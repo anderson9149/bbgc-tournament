@@ -1,3 +1,57 @@
 # BBGC Tournament Tracker
 
-Live results site for the BBGC bocce tournament. Data entry in a Google Sheet, served as JSON by Apps Script, displayed by a React site.
+Live results for the BBGC bocce tournament: 4 pools of 6 (round robin), top 3
+from each pool into a 12-team single-elimination bracket.
+
+- **Data entry:** a Google Sheet (`Teams`, `PoolGames`, `BracketGames` tabs)
+- **API:** Google Apps Script `doGet()` in [`apps-script/Code.gs`](apps-script/Code.gs)
+- **Site:** React (Vite) in [`site/`](site), deployed to GitHub Pages on every push to `main`
+
+## One-time setup
+
+### 1. Google Sheet
+1. Create a blank Google Sheet, name it whatever you like.
+2. **Extensions → Apps Script.** Delete the placeholder code, paste in all of `apps-script/Code.gs`, save.
+3. Pick `setup` in the function dropdown and click **Run**. Approve the permissions prompt (it only touches this sheet).
+4. Back in the sheet you'll see three tabs and a **BBGC** menu.
+
+### 2. Publish the API
+1. In Apps Script: **Deploy → New deployment**. Type: **Web app**.
+   Execute as: **Me**. Who has access: **Anyone**. Deploy.
+2. Copy the Web app URL (ends in `/exec`).
+3. Paste it into `site/src/config.js` as `API_URL`.
+
+### 3. GitHub Pages
+1. Push this repo to GitHub as `bbgc-tournament` (the name must match `base` in `site/vite.config.js`).
+2. Repo **Settings → Pages → Source: GitHub Actions**.
+3. Every push to `main` deploys to `https://<user>.github.io/bbgc-tournament/`.
+
+## Running the tournament
+
+1. **Teams tab** — type the 24 team names (6 per pool; pools are pre-filled).
+2. **PoolGames tab** — team names fill in automatically. Enter `Score A` / `Score B` as games finish.
+   Standings on the site: wins, then point differential, then points for.
+3. Disputed tiebreaker? Put `1`–`6` in **Seed Override** on the Teams tab for the team(s) in question.
+4. When pool play is done: **BBGC menu → Seed Bracket**. Round-1 matchups and the pool-winner byes are written into **BracketGames**.
+5. Enter bracket scores. Winners advance to the next row automatically.
+
+The site refreshes every 20 seconds.
+
+## Bracket structure
+
+| Game | Round | Matchup |
+|---|---|---|
+| 1–4 | Round 1 | Orange#2 v Red#3 · Red#2 v Orange#3 · Blue#2 v Yellow#3 · Yellow#2 v Blue#3 |
+| 5–8 | Quarterfinal | Blue#1 v W1 · Yellow#1 v W2 · Orange#1 v W3 · Red#1 v W4 |
+| 9–10 | Semifinal | W5 v W6 · W7 v W8 |
+| 11 | Final | W9 v W10 |
+
+Pool winners get byes and can't meet a pool-mate before the semifinals.
+
+## Local development
+
+```bash
+cd site && npm install && npm run dev
+```
+
+With `API_URL` blank the site shows `src/sample-data.json`.

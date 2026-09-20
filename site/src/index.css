@@ -1,0 +1,73 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --line: #e2e4e8;
+  --accent: #2f5fd1;
+  --win: #1f7a3a;
+  --win-bg: #e6f4ea;
+  --orange: #f2994a;
+  --red: #e05252;
+  --blue: #4a86e8;
+  --yellow: #e8c547;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14161a; --card: #1e2126; --text: #ecedef; --muted: #9aa0a8; --line: #2c3037; --win-bg: #17311f; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+.app { max-width: 1100px; margin: 0 auto; padding: 0 16px 32px; }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0; flex-wrap: wrap; }
+.topbar h1 { margin: 0; font-size: 1.6rem; letter-spacing: .04em; }
+.tabs { display: flex; gap: 6px; }
+.tabs button { border: 1px solid var(--line); background: var(--card); color: var(--text); padding: 8px 14px; border-radius: 999px; font-size: .95rem; cursor: pointer; }
+.tabs button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pill { background: rgba(0,0,0,.12); border-radius: 999px; padding: 1px 7px; font-size: .8em; margin-left: 4px; }
+.status { color: var(--muted); font-size: .85rem; text-align: center; padding: 16px 0; }
+.warn { color: #b26a00; }
+.notice { color: var(--muted); text-align: center; }
+.champion { text-align: center; font-size: 1.4rem; font-weight: 700; margin: 8px 0 16px; }
+
+/* Pools */
+.pools { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.pool { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; border-top: 5px solid var(--accent); }
+.pool-orange { border-top-color: var(--orange); }
+.pool-red { border-top-color: var(--red); }
+.pool-blue { border-top-color: var(--blue); }
+.pool-yellow { border-top-color: var(--yellow); }
+.pool h2 { margin: 0 0 10px; font-size: 1.15rem; display: flex; justify-content: space-between; align-items: baseline; }
+.progress { font-size: .8rem; color: var(--muted); font-weight: 500; }
+.standings { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.standings th, .standings td { padding: 6px 4px; text-align: center; border-bottom: 1px solid var(--line); }
+.standings th { color: var(--muted); font-weight: 600; font-size: .8rem; }
+.standings .team { text-align: left; }
+.standings tr.advancing td { font-weight: 600; }
+.standings tr.advancing td:first-child { color: var(--win); }
+.override { color: var(--muted); margin-left: 3px; }
+.games { margin-top: 10px; }
+.games summary { cursor: pointer; color: var(--muted); font-size: .9rem; }
+.round h3 { margin: 10px 0 4px; font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.game { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; padding: 4px 0; font-size: .9rem; }
+.game .name.right { text-align: right; }
+.game .score { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 48px; text-align: center; }
+.game.played .score { color: var(--text); font-weight: 600; }
+.game .win { font-weight: 700; color: var(--win); }
+
+/* Bracket */
+.bracket-wrap { overflow-x: auto; }
+.bracket { display: flex; gap: 20px; min-width: 760px; }
+.column { flex: 1; display: flex; flex-direction: column; }
+.column h2 { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; text-align: center; margin: 0 0 8px; }
+.matches { flex: 1; display: flex; flex-direction: column; justify-content: space-around; gap: 12px; }
+.match { background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.slot { display: flex; justify-content: space-between; padding: 8px 10px; font-size: .92rem; }
+.slot + .slot { border-top: 1px solid var(--line); }
+.slot.win { background: var(--win-bg); font-weight: 700; color: var(--win); }
+.slot.empty .name { color: var(--muted); font-style: italic; }
+.slot small { color: var(--muted); font-weight: 400; }
+.slot .score { font-variant-numeric: tabular-nums; }
