@@ -72,16 +72,26 @@ button { font: inherit; cursor: pointer; }
 .notice { text-align: center; color: var(--muted); font-weight: 600; }
 .champion-banner { text-align: center; font-size: 1.4rem; font-weight: 800; margin: 0 0 12px; }
 .column h2 { font-size: 0.8rem; color: rgba(255, 255, 255, 0.8); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; margin: 0 0 10px; font-weight: 800; }
-.matches { display: flex; flex-direction: column; justify-content: space-around; gap: 12px; flex: 1; }
+.matches { display: flex; flex-direction: column; gap: 12px; }
 .match { background: var(--panel); border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); }
-.slot { display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; font-weight: 700; }
+.match-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 6px 12px; white-space: nowrap;
+  background: linear-gradient(#ff5a6e, var(--pool-red)); color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+}
+.match-head .game { font-weight: 600; font-size: 0.8em; opacity: 0.85; }
+.slot { display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 12px; font-weight: 700; }
 .slot + .slot { border-top: 1px solid var(--panel-line); }
-.slot.win { background: #fff; color: var(--red); }
-.slot:not(.win) .name { color: rgba(255, 255, 255, 0.9); }
+.slot .seed { flex: 0 0 2em; color: rgba(255, 255, 255, 0.65); font-weight: 600; font-size: 0.8em; }
+.slot .name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .slot.empty .name { color: var(--muted); font-style: italic; font-weight: 500; }
-.slot small { font-weight: 600; opacity: 0.7; font-size: 0.7em; text-transform: uppercase; }
-.slot .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
-.slot .score { font-variant-numeric: tabular-nums; margin-left: 12px; flex-shrink: 0; }
+.slot .score {
+  flex: 0 0 auto; min-width: 2.2em; height: 1.7em; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; background: rgba(255, 255, 255, 0.15); font-weight: 800; font-variant-numeric: tabular-nums;
+}
+.slot.win .score { background: var(--pool-red); color: #fff; }
+.slot.lose .score { background: #4a4a4a; color: #ddd; }
+.slot.lose .name { color: rgba(255, 255, 255, 0.75); }
+.slot .bye { flex: 0 0 auto; font-size: 0.7em; font-weight: 700; text-transform: uppercase; opacity: 0.7; padding-right: 6px; }
 
 .status { color: var(--muted); font-weight: 600; }
 .status.center { text-align: center; }
@@ -111,18 +121,20 @@ button { font: inherit; cursor: pointer; }
 .tv .status { position: absolute; right: 70px; bottom: 64px; font-size: 18px; }
 .tv .status.center { left: 0; right: 0; top: 50%; }
 
-.tv .bracket { position: absolute; top: 290px; left: 50px; right: 0; bottom: 90px; }
-.tv .column { position: absolute; top: 0; bottom: 0; width: 300px; display: flex; flex-direction: column; }
-.tv .col-round1 { left: 0; }
-.tv .col-quarterfinal { left: 330px; }
-.tv .col-semifinal { left: 660px; }
-.tv .col-final { left: 990px; }
-.tv .column h2 { font-size: 20px; }
-.tv .slot { font-size: 22px; padding: 10px 16px; }
-.tv .notice { position: absolute; left: 0; width: 1290px; top: 380px; font-size: 26px; }
+.tv .bracket { position: absolute; top: 325px; left: 50px; width: 1300px; height: 700px; }
+.tv .connectors { position: absolute; left: 0; top: 0; pointer-events: none; }
+.tv .column { position: absolute; top: 0; bottom: 0; width: 310px; }
+.tv .column h2 { position: absolute; top: -30px; left: 0; right: 0; font-size: 18px; margin: 0; }
+.tv .matches { display: block; }
+.tv .match { position: absolute; left: 0; width: 310px; height: 130px; }
+.tv .match-head { font-size: 15px; padding: 7px 14px; }
+.tv .slot { font-size: 18px; padding: 7px 10px 7px 12px; height: 45px; gap: 8px; }
+.tv .slot .seed { flex-basis: 30px; font-size: 14px; }
+.tv .slot .score { font-size: 19px; min-width: 46px; height: 32px; }
+.tv .notice { position: absolute; left: 0; width: 1300px; top: -66px; font-size: 18px; margin: 0; }
 /* The trophy's nameplate in the landscape background. */
 .tv .plaque {
-  position: absolute; left: 1397px; top: 603px; width: 233px; height: 72px;
+  position: absolute; left: 1397px; top: 568px; width: 233px; height: 72px;
   display: flex; align-items: center; justify-content: center; text-align: center;
   color: #ffd9dd; font-weight: 800; font-size: 20px; line-height: 1.1; letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); padding: 4px 6px;
