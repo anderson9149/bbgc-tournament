@@ -39,7 +39,7 @@ button { font: inherit; cursor: pointer; }
   background: linear-gradient(#ffffff, #d6d6d6); color: var(--red);
 }
 .pool h2 { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; }
-.pool .progress { font-weight: 700; color: #555; }
+.pool .progress { font-weight: 700; font-size: 0.7em; margin-left: 4px; letter-spacing: 0; }
 .pool-orange header { background: linear-gradient(#ffb066, var(--orange)); color: #fff; }
 .pool-red header { background: linear-gradient(#ff5a6e, var(--pool-red)); color: #fff; }
 .pool-blue header { background: linear-gradient(#6f9df0, var(--blue)); color: #fff; }
@@ -100,12 +100,8 @@ button { font: inherit; cursor: pointer; }
 .status.center { text-align: center; }
 
 /* ----------------------------------------------------- details */
-.pool footer { margin-top: auto; display: flex; justify-content: flex-end; padding: 6px 12px; background: var(--panel); }
-.details-btn {
-  border: 2px solid rgba(255, 255, 255, 0.7); background: rgba(0, 0, 0, 0.3); color: #fff;
-  border-radius: 999px; padding: 4px 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.8em;
-}
-.details-btn:hover { background: #fff; color: var(--red); }
+.details-btn { border: 0; background: none; color: inherit; padding: 0; font-weight: 700; font-size: 0.75em; opacity: 0.9; }
+.details-btn:hover { text-decoration: underline; opacity: 1; }
 .modal-backdrop { position: absolute; inset: 0; z-index: 20; background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; }
 .modal { background: rgba(50, 0, 6, 0.96); border-radius: 14px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); display: flex; flex-direction: column; }
 .modal header { display: flex; align-items: center; gap: 16px; padding: 10px 20px; }
@@ -136,7 +132,7 @@ button { font: inherit; cursor: pointer; }
 .tv .pool h2 { font-size: 28px; }
 .tv .pool .progress { font-size: 20px; }
 .tv .pool th { font-size: 17px; padding: 5px 8px; }
-.tv .pool td { font-size: 22px; padding: 5px 8px; }
+.tv .pool td { font-size: 23px; padding: 6px 8px; }
 .tv .pool th.team, .tv .pool td.team { padding-left: 20px; }
 .tv .status { position: absolute; right: 70px; bottom: 64px; font-size: 18px; }
 .tv .status.center { left: 0; right: 0; top: 50%; }
@@ -160,8 +156,7 @@ button { font: inherit; cursor: pointer; }
 
 .tv .ticker { position: absolute; left: 0; right: 0; bottom: 0; height: 56px; line-height: 54px; font-size: 26px; }
 
-.tv .pool footer { padding: 4px 14px; }
-.tv .details-btn { font-size: 16px; padding: 5px 20px; }
+.tv .details-btn { font-size: 20px; }
 .tv .modal { width: 1200px; max-height: 860px; }
 .tv .modal h2 { font-size: 30px; }
 .tv .modal .progress { font-size: 20px; }

@@ -26,8 +26,8 @@ function Pool({ name, pool, tv, onDetails }) {
   return (
     <article className={`pool pool-${name.toLowerCase()}`}>
       <header>
-        <h2>{name}</h2>
-        <span className="progress">{pool.complete ? 'FINAL' : `${pool.played}/${pool.total}`}</span>
+        <h2>{name} <span className="progress">({pool.complete ? 'Final' : `${pool.played}/${pool.total}`})</span></h2>
+        {tv && <button className="details-btn" onClick={onDetails}>Details…</button>}
       </header>
       <table>
         <thead>
@@ -50,11 +50,7 @@ function Pool({ name, pool, tv, onDetails }) {
         </tbody>
       </table>
 
-      {tv ? (
-        <footer>
-          <button className="details-btn" onClick={onDetails}>Details</button>
-        </footer>
-      ) : (
+      {!tv && (
         <details className="games">
           <summary>Games</summary>
           <GameList games={pool.games} />
