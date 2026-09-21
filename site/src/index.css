@@ -72,24 +72,28 @@ button { font: inherit; cursor: pointer; }
 .notice { text-align: center; color: var(--muted); font-weight: 600; }
 .champion-banner { text-align: center; font-size: 1.4rem; font-weight: 800; margin: 0 0 12px; }
 .matches { display: flex; flex-direction: column; gap: 12px; }
-.match { background: var(--panel); border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); }
+.match {
+  background: rgba(14, 14, 16, 0.92); border: 2px solid #d9a93a; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
 .match-head {
   display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 6px 12px; white-space: nowrap;
-  background: linear-gradient(#ff5a6e, var(--pool-red)); color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+  background: #1c1c1e; color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+  border-bottom: 1px solid #d9a93a;
 }
-.match-head .game { font-weight: 700; font-size: 0.6em; opacity: 0.9; }
-.slot { display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 12px; font-weight: 700; }
-.slot + .slot { border-top: 1px solid var(--panel-line); }
-.slot .seed { flex: 0 0 2em; color: rgba(255, 255, 255, 0.65); font-weight: 600; font-size: 0.8em; }
+.match-head .game { font-weight: 700; font-size: 0.6em; color: #e8b84a; }
+.slot { display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 12px; font-weight: 700; color: #fff; }
+.slot + .slot { border-top: 1px solid rgba(255, 255, 255, 0.12); }
+.slot .seed { flex: 0 0 2em; color: rgba(255, 255, 255, 0.7); font-weight: 500; font-size: 0.8em; }
 .slot .name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .slot.empty .name { color: #fff; }
 .slot .score {
   flex: 0 0 auto; min-width: 2.2em; height: 1.7em; display: flex; align-items: center; justify-content: center;
-  border-radius: 6px; background: rgba(255, 255, 255, 0.15); font-weight: 800; font-variant-numeric: tabular-nums;
+  border-radius: 6px; background: #2b2b2e; font-weight: 800; font-variant-numeric: tabular-nums; color: #fff;
 }
-.slot.win .score { background: var(--pool-red); color: #fff; }
-.slot.lose .score { background: #4a4a4a; color: #ddd; }
-.slot.lose .name { color: rgba(255, 255, 255, 0.75); }
+.slot.win .score { background: #e0122e; }
+.slot.lose .score { background: #3d3d40; }
+.slot.lose .name { color: rgba(255, 255, 255, 0.8); }
 .slot .bye { flex: 0 0 auto; font-size: 0.7em; font-weight: 700; text-transform: uppercase; opacity: 0.7; padding-right: 6px; }
 
 .status { color: var(--muted); font-weight: 600; }
