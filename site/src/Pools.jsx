@@ -8,7 +8,7 @@ export function Pools({ pools, order, tv }) {
 
 function Pool({ name, pool, tv }) {
   if (!pool) return null
-  // Ties aren't counted server-side; derive played/tied from the games list.
+  // Ties aren't counted server-side; derive them from the games list.
   const ties = {}
   pool.games.forEach((g) => {
     if (g.scoreA != null && g.scoreB != null && g.scoreA === g.scoreB) {
@@ -26,7 +26,7 @@ function Pool({ name, pool, tv }) {
       </header>
       <table>
         <thead>
-          <tr><th>#</th><th className="team">Team</th><th>P</th><th>W</th><th>L</th><th>T</th><th>+/−</th></tr>
+          <tr><th>#</th><th className="team">Team</th><th>W</th><th>L</th><th>T</th><th>+/−</th></tr>
         </thead>
         <tbody>
           {pool.standings.map((row) => {
@@ -35,7 +35,6 @@ function Pool({ name, pool, tv }) {
               <tr key={row.team} className={row.seed <= 3 ? 'advancing' : ''}>
                 <td>{row.seed}</td>
                 <td className="team">{row.team || <em>TBD</em>}{row.override ? <span className="override" title="Seed set manually">*</span> : null}</td>
-                <td>{row.w + row.l + t}</td>
                 <td>{row.w}</td>
                 <td>{row.l}</td>
                 <td>{t}</td>
