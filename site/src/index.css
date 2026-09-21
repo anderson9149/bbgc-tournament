@@ -54,12 +54,7 @@ button { font: inherit; cursor: pointer; }
 .pool th:first-child, .pool td:first-child { width: 2.4em; }
 .pool th:not(.team):not(:first-child), .pool td:not(.team):not(:first-child) { width: 2.8em; }
 .pool th:last-child, .pool td:last-child { width: 4.4em; }
-.pool td.team { font-weight: 700; }
-.pool tr.advancing td:first-child { font-weight: 800; }
-.pool tr.advancing td.team::after { content: ''; }
-.pool tbody tr:nth-child(3) td { border-bottom: 2px dashed rgba(255, 255, 255, 0.5); }
-.pool tbody tr:not(.advancing) td { color: rgba(255, 255, 255, 0.65); }
-.pool tbody tr:not(.advancing) td.team { font-weight: 600; }
+.pool td { font-weight: 700; }
 .override { color: var(--muted); margin-left: 3px; }
 .pool em { color: var(--muted); font-style: italic; font-weight: 500; }
 
@@ -96,8 +91,8 @@ button { font: inherit; cursor: pointer; }
   position: fixed; left: 50%; top: 50%; width: 1920px; height: 1080px;
   background-size: cover; background-position: center; overflow: hidden;
 }
-.tv .menu { position: absolute; top: 205px; left: 288px; justify-content: flex-start; }
-.tv .menu button { font-size: 22px; padding: 12px 34px; }
+.tv .menu { position: absolute; top: 205px; left: 0; right: 0; gap: 14px; }
+.tv .menu button { font-size: 20px; padding: 11px 24px; }
 .tv .pools { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 60px; grid-template-rows: 1fr 1fr; }
 .tv .pool h2 { font-size: 30px; }
 .tv .pool .progress { font-size: 20px; }
