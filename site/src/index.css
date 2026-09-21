@@ -71,14 +71,13 @@ button { font: inherit; cursor: pointer; }
 /* -------------------------------------------------------- bracket */
 .notice { text-align: center; color: var(--muted); font-weight: 600; }
 .champion-banner { text-align: center; font-size: 1.4rem; font-weight: 800; margin: 0 0 12px; }
-.column h2 { font-size: 0.9rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; margin: 0 0 10px; font-weight: 800; }
 .matches { display: flex; flex-direction: column; gap: 12px; }
 .match { background: var(--panel); border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); }
 .match-head {
   display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 6px 12px; white-space: nowrap;
   background: linear-gradient(#ff5a6e, var(--pool-red)); color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
 }
-.match-head .game { font-weight: 600; font-size: 0.8em; opacity: 0.85; }
+.match-head .game { font-weight: 700; font-size: 0.6em; opacity: 0.9; }
 .slot { display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 12px; font-weight: 700; }
 .slot + .slot { border-top: 1px solid var(--panel-line); }
 .slot .seed { flex: 0 0 2em; color: rgba(255, 255, 255, 0.65); font-weight: 600; font-size: 0.8em; }
@@ -121,19 +120,18 @@ button { font: inherit; cursor: pointer; }
 .tv .status { position: absolute; right: 70px; bottom: 64px; font-size: 18px; }
 .tv .status.center { left: 0; right: 0; top: 50%; }
 
-.tv .bracket { position: absolute; top: 325px; left: 50px; width: 1300px; height: 700px; }
+.tv .bracket { position: absolute; top: 285px; left: 40px; width: 1325px; height: 700px; }
 .tv .connectors { position: absolute; left: 0; top: 0; pointer-events: none; }
-.tv .column { position: absolute; top: 0; bottom: 0; width: 310px; }
-.tv .column h2 { position: absolute; top: -36px; left: 0; right: 0; font-size: 24px; margin: 0; }
+.tv .column { position: absolute; top: 0; bottom: 0; width: 320px; }
 .tv .matches { display: block; }
-.tv .match { position: absolute; left: 0; width: 310px; height: 130px; }
-.tv .match-head { font-size: 15px; padding: 7px 14px; }
-.tv .slot { font-size: 18px; padding: 7px 10px 7px 12px; height: 45px; gap: 8px; }
-.tv .slot .seed { flex-basis: 30px; font-size: 14px; }
-.tv .slot .score { font-size: 19px; min-width: 46px; height: 32px; }
+.tv .match { position: absolute; left: 0; width: 320px; height: 150px; }
+.tv .match-head { font-size: 23px; padding: 6px 14px; height: 46px; align-items: center; }
+.tv .slot { font-size: 20px; padding: 6px 10px 6px 12px; height: 52px; gap: 8px; }
+.tv .slot .seed { flex-basis: 30px; font-size: 15px; }
+.tv .slot .score { font-size: 21px; min-width: 52px; height: 38px; }
 /* The trophy's nameplate in the landscape background. */
 .tv .plaque {
-  position: absolute; left: 1397px; top: 568px; width: 233px; height: 72px;
+  position: absolute; left: 1407px; top: 608px; width: 233px; height: 72px;
   display: flex; align-items: center; justify-content: center; text-align: center;
   color: #ffd9dd; font-weight: 800; font-size: 20px; line-height: 1.1; letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); padding: 4px 6px;

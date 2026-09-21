@@ -2,9 +2,9 @@ const ROUNDS = ['Round 1', 'Quarterfinal', 'Semifinal', 'Final']
 const POOL_LETTER = { Orange: 'O', Red: 'R', Blue: 'B', Yellow: 'Y' }
 
 // TV layout, in 1920x1080 stage units relative to the bracket box.
-const COL_X = [0, 330, 660, 990]
-const CARD_W = 310
-const CARD_H = 130
+const COL_X = [0, 335, 670, 1005]
+const CARD_W = 320
+const CARD_H = 150
 const AREA_H = 700
 const CENTERS = {
   'Round 1': [1, 3, 5, 7].map((n) => (AREA_H / 8) * n),
@@ -29,7 +29,6 @@ export function Bracket({ games, tv }) {
       {tv && <Connectors />}
       {ROUNDS.map((round, ci) => (
         <div key={round} className={`column col-${round.toLowerCase().replace(' ', '')}`} style={tv ? { left: COL_X[ci] } : undefined}>
-          <h2>{round}</h2>
           <div className="matches">
             {games.filter((g) => g.round === round).map((g, i) => (
               <Match key={g.game} g={g} index={i} seedOf={seedOf}
@@ -92,7 +91,7 @@ function Connectors() {
   join('Quarterfinal', 'Semifinal', 1, 2)
   join('Semifinal', 'Final', 2, 3)
   return (
-    <svg className="connectors" viewBox={`0 0 1300 ${AREA_H}`} width="1300" height={AREA_H} aria-hidden="true">
+    <svg className="connectors" viewBox={`0 0 1325 ${AREA_H}`} width="1325" height={AREA_H} aria-hidden="true">
       <path d={d.join(' ')} fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="3" />
     </svg>
   )
