@@ -1,12 +1,18 @@
+import { useEffect, useState } from 'react'
+
 export function Pools({ pools, order, tv }) {
+  const [open, setOpen] = useState(null)
   return (
-    <section className="pools">
-      {order.map((name) => <Pool key={name} name={name} pool={pools[name]} tv={tv} />)}
-    </section>
+    <>
+      <section className="pools">
+        {order.map((name) => <Pool key={name} name={name} pool={pools[name]} tv={tv} onDetails={() => setOpen(name)} />)}
+      </section>
+      {open && pools[open] && <PoolDetails name={open} pool={pools[open]} onClose={() => setOpen(null)} />}
+    </>
   )
 }
 
-function Pool({ name, pool, tv }) {
+function Pool({ name, pool, tv, onDetails }) {
   if (!pool) return null
   // Ties aren't counted server-side; derive them from the games list.
   const ties = {}
@@ -16,7 +22,6 @@ function Pool({ name, pool, tv }) {
       ties[g.teamB] = (ties[g.teamB] || 0) + 1
     }
   })
-  const rounds = [...new Set(pool.games.map((g) => g.round))]
 
   return (
     <article className={`pool pool-${name.toLowerCase()}`}>
@@ -45,19 +50,28 @@ function Pool({ name, pool, tv }) {
         </tbody>
       </table>
 
-      {!tv && (
+      {tv ? (
+        <footer>
+          <button className="details-btn" onClick={onDetails}>Details</button>
+        </footer>
+      ) : (
         <details className="games">
           <summary>Games</summary>
-          {rounds.map((r) => (
-            <div key={r} className="round">
-              <h3>Round {r}</h3>
-              {pool.games.filter((g) => g.round === r).map((g, i) => <Game key={i} g={g} />)}
-            </div>
-          ))}
+          <GameList games={pool.games} />
         </details>
       )}
     </article>
   )
+}
+
+function GameList({ games }) {
+  const rounds = [...new Set(games.map((g) => g.round))]
+  return rounds.map((r) => (
+    <div key={r} className="round">
+      <h3>Round {r}</h3>
+      {games.filter((g) => g.round === r).map((g, i) => <Game key={i} g={g} />)}
+    </div>
+  ))
 }
 
 function Game({ g }) {
@@ -69,6 +83,30 @@ function Game({ g }) {
       <span className={`name ${aWins ? 'win' : ''}`}>{g.teamA || '—'}</span>
       <span className="score">{played ? `${g.scoreA} – ${g.scoreB}` : 'vs'}</span>
       <span className={`name right ${bWins ? 'win' : ''}`}>{g.teamB || '—'}</span>
+    </div>
+  )
+}
+
+// Popup with every game in the pool (TV layout). Esc, ✕ or the backdrop closes it.
+function PoolDetails({ name, pool, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className={`modal pool-${name.toLowerCase()}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-label={`${name} results`}>
+        <header>
+          <h2>{name} — Results</h2>
+          <span className="progress">{pool.complete ? 'FINAL' : `${pool.played}/${pool.total}`}</span>
+          <button className="close" onClick={onClose} aria-label="Close">✕</button>
+        </header>
+        <div className="modal-body">
+          <GameList games={pool.games} />
+        </div>
+      </div>
     </div>
   )
 }
