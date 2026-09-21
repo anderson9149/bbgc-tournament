@@ -3,8 +3,9 @@
  *
  * Paste this whole file into Extensions > Apps Script in a blank Google Sheet.
  *
- *   setup()   Run ONCE. Builds the Teams / PoolGames / BracketGames tabs,
- *             adds dropdowns, and pre-fills all 60 pool matchups.
+ *   setup()   Run ONCE. Builds the Teams / PoolGames / BracketGames /
+ *             Ticker Messages tabs, adds dropdowns, and pre-fills all 60
+ *             pool matchups.
  *   doGet()   The JSON endpoint the website reads. Deploy > New deployment >
  *             Web app, "Execute as: Me", "Who has access: Anyone".
  *
@@ -57,6 +58,7 @@ function setup() {
   setupTeams_(ss);
   setupPoolGames_(ss);
   setupBracketGames_(ss);
+  setupTicker_(ss);
   var extra = ss.getSheetByName('Sheet1');
   if (extra && ss.getSheets().length > 1) ss.deleteSheet(extra);
   onOpen();
@@ -156,6 +158,16 @@ function setupBracketGames_(ss) {
     .setFontStyle('italic').setFontColor('#666666');
 }
 
+var TICKER_SHEET = 'Ticker Messages';
+
+// One message per row in column A. Not cleared on re-run so messages survive.
+function setupTicker_(ss) {
+  if (ss.getSheetByName(TICKER_SHEET)) return;
+  var sh = ss.insertSheet(TICKER_SHEET);
+  sh.getRange(1, 1).setValue('Welcome to the Barrington Bocce Golf Classic!');
+  sh.setColumnWidth(1, 500);
+}
+
 // ------------------------------------------------------- bracket seeding
 
 function seedBracket() {
@@ -222,7 +234,17 @@ function readData_(ss) {
       };
     });
 
-  return { teams: teams, poolGames: poolGames, bracket: bracket };
+  return { teams: teams, poolGames: poolGames, bracket: bracket, ticker: readTicker_(ss) };
+}
+
+function readTicker_(ss) {
+  var sh = ss.getSheetByName(TICKER_SHEET);
+  if (!sh) return [];
+  var last = sh.getLastRow();
+  if (last < 1) return [];
+  return sh.getRange(1, 1, last, 1).getValues()
+    .map(function (r) { return String(r[0]).trim(); })
+    .filter(function (t) { return t !== ''; });
 }
 
 function num_(v) {
@@ -306,5 +328,6 @@ function buildPayload_() {
                slotA: BRACKET[i].a, slotB: BRACKET[i].b };
     }),
     bracketSeeded: data.bracket.slice(0, 4).some(function (g) { return g.teamA !== ''; }),
+    ticker: data.ticker,
   };
 }

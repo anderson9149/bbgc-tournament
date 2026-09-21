@@ -3,7 +3,7 @@
 Live results for the BBGC bocce tournament: 4 pools of 6 (round robin), top 3
 from each pool into a 12-team single-elimination bracket.
 
-- **Data entry:** a Google Sheet (`Teams`, `PoolGames`, `BracketGames` tabs)
+- **Data entry:** a Google Sheet (`Teams`, `PoolGames`, `BracketGames`, `Ticker Messages` tabs)
 - **API:** Google Apps Script `doGet()` in [`apps-script/Code.gs`](apps-script/Code.gs)
 - **Site:** React (Vite) in [`site/`](site), deployed to GitHub Pages on every push to `main`
 
@@ -26,6 +26,10 @@ from each pool into a 12-team single-elimination bracket.
 2. Repo **Settings → Pages → Source: GitHub Actions**.
 3. Every push to `main` deploys to `https://<user>.github.io/bbgc-tournament/`.
 
+### Updating the script later
+When `apps-script/Code.gs` changes: paste the new code over the old in Apps Script, save, then
+**Deploy → Manage deployments → ✎ → Version: New version → Deploy**. The URL stays the same.
+
 ## Running the tournament
 
 1. **Teams tab** — type the 24 team names (6 per pool; pools are pre-filled).
@@ -34,6 +38,7 @@ from each pool into a 12-team single-elimination bracket.
 3. Disputed tiebreaker? Put `1`–`6` in **Seed Override** on the Teams tab for the team(s) in question.
 4. When pool play is done: **BBGC menu → Seed Bracket**. Round-1 matchups and the pool-winner byes are written into **BracketGames**.
 5. Enter bracket scores. Winners advance to the next row automatically.
+6. **Ticker Messages tab** — one message per row in column A. They scroll across the bottom of the site, separated by bullets. Edit any time.
 
 The site refreshes every 20 seconds.
 

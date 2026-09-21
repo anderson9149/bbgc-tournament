@@ -3,6 +3,7 @@ import { useResults } from './useResults.js'
 import { useMediaQuery, useStageScale } from './hooks.js'
 import { Pools } from './Pools.jsx'
 import { Bracket } from './Bracket.jsx'
+import { Ticker } from './Ticker.jsx'
 import { API_URL as CONFIGURED_URL } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
@@ -42,6 +43,7 @@ export default function App() {
         {error && <span>Refresh failed · </span>}
         {fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
       </footer>
+      {data && <Ticker messages={data.ticker} />}
     </>
   )
 
