@@ -13,7 +13,7 @@ const CENTERS = {
   'Final': [AREA_H / 2],
 }
 
-export function Bracket({ games, seeded, tv }) {
+export function Bracket({ games, tv }) {
   const champion = games.find((g) => g.round === 'Final')?.winner
 
   // "O2", "R3"… from the slot a team was seeded into, so later rounds can show it.
@@ -25,7 +25,6 @@ export function Bracket({ games, seeded, tv }) {
 
   return (
     <section className="bracket">
-      {!seeded && <p className="notice">Bracket will be filled in once the group stage is complete.</p>}
       {champion && !tv && <p className="champion-banner">🏆 {champion}</p>}
       {tv && <Connectors />}
       {ROUNDS.map((round, ci) => (
