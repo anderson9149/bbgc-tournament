@@ -1,52 +1,63 @@
 import { useState } from 'react'
 import { useResults } from './useResults.js'
+import { useMediaQuery, useStageScale } from './hooks.js'
 import { Pools } from './Pools.jsx'
 import { Bracket } from './Bracket.jsx'
-import { API_URL } from './config.js'
+import { API_URL as CONFIGURED_URL } from './config.js'
+
+const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
 
 const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
+const BASE = import.meta.env.BASE_URL
 
 export default function App() {
   const { data, error, fetchedAt, loading, refresh } = useResults()
-  const [tab, setTab] = useState('pools')
+  const [tab, setTab] = useState('group')
+  // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
+  const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
+  const scale = useStageScale()
 
-  if (!data) {
-    return (
-      <main className="app">
-        <header className="topbar"><h1>BBGC</h1></header>
-        <p className="status">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
-      </main>
-    )
-  }
+  const bg = `${BASE}bg/${tab}-${isTV ? 'landscape' : 'portrait'}.webp`
 
-  const poolsDone = POOLS.filter((p) => data.pools[p]?.complete).length
+  const content = (
+    <>
+      <nav className="menu">
+        <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
+        <button className={tab === 'knockout' ? 'active' : ''} onClick={() => setTab('knockout')}>Knockout Round</button>
+        <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
+          <span className="icon">↻</span> Refresh
+        </button>
+      </nav>
 
-  return (
-    <main className="app">
-      <header className="topbar">
-        <h1>BBGC</h1>
-        <nav className="tabs">
-          <button className={tab === 'pools' ? 'active' : ''} onClick={() => setTab('pools')}>
-            Pool Play <span className="pill">{poolsDone}/4</span>
-          </button>
-          <button className={tab === 'bracket' ? 'active' : ''} onClick={() => setTab('bracket')}>
-            Bracket
-          </button>
-          {API_URL && (
-            <button className={`refresh ${loading ? 'spinning' : ''}`} onClick={refresh} disabled={loading} title="Refresh now" aria-label="Refresh now">
-              ↻
-            </button>
-          )}
-        </nav>
-      </header>
-
-      {tab === 'pools' ? <Pools pools={data.pools} order={POOLS} /> : <Bracket games={data.bracket} seeded={data.bracketSeeded} />}
+      {!data ? (
+        <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
+      ) : tab === 'group' ? (
+        <Pools pools={data.pools} order={POOLS} tv={isTV} />
+      ) : (
+        <Bracket games={data.bracket} seeded={data.bracketSeeded} tv={isTV} />
+      )}
 
       <footer className="status">
-        {!API_URL && <span className="warn">Sample data — set API_URL in config.js. </span>}
-        {error && <span className="warn">Refresh failed ({error}) — showing last good data. </span>}
+        {!API_URL && <span>Sample data · </span>}
+        {error && <span>Refresh failed · </span>}
         {fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
       </footer>
-    </main>
+    </>
+  )
+
+  if (isTV) {
+    return (
+      <div className="tv">
+        <div className="stage" style={{ transform: `translate(-50%, -50%) scale(${scale})`, backgroundImage: `url(${bg})` }}>
+          {content}
+        </div>
+      </div>
+    )
+  }
+  return (
+    <div className="mobile">
+      <div className="mobile-bg" style={{ backgroundImage: `url(${bg})` }} />
+      {content}
+    </div>
   )
 }

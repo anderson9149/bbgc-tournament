@@ -1,6 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { API_URL, REFRESH_SECONDS } from './config.js'
-import sample from './sample-data.json'
+import { API_URL as CONFIGURED_URL, REFRESH_SECONDS } from './config.js'
+import sampleLive from './sample-data.json'
+import sampleFull from './sample-full.json'
+
+// ?sample in the URL forces the bundled sample data (handy for demos);
+// ?sample=full shows a finished tournament.
+const params = new URLSearchParams(window.location.search)
+const API_URL = params.has('sample') ? '' : CONFIGURED_URL
+const sample = params.get('sample') === 'full' ? sampleFull : sampleLive
 
 // Polls the Apps Script endpoint. With no API_URL configured it serves the
 // bundled sample data so the site can be developed without a sheet.

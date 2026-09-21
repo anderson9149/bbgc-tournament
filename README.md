@@ -54,4 +54,14 @@ Pool winners get byes and can't meet a pool-mate before the semifinals.
 cd site && npm install && npm run dev
 ```
 
-With `API_URL` blank the site shows `src/sample-data.json`.
+With `API_URL` blank the site shows `src/sample-data.json`. Add `?sample` to any URL
+to force sample data, or `?sample=full` for a finished tournament (champion on the trophy).
+
+## Display modes
+
+- **TV / laptop (landscape, ≥900px wide):** a fixed 1920×1080 stage scaled to fit the screen,
+  letterboxed if the screen isn't 16:9. Uses the landscape background images.
+- **Phone / portrait:** normal scrolling page over the portrait background images.
+
+Backgrounds live in `site/public/bg/` (`group-*.webp`, `knockout-*.webp`). The title
+is baked into the images, so the menu is positioned just below it.
