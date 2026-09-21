@@ -31,7 +31,7 @@ export function Bracket({ games, tv }) {
         <div key={round} className={`column col-${round.toLowerCase().replace(' ', '')}`} style={tv ? { left: COL_X[ci] } : undefined}>
           <div className="matches">
             {games.filter((g) => g.round === round).map((g, i) => (
-              <Match key={g.game} g={g} index={i} seedOf={seedOf}
+              <Match key={g.game} g={g} seedOf={seedOf}
                 style={tv ? { top: CENTERS[round][i] - CARD_H / 2 } : undefined} />
             ))}
           </div>
@@ -47,12 +47,12 @@ function shortSeed(slot) {
   return (POOL_LETTER[pool] || pool[0]) + n
 }
 
-function Match({ g, index, seedOf, style }) {
+function Match({ g, seedOf, style }) {
   const played = g.scoreA != null && g.scoreB != null
   return (
     <div className="match" style={style}>
       <div className="match-head">
-        <span>{g.round === 'Round 1' || g.round === 'Final' ? g.round : `${g.round} ${index + 1}`}</span>
+        <span>{g.round}</span>
         <span className="game">Game {g.game}</span>
       </div>
       <Slot team={g.teamA} seed={seedOf[g.teamA]} score={g.scoreA} played={played} win={played && g.scoreA > g.scoreB} bye={g.round === 'Quarterfinal'} />
