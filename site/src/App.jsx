@@ -7,7 +7,7 @@ import { API_URL } from './config.js'
 const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 
 export default function App() {
-  const { data, error, fetchedAt } = useResults()
+  const { data, error, fetchedAt, loading, refresh } = useResults()
   const [tab, setTab] = useState('pools')
 
   if (!data) {
@@ -32,6 +32,11 @@ export default function App() {
           <button className={tab === 'bracket' ? 'active' : ''} onClick={() => setTab('bracket')}>
             Bracket
           </button>
+          {API_URL && (
+            <button className={`refresh ${loading ? 'spinning' : ''}`} onClick={refresh} disabled={loading} title="Refresh now" aria-label="Refresh now">
+              ↻
+            </button>
+          )}
         </nav>
       </header>
 
