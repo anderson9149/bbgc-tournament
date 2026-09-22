@@ -1,0 +1,60 @@
+{
+  "year": 2024,
+  "source": "history/2024-poster.jpg (hand-written results poster)",
+  "notes": [
+    "Pool scores transcribed from the poster and cross-checked against the win/loss tallies and the points-for totals written beside the standings.",
+    "Yellow round 5, Sparty Devils vs Inches From Glory, was not played.",
+    "Bracket results are winners only; scores recorded as 1-0.",
+    "Orange finished with a 4-way tie at 3-2; the bracket used Long Ballz as the 3rd seed (Seed Override = 3)."
+  ],
+  "teams": {
+    "Orange": ["Brothers Boor", "Long Ballz", "White Zin", "Vandalay Industries", "Bocce Balboa", "D-Boccery"],
+    "Red": ["Hawkeye", "Hot Sauce", "The M.J.s", "Tyson's Micropenis", "Mickey Mitcher", "Joanie Loves Bocce"],
+    "Blue": ["Don Cuzzi", "Laces Out", "Hide Your Moms", "The Seekers", "Moist Baguette", "Banana in Your Tailpipe"],
+    "Yellow": ["Brainerdbergs", "Gumby Dammit", "Guns n Rollers", "Sister Swap", "Sparty Devils", "Inches From Glory"]
+  },
+  "overrides": { "Long Ballz": 3 },
+  "poolGames": {
+    "Orange": [
+      [1, 2, 1, 17, 12], [1, 3, 6, 20, 18], [1, 4, 5, 14, 15],
+      [2, 3, 4, 11, 17], [2, 6, 1, 19, 12], [2, 2, 5, 19, 12],
+      [3, 6, 4, 15, 11], [3, 2, 3, 10, 25], [3, 1, 5, 17, 11],
+      [4, 4, 1, 17, 24], [4, 5, 3, 3, 28],  [4, 6, 2, 12, 17],
+      [5, 5, 6, 13, 19], [5, 1, 3, 18, 13], [5, 4, 2, 14, 12]
+    ],
+    "Red": [
+      [1, 2, 1, 10, 16], [1, 3, 6, 11, 16], [1, 4, 5, 16, 9],
+      [2, 3, 4, 13, 15], [2, 6, 1, 14, 12], [2, 2, 5, 14, 13],
+      [3, 6, 4, 14, 10], [3, 2, 3, 17, 8],  [3, 1, 5, 17, 9],
+      [4, 4, 1, 17, 13], [4, 5, 3, 17, 14], [4, 6, 2, 15, 11],
+      [5, 5, 6, 17, 14], [5, 1, 3, 17, 11], [5, 4, 2, 6, 24]
+    ],
+    "Blue": [
+      [1, 2, 1, 13, 9],  [1, 3, 6, 22, 5],  [1, 4, 5, 15, 5],
+      [2, 3, 4, 14, 18], [2, 6, 1, 20, 11], [2, 2, 5, 22, 7],
+      [3, 6, 4, 13, 17], [3, 2, 3, 10, 29], [3, 1, 5, 20, 8],
+      [4, 4, 1, 16, 14], [4, 5, 3, 16, 17], [4, 6, 2, 14, 14],
+      [5, 5, 6, 14, 13], [5, 1, 3, 13, 19], [5, 4, 2, 15, 14]
+    ],
+    "Yellow": [
+      [1, 2, 1, 20, 10], [1, 3, 6, 18, 12], [1, 4, 5, 24, 8],
+      [2, 3, 4, 10, 16], [2, 6, 1, 19, 6],  [2, 2, 5, 19, 12],
+      [3, 6, 4, 13, 17], [3, 2, 3, 19, 11], [3, 1, 5, 9, 15],
+      [4, 4, 1, 22, 6],  [4, 5, 3, 6, 23],  [4, 6, 2, 9, 18],
+      [5, 5, 6, null, null], [5, 1, 3, 9, 13], [5, 4, 2, 10, 22]
+    ]
+  },
+  "bracket": [
+    { "game": 1,  "a": "Hawkeye",            "b": "Guns n Rollers", "winner": "a" },
+    { "game": 2,  "a": "Hide Your Moms",     "b": "Laces Out",      "winner": "a" },
+    { "game": 3,  "a": "D-Boccery",          "b": "Hot Sauce",      "winner": "a" },
+    { "game": 4,  "a": "Sister Swap",        "b": "Long Ballz",     "winner": "b" },
+    { "game": 5,  "a": "Gumby Dammit",       "b": "W1",             "winner": "b" },
+    { "game": 6,  "a": "White Zin",          "b": "W2",             "winner": "a" },
+    { "game": 7,  "a": "The Seekers",        "b": "W3",             "winner": "a" },
+    { "game": 8,  "a": "Joanie Loves Bocce", "b": "W4",             "winner": "a" },
+    { "game": 9,  "a": "W5",                 "b": "W6",             "winner": "b" },
+    { "game": 10, "a": "W7",                 "b": "W8",             "winner": "a" },
+    { "game": 11, "a": "W9",                 "b": "W10",            "winner": "a" }
+  ]
+}
