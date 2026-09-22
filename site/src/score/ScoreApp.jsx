@@ -1,10 +1,29 @@
 import { useEffect, useRef, useState } from 'react'
 import { API_URL } from '../config.js'
-import { fetchGame, saveHole, finishGame, login } from './api.js'
+import { fetchTournament, fetchGame, saveHole, finishGame, login } from './api.js'
 
 const HOLES = 18
+const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 const PIN_KEY = 'bbgc-pin'
 const BASE = import.meta.env.BASE_URL
+
+// Pool-mates plus knockout opponents, worked out from the results payload.
+function opponentsFor(tour, team) {
+  let pool = null
+  const teams = []
+  POOLS.forEach((p) => tour.pools[p]?.standings.forEach((r) => {
+    if (!r.team) return
+    teams.push({ team: r.team, pool: p })
+    if (r.team === team) pool = p
+  }))
+  const mates = teams.filter((x) => x.pool === pool && x.team !== team).map((x) => x.team)
+  const bracket = []
+  tour.bracket.forEach((g) => {
+    if (g.teamA === team && g.teamB) bracket.push(g.teamB)
+    if (g.teamB === team && g.teamA) bracket.push(g.teamA)
+  })
+  return { pool: mates, bracket: [...new Set(bracket)].filter((t) => !mates.includes(t)) }
+}
 
 export default function ScoreApp() {
   const [game, setGame] = useState(null) // null = setup screen
@@ -34,23 +53,41 @@ function Setup({ onStart, onYear }) {
   const [b, setB] = useState('')
   const [existing, setExisting] = useState(null)
   const [busy, setBusy] = useState(false)
+  const [status, setStatus] = useState('')
   const [err, setErr] = useState(null)
   const a = me?.team || ''
 
-  // PIN -> team + opponents. Runs once 4 digits are in (and on load if remembered).
+  // Start downloading the team data right away, in the background, so it's
+  // (usually) already here by the time a PIN has been typed.
+  const tourRef = useRef(null)
+  const loadTournament = () => {
+    if (!tourRef.current) tourRef.current = fetchTournament().catch((e) => { tourRef.current = null; throw e })
+    return tourRef.current
+  }
+  useEffect(() => { loadTournament().catch(() => {}) }, []) // eslint-disable-line
+
+  // PIN -> team (checked by the sheet), then opponents from the loaded data.
   useEffect(() => {
     setMe(null); setB(''); setErr(null)
     if (pin.length !== 4) return
     let cancelled = false
-    setBusy(true)
-    login(pin)
-      .then((who) => {
+    setBusy(true); setStatus('Checking PIN…')
+    ;(async () => {
+      try {
+        const who = await login(pin)
         if (cancelled) return
-        setMe(who); onYear(who.year)
+        setStatus('Loading teams…')
+        const tour = await loadTournament()
+        if (cancelled) return
+        setMe({ ...who, opponents: opponentsFor(tour, who.team) })
+        onYear(tour.year || who.year)
         try { localStorage.setItem(PIN_KEY, pin) } catch {}
-      })
-      .catch((e) => { if (!cancelled) setErr(e.message) })
-      .finally(() => { if (!cancelled) setBusy(false) })
+      } catch (e) {
+        if (!cancelled) setErr(e.message)
+      } finally {
+        if (!cancelled) { setBusy(false); setStatus('') }
+      }
+    })()
     return () => { cancelled = true }
   }, [pin]) // eslint-disable-line
 
@@ -79,7 +116,7 @@ function Setup({ onStart, onYear }) {
         <input type="password" inputMode="numeric" pattern="[0-9]*" maxLength={4} autoComplete="off" placeholder="••••" autoFocus={!pin}
           value={pin} onChange={(e) => setPin(e.target.value.replace(/\D/g, ''))} disabled={!!me} />
       </label>
-      {busy && !me && <p className="muted center">Checking…</p>}
+      {busy && !me && <p className="muted center">{status}</p>}
 
       {me && (
         <>
