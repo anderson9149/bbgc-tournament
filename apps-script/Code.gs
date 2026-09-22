@@ -197,12 +197,35 @@ function setupTicker_(ss) {
 
 // ------------------------------------------------------- bracket seeding
 
+// Guards: never touch a past year's bracket, and never seed over existing data.
+function isPastYear_(ss) {
+  var m = ss.getName().match(FILE_PATTERN);
+  return !!m && parseInt(m[1], 10) < new Date().getFullYear();
+}
+
+function bracketHasData_(ss) {
+  var vals = ss.getSheetByName('BracketGames').getRange(2, 3, BRACKET.length, 4).getValues();
+  return vals.some(function (r, i) {
+    var g = BRACKET[i];
+    return (g.a.charAt(0) !== 'W' && r[0] !== '') || (g.b.charAt(0) !== 'W' && r[1] !== '') || r[2] !== '' || r[3] !== '';
+  });
+}
+
 function seedBracket() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ui = SpreadsheetApp.getUi();
+  if (isPastYear_(ss)) {
+    ui.alert('This is a past year. Its bracket is history — edit it by hand if something is wrong.');
+    return;
+  }
+  if (bracketHasData_(ss)) {
+    ui.alert('The bracket already has teams or scores in it, so nothing was changed.\n\n' +
+             'To start over, run BBGC > Reset Bracket first (it will ask you to confirm), then seed again.');
+    return;
+  }
   var data = readData_(ss);
   var standings = computeStandings_(data);
   var incomplete = POOLS.filter(function (p) { return !standings[p].complete; });
-  var ui = SpreadsheetApp.getUi();
   if (incomplete.length) {
     var resp = ui.alert(
       'Pool play is not finished for: ' + incomplete.join(', ') + '.\n\nSeed the bracket anyway?',
@@ -226,7 +249,16 @@ function seedName_(standings, ref) {
 }
 
 function resetBracket() {
-  resetBracket_(SpreadsheetApp.getActiveSpreadsheet());
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ui = SpreadsheetApp.getUi();
+  if (isPastYear_(ss)) {
+    ui.alert('This is a past year. Its bracket is history — edit it by hand if something is wrong.');
+    return;
+  }
+  if (!bracketHasData_(ss)) { ui.alert('The bracket is already empty.'); return; }
+  var resp = ui.alert('Erase ALL bracket teams and scores?', 'This cannot be undone (except via File > Version history).', ui.ButtonSet.YES_NO);
+  if (resp !== ui.Button.YES) return;
+  resetBracket_(ss);
 }
 
 function resetBracket_(ss) {
