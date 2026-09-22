@@ -75,7 +75,7 @@ function onOpen() {
     .addSeparator()
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addItem('Refresh year list', 'refreshYearList')
-    .addItem('Import this year from GitHub history', 'importHistory')
+    .addItem('Import a past year from GitHub history…', 'importHistory')
     .addToUi();
 }
 
@@ -432,22 +432,29 @@ function clearData_(ss) {
 
 // ------------------------------------------------------- history import
 
-// Fills this sheet from history/<year>.json in the GitHub repo (transcribed
-// past results). Overwrites Teams, PoolGames and BracketGames; keeps PINs.
+// Fills a year's sheet from history/<year>.json in the GitHub repo (transcribed
+// past results). Run from any sheet; it asks which year and opens that file.
+// Overwrites Teams, PoolGames and BracketGames there; keeps PINs.
 function importHistory() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
   var ui = SpreadsheetApp.getUi();
-  var m = ss.getName().match(FILE_PATTERN);
-  if (!m) { ui.alert('Rename this sheet to ' + FILE_PREFIX + '<year> first.'); return; }
-  var year = m[1];
+  var years = yearFiles_(true);
+  var list = Object.keys(years).sort();
+  var thisYear = new Date().getFullYear();
+  var ask = ui.prompt('Import a past year', 'Which year? (' + list.join(', ') + ')', ui.ButtonSet.OK_CANCEL);
+  if (ask.getSelectedButton() !== ui.Button.OK) return;
+  var year = ask.getResponseText().trim();
+  if (!years[year]) { ui.alert('No sheet named ' + FILE_PREFIX + year + ' in ' + FOLDER_NAME + '.'); return; }
+  if (parseInt(year, 10) >= thisYear) { ui.alert('Only past years can be imported.'); return; }
+
   var res = UrlFetchApp.fetch(HISTORY_URL + year + '.json', { muteHttpExceptions: true });
-  if (res.getResponseCode() !== 200) { ui.alert('No history file for ' + year + ' in the repo (history/' + year + '.json).'); return; }
+  if (res.getResponseCode() !== 200) { ui.alert('No history file for ' + year + ' in the repo (history/' + year + '.json). Push it to GitHub first.'); return; }
   var h = JSON.parse(res.getContentText());
   var resp = ui.alert('Import ' + year + ' results?',
-    'This replaces everything in Teams (except PINs), PoolGames and BracketGames with the transcribed ' + year + ' results.',
-    ui.ButtonSet.YES_NO);
+    'This replaces everything in Teams (except PINs), PoolGames and BracketGames of ' + FILE_PREFIX + year +
+    ' with the transcribed results.', ui.ButtonSet.YES_NO);
   if (resp !== ui.Button.YES) return;
 
+  var ss = SpreadsheetApp.openById(years[year]);
   // Teams: name, pool, seed override (column D = PIN untouched)
   var teams = [];
   POOLS.forEach(function (p) {

@@ -51,7 +51,7 @@ no redeploy.
 appears on that year's Knockout Round page next to the Final. Any size/orientation; ~1000px is plenty.
 
 **Importing a past year:** transcribe it into `history/<year>.json` (see `history/2024.json`), push,
-then open that year's sheet and run **BBGC → Import this year from GitHub history**. (Or run
+then from the current year's sheet run **BBGC → Import a past year from GitHub history…** and type the year. (Or run
 `python3 history/make-paste.py <year>` and paste the blocks by hand.) Seed Bracket and Reset Bracket
 refuse to run on past years, so imported brackets can't be clobbered.
 
