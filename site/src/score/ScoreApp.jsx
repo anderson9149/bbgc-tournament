@@ -27,6 +27,7 @@ export default function ScoreApp() {
       {error && <p className="error">{error}</p>}
       {!tour && !error && <p className="muted center">Loading teams…</p>}
       {tour && !game && <Setup tour={tour} onStart={setGame} />}
+      {game && <div className="page-title">Score Card</div>}
       {game && <Scoring initial={game} onExit={() => setGame(null)} />}
     </main>
   )
@@ -185,8 +186,8 @@ function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
   return (
     <section className="card scoring">
       <div className="hole-row">
-        <div className="hole-title">Hole {hole}</div>
         <img className="hole-sign" src={`${import.meta.env.BASE_URL}holes/${String(hole).padStart(2, '0')}.webp`} alt="" />
+        <div className="hole-title">Hole {hole}</div>
       </div>
       <div className="teams">
         <div className={winner === 'A' ? 'active' : ''}><span className="name">{game.teamA}</span><span className="pts">{scoreA}</span></div>
