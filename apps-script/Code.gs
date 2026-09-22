@@ -246,7 +246,8 @@ function seedBracket() {
 
 function seedName_(standings, ref) {
   var parts = ref.split('#');
-  var row = standings[parts[0]].rows[parseInt(parts[1], 10) - 1];
+  var pool = standings[parts[0]];
+  var row = pool && pool.rows[parseInt(parts[1], 10) - 1];
   return row ? row.team : '';
 }
 
@@ -319,9 +320,16 @@ function num_(v) {
 
 // ------------------------------------------------------------- standings
 
+// Pool names as they appear in the Teams tab, in order (falls back to POOLS).
+function poolsOf_(data) {
+  var seen = [];
+  data.teams.forEach(function (t) { if (t.pool && seen.indexOf(t.pool) < 0) seen.push(t.pool); });
+  return seen.length ? seen : POOLS;
+}
+
 function computeStandings_(data) {
   var out = {};
-  POOLS.forEach(function (pool) {
+  poolsOf_(data).forEach(function (pool) {
     var stats = {};
     data.teams.filter(function (t) { return t.pool === pool; }).forEach(function (t) {
       stats[t.team] = { team: t.team, w: 0, l: 0, pf: 0, pa: 0, diff: 0, override: t.override };
@@ -455,25 +463,30 @@ function importHistory() {
   if (resp !== ui.Button.YES) return;
 
   var ss = SpreadsheetApp.openById(years[year]);
+  // Pools are whatever the JSON names them (e.g. 2023 had Green instead of Yellow).
+  var pools = Object.keys(h.teams);
+  var tsh = ss.getSheetByName('Teams');
+  tsh.getRange(2, 2, 24, 1).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(pools, true).build());
+
   // Teams: name, pool, seed override (column D = PIN untouched)
   var teams = [];
-  POOLS.forEach(function (p) {
+  pools.forEach(function (p) {
     (h.teams[p] || []).forEach(function (t) { teams.push([t, p, (h.overrides || {})[t] || '']); });
   });
   while (teams.length < 24) teams.push(['', '', '']);
-  ss.getSheetByName('Teams').getRange(2, 1, 24, 3).setValues(teams);
+  tsh.getRange(2, 1, 24, 3).setValues(teams);
 
-  // PoolGames: round + slots in B:D, scores in G:H, in the sheet's pool order
-  var sched = [], scores = [];
-  POOLS.forEach(function (p) {
+  // PoolGames: pool in A, round + slots in B:D, scores in G:H
+  var rows = [], scores = [];
+  pools.forEach(function (p) {
     var games = (h.poolGames[p] || []).slice().sort(function (x, y) { return x[0] - y[0]; });
     games.forEach(function (g) {
-      sched.push([g[0], g[1], g[2]]);
+      rows.push([p, g[0], g[1], g[2]]);
       scores.push([g[3] === null ? '' : g[3], g[4] === null ? '' : g[4]]);
     });
   });
   var pg = ss.getSheetByName('PoolGames');
-  pg.getRange(2, 2, sched.length, 3).setValues(sched);
+  pg.getRange(2, 1, rows.length, 4).setValues(rows);
   pg.getRange(2, 7, scores.length, 2).setValues(scores);
 
   // BracketGames: typed names for the seeded slots, 1-0 / 0-1 for winners
@@ -754,7 +767,7 @@ function buildPayload_(ss) {
   var data = readData_(ss);
   var standings = computeStandings_(data);
   var pools = {};
-  POOLS.forEach(function (pool) {
+  poolsOf_(data).forEach(function (pool) {
     pools[pool] = {
       standings: standings[pool].rows,
       complete: standings[pool].complete,

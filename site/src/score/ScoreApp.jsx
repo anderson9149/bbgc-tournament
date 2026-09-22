@@ -3,7 +3,6 @@ import { API_URL } from '../config.js'
 import { fetchTournament, fetchGame, saveHole, finishGame, login } from './api.js'
 
 const HOLES = 18
-const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 const PIN_KEY = 'bbgc-pin'
 const BASE = import.meta.env.BASE_URL
 
@@ -11,7 +10,7 @@ const BASE = import.meta.env.BASE_URL
 function opponentsFor(tour, team) {
   let pool = null
   const teams = []
-  POOLS.forEach((p) => tour.pools[p]?.standings.forEach((r) => {
+  Object.keys(tour.pools).forEach((p) => tour.pools[p].standings.forEach((r) => {
     if (!r.team) return
     teams.push({ team: r.team, pool: p })
     if (r.team === team) pool = p

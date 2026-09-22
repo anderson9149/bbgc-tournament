@@ -8,7 +8,6 @@ import { API_URL as CONFIGURED_URL } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
 
-const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 const BASE = import.meta.env.BASE_URL
 
 export default function App() {
@@ -48,7 +47,7 @@ export default function App() {
       {!data ? (
         <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
       ) : tab === 'group' ? (
-        <Pools pools={data.pools} order={POOLS} tv={isTV} />
+        <Pools pools={data.pools} order={Object.keys(data.pools)} tv={isTV} />
       ) : (
         <Bracket games={data.bracket} pools={data.pools} tv={isTV} year={data.year} />
       )}

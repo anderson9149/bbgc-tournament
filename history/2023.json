@@ -1,0 +1,66 @@
+{
+  "year": 2023,
+  "source": "history/2023-poster.jpg (hand-written results poster)",
+  "notes": [
+    "Pools were labelled A/Orange, B/Green, C/Blue, D/Red.",
+    "Pool play was only partly recorded: Orange 12 of 15 games, Blue 8, Red 4, Green 0 (one winner circled, no score).",
+    "Games with a circled winner but no score are entered as 1-0.",
+    "Seed Overrides pin each pool's top 3 to the bracket as it was actually played, since the recorded games alone can't reproduce it.",
+    "Bracket results are winners only; scores recorded as 1-0. Bros Boor beat Don Cuzzi in the final."
+  ],
+  "teams": {
+    "Orange": ["Hawkeyes", "The Big LeBocce", "Don Cuzzi", "Loh Hang Bawls", "Long Ballz", "Return of the Mesh"],
+    "Green": ["Smug Champs", "Joanie Loves Bocce", "Hot Sauce", "Blues Bros", "Sparty Devils", "Holy Rollers"],
+    "Blue": ["Muck Fichigan", "White Zin", "Bros Boor", "Sister Swap", "Grand Lakes", "Here 4 Beer"],
+    "Red": ["Brainardbergs", "The Seekers", "Ghetto Ballers", "Loose Meats", "Vandelay", "Goldylichs"]
+  },
+  "overrides": {
+    "The Big LeBocce": 1, "Don Cuzzi": 2, "Loh Hang Bawls": 3,
+    "Holy Rollers": 1, "Sparty Devils": 2, "Hot Sauce": 3,
+    "White Zin": 1, "Sister Swap": 2, "Bros Boor": 3,
+    "Loose Meats": 1, "Ghetto Ballers": 2, "The Seekers": 3
+  },
+  "poolGames": {
+    "Orange": [
+      [1, 2, 1, 18, 14], [1, 3, 6, 16, 18], [1, 4, 5, 17, 14],
+      [2, 3, 4, null, null], [2, 6, 1, 17, 10], [2, 2, 5, 27, 8],
+      [3, 6, 4, null, null], [3, 2, 3, 13, 10], [3, 1, 5, 15, 9],
+      [4, 4, 1, 14, 17], [4, 5, 3, null, null], [4, 6, 2, 8, 20],
+      [5, 5, 6, 17, 10], [5, 1, 3, 11, 19], [5, 4, 2, 17, 11]
+    ],
+    "Green": [
+      [1, 2, 1, 1, 0], [1, 3, 6, null, null], [1, 4, 5, null, null],
+      [2, 3, 4, null, null], [2, 6, 1, null, null], [2, 2, 5, null, null],
+      [3, 6, 4, null, null], [3, 2, 3, null, null], [3, 1, 5, null, null],
+      [4, 4, 1, null, null], [4, 5, 3, null, null], [4, 6, 2, null, null],
+      [5, 5, 6, null, null], [5, 1, 3, null, null], [5, 4, 2, null, null]
+    ],
+    "Blue": [
+      [1, 2, 1, 17, 12], [1, 3, 6, null, null], [1, 4, 5, 17, 10],
+      [2, 3, 4, 13, 15], [2, 6, 1, null, null], [2, 2, 5, 21, 9],
+      [3, 6, 4, 6, 17], [3, 2, 3, 15, 13], [3, 1, 5, null, null],
+      [4, 4, 1, 10, 20], [4, 5, 3, null, null], [4, 6, 2, null, null],
+      [5, 5, 6, null, null], [5, 1, 3, null, null], [5, 4, 2, 12, 12]
+    ],
+    "Red": [
+      [1, 2, 1, 22, 8], [1, 3, 6, 12, 12], [1, 4, 5, 1, 0],
+      [2, 3, 4, null, null], [2, 6, 1, null, null], [2, 2, 5, 24, 16],
+      [3, 6, 4, null, null], [3, 2, 3, null, null], [3, 1, 5, null, null],
+      [4, 4, 1, null, null], [4, 5, 3, null, null], [4, 6, 2, null, null],
+      [5, 5, 6, 8, 13], [5, 1, 3, null, null], [5, 4, 2, null, null]
+    ]
+  },
+  "bracket": [
+    { "game": 1,  "a": "The Seekers",    "b": "Don Cuzzi",      "winner": "b" },
+    { "game": 2,  "a": "Hot Sauce",      "b": "Ghetto Ballers", "winner": "a" },
+    { "game": 3,  "a": "Loh Hang Bawls", "b": "Sparty Devils",  "winner": "a" },
+    { "game": 4,  "a": "Bros Boor",      "b": "Sister Swap",    "winner": "a" },
+    { "game": 5,  "a": "White Zin",      "b": "W1",             "winner": "b" },
+    { "game": 6,  "a": "Holy Rollers",   "b": "W2",             "winner": "b" },
+    { "game": 7,  "a": "The Big LeBocce","b": "W3",             "winner": "a" },
+    { "game": 8,  "a": "Loose Meats",    "b": "W4",             "winner": "b" },
+    { "game": 9,  "a": "W5",             "b": "W6",             "winner": "a" },
+    { "game": 10, "a": "W7",             "b": "W8",             "winner": "b" },
+    { "game": 11, "a": "W9",             "b": "W10",            "winner": "b" }
+  ]
+}
