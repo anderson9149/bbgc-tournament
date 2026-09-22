@@ -9,10 +9,9 @@ const params = new URLSearchParams(window.location.search)
 const API_URL = params.has('sample') ? '' : CONFIGURED_URL
 const sample = params.get('sample') === 'full' ? sampleFull : sampleLive
 
-// Polls the Apps Script endpoint. With no API_URL configured it serves the
-// bundled sample data so the site can be developed without a sheet.
+// Polls the Apps Script endpoint for one tournament year (null = latest).
 // `refresh()` fetches immediately and restarts the polling timer.
-export function useResults() {
+export function useResults(year) {
   const [state, setState] = useState({ data: API_URL ? null : sample, error: null, fetchedAt: null })
   const [loading, setLoading] = useState(false)
   const timer = useRef(null)
@@ -21,16 +20,18 @@ export function useResults() {
     if (!API_URL) return
     setLoading(true)
     try {
-      const res = await fetch(API_URL, { cache: 'no-store' })
+      const url = year ? `${API_URL}?year=${encodeURIComponent(year)}` : API_URL
+      const res = await fetch(url, { cache: 'no-store' })
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
+      if (data.error) throw new Error(data.error)
       setState({ data, error: null, fetchedAt: new Date() })
     } catch (err) {
       setState((s) => ({ ...s, error: err.message }))
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [year])
 
   const schedule = useCallback(() => {
     clearInterval(timer.current)

@@ -12,8 +12,18 @@ const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 const BASE = import.meta.env.BASE_URL
 
 export default function App() {
-  const { data, error, fetchedAt, loading, refresh } = useResults()
+  // ?year=2024 deep-links a past tournament; otherwise the latest year.
+  const [year, setYear] = useState(() => new URLSearchParams(window.location.search).get('year'))
+  const { data, error, fetchedAt, loading, refresh } = useResults(year)
   const [tab, setTab] = useState('group')
+
+  const changeYear = (y) => {
+    setYear(y)
+    const url = new URL(window.location)
+    url.searchParams.set('year', y)
+    window.history.replaceState(null, '', url)
+  }
+  const years = data?.years?.length ? [...data.years].sort((a, b) => b - a) : null
   // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
   const scale = useStageScale()
@@ -28,6 +38,11 @@ export default function App() {
         <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
           <span className="icon">↻</span> Refresh
         </button>
+        {years && (
+          <select className="year" value={data.year} onChange={(e) => changeYear(e.target.value)} aria-label="Tournament year">
+            {years.map((y) => <option key={y} value={y}>{y}</option>)}
+          </select>
+        )}
       </nav>
 
       {!data ? (

@@ -30,6 +30,23 @@ from each pool into a 12-team single-elimination bracket.
 When `apps-script/Code.gs` changes: paste the new code over the old in Apps Script, save, then
 **Deploy → Manage deployments → ✎ → Version: New version → Deploy**. The URL stays the same.
 
+## Years
+
+Every tournament is one Google Sheet named `BBGC_ScoreCardResults_<year>` in the Drive folder
+`BBGC_ScoreCards`. The deployed script (bound to one of them) reads whichever year the site asks
+for (`?year=2024`); the site's dropdown lists every year it finds. Default is the latest year.
+
+**One-time setup:** in the current year's sheet, **BBGC → Set up year files**. This renames the sheet
+to the current year, moves it into the folder, and creates blank copies for every earlier year back
+to 2016. (It will ask for Drive permission the first time.)
+
+**Each new year:** File → Make a copy of last year's sheet, name it `BBGC_ScoreCardResults_<year>`,
+keep it in the folder, and clear the old data (or run **BBGC → Reset Bracket** and clear the Teams /
+scores by hand). It shows up in the dropdown within 5 minutes — no code change, no redeploy.
+
+**Past years with only win/loss records** (no scores): enter each win as `1`–`0`. Standings will be
+right; the +/− column just won't mean much.
+
 ## Running the tournament
 
 1. **Teams tab** — type the 24 team names (6 per pool; pools are pre-filled).

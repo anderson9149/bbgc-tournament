@@ -8,10 +8,21 @@
  *             pool matchups.
  *   doGet()   The JSON endpoint the website reads. Deploy > New deployment >
  *             Web app, "Execute as: Me", "Who has access: Anyone".
+ *             ?year=2024 selects a year; the default is the latest year.
+ *
+ * Years: every Google Sheet in the Drive folder BBGC_ScoreCards named
+ * BBGC_ScoreCardResults_<year> is one tournament. The deployed script (bound
+ * to one of them) reads whichever year the site asks for.
  *
  * A "BBGC" menu is added to the sheet with "Seed Bracket" (fills round 1
- * from pool standings) and "Reset Bracket".
+ * from pool standings), "Reset Bracket" and "Set up year files" (one-time:
+ * renames/moves this sheet and creates blank copies for earlier years).
  */
+
+var FOLDER_NAME = 'BBGC_ScoreCards';
+var FILE_PREFIX = 'BBGC_ScoreCardResults_';
+var FILE_PATTERN = /^BBGC_ScoreCardResults_(\d{4})$/;
+var FIRST_YEAR = 2016;
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
 
@@ -50,6 +61,8 @@ function onOpen() {
     .createMenu('BBGC')
     .addItem('Seed Bracket from pool standings', 'seedBracket')
     .addItem('Reset Bracket', 'resetBracket')
+    .addSeparator()
+    .addItem('Set up year files (one time)', 'setupYearFiles')
     .addToUi();
 }
 
@@ -199,7 +212,10 @@ function seedName_(standings, ref) {
 }
 
 function resetBracket() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  resetBracket_(SpreadsheetApp.getActiveSpreadsheet());
+}
+
+function resetBracket_(ss) {
   var sh = ss.getSheetByName('BracketGames');
   BRACKET.forEach(function (g, i) {
     var r = i + 2;
@@ -294,20 +310,97 @@ function applyOverrides_(rows) {
   return rest;
 }
 
+// ------------------------------------------------------------ years
+
+function folder_() {
+  var it = DriveApp.getFoldersByName(FOLDER_NAME);
+  return it.hasNext() ? it.next() : DriveApp.createFolder(FOLDER_NAME);
+}
+
+// { '2024': spreadsheetId, ... } from the Drive folder, plus this sheet.
+function yearFiles_(noCache) {
+  var cache = CacheService.getScriptCache();
+  var cached = noCache ? null : cache.get('years');
+  if (cached) return JSON.parse(cached);
+  var map = {};
+  var it = DriveApp.getFoldersByName(FOLDER_NAME);
+  if (it.hasNext()) {
+    var files = it.next().getFilesByType(MimeType.GOOGLE_SHEETS);
+    while (files.hasNext()) {
+      var f = files.next();
+      var m = f.getName().match(FILE_PATTERN);
+      if (m) map[m[1]] = f.getId();
+    }
+  }
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var mine = ss.getName().match(FILE_PATTERN);
+  if (mine && !map[mine[1]]) map[mine[1]] = ss.getId();
+  if (!Object.keys(map).length) map[String(new Date().getFullYear())] = ss.getId();
+  cache.put('years', JSON.stringify(map), 300);
+  return map;
+}
+
+// One-time: rename this sheet to the current year, move it into the folder,
+// and create blank copies for every earlier year back to FIRST_YEAR.
+function setupYearFiles() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var file = DriveApp.getFileById(ss.getId());
+  var folder = folder_();
+  var m = ss.getName().match(FILE_PATTERN);
+  var year = m ? parseInt(m[1], 10) : new Date().getFullYear();
+  if (!m) ss.rename(FILE_PREFIX + year);
+  file.moveTo(folder);
+
+  var existing = yearFiles_(true);
+  var created = [];
+  for (var y = FIRST_YEAR; y < year; y++) {
+    if (existing[y]) continue;
+    var copy = file.makeCopy(FILE_PREFIX + y, folder);
+    clearData_(SpreadsheetApp.openById(copy.getId()));
+    created.push(y);
+  }
+  CacheService.getScriptCache().remove('years');
+  SpreadsheetApp.getUi().alert(
+    'This sheet is now ' + ss.getName() + ' in the folder ' + FOLDER_NAME + '.\n' +
+    (created.length ? 'Created blank sheets for: ' + created.join(', ') : 'All earlier years already exist.')
+  );
+}
+
+// Empty a copied sheet: team names, overrides, scores, bracket, ticker.
+function clearData_(ss) {
+  ss.getSheetByName('Teams').getRange(2, 1, 24, 1).clearContent();
+  ss.getSheetByName('Teams').getRange(2, 3, 24, 1).clearContent();
+  ss.getSheetByName('PoolGames').getRange(2, 7, 60, 2).clearContent();
+  resetBracket_(ss);
+  var t = ss.getSheetByName(TICKER_SHEET);
+  if (t) t.clearContents();
+}
+
 // ------------------------------------------------------------------ API
 
-function doGet() {
+function doGet(e) {
+  var years = yearFiles_();
+  var list = Object.keys(years).sort();
+  var year = (e && e.parameter && e.parameter.year) || list[list.length - 1];
   var cache = CacheService.getScriptCache();
-  var cached = cache.get('payload');
+  var key = 'payload:' + year;
+  var cached = cache.get(key);
   if (!cached) {
-    cached = JSON.stringify(buildPayload_());
-    cache.put('payload', cached, 10); // seconds
+    var payload;
+    if (!years[year]) {
+      payload = { error: 'No results sheet for ' + year, years: list.map(Number) };
+    } else {
+      payload = buildPayload_(SpreadsheetApp.openById(years[year]));
+      payload.year = Number(year);
+      payload.years = list.map(Number);
+    }
+    cached = JSON.stringify(payload);
+    cache.put(key, cached, 10); // seconds
   }
   return ContentService.createTextOutput(cached).setMimeType(ContentService.MimeType.JSON);
 }
 
-function buildPayload_() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+function buildPayload_(ss) {
   var data = readData_(ss);
   var standings = computeStandings_(data);
   var pools = {};

@@ -26,6 +26,13 @@ button { font: inherit; cursor: pointer; }
   display: inline-flex; align-items: center; gap: 8px; transition: background 0.15s, color 0.15s;
 }
 .menu button.active { background: #fff; color: var(--red); border-color: #fff; }
+.menu select.year {
+  appearance: none; -webkit-appearance: none; border: 2px solid rgba(255, 255, 255, 0.75); background: rgba(0, 0, 0, 0.28); color: #fff;
+  padding: 10px 40px 10px 20px; border-radius: 999px; font: inherit; font-weight: 700; letter-spacing: 0.04em; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 16px center;
+}
+.menu select.year option { color: #000; }
 .menu button:disabled { opacity: 0.6; cursor: default; }
 .menu .icon { display: inline-block; font-size: 1.25em; line-height: 1; }
 .menu .loading .icon { animation: spin 1s linear infinite; }
@@ -125,8 +132,9 @@ button { font: inherit; cursor: pointer; }
   position: fixed; left: 50%; top: 50%; width: 1920px; height: 1080px;
   background-size: cover; background-position: center; overflow: hidden;
 }
-.tv .menu { position: absolute; top: 205px; left: 0; right: 0; gap: 14px; }
+.tv .menu { position: absolute; top: 205px; left: 0; right: 130px; gap: 14px; }
 .tv .menu button { font-size: 20px; padding: 11px 24px; }
+.tv .menu select.year { font-size: 20px; padding: 11px 44px 11px 22px; }
 .tv .pools { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px; grid-template-rows: 1fr 1fr; }
 .tv .pool header { padding: 6px 18px; }
 .tv .pool h2 { font-size: 28px; }
@@ -172,6 +180,7 @@ button { font: inherit; cursor: pointer; }
 /* The title is baked into the top ~11.5% of the portrait image; keep content below it. */
 .mobile .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 200 + 8px); flex-wrap: wrap; gap: 8px; }
 .mobile .menu button { font-size: 13px; padding: 8px 14px; }
+.mobile .menu select.year { font-size: 13px; padding: 8px 34px 8px 14px; background-position: right 12px center; }
 .mobile .pools { grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
 .mobile .pool h2 { font-size: 1.1rem; }
 .mobile .pool th { font-size: 0.7rem; padding: 6px 3px; }
