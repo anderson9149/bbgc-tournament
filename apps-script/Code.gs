@@ -9,6 +9,12 @@
  *   doGet()   The JSON endpoint the website reads. Deploy > New deployment >
  *             Web app, "Execute as: Me", "Who has access: Anyone".
  *             ?year=2024 selects a year; the default is the latest year.
+ *             ?action=game&a=<team>&b=<team> returns one game's hole scores.
+ *   doPost()  Used by the scorekeeper page (site/score/). Body is JSON:
+ *             {action:'hole', year, a, b, hole, value} writes one hole
+ *             (value > 0 = team A scored, < 0 = team B scored, 0 = no score);
+ *             {action:'finish', year, a, b} marks the game done and copies the
+ *             final score into PoolGames or BracketGames.
  *
  * Years: every Google Sheet in the Drive folder BBGC_ScoreCards named
  * BBGC_ScoreCardResults_<year> is one tournament. The deployed script (bound
@@ -172,6 +178,8 @@ function setupBracketGames_(ss) {
 }
 
 var TICKER_SHEET = 'Ticker Messages';
+var HOLE_SHEET = 'HoleScores';
+var HOLES = 18;
 
 // One message per row in column A. Not cleared on re-run so messages survive.
 function setupTicker_(ss) {
@@ -376,12 +384,173 @@ function clearData_(ss) {
   if (t) t.clearContents();
 }
 
+// ------------------------------------------------------ hole scores
+
+// HoleScores: Team A | Team B | Score A | Score B | H1..H18 | Done | Updated
+var HOLE_COL = 5;                 // first hole column (E)
+var DONE_COL = HOLE_COL + HOLES;  // W
+var UPD_COL = DONE_COL + 1;       // X
+
+function holeSheet_(ss) {
+  var sh = ss.getSheetByName(HOLE_SHEET);
+  if (sh) return sh;
+  sh = ss.insertSheet(HOLE_SHEET);
+  var hdr = ['Team A', 'Team B', 'Score A', 'Score B'];
+  for (var h = 1; h <= HOLES; h++) hdr.push('H' + h);
+  hdr.push('Done', 'Updated');
+  header_(sh, 1, hdr);
+  sh.setColumnWidth(1, 200);
+  sh.setColumnWidth(2, 200);
+  for (var c = HOLE_COL; c < DONE_COL; c++) sh.setColumnWidth(c, 40);
+  return sh;
+}
+
+// Rows are keyed by the pair of teams in either order; `flipped` means the
+// stored row has them the other way round, so hole signs are inverted.
+function findGameRow_(sh, a, b) {
+  var last = sh.getLastRow();
+  if (last < 2) return null;
+  var vals = sh.getRange(2, 1, last - 1, 2).getValues();
+  for (var i = 0; i < vals.length; i++) {
+    if (vals[i][0] === a && vals[i][1] === b) return { row: i + 2, flipped: false };
+    if (vals[i][0] === b && vals[i][1] === a) return { row: i + 2, flipped: true };
+  }
+  return null;
+}
+
+function readGame_(ss, a, b) {
+  var sh = holeSheet_(ss);
+  var f = findGameRow_(sh, a, b);
+  var holes = [], done = false;
+  for (var h = 0; h < HOLES; h++) holes.push(null);
+  if (f) {
+    var row = sh.getRange(f.row, HOLE_COL, 1, HOLES + 1).getValues()[0];
+    holes = row.slice(0, HOLES).map(function (v) {
+      if (v === '' || v === null) return null;
+      var n = Number(v);
+      return f.flipped ? -n : n;
+    });
+    done = row[HOLES] === true;
+  }
+  var scoreA = 0, scoreB = 0;
+  holes.forEach(function (v) { if (v > 0) scoreA += v; else if (v < 0) scoreB += -v; });
+  return { teamA: a, teamB: b, holes: holes, scoreA: scoreA, scoreB: scoreB, done: done };
+}
+
+function writeHole_(ss, a, b, hole, value) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    var sh = holeSheet_(ss);
+    var f = findGameRow_(sh, a, b);
+    if (!f) {
+      var r = sh.getLastRow() + 1;
+      sh.getRange(r, 1, 1, 2).setValues([[a, b]]);
+      var first = colLetter_(HOLE_COL) + r, last = colLetter_(DONE_COL - 1) + r;
+      sh.getRange(r, 3).setFormula('=SUMIF(' + first + ':' + last + ',">0")');
+      sh.getRange(r, 4).setFormula('=-SUMIF(' + first + ':' + last + ',"<0")');
+      f = { row: r, flipped: false };
+    }
+    var v = (value === null || value === undefined) ? '' : (f.flipped ? -value : value);
+    sh.getRange(f.row, HOLE_COL + hole - 1).setValue(v);
+    sh.getRange(f.row, UPD_COL).setValue(new Date());
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function finishGame_(ss, a, b) {
+  var g = readGame_(ss, a, b);
+  var sh = holeSheet_(ss);
+  var f = findGameRow_(sh, a, b);
+  if (f) sh.getRange(f.row, DONE_COL).setValue(true);
+  g.done = true;
+  g.recordedIn = recordFinal_(ss, a, b, g.scoreA, g.scoreB);
+  return g;
+}
+
+// Copy a final score into the matching PoolGames or BracketGames row.
+// Returns the sheet name it wrote to, or null if the matchup isn't listed.
+function recordFinal_(ss, a, b, scoreA, scoreB) {
+  var targets = [
+    { name: 'PoolGames', teamCol: 5, scoreCol: 7, rows: 60 },
+    { name: 'BracketGames', teamCol: 3, scoreCol: 5, rows: BRACKET.length },
+  ];
+  for (var t = 0; t < targets.length; t++) {
+    var sh = ss.getSheetByName(targets[t].name);
+    if (!sh) continue;
+    var names = sh.getRange(2, targets[t].teamCol, targets[t].rows, 2).getValues();
+    for (var i = 0; i < names.length; i++) {
+      if (names[i][0] === a && names[i][1] === b) {
+        sh.getRange(i + 2, targets[t].scoreCol, 1, 2).setValues([[scoreA, scoreB]]);
+        return targets[t].name;
+      }
+      if (names[i][0] === b && names[i][1] === a) {
+        sh.getRange(i + 2, targets[t].scoreCol, 1, 2).setValues([[scoreB, scoreA]]);
+        return targets[t].name;
+      }
+    }
+  }
+  return null;
+}
+
+function colLetter_(n) {
+  var s = '';
+  while (n > 0) { var m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); }
+  return s;
+}
+
+function json_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+function spreadsheetForYear_(year) {
+  var years = yearFiles_();
+  var list = Object.keys(years).sort();
+  var y = year || list[list.length - 1];
+  return years[y] ? { year: Number(y), ss: SpreadsheetApp.openById(years[y]) } : null;
+}
+
+function doPost(e) {
+  try {
+    var body = JSON.parse(e.postData.contents);
+    var target = spreadsheetForYear_(body.year);
+    if (!target) return json_({ error: 'No results sheet for ' + body.year });
+    var a = String(body.a || '').trim(), b = String(body.b || '').trim();
+    if (!a || !b || a === b) return json_({ error: 'Two different teams are required' });
+    var game;
+    if (body.action === 'hole') {
+      var hole = Number(body.hole);
+      if (!(hole >= 1 && hole <= HOLES)) return json_({ error: 'Bad hole number' });
+      writeHole_(target.ss, a, b, hole, body.value === null ? null : Number(body.value));
+      game = readGame_(target.ss, a, b);
+    } else if (body.action === 'finish') {
+      game = finishGame_(target.ss, a, b);
+      CacheService.getScriptCache().remove('payload:' + target.year);
+    } else {
+      return json_({ error: 'Unknown action' });
+    }
+    game.year = target.year;
+    return json_(game);
+  } catch (err) {
+    return json_({ error: String(err && err.message || err) });
+  }
+}
+
 // ------------------------------------------------------------------ API
 
 function doGet(e) {
+  var p = (e && e.parameter) || {};
+  if (p.action === 'game') {
+    var target = spreadsheetForYear_(p.year);
+    if (!target) return json_({ error: 'No results sheet for ' + p.year });
+    var g = readGame_(target.ss, String(p.a || '').trim(), String(p.b || '').trim());
+    g.year = target.year;
+    return json_(g);
+  }
   var years = yearFiles_();
   var list = Object.keys(years).sort();
-  var year = (e && e.parameter && e.parameter.year) || list[list.length - 1];
+  var year = p.year || list[list.length - 1];
   var cache = CacheService.getScriptCache();
   var key = 'payload:' + year;
   var cached = cache.get(key);

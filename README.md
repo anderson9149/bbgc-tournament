@@ -6,6 +6,8 @@ from each pool into a 12-team single-elimination bracket.
 - **Data entry:** a Google Sheet (`Teams`, `PoolGames`, `BracketGames`, `Ticker Messages` tabs)
 - **API:** Google Apps Script `doGet()` in [`apps-script/Code.gs`](apps-script/Code.gs)
 - **Site:** React (Vite) in [`site/`](site), deployed to GitHub Pages on every push to `main`
+  - `/` — results (TV + mobile)
+  - `/score/` — scorekeeper page for phones, writes hole-by-hole scores back to the sheet
 
 ## One-time setup
 
@@ -49,6 +51,20 @@ appears on that year's Knockout Round page next to the Final. Any size/orientati
 
 **Past years with only win/loss records** (no scores): enter each win as `1`–`0`. Standings will be
 right; the +/− column just won't mean much.
+
+## Scorekeeper page
+
+`https://<user>.github.io/bbgc-tournament/score/` — give this link to whoever is keeping score.
+
+1. Pick your team, then the opponent (pool-mates, plus knockout opponents once the bracket is seeded).
+2. **Start Round.** Each hole: set the points with − / +, tap the team that scored, **Next**.
+   **Previous** goes back and shows what was saved so it can be corrected.
+3. After hole 18, **Finish Game** writes the final score into `PoolGames` or `BracketGames`, so
+   standings and the bracket on the results page update on their own.
+
+Every hole is saved to the `HoleScores` tab as it's entered (one row per game; positive = team A
+scored, negative = team B). Reopening a game resumes at the next unplayed hole. Add `?year=2025`
+to score into a different year's sheet.
 
 ## Running the tournament
 
