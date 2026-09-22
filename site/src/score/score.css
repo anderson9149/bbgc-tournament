@@ -35,6 +35,13 @@ button { font: inherit; cursor: pointer; }
 }
 .setup select option, .setup select optgroup { color: #000; }
 .setup select:disabled { opacity: 0.5; }
+.pin-row { margin-top: 12px; }
+.setup input {
+  width: 100%; font: inherit; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.4em; text-align: center; padding: 10px 16px; border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6); background: rgba(0, 0, 0, 0.3); color: #fff;
+}
+.setup input::placeholder { color: rgba(255, 255, 255, 0.4); letter-spacing: 0.4em; }
+.setup input:disabled { opacity: 0.5; }
 .vs { text-align: center; font-weight: 800; font-size: 1.2rem; margin: 14px 0; opacity: 0.9; }
 
 button.primary { background: #fff; color: var(--red); border: 0; border-radius: 999px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }

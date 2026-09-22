@@ -15,6 +15,8 @@
  *             (value > 0 = team A scored, < 0 = team B scored, 0 = no score);
  *             {action:'finish', year, a, b} marks the game done and copies the
  *             final score into PoolGames or BracketGames.
+ *             Writes must include team A's `pin` (Teams column D) when one is set;
+ *             {action:'verify', year, a, pin} checks a PIN without writing.
  *
  * Years: every Google Sheet in the Drive folder BBGC_ScoreCards named
  * BBGC_ScoreCardResults_<year> is one tournament. The deployed script (bound
@@ -67,6 +69,7 @@ function onOpen() {
     .createMenu('BBGC')
     .addItem('Seed Bracket from pool standings', 'seedBracket')
     .addItem('Reset Bracket', 'resetBracket')
+    .addItem('Assign team PINs', 'assignPins')
     .addSeparator()
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addToUi();
@@ -104,7 +107,7 @@ function header_(sh, row, values) {
 
 function setupTeams_(ss) {
   var sh = getOrCreate_(ss, 'Teams');
-  header_(sh, 1, ['Team', 'Pool', 'Seed Override']);
+  header_(sh, 1, ['Team', 'Pool', 'Seed Override', 'PIN']);
   var poolRule = SpreadsheetApp.newDataValidation().requireValueInList(POOLS, true).build();
   sh.getRange(2, 2, 24, 1).setDataValidation(poolRule);
   var seedRule = SpreadsheetApp.newDataValidation().requireValueInList(['1', '2', '3', '4', '5', '6'], true).setAllowInvalid(false).build();
@@ -117,6 +120,7 @@ function setupTeams_(ss) {
     .setFontStyle('italic').setFontColor('#666666');
   sh.setColumnWidth(1, 220);
   sh.setColumnWidth(3, 120);
+  sh.getRange(2, 4, 24, 1).setNumberFormat('000');
 }
 
 function setupPoolGames_(ss) {
@@ -236,10 +240,10 @@ function resetBracket_(ss) {
 // --------------------------------------------------------------- reading
 
 function readData_(ss) {
-  var teams = ss.getSheetByName('Teams').getRange(2, 1, 24, 3).getValues()
+  var teams = ss.getSheetByName('Teams').getRange(2, 1, 24, 4).getValues()
     .filter(function (r) { return r[0] !== ''; })
     .map(function (r) {
-      return { team: String(r[0]).trim(), pool: String(r[1]), override: r[2] === '' ? null : parseInt(r[2], 10) };
+      return { team: String(r[0]).trim(), pool: String(r[1]), override: r[2] === '' ? null : parseInt(r[2], 10), pin: String(r[3]).trim() };
     });
 
   var poolGames = ss.getSheetByName('PoolGames').getRange(2, 1, 60, 8).getValues()
@@ -384,6 +388,41 @@ function clearData_(ss) {
   if (t) t.clearContents();
 }
 
+// ------------------------------------------------------------- PINs
+
+// Fills column D of Teams with unique random 3-digit PINs (blank cells only).
+function assignPins() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName('Teams');
+  sh.getRange(1, 4).setValue('PIN').setBackground(HEADER_BG).setFontColor('#ffffff').setFontWeight('bold');
+  var rows = sh.getRange(2, 1, 24, 4).getValues();
+  var used = {};
+  rows.forEach(function (r) { if (r[3] !== '') used[String(r[3])] = true; });
+  var out = [], n = 0;
+  rows.forEach(function (r) {
+    var pin = r[3];
+    if (r[0] !== '' && pin === '') {
+      do { pin = String(100 + Math.floor(Math.random() * 900)); } while (used[pin]);
+      used[pin] = true; n++;
+    }
+    out.push([pin === '' ? '' : String(pin)]);
+  });
+  sh.getRange(2, 4, 24, 1).setNumberFormat('@').setValues(out);
+  SpreadsheetApp.getUi().alert('Assigned ' + n + ' new PIN' + (n === 1 ? '' : 's') + '. Existing PINs were kept.');
+}
+
+// True if the team has no PIN set, or the given PIN matches.
+function checkPin_(ss, team, pin) {
+  var rows = ss.getSheetByName('Teams').getRange(2, 1, 24, 4).getValues();
+  for (var i = 0; i < rows.length; i++) {
+    if (String(rows[i][0]).trim() === team) {
+      var want = String(rows[i][3]).trim();
+      return want === '' || want === String(pin || '').trim();
+    }
+  }
+  return false;
+}
+
 // ------------------------------------------------------ hole scores
 
 // HoleScores: Team A | Team B | Score A | Score B | H1..H18 | Done | Updated
@@ -517,7 +556,12 @@ function doPost(e) {
     var target = spreadsheetForYear_(body.year);
     if (!target) return json_({ error: 'No results sheet for ' + body.year });
     var a = String(body.a || '').trim(), b = String(body.b || '').trim();
+    if (body.action === 'verify') {
+      if (!a) return json_({ error: 'Team is required' });
+      return json_({ ok: checkPin_(target.ss, a, body.pin) });
+    }
     if (!a || !b || a === b) return json_({ error: 'Two different teams are required' });
+    if (!checkPin_(target.ss, a, body.pin)) return json_({ error: 'Wrong PIN for ' + a });
     var game;
     if (body.action === 'hole') {
       var hole = Number(body.hole);

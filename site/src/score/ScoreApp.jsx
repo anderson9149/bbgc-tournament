@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { API_URL } from '../config.js'
-import { fetchTournament, fetchGame, saveHole, finishGame } from './api.js'
+import { fetchTournament, fetchGame, saveHole, finishGame, verifyPin } from './api.js'
 
 const HOLES = 18
 const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 const REMEMBER_KEY = 'bbgc-my-team'
+const PIN_KEY = 'bbgc-pin'
 
 export default function ScoreApp() {
   const [tour, setTour] = useState(null)
@@ -38,6 +39,7 @@ export default function ScoreApp() {
 function Setup({ tour, onStart }) {
   const [a, setA] = useState(() => { try { return localStorage.getItem(REMEMBER_KEY) || '' } catch { return '' } })
   const [b, setB] = useState('')
+  const [pin, setPin] = useState(() => { try { return localStorage.getItem(PIN_KEY) || '' } catch { return '' } })
   const [existing, setExisting] = useState(null)
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState(null)
@@ -77,8 +79,10 @@ function Setup({ tour, onStart }) {
   const start = async () => {
     setBusy(true); setErr(null)
     try {
-      try { localStorage.setItem(REMEMBER_KEY, a) } catch {}
-      onStart(existing || await fetchGame(a, b))
+      const { ok } = await verifyPin(a, pin)
+      if (!ok) throw new Error(`Wrong PIN for ${a}`)
+      try { localStorage.setItem(REMEMBER_KEY, a); localStorage.setItem(PIN_KEY, pin) } catch {}
+      onStart({ ...(existing || await fetchGame(a, b)), pin })
     } catch (e) { setErr(e.message) } finally { setBusy(false) }
   }
 
@@ -95,6 +99,11 @@ function Setup({ tour, onStart }) {
           ))}
         </select>
       </label>
+      <label className="pin-row">
+        <span>Team PIN</span>
+        <input type="password" inputMode="numeric" pattern="[0-9]*" maxLength={3} autoComplete="off" placeholder="•••"
+          value={pin} onChange={(e) => setPin(e.target.value.replace(/\D/g, ''))} disabled={!a} />
+      </label>
       <div className="vs">vs.</div>
       <label>
         <span>Opponent</span>
@@ -110,7 +119,7 @@ function Setup({ tour, onStart }) {
       </label>
       {existing?.done && <p className="muted center">This game is already finished ({existing.scoreA}–{existing.scoreB}). You can still edit it.</p>}
       {err && <p className="error">{err}</p>}
-      <button className="primary big" disabled={!a || !b || busy} onClick={start}>
+      <button className="primary big" disabled={!a || !b || pin.length !== 3 || busy} onClick={start}>
         {busy ? 'Loading…' : played > 0 && played < HOLES ? `Resume Round (hole ${played + 1})` : played >= HOLES ? 'Review Round' : 'Start Round'}
       </button>
     </section>
@@ -150,8 +159,8 @@ function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
     setSaving(true); setErr(null)
     try {
       const value = winner === 'A' ? points : winner === 'B' ? -points : 0
-      const g = await saveHole(game.teamA, game.teamB, hole, value)
-      setGame(g)
+      const g = await saveHole(game.teamA, game.teamB, hole, value, game.pin)
+      setGame({ ...g, pin: game.pin })
       return true
     } catch (e) { setErr(`Couldn't save: ${e.message}`); return false } finally { setSaving(false) }
   }
@@ -161,7 +170,7 @@ function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
     if (hole < HOLES) setHole(hole + 1)
     else {
       setSaving(true)
-      try { setFinished(await finishGame(game.teamA, game.teamB)) }
+      try { setFinished(await finishGame(game.teamA, game.teamB, game.pin)) }
       catch (e) { setErr(`Saved hole 18 but couldn't finish: ${e.message}`) }
       finally { setSaving(false) }
     }

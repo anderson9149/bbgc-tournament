@@ -27,14 +27,16 @@ export const fetchGame = (a, b) =>
 
 // Writes go through doPost. text/plain avoids a CORS preflight, which Apps
 // Script can't answer; the 302 it returns is followed automatically.
-function post(body) {
-  return fetch(API_URL, {
+function post(body, expectGame = true) {
+  const p = fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({ ...body, year: YEAR || undefined }),
     redirect: 'follow',
-  }).then(check).then(asGame)
+  }).then(check)
+  return expectGame ? p.then(asGame) : p
 }
 
-export const saveHole = (a, b, hole, value) => post({ action: 'hole', a, b, hole, value })
-export const finishGame = (a, b) => post({ action: 'finish', a, b })
+export const verifyPin = (a, pin) => post({ action: 'verify', a, pin }, false)
+export const saveHole = (a, b, hole, value, pin) => post({ action: 'hole', a, b, hole, value, pin })
+export const finishGame = (a, b, pin) => post({ action: 'finish', a, b, pin })

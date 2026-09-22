@@ -62,6 +62,11 @@ right; the +/− column just won't mean much.
 3. After hole 18, **Finish Game** writes the final score into `PoolGames` or `BracketGames`, so
    standings and the bracket on the results page update on their own.
 
+**PINs:** run **BBGC → Assign team PINs** once to fill column D of `Teams` with a random 3-digit PIN
+per team (existing PINs are kept; you can also type your own). Give each team theirs. The page asks
+for the PIN with the team; every save is checked against it. A team with a blank PIN needs none.
+PINs are never sent to the results site.
+
 Every hole is saved to the `HoleScores` tab as it's entered (one row per game; positive = team A
 scored, negative = team B). Reopening a game resumes at the next unplayed hole. Add `?year=2025`
 to score into a different year's sheet.
