@@ -20,7 +20,9 @@ export default function ScoreApp() {
     <main className="score-app">
       <header className="top">
         <img className="logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="Barrington Bocce Golf Classic" />
-        <div className="sub">Scorekeeper{tour?.year ? <><br />{tour.year}</> : ''}</div>
+        {game
+          ? <button className="exit" onClick={() => setGame(null)}>Exit</button>
+          : <div className="sub">Scorekeeper{tour?.year ? <><br />{tour.year}</> : ''}</div>}
       </header>
       {error && <p className="error">{error}</p>}
       {!tour && !error && <p className="muted center">Loading teams…</p>}
@@ -116,7 +118,7 @@ function Setup({ tour, onStart }) {
 
 // ---------------------------------------------------------- scoring
 
-function Scoring({ initial, onExit }) {
+function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
   const [game, setGame] = useState(initial)
   const firstOpen = Math.max(0, game.holes.findIndex((h) => h === null))
   const [hole, setHole] = useState(game.done || firstOpen === -1 ? 1 : firstOpen + 1)
@@ -182,7 +184,10 @@ function Scoring({ initial, onExit }) {
 
   return (
     <section className="card scoring">
-      <div className="hole-title">Hole {hole} <small>of {HOLES}</small></div>
+      <div className="hole-row">
+        <div className="hole-title">Hole {hole}</div>
+        <img className="hole-sign" src={`${import.meta.env.BASE_URL}holes/${String(hole).padStart(2, '0')}.webp`} alt="" />
+      </div>
       <div className="teams">
         <div className={winner === 'A' ? 'active' : ''}><span className="name">{game.teamA}</span><span className="pts">{scoreA}</span></div>
         <div className={winner === 'B' ? 'active' : ''}><span className="name">{game.teamB}</span><span className="pts">{scoreB}</span></div>
@@ -207,7 +212,6 @@ function Scoring({ initial, onExit }) {
           {saving ? 'Saving…' : hole < HOLES ? 'Next' : 'Finish Game'}
         </button>
       </div>
-      <button className="link" onClick={onExit}>Change teams</button>
     </section>
   )
 }
