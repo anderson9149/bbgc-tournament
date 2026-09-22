@@ -32,6 +32,7 @@ var FOLDER_NAME = 'BBGC_ScoreCards';
 var FILE_PREFIX = 'BBGC_ScoreCardResults_';
 var FILE_PATTERN = /^BBGC_ScoreCardResults_(\d{4})$/;
 var FIRST_YEAR = 2016;
+var HISTORY_URL = 'https://raw.githubusercontent.com/anderson9149/bbgc-tournament/main/history/';
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
 
@@ -74,6 +75,7 @@ function onOpen() {
     .addSeparator()
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addItem('Refresh year list', 'refreshYearList')
+    .addItem('Import this year from GitHub history', 'importHistory')
     .addToUi();
 }
 
@@ -426,6 +428,59 @@ function clearData_(ss) {
   resetBracket_(ss);
   var t = ss.getSheetByName(TICKER_SHEET);
   if (t) t.clearContents();
+}
+
+// ------------------------------------------------------- history import
+
+// Fills this sheet from history/<year>.json in the GitHub repo (transcribed
+// past results). Overwrites Teams, PoolGames and BracketGames; keeps PINs.
+function importHistory() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ui = SpreadsheetApp.getUi();
+  var m = ss.getName().match(FILE_PATTERN);
+  if (!m) { ui.alert('Rename this sheet to ' + FILE_PREFIX + '<year> first.'); return; }
+  var year = m[1];
+  var res = UrlFetchApp.fetch(HISTORY_URL + year + '.json', { muteHttpExceptions: true });
+  if (res.getResponseCode() !== 200) { ui.alert('No history file for ' + year + ' in the repo (history/' + year + '.json).'); return; }
+  var h = JSON.parse(res.getContentText());
+  var resp = ui.alert('Import ' + year + ' results?',
+    'This replaces everything in Teams (except PINs), PoolGames and BracketGames with the transcribed ' + year + ' results.',
+    ui.ButtonSet.YES_NO);
+  if (resp !== ui.Button.YES) return;
+
+  // Teams: name, pool, seed override (column D = PIN untouched)
+  var teams = [];
+  POOLS.forEach(function (p) {
+    (h.teams[p] || []).forEach(function (t) { teams.push([t, p, (h.overrides || {})[t] || '']); });
+  });
+  while (teams.length < 24) teams.push(['', '', '']);
+  ss.getSheetByName('Teams').getRange(2, 1, 24, 3).setValues(teams);
+
+  // PoolGames: round + slots in B:D, scores in G:H, in the sheet's pool order
+  var sched = [], scores = [];
+  POOLS.forEach(function (p) {
+    var games = (h.poolGames[p] || []).slice().sort(function (x, y) { return x[0] - y[0]; });
+    games.forEach(function (g) {
+      sched.push([g[0], g[1], g[2]]);
+      scores.push([g[3] === null ? '' : g[3], g[4] === null ? '' : g[4]]);
+    });
+  });
+  var pg = ss.getSheetByName('PoolGames');
+  pg.getRange(2, 2, sched.length, 3).setValues(sched);
+  pg.getRange(2, 7, scores.length, 2).setValues(scores);
+
+  // BracketGames: typed names for the seeded slots, 1-0 / 0-1 for winners
+  var bg = ss.getSheetByName('BracketGames');
+  h.bracket.forEach(function (g, i) {
+    var r = i + 2;
+    if (g.a.charAt(0) !== 'W') bg.getRange(r, 3).setValue(g.a);
+    if (g.b.charAt(0) !== 'W') bg.getRange(r, 4).setValue(g.b);
+    if (g.winner) bg.getRange(r, 5, 1, 2).setValues([g.winner === 'a' ? [g.scoreA || 1, g.scoreB || 0] : [g.scoreA || 0, g.scoreB || 1]]);
+  });
+
+  CacheService.getScriptCache().remove('payload:' + year);
+  ui.alert('Imported ' + year + ': ' + teams.filter(function (t) { return t[0]; }).length + ' teams, ' +
+           scores.filter(function (x) { return x[0] !== ''; }).length + ' pool games, ' + h.bracket.length + ' bracket games.');
 }
 
 // ------------------------------------------------------------- PINs

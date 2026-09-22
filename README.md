@@ -50,9 +50,10 @@ no redeploy.
 **Champions photo:** drop a `<year>.jpg` into `site/public/winners/` (e.g. `2027.jpg`) and push. It
 appears on that year's Knockout Round page next to the Final. Any size/orientation; ~1000px is plenty.
 
-**Importing a past year:** transcribe it into `history/<year>.json` (see `history/2024.json`), run
-`python3 history/make-paste.py <year>`, and paste each block into the year's sheet where the block
-says. Don't run "Seed Bracket" on an imported year — the bracket names are pasted in directly.
+**Importing a past year:** transcribe it into `history/<year>.json` (see `history/2024.json`), push,
+then open that year's sheet and run **BBGC → Import this year from GitHub history**. (Or run
+`python3 history/make-paste.py <year>` and paste the blocks by hand.) Seed Bracket and Reset Bracket
+refuse to run on past years, so imported brackets can't be clobbered.
 
 **Past years with only win/loss records** (no scores): enter each win as `1`–`0`. Standings will be
 right; the +/− column just won't mean much.
