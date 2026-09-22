@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react'
+
 const ROUNDS = ['Round 1', 'Quarterfinal', 'Semifinal', 'Final']
+const BASE = import.meta.env.BASE_URL
 const POOL_LETTER = { Orange: 'O', Red: 'R', Blue: 'B', Yellow: 'Y' }
 
 // TV layout, in 1920x1080 stage units relative to the bracket box.
@@ -6,15 +9,18 @@ const COL_X = [0, 335, 670, 1005]
 const CARD_W = 320
 const CARD_H = 150
 const AREA_H = 700
-const CENTERS = {
+// With a champions photo, the Final card moves up to make room below it.
+const centers = (withPhoto) => ({
   'Round 1': [1, 3, 5, 7].map((n) => (AREA_H / 8) * n),
   'Quarterfinal': [1, 3, 5, 7].map((n) => (AREA_H / 8) * n),
   'Semifinal': [2, 6].map((n) => (AREA_H / 8) * n),
-  'Final': [AREA_H / 2],
-}
+  'Final': [withPhoto ? CARD_H / 2 : AREA_H / 2],
+})
 
-export function Bracket({ games, tv }) {
+export function Bracket({ games, tv, year }) {
   const champion = games.find((g) => g.round === 'Final')?.winner
+  const [hasPhoto, setHasPhoto] = useState(false)
+  const CENTERS = centers(tv && hasPhoto)
 
   // "O2", "R3"… from the slot a team was seeded into, so later rounds can show it.
   const seedOf = {}
@@ -26,7 +32,8 @@ export function Bracket({ games, tv }) {
   return (
     <section className="bracket">
       {champion && !tv && <p className="champion-banner">🏆 {champion}</p>}
-      {tv && <Connectors />}
+      {!tv && <WinnerPhoto year={year} champion={champion} onStatus={setHasPhoto} />}
+      {tv && <Connectors centers={CENTERS} />}
       {ROUNDS.map((round, ci) => (
         <div key={round} className={`column col-${round.toLowerCase().replace(' ', '')}`} style={tv ? { left: COL_X[ci] } : undefined}>
           <div className="matches">
@@ -38,7 +45,22 @@ export function Bracket({ games, tv }) {
         </div>
       ))}
       {champion && tv && <div className="plaque">{champion}</div>}
+      {tv && <WinnerPhoto year={year} champion={champion} onStatus={setHasPhoto} />}
     </section>
+  )
+}
+
+// Champions photo for the selected year, if site/public/winners/<year>.jpg exists.
+function WinnerPhoto({ year, champion, onStatus }) {
+  const [ok, setOk] = useState(true)
+  useEffect(() => { setOk(true); onStatus(false) }, [year, onStatus])
+  if (!year || !ok) return null
+  return (
+    <figure className="winner-photo">
+      <img src={`${BASE}winners/${year}.jpg`} alt={`${year} champions`}
+        onLoad={() => onStatus(true)} onError={() => { setOk(false); onStatus(false) }} />
+      <figcaption>{year} Champions{champion ? ` · ${champion}` : ''}</figcaption>
+    </figure>
   )
 }
 
@@ -73,7 +95,7 @@ function Slot({ team, seed, score, played, win, bye }) {
 }
 
 // White bracket lines between the columns (TV only).
-function Connectors() {
+function Connectors({ centers: CENTERS }) {
   const d = []
   const stub = 15
   // Round 1 -> Quarterfinal: straight across (same row).
@@ -84,7 +106,9 @@ function Connectors() {
     to.forEach((ty, j) => {
       const a = from[2 * j], b = from[2 * j + 1]
       const x1 = COL_X[fromCol] + CARD_W, xm = x1 + stub
-      d.push(`M${x1},${a} H${xm} V${b} H${x1}`)
+      d.push(`M${x1},${a} H${xm} H${x1}`)
+      d.push(`M${x1},${b} H${xm} H${x1}`)
+      d.push(`M${xm},${Math.min(a, ty)} V${Math.max(b, ty)}`)
       d.push(`M${xm},${ty} H${COL_X[toCol]}`)
     })
   }

@@ -75,6 +75,11 @@ button { font: inherit; cursor: pointer; }
 .game .win { font-weight: 800; }
 .game .name:not(.win) { color: rgba(255, 255, 255, 0.75); }
 
+/* --------------------------------------------------- winner photo */
+.winner-photo { margin: 0; background: #fff; padding: 6px 6px 0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); overflow: hidden; }
+.winner-photo img { display: block; width: 100%; border-radius: 6px; object-fit: cover; object-position: 50% 45%; }
+.winner-photo figcaption { color: var(--red); font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; text-align: center; padding: 6px 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
 /* -------------------------------------------------------- bracket */
 .notice { text-align: center; color: var(--muted); font-weight: 600; }
 .champion-banner { text-align: center; font-size: 1.4rem; font-weight: 800; margin: 0 0 12px; }
@@ -154,6 +159,9 @@ button { font: inherit; cursor: pointer; }
 .tv .slot { font-size: 20px; padding: 6px 10px 6px 12px; height: 52px; gap: 8px; }
 .tv .slot .seed { flex-basis: 30px; font-size: 15px; }
 .tv .slot .score { font-size: 21px; min-width: 52px; height: 38px; }
+.tv .winner-photo { position: absolute; left: 1005px; top: 165px; width: 380px; }
+.tv .winner-photo img { max-height: 480px; object-fit: contain; }
+.tv .winner-photo figcaption { font-size: 15px; }
 /* The trophy's nameplate in the landscape background. */
 .tv .plaque {
   position: absolute; left: 1407px; top: 608px; width: 233px; height: 72px;
@@ -191,6 +199,9 @@ button { font: inherit; cursor: pointer; }
 .mobile .pool th:last-child, .mobile .pool td:last-child { width: 3.5rem; }
 .pool td:last-child { overflow: visible; }
 .mobile .bracket { margin-top: 16px; display: flex; flex-direction: column; gap: 18px; }
+.mobile .winner-photo { max-width: 420px; margin: 0 auto; }
+.mobile .winner-photo img { max-height: 60vh; }
+.mobile .winner-photo figcaption { font-size: 0.9rem; }
 .mobile .matches { gap: 8px; }
 .mobile .slot { font-size: 0.95rem; }
 .mobile .status { text-align: center; font-size: 0.8rem; margin-top: 20px; }

@@ -44,6 +44,9 @@ to 2016. (It will ask for Drive permission the first time.)
 keep it in the folder, and clear the old data (or run **BBGC → Reset Bracket** and clear the Teams /
 scores by hand). It shows up in the dropdown within 5 minutes — no code change, no redeploy.
 
+**Champions photo:** drop a `<year>.jpg` into `site/public/winners/` (e.g. `2027.jpg`) and push. It
+appears on that year's Knockout Round page next to the Final. Any size/orientation; ~1000px is plenty.
+
 **Past years with only win/loss records** (no scores): enter each win as `1`–`0`. Standings will be
 right; the +/− column just won't mean much.
 
