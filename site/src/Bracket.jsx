@@ -16,14 +16,13 @@ const CENTERS = {
   'Final': [AREA_H / 2],
 }
 
-export function Bracket({ games, tv, year }) {
+export function Bracket({ games, pools, tv, year }) {
   const champion = games.find((g) => g.round === 'Final')?.winner
 
-  // "O2", "R3"… from the slot a team was seeded into, so later rounds can show it.
+  // "O2", "R3"… from where each team actually finished in its pool.
   const seedOf = {}
-  games.forEach((g) => {
-    if (g.slotA && !g.slotA.startsWith('W') && g.teamA) seedOf[g.teamA] = shortSeed(g.slotA)
-    if (g.slotB && !g.slotB.startsWith('W') && g.teamB) seedOf[g.teamB] = shortSeed(g.slotB)
+  Object.entries(pools || {}).forEach(([pool, p]) => {
+    p.standings.forEach((r) => { if (r.team) seedOf[r.team] = (POOL_LETTER[pool] || pool[0]) + r.seed })
   })
 
   return (
@@ -58,11 +57,6 @@ function WinnerPhoto({ year, champion }) {
       <figcaption>{year} Champions{champion ? ` · ${champion}` : ''}</figcaption>
     </figure>
   )
-}
-
-function shortSeed(slot) {
-  const [pool, n] = slot.split('#')
-  return (POOL_LETTER[pool] || pool[0]) + n
 }
 
 function Match({ g, seedOf, style }) {

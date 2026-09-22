@@ -478,10 +478,11 @@ function importHistory() {
 
   // BracketGames: typed names for the seeded slots, 1-0 / 0-1 for winners
   var bg = ss.getSheetByName('BracketGames');
+  var isRef = function (v) { return /^W\d+$/.test(v); }; // "W3" = winner of game 3
   h.bracket.forEach(function (g, i) {
     var r = i + 2;
-    if (g.a.charAt(0) !== 'W') bg.getRange(r, 3).setValue(g.a);
-    if (g.b.charAt(0) !== 'W') bg.getRange(r, 4).setValue(g.b);
+    if (!isRef(g.a)) bg.getRange(r, 3).setValue(g.a);
+    if (!isRef(g.b)) bg.getRange(r, 4).setValue(g.b);
     if (g.winner) bg.getRange(r, 5, 1, 2).setValues([g.winner === 'a' ? [g.scoreA || 1, g.scoreB || 0] : [g.scoreA || 0, g.scoreB || 1]]);
   });
 

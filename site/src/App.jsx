@@ -50,7 +50,7 @@ export default function App() {
       ) : tab === 'group' ? (
         <Pools pools={data.pools} order={POOLS} tv={isTV} />
       ) : (
-        <Bracket games={data.bracket} tv={isTV} year={data.year} />
+        <Bracket games={data.bracket} pools={data.pools} tv={isTV} year={data.year} />
       )}
 
       <footer className="status">
