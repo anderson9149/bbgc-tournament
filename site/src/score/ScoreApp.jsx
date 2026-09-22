@@ -19,8 +19,8 @@ export default function ScoreApp() {
   return (
     <main className="score-app">
       <header className="top">
-        <div className="brand">BBGC</div>
-        <div className="sub">Scorekeeper{tour?.year ? ` · ${tour.year}` : ''}</div>
+        <img className="logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="Barrington Bocce Golf Classic" />
+        <div className="sub">Scorekeeper{tour?.year ? <><br />{tour.year}</> : ''}</div>
       </header>
       {error && <p className="error">{error}</p>}
       {!tour && !error && <p className="muted center">Loading teams…</p>}
