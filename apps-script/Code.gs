@@ -16,7 +16,8 @@
  *             {action:'finish', year, a, b} marks the game done and copies the
  *             final score into PoolGames or BracketGames.
  *             Writes must include team A's `pin` (Teams column D) when one is set;
- *             {action:'login', year, pin} returns the team that PIN belongs to.
+ *             {action:'login', year, pin} returns the team that PIN belongs to,
+ *             with its possible opponents.
  *
  * Years: every Google Sheet in the Drive folder BBGC_ScoreCards named
  * BBGC_ScoreCardResults_<year> is one tournament. The deployed script (bound
@@ -72,6 +73,7 @@ function onOpen() {
     .addItem('Assign team PINs', 'assignPins')
     .addSeparator()
     .addItem('Set up year files (one time)', 'setupYearFiles')
+    .addItem('Refresh year list', 'refreshYearList')
     .addToUi();
 }
 
@@ -348,8 +350,14 @@ function yearFiles_(noCache) {
   var mine = ss.getName().match(FILE_PATTERN);
   if (mine && !map[mine[1]]) map[mine[1]] = ss.getId();
   if (!Object.keys(map).length) map[String(new Date().getFullYear())] = ss.getId();
-  cache.put('years', JSON.stringify(map), 300);
+  cache.put('years', JSON.stringify(map), 21600); // 6 hours (the max)
   return map;
+}
+
+function refreshYearList() {
+  CacheService.getScriptCache().remove('years');
+  var list = Object.keys(yearFiles_(true)).sort();
+  SpreadsheetApp.getUi().alert('Years found: ' + list.join(', '));
 }
 
 // One-time: rename this sheet to the current year, move it into the folder,
@@ -422,6 +430,24 @@ function teamForPin_(ss, pin) {
     if (rows[i][0] !== '' && String(rows[i][3]).trim() === pin) return { team: String(rows[i][0]).trim(), pool: String(rows[i][1]) };
   }
   return null;
+}
+
+// Pool-mates plus knockout opponents (once the bracket is seeded).
+function opponentsFor_(ss, team, pool) {
+  var rows = ss.getSheetByName('Teams').getRange(2, 1, 24, 2).getValues();
+  var mates = [];
+  rows.forEach(function (r) {
+    var t = String(r[0]).trim();
+    if (t && t !== team && String(r[1]) === pool) mates.push(t);
+  });
+  var bracket = [];
+  var br = ss.getSheetByName('BracketGames').getRange(2, 3, BRACKET.length, 2).getValues();
+  br.forEach(function (r) {
+    var a = String(r[0]).trim(), b = String(r[1]).trim();
+    if (a === team && b && bracket.indexOf(b) < 0 && mates.indexOf(b) < 0) bracket.push(b);
+    if (b === team && a && bracket.indexOf(a) < 0 && mates.indexOf(a) < 0) bracket.push(a);
+  });
+  return { pool: mates, bracket: bracket };
 }
 
 // True if the team has no PIN set, or the given PIN matches.
@@ -571,7 +597,10 @@ function doPost(e) {
     var a = String(body.a || '').trim(), b = String(body.b || '').trim();
     if (body.action === 'login') {
       var who = teamForPin_(target.ss, body.pin);
-      return who ? json_(who) : json_({ error: 'No team associated with that PIN' });
+      if (!who) return json_({ error: 'No team associated with that PIN' });
+      who.opponents = opponentsFor_(target.ss, who.team, who.pool);
+      who.year = target.year;
+      return json_(who);
     }
     if (!a || !b || a === b) return json_({ error: 'Two different teams are required' });
     if (!checkPin_(target.ss, a, body.pin)) return json_({ error: 'Wrong PIN for ' + a });

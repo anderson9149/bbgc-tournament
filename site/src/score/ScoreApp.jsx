@@ -1,32 +1,25 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { API_URL } from '../config.js'
-import { fetchTournament, fetchGame, saveHole, finishGame, login } from './api.js'
+import { fetchGame, saveHole, finishGame, login } from './api.js'
 
 const HOLES = 18
-const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
 const PIN_KEY = 'bbgc-pin'
+const BASE = import.meta.env.BASE_URL
 
 export default function ScoreApp() {
-  const [tour, setTour] = useState(null)
-  const [error, setError] = useState(null)
   const [game, setGame] = useState(null) // null = setup screen
-
-  useEffect(() => {
-    if (!API_URL) { setError('API_URL is not configured'); return }
-    fetchTournament().then(setTour).catch((e) => setError(e.message))
-  }, [])
+  const [year, setYear] = useState(null)
 
   return (
     <main className="score-app">
       <header className="top">
-        <img className="logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="Barrington Bocce Golf Classic" />
+        <img className="logo" src={`${BASE}logo.png`} alt="Barrington Bocce Golf Classic" />
         {game
           ? <button className="exit" onClick={() => setGame(null)}>Exit</button>
-          : <div className="sub">Scorekeeper{tour?.year ? <><br />{tour.year}</> : ''}</div>}
+          : <div className="sub">Scorekeeper{year ? <><br />{year}</> : ''}</div>}
       </header>
-      {error && <p className="error">{error}</p>}
-      {!tour && !error && <p className="muted center">Loading teams…</p>}
-      {tour && !game && <Setup tour={tour} onStart={setGame} />}
+      {!API_URL && <p className="error">API_URL is not configured</p>}
+      {!game && <Setup onStart={setGame} onYear={setYear} />}
       {game && <div className="page-title">Score Card</div>}
       {game && <Scoring initial={game} onExit={() => setGame(null)} />}
     </main>
@@ -35,46 +28,31 @@ export default function ScoreApp() {
 
 // ------------------------------------------------------------ setup
 
-function Setup({ tour, onStart }) {
+function Setup({ onStart, onYear }) {
   const [pin, setPin] = useState(() => { try { return localStorage.getItem(PIN_KEY) || '' } catch { return '' } })
-  const [me, setMe] = useState(null)      // { team, pool } once the PIN checks out
+  const [me, setMe] = useState(null)      // { team, pool, opponents } once the PIN checks out
   const [b, setB] = useState('')
   const [existing, setExisting] = useState(null)
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState(null)
   const a = me?.team || ''
 
-  const teams = useMemo(() => {
-    const out = []
-    POOLS.forEach((p) => tour.pools[p]?.standings.forEach((r) => r.team && out.push({ team: r.team, pool: p })))
-    return out
-  }, [tour])
-
-  // PIN -> team. Runs automatically once 3 digits are in (and on load if remembered).
+  // PIN -> team + opponents. Runs once 4 digits are in (and on load if remembered).
   useEffect(() => {
     setMe(null); setB(''); setErr(null)
     if (pin.length !== 4) return
     let cancelled = false
     setBusy(true)
     login(pin)
-      .then((who) => { if (!cancelled) { setMe(who); try { localStorage.setItem(PIN_KEY, pin) } catch {} } })
+      .then((who) => {
+        if (cancelled) return
+        setMe(who); onYear(who.year)
+        try { localStorage.setItem(PIN_KEY, pin) } catch {}
+      })
       .catch((e) => { if (!cancelled) setErr(e.message) })
       .finally(() => { if (!cancelled) setBusy(false) })
     return () => { cancelled = true }
-  }, [pin])
-
-  // Opponents: everyone else in the pool, plus knockout opponents once seeded.
-  const opponents = useMemo(() => {
-    if (!a) return { pool: [], bracket: [] }
-    const p = me.pool
-    const pool = teams.filter((x) => x.pool === p && x.team !== a).map((x) => x.team)
-    const bracket = []
-    tour.bracket.forEach((g) => {
-      if (g.teamA === a && g.teamB) bracket.push(g.teamB)
-      if (g.teamB === a && g.teamA) bracket.push(g.teamA)
-    })
-    return { pool, bracket: [...new Set(bracket)].filter((t) => !pool.includes(t)) }
-  }, [a, me, teams, tour])
+  }, [pin]) // eslint-disable-line
 
   // Peek at the game so the button can say "Resume".
   useEffect(() => {
@@ -92,6 +70,7 @@ function Setup({ tour, onStart }) {
     catch (e) { setErr(e.message) } finally { setBusy(false) }
   }
   const forget = () => { setPin(''); try { localStorage.removeItem(PIN_KEY) } catch {} }
+  const opp = me?.opponents || { pool: [], bracket: [] }
 
   return (
     <section className="card setup">
@@ -115,11 +94,11 @@ function Setup({ tour, onStart }) {
             <span>Opponent</span>
             <select value={b} onChange={(e) => setB(e.target.value)}>
               <option value="">Select opponent…</option>
-              {opponents.pool.length > 0 && (
-                <optgroup label="Pool play">{opponents.pool.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
+              {opp.pool.length > 0 && (
+                <optgroup label="Pool play">{opp.pool.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
               )}
-              {opponents.bracket.length > 0 && (
-                <optgroup label="Knockout">{opponents.bracket.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
+              {opp.bracket.length > 0 && (
+                <optgroup label="Knockout">{opp.bracket.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
               )}
             </select>
           </label>
@@ -139,53 +118,60 @@ function Setup({ tour, onStart }) {
 
 // ---------------------------------------------------------- scoring
 
-function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
-  const [game, setGame] = useState(initial)
-  const firstOpen = Math.max(0, game.holes.findIndex((h) => h === null))
-  const [hole, setHole] = useState(game.done || firstOpen === -1 ? 1 : firstOpen + 1)
+function Scoring({ initial, onExit }) {
+  const [holes, setHoles] = useState(initial.holes)   // local copy is the source of truth
+  const firstOpen = holes.findIndex((h) => h === null)
+  const [hole, setHole] = useState(initial.done || firstOpen === -1 ? 1 : firstOpen + 1)
   const [points, setPoints] = useState(0)
   const [winner, setWinner] = useState(null) // 'A' | 'B' | null
-  const [saving, setSaving] = useState(false)
   const [err, setErr] = useState(null)
   const [finished, setFinished] = useState(null)
+  const [finishing, setFinishing] = useState(false)
+  const [pending, setPending] = useState(0)     // saves in flight
+  const [failed, setFailed] = useState({})      // hole -> value that didn't save
+  const inflight = useRef([])
+  const { teamA, teamB, pin } = initial
 
   // Load whatever is stored for this hole whenever we move to it.
   useEffect(() => {
-    const v = game.holes[hole - 1]
+    const v = holes[hole - 1]
     if (v === null || v === undefined) { setPoints(0); setWinner(null) }
     else { setPoints(Math.abs(v)); setWinner(v > 0 ? 'A' : v < 0 ? 'B' : null) }
     setErr(null)
   }, [hole]) // eslint-disable-line
 
   // Running score: saved holes, with this hole's pending entry substituted in.
-  const pending = winner === 'A' ? points : winner === 'B' ? -points : 0
+  const current = winner === 'A' ? points : winner === 'B' ? -points : 0
   let scoreA = 0, scoreB = 0
-  game.holes.forEach((v, i) => {
-    const x = i === hole - 1 ? pending : v
+  holes.forEach((v, i) => {
+    const x = i === hole - 1 ? current : v
     if (x > 0) scoreA += x; else if (x < 0) scoreB += -x
   })
 
-  const save = async () => {
-    if (points > 0 && !winner) { setErr('Tap the team that scored this hole'); return false }
-    setSaving(true); setErr(null)
-    try {
-      const value = winner === 'A' ? points : winner === 'B' ? -points : 0
-      const g = await saveHole(game.teamA, game.teamB, hole, value, game.pin)
-      setGame({ ...g, pin: game.pin })
-      return true
-    } catch (e) { setErr(`Couldn't save: ${e.message}`); return false } finally { setSaving(false) }
+  // Optimistic: update locally, write in the background, remember failures.
+  const save = (h, value) => {
+    setHoles((prev) => prev.map((v, i) => (i === h - 1 ? value : v)))
+    setFailed((f) => { const n = { ...f }; delete n[h]; return n })
+    setPending((n) => n + 1)
+    const p = saveHole(teamA, teamB, h, value, pin)
+      .catch(() => setFailed((f) => ({ ...f, [h]: value })))
+      .finally(() => { setPending((n) => n - 1); inflight.current = inflight.current.filter((x) => x !== p) })
+    inflight.current.push(p)
   }
 
   const next = async () => {
-    if (!(await save())) return
-    if (hole < HOLES) setHole(hole + 1)
-    else {
-      setSaving(true)
-      try { setFinished(await finishGame(game.teamA, game.teamB, game.pin)) }
-      catch (e) { setErr(`Saved hole 18 but couldn't finish: ${e.message}`) }
-      finally { setSaving(false) }
-    }
+    if (points > 0 && !winner) { setErr('Tap the team that scored this hole'); return }
+    save(hole, current)
+    if (hole < HOLES) { setHole(hole + 1); return }
+    setFinishing(true); setErr(null)
+    try {
+      await Promise.all(inflight.current)
+      if (Object.keys(failed).length) throw new Error('Some holes did not save — retry them first')
+      setFinished(await finishGame(teamA, teamB, pin))
+    } catch (e) { setErr(`Couldn't finish: ${e.message}`) } finally { setFinishing(false) }
   }
+
+  const failedHoles = Object.keys(failed).map(Number).sort((x, y) => x - y)
 
   if (finished) {
     return (
@@ -206,12 +192,12 @@ function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
   return (
     <section className="card scoring">
       <div className="hole-row">
-        <img className="hole-sign" src={`${import.meta.env.BASE_URL}holes/${String(hole).padStart(2, '0')}.webp`} alt="" />
+        <img className="hole-sign" src={`${BASE}holes/${String(hole).padStart(2, '0')}.webp`} alt="" />
         <div className="hole-title">Hole {hole}</div>
       </div>
       <div className="teams">
-        <div className={winner === 'A' ? 'active' : ''}><span className="name">{game.teamA}</span><span className="pts">{scoreA}</span></div>
-        <div className={winner === 'B' ? 'active' : ''}><span className="name">{game.teamB}</span><span className="pts">{scoreB}</span></div>
+        <div className={winner === 'A' ? 'active' : ''}><span className="name">{teamA}</span><span className="pts">{scoreA}</span></div>
+        <div className={winner === 'B' ? 'active' : ''}><span className="name">{teamB}</span><span className="pts">{scoreB}</span></div>
       </div>
 
       <div className="points">{points}</div>
@@ -222,17 +208,24 @@ function Scoring({ initial, onExit }) {  // onExit: used by the Final screen
 
       <div className="label">Select Hole Winner</div>
       <div className="toggles">
-        <button className={winner === 'A' ? 'on' : ''} onClick={() => { setWinner(winner === 'A' ? null : 'A'); setErr(null) }}>{game.teamA}</button>
-        <button className={winner === 'B' ? 'on' : ''} onClick={() => { setWinner(winner === 'B' ? null : 'B'); setErr(null) }}>{game.teamB}</button>
+        <button className={winner === 'A' ? 'on' : ''} onClick={() => { setWinner(winner === 'A' ? null : 'A'); setErr(null) }}>{teamA}</button>
+        <button className={winner === 'B' ? 'on' : ''} onClick={() => { setWinner(winner === 'B' ? null : 'B'); setErr(null) }}>{teamB}</button>
       </div>
 
       {err && <p className="error">{err}</p>}
+      {failedHoles.length > 0 && (
+        <p className="error">
+          Hole {failedHoles.join(', ')} didn't save.{' '}
+          <button className="retry" onClick={() => failedHoles.forEach((h) => save(h, failed[h]))}>Retry</button>
+        </p>
+      )}
       <div className="nav">
-        <button onClick={() => setHole(hole - 1)} disabled={hole === 1 || saving}>Previous</button>
-        <button className="primary" onClick={next} disabled={saving}>
-          {saving ? 'Saving…' : hole < HOLES ? 'Next' : 'Finish Game'}
+        <button onClick={() => setHole(hole - 1)} disabled={hole === 1 || finishing}>Previous</button>
+        <button className="primary" onClick={next} disabled={finishing}>
+          {finishing ? 'Finishing…' : hole < HOLES ? 'Next' : 'Finish Game'}
         </button>
       </div>
+      <div className={`sync ${pending ? 'on' : ''}`}>{pending ? 'Saving…' : 'Saved'}</div>
     </section>
   )
 }

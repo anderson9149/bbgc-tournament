@@ -78,5 +78,9 @@ button.link { background: none; border: 0; color: #fff; opacity: 0.75; text-deco
 .nav button:disabled { opacity: 0.4; cursor: default; }
 .scoring .error { margin: 14px 0 0; }
 
+.retry { border: 0; background: var(--red); color: #fff; border-radius: 999px; padding: 4px 12px; font-weight: 700; margin-left: 6px; }
+.sync { text-align: center; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; opacity: 0.45; margin-top: 10px; }
+.sync.on { opacity: 0.9; }
+
 /* done */
 .done h2 { text-align: center; margin: 0; font-size: 2rem; text-transform: uppercase; }

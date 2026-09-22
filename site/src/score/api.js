@@ -18,9 +18,6 @@ const asGame = (data) => {
   return data
 }
 
-// Teams, pools and bracket for the year (same payload the results site uses).
-export const fetchTournament = () => fetch(withYear(API_URL), { cache: 'no-store' }).then(check)
-
 // One game's hole-by-hole scores.
 export const fetchGame = (a, b) =>
   fetch(withYear(`${API_URL}?action=game&a=${encodeURIComponent(a)}&b=${encodeURIComponent(b)}`), { cache: 'no-store' }).then(check).then(asGame)

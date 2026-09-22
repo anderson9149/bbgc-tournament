@@ -44,7 +44,8 @@ to 2016. (It will ask for Drive permission the first time.)
 
 **Each new year:** File → Make a copy of last year's sheet, name it `BBGC_ScoreCardResults_<year>`,
 keep it in the folder, and clear the old data (or run **BBGC → Reset Bracket** and clear the Teams /
-scores by hand). It shows up in the dropdown within 5 minutes — no code change, no redeploy.
+scores by hand). Then **BBGC → Refresh year list** (the list is cached for 6 hours) — no code change,
+no redeploy.
 
 **Champions photo:** drop a `<year>.jpg` into `site/public/winners/` (e.g. `2027.jpg`) and push. It
 appears on that year's Knockout Round page next to the Final. Any size/orientation; ~1000px is plenty.
