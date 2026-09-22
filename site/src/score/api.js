@@ -37,6 +37,6 @@ function post(body, expectGame = true) {
   return expectGame ? p.then(asGame) : p
 }
 
-export const verifyPin = (a, pin) => post({ action: 'verify', a, pin }, false)
+export const login = (pin) => post({ action: 'login', pin }, false)
 export const saveHole = (a, b, hole, value, pin) => post({ action: 'hole', a, b, hole, value, pin })
 export const finishGame = (a, b, pin) => post({ action: 'finish', a, b, pin })

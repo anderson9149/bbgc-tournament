@@ -35,7 +35,11 @@ button { font: inherit; cursor: pointer; }
 }
 .setup select option, .setup select optgroup { color: #000; }
 .setup select:disabled { opacity: 0.5; }
-.pin-row { margin-top: 12px; }
+.pin-row { margin-top: 0; }
+.me { text-align: center; margin-top: 16px; display: flex; flex-direction: column; gap: 2px; }
+.me strong { font-size: 1.5rem; font-weight: 800; }
+.me .muted { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+button.link.inline { margin: 6px auto 0; font-size: 0.85rem; }
 .setup input {
   width: 100%; font: inherit; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.4em; text-align: center; padding: 10px 16px; border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.6); background: rgba(0, 0, 0, 0.3); color: #fff;

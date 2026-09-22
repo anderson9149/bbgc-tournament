@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { API_URL } from '../config.js'
-import { fetchTournament, fetchGame, saveHole, finishGame, verifyPin } from './api.js'
+import { fetchTournament, fetchGame, saveHole, finishGame, login } from './api.js'
 
 const HOLES = 18
 const POOLS = ['Orange', 'Red', 'Blue', 'Yellow']
-const REMEMBER_KEY = 'bbgc-my-team'
 const PIN_KEY = 'bbgc-pin'
 
 export default function ScoreApp() {
@@ -37,24 +36,37 @@ export default function ScoreApp() {
 // ------------------------------------------------------------ setup
 
 function Setup({ tour, onStart }) {
-  const [a, setA] = useState(() => { try { return localStorage.getItem(REMEMBER_KEY) || '' } catch { return '' } })
-  const [b, setB] = useState('')
   const [pin, setPin] = useState(() => { try { return localStorage.getItem(PIN_KEY) || '' } catch { return '' } })
+  const [me, setMe] = useState(null)      // { team, pool } once the PIN checks out
+  const [b, setB] = useState('')
   const [existing, setExisting] = useState(null)
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState(null)
+  const a = me?.team || ''
 
   const teams = useMemo(() => {
     const out = []
     POOLS.forEach((p) => tour.pools[p]?.standings.forEach((r) => r.team && out.push({ team: r.team, pool: p })))
     return out
   }, [tour])
-  const poolOf = (t) => teams.find((x) => x.team === t)?.pool
+
+  // PIN -> team. Runs automatically once 3 digits are in (and on load if remembered).
+  useEffect(() => {
+    setMe(null); setB(''); setErr(null)
+    if (pin.length !== 4) return
+    let cancelled = false
+    setBusy(true)
+    login(pin)
+      .then((who) => { if (!cancelled) { setMe(who); try { localStorage.setItem(PIN_KEY, pin) } catch {} } })
+      .catch((e) => { if (!cancelled) setErr(e.message) })
+      .finally(() => { if (!cancelled) setBusy(false) })
+    return () => { cancelled = true }
+  }, [pin])
 
   // Opponents: everyone else in the pool, plus knockout opponents once seeded.
   const opponents = useMemo(() => {
     if (!a) return { pool: [], bracket: [] }
-    const p = poolOf(a)
+    const p = me.pool
     const pool = teams.filter((x) => x.pool === p && x.team !== a).map((x) => x.team)
     const bracket = []
     tour.bracket.forEach((g) => {
@@ -62,13 +74,11 @@ function Setup({ tour, onStart }) {
       if (g.teamB === a && g.teamA) bracket.push(g.teamA)
     })
     return { pool, bracket: [...new Set(bracket)].filter((t) => !pool.includes(t)) }
-  }, [a, teams, tour])
-
-  useEffect(() => { if (b && ![...opponents.pool, ...opponents.bracket].includes(b)) setB('') }, [a]) // eslint-disable-line
+  }, [a, me, teams, tour])
 
   // Peek at the game so the button can say "Resume".
   useEffect(() => {
-    setExisting(null); setErr(null)
+    setExisting(null)
     if (!a || !b) return
     let cancelled = false
     fetchGame(a, b).then((g) => { if (!cancelled) setExisting(g) }).catch((e) => { if (!cancelled) setErr(e.message) })
@@ -78,50 +88,51 @@ function Setup({ tour, onStart }) {
   const played = existing ? existing.holes.filter((h) => h !== null).length : 0
   const start = async () => {
     setBusy(true); setErr(null)
-    try {
-      const { ok } = await verifyPin(a, pin)
-      if (!ok) throw new Error(`Wrong PIN for ${a}`)
-      try { localStorage.setItem(REMEMBER_KEY, a); localStorage.setItem(PIN_KEY, pin) } catch {}
-      onStart({ ...(existing || await fetchGame(a, b)), pin })
-    } catch (e) { setErr(e.message) } finally { setBusy(false) }
+    try { onStart({ ...(existing || await fetchGame(a, b)), pin }) }
+    catch (e) { setErr(e.message) } finally { setBusy(false) }
   }
+  const forget = () => { setPin(''); try { localStorage.removeItem(PIN_KEY) } catch {} }
 
   return (
     <section className="card setup">
-      <label>
-        <span>Your team</span>
-        <select value={a} onChange={(e) => setA(e.target.value)}>
-          <option value="">Select team…</option>
-          {POOLS.map((p) => (
-            <optgroup key={p} label={`${p} pool`}>
-              {teams.filter((x) => x.pool === p).map((x) => <option key={x.team} value={x.team}>{x.team}</option>)}
-            </optgroup>
-          ))}
-        </select>
-      </label>
       <label className="pin-row">
-        <span>Team PIN</span>
-        <input type="password" inputMode="numeric" pattern="[0-9]*" maxLength={3} autoComplete="off" placeholder="•••"
-          value={pin} onChange={(e) => setPin(e.target.value.replace(/\D/g, ''))} disabled={!a} />
+        <span>Enter your team PIN</span>
+        <input type="password" inputMode="numeric" pattern="[0-9]*" maxLength={4} autoComplete="off" placeholder="••••" autoFocus={!pin}
+          value={pin} onChange={(e) => setPin(e.target.value.replace(/\D/g, ''))} disabled={!!me} />
       </label>
-      <div className="vs">vs.</div>
-      <label>
-        <span>Opponent</span>
-        <select value={b} onChange={(e) => setB(e.target.value)} disabled={!a}>
-          <option value="">{a ? 'Select opponent…' : 'Pick your team first'}</option>
-          {opponents.pool.length > 0 && (
-            <optgroup label="Pool play">{opponents.pool.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
-          )}
-          {opponents.bracket.length > 0 && (
-            <optgroup label="Knockout">{opponents.bracket.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
-          )}
-        </select>
-      </label>
-      {existing?.done && <p className="muted center">This game is already finished ({existing.scoreA}–{existing.scoreB}). You can still edit it.</p>}
+      {busy && !me && <p className="muted center">Checking…</p>}
+
+      {me && (
+        <>
+          <div className="me">
+            <span className="muted">Your team</span>
+            <strong>{me.team}</strong>
+            <span className="muted">{me.pool} pool</span>
+            <button className="link inline" onClick={forget}>Not you?</button>
+          </div>
+          <div className="vs">vs.</div>
+          <label>
+            <span>Opponent</span>
+            <select value={b} onChange={(e) => setB(e.target.value)}>
+              <option value="">Select opponent…</option>
+              {opponents.pool.length > 0 && (
+                <optgroup label="Pool play">{opponents.pool.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
+              )}
+              {opponents.bracket.length > 0 && (
+                <optgroup label="Knockout">{opponents.bracket.map((t) => <option key={t} value={t}>{t}</option>)}</optgroup>
+              )}
+            </select>
+          </label>
+          {existing?.done && <p className="muted center">This game is already finished ({existing.scoreA}–{existing.scoreB}). You can still edit it.</p>}
+        </>
+      )}
+
       {err && <p className="error">{err}</p>}
-      <button className="primary big" disabled={!a || !b || pin.length !== 3 || busy} onClick={start}>
-        {busy ? 'Loading…' : played > 0 && played < HOLES ? `Resume Round (hole ${played + 1})` : played >= HOLES ? 'Review Round' : 'Start Round'}
-      </button>
+      {me && (
+        <button className="primary big" disabled={!b || busy} onClick={start}>
+          {busy ? 'Loading…' : played > 0 && played < HOLES ? `Resume Round (hole ${played + 1})` : played >= HOLES ? 'Review Round' : 'Start Round'}
+        </button>
+      )}
     </section>
   )
 }

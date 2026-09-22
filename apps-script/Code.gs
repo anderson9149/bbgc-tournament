@@ -16,7 +16,7 @@
  *             {action:'finish', year, a, b} marks the game done and copies the
  *             final score into PoolGames or BracketGames.
  *             Writes must include team A's `pin` (Teams column D) when one is set;
- *             {action:'verify', year, a, pin} checks a PIN without writing.
+ *             {action:'login', year, pin} returns the team that PIN belongs to.
  *
  * Years: every Google Sheet in the Drive folder BBGC_ScoreCards named
  * BBGC_ScoreCardResults_<year> is one tournament. The deployed script (bound
@@ -120,7 +120,7 @@ function setupTeams_(ss) {
     .setFontStyle('italic').setFontColor('#666666');
   sh.setColumnWidth(1, 220);
   sh.setColumnWidth(3, 120);
-  sh.getRange(2, 4, 24, 1).setNumberFormat('000');
+  sh.getRange(2, 4, 24, 1).setNumberFormat('@');
 }
 
 function setupPoolGames_(ss) {
@@ -390,25 +390,38 @@ function clearData_(ss) {
 
 // ------------------------------------------------------------- PINs
 
-// Fills column D of Teams with unique random 3-digit PINs (blank cells only).
+// Fills column D of Teams with unique random 4-digit PINs. Cells that already
+// hold a 4-digit PIN are kept; blanks and anything else get a new one.
 function assignPins() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getSheetByName('Teams');
   sh.getRange(1, 4).setValue('PIN').setBackground(HEADER_BG).setFontColor('#ffffff').setFontWeight('bold');
   var rows = sh.getRange(2, 1, 24, 4).getValues();
   var used = {};
-  rows.forEach(function (r) { if (r[3] !== '') used[String(r[3])] = true; });
+  var valid = function (v) { return /^\d{4}$/.test(String(v).trim()); };
+  rows.forEach(function (r) { if (valid(r[3])) used[String(r[3]).trim()] = true; });
   var out = [], n = 0;
   rows.forEach(function (r) {
-    var pin = r[3];
+    var pin = valid(r[3]) ? String(r[3]).trim() : '';
     if (r[0] !== '' && pin === '') {
-      do { pin = String(100 + Math.floor(Math.random() * 900)); } while (used[pin]);
+      do { pin = String(1000 + Math.floor(Math.random() * 9000)); } while (used[pin]);
       used[pin] = true; n++;
     }
-    out.push([pin === '' ? '' : String(pin)]);
+    out.push([pin]);
   });
   sh.getRange(2, 4, 24, 1).setNumberFormat('@').setValues(out);
-  SpreadsheetApp.getUi().alert('Assigned ' + n + ' new PIN' + (n === 1 ? '' : 's') + '. Existing PINs were kept.');
+  SpreadsheetApp.getUi().alert('Assigned ' + n + ' new PIN' + (n === 1 ? '' : 's') + '. Existing 4-digit PINs were kept.');
+}
+
+// The team whose PIN this is, or null.
+function teamForPin_(ss, pin) {
+  pin = String(pin || '').trim();
+  if (!pin) return null;
+  var rows = ss.getSheetByName('Teams').getRange(2, 1, 24, 4).getValues();
+  for (var i = 0; i < rows.length; i++) {
+    if (rows[i][0] !== '' && String(rows[i][3]).trim() === pin) return { team: String(rows[i][0]).trim(), pool: String(rows[i][1]) };
+  }
+  return null;
 }
 
 // True if the team has no PIN set, or the given PIN matches.
@@ -556,9 +569,9 @@ function doPost(e) {
     var target = spreadsheetForYear_(body.year);
     if (!target) return json_({ error: 'No results sheet for ' + body.year });
     var a = String(body.a || '').trim(), b = String(body.b || '').trim();
-    if (body.action === 'verify') {
-      if (!a) return json_({ error: 'Team is required' });
-      return json_({ ok: checkPin_(target.ss, a, body.pin) });
+    if (body.action === 'login') {
+      var who = teamForPin_(target.ss, body.pin);
+      return who ? json_(who) : json_({ error: 'No team associated with that PIN' });
     }
     if (!a || !b || a === b) return json_({ error: 'Two different teams are required' });
     if (!checkPin_(target.ss, a, body.pin)) return json_({ error: 'Wrong PIN for ' + a });
