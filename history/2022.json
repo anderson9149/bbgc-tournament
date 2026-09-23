@@ -1,0 +1,546 @@
+{
+  "year": 2022,
+  "source": "history/2022-bracket.webp and history/2022-pools.webp",
+  "notes": [
+    "23 teams: Blue, Red and Yellow had 6 each; Orange had 5 (10 games, a bye each round).",
+    "The pool board records each team's five round scores and point total but NOT which teams played each other in each round. Searching every possible round-robin schedule leaves 6 possibilities for Blue and 2 for Red, so the individual games cannot be reconstructed; the pools are entered as records only (Teams tab Record column).",
+    "Yellow's tally marks are the least legible on the board (photographed at an angle). Its records are a best reading, and they put Brownkowski (2-2-1) above Vandalay (1-3-1) even though the bracket seeded Vandalay as Yellow's #3 \u2014 worth confirming.",
+    "Seed Overrides follow the bracket's own seed numbers and the seed list written on the board (Seekers 5, White Zin 6, Boor 7, Brainerd 8, Mickey 9, LeBocce 10, Be-Yotch 11, Vandalay 12).",
+    "Bracket is winners only; scores recorded as 1-0. Brainerd Bergs beat Hawkeyes in the final."
+  ],
+  "teams": {
+    "Blue": [
+      "J.L.B!",
+      "Seekers",
+      "Merman",
+      "Banana the Tailpipe",
+      "Mickey the Mitcher",
+      "Royale w/ Cheese"
+    ],
+    "Red": [
+      "Smug Champs!",
+      "Bro's Boor",
+      "Steve + Jake",
+      "Guns 'n Rollers",
+      "Top Gun",
+      "Brainerd Bergs"
+    ],
+    "Yellow": [
+      "White Zin!",
+      "Hawkeyes",
+      "Keen on Christ + Blue Balls",
+      "Get Leid",
+      "Brownkowski",
+      "Vandalay"
+    ],
+    "Orange": [
+      "Muck Fichigan!",
+      "Big LeBocce",
+      "Sparty Devils",
+      "Be-Yotch-e, Please",
+      "Billy G.O.A.T."
+    ]
+  },
+  "records": {
+    "J.L.B!": "2-3",
+    "Seekers": "4-1",
+    "Merman": "1-3-1",
+    "Banana the Tailpipe": "0-5",
+    "Mickey the Mitcher": "2-2-1",
+    "Royale w/ Cheese": "5-0",
+    "Smug Champs!": "4-1",
+    "Bro's Boor": "2-2-1",
+    "Steve + Jake": "2-3",
+    "Guns 'n Rollers": "2-3",
+    "Top Gun": "2-3",
+    "Brainerd Bergs": "2-2-1",
+    "White Zin!": "3-1-1",
+    "Hawkeyes": "4-0-1",
+    "Keen on Christ + Blue Balls": "2-3",
+    "Get Leid": "1-4",
+    "Brownkowski": "2-2-1",
+    "Vandalay": "1-3-1",
+    "Muck Fichigan!": "3-1",
+    "Big LeBocce": "2-2",
+    "Sparty Devils": "1-2-1",
+    "Be-Yotch-e, Please": "2-2",
+    "Billy G.O.A.T.": "1-2-1"
+  },
+  "overrides": {
+    "Royale w/ Cheese": 1,
+    "Seekers": 2,
+    "Mickey the Mitcher": 3,
+    "Smug Champs!": 1,
+    "Bro's Boor": 2,
+    "Brainerd Bergs": 3,
+    "Hawkeyes": 1,
+    "White Zin!": 2,
+    "Vandalay": 3,
+    "Muck Fichigan!": 1,
+    "Big LeBocce": 2,
+    "Be-Yotch-e, Please": 3
+  },
+  "poolGames": {
+    "Blue": [
+      [
+        1,
+        2,
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        3,
+        6,
+        null,
+        null
+      ],
+      [
+        1,
+        4,
+        5,
+        null,
+        null
+      ],
+      [
+        2,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        2,
+        6,
+        1,
+        null,
+        null
+      ],
+      [
+        2,
+        2,
+        5,
+        null,
+        null
+      ],
+      [
+        3,
+        6,
+        4,
+        null,
+        null
+      ],
+      [
+        3,
+        2,
+        3,
+        null,
+        null
+      ],
+      [
+        3,
+        1,
+        5,
+        null,
+        null
+      ],
+      [
+        4,
+        4,
+        1,
+        null,
+        null
+      ],
+      [
+        4,
+        5,
+        3,
+        null,
+        null
+      ],
+      [
+        4,
+        6,
+        2,
+        null,
+        null
+      ],
+      [
+        5,
+        5,
+        6,
+        null,
+        null
+      ],
+      [
+        5,
+        1,
+        3,
+        null,
+        null
+      ],
+      [
+        5,
+        4,
+        2,
+        null,
+        null
+      ]
+    ],
+    "Red": [
+      [
+        1,
+        2,
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        3,
+        6,
+        null,
+        null
+      ],
+      [
+        1,
+        4,
+        5,
+        null,
+        null
+      ],
+      [
+        2,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        2,
+        6,
+        1,
+        null,
+        null
+      ],
+      [
+        2,
+        2,
+        5,
+        null,
+        null
+      ],
+      [
+        3,
+        6,
+        4,
+        null,
+        null
+      ],
+      [
+        3,
+        2,
+        3,
+        null,
+        null
+      ],
+      [
+        3,
+        1,
+        5,
+        null,
+        null
+      ],
+      [
+        4,
+        4,
+        1,
+        null,
+        null
+      ],
+      [
+        4,
+        5,
+        3,
+        null,
+        null
+      ],
+      [
+        4,
+        6,
+        2,
+        null,
+        null
+      ],
+      [
+        5,
+        5,
+        6,
+        null,
+        null
+      ],
+      [
+        5,
+        1,
+        3,
+        null,
+        null
+      ],
+      [
+        5,
+        4,
+        2,
+        null,
+        null
+      ]
+    ],
+    "Yellow": [
+      [
+        1,
+        2,
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        3,
+        6,
+        null,
+        null
+      ],
+      [
+        1,
+        4,
+        5,
+        null,
+        null
+      ],
+      [
+        2,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        2,
+        6,
+        1,
+        null,
+        null
+      ],
+      [
+        2,
+        2,
+        5,
+        null,
+        null
+      ],
+      [
+        3,
+        6,
+        4,
+        null,
+        null
+      ],
+      [
+        3,
+        2,
+        3,
+        null,
+        null
+      ],
+      [
+        3,
+        1,
+        5,
+        null,
+        null
+      ],
+      [
+        4,
+        4,
+        1,
+        null,
+        null
+      ],
+      [
+        4,
+        5,
+        3,
+        null,
+        null
+      ],
+      [
+        4,
+        6,
+        2,
+        null,
+        null
+      ],
+      [
+        5,
+        5,
+        6,
+        null,
+        null
+      ],
+      [
+        5,
+        1,
+        3,
+        null,
+        null
+      ],
+      [
+        5,
+        4,
+        2,
+        null,
+        null
+      ]
+    ],
+    "Orange": [
+      [
+        1,
+        1,
+        4,
+        null,
+        null
+      ],
+      [
+        1,
+        2,
+        3,
+        null,
+        null
+      ],
+      [
+        2,
+        3,
+        1,
+        null,
+        null
+      ],
+      [
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      [
+        3,
+        1,
+        2,
+        null,
+        null
+      ],
+      [
+        3,
+        3,
+        5,
+        null,
+        null
+      ],
+      [
+        4,
+        2,
+        5,
+        null,
+        null
+      ],
+      [
+        4,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        5,
+        4,
+        2,
+        null,
+        null
+      ],
+      [
+        5,
+        5,
+        1,
+        null,
+        null
+      ]
+    ]
+  },
+  "bracket": [
+    {
+      "game": 1,
+      "a": "Mickey the Mitcher",
+      "b": "Brainerd Bergs",
+      "winner": "b"
+    },
+    {
+      "game": 2,
+      "a": "Vandalay",
+      "b": "Seekers",
+      "winner": "b"
+    },
+    {
+      "game": 3,
+      "a": "Big LeBocce",
+      "b": "Bro's Boor",
+      "winner": "a"
+    },
+    {
+      "game": 4,
+      "a": "Be-Yotch-e, Please",
+      "b": "White Zin!",
+      "winner": "a"
+    },
+    {
+      "game": 5,
+      "a": "Royale w/ Cheese",
+      "b": "W1",
+      "winner": "b"
+    },
+    {
+      "game": 6,
+      "a": "Muck Fichigan!",
+      "b": "W2",
+      "winner": "a"
+    },
+    {
+      "game": 7,
+      "a": "Hawkeyes",
+      "b": "W3",
+      "winner": "a"
+    },
+    {
+      "game": 8,
+      "a": "Smug Champs!",
+      "b": "W4",
+      "winner": "a"
+    },
+    {
+      "game": 9,
+      "a": "W5",
+      "b": "W6",
+      "winner": "a"
+    },
+    {
+      "game": 10,
+      "a": "W7",
+      "b": "W8",
+      "winner": "a"
+    },
+    {
+      "game": 11,
+      "a": "W9",
+      "b": "W10",
+      "winner": "a"
+    }
+  ]
+}
