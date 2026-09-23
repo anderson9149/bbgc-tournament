@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 const ROUNDS = ['Round 1', 'Quarterfinal', 'Semifinal', 'Final']
 const BASE = import.meta.env.BASE_URL
-const POOL_LETTER = { Orange: 'O', Red: 'R', Blue: 'B', Yellow: 'Y', Green: 'G' }
+const POOL_LETTER = { Orange: 'O', Red: 'R', Blue: 'B', Yellow: 'Y', Green: 'G', Pink: 'P' }
 
 // TV layout, in 1920x1080 stage units relative to the bracket box.
 const COL_X = [0, 335, 670, 1005]

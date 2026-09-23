@@ -11,6 +11,7 @@
   --blue: #2f6fd6;
   --yellow: #f2c230;
   --green: #2e9e5b;
+  --pink: #e0559b;
   font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
   color: var(--text);
 }
@@ -53,7 +54,8 @@ button { font: inherit; cursor: pointer; }
 .pool-blue header { background: linear-gradient(#6f9df0, var(--blue)); color: #fff; }
 .pool-yellow header { background: linear-gradient(#ffe083, var(--yellow)); color: #3a2a00; }
 .pool-green header { background: linear-gradient(#6fd39a, var(--green)); color: #fff; }
-.pool-orange .progress, .pool-red .progress, .pool-blue .progress, .pool-green .progress { color: rgba(255, 255, 255, 0.85); }
+.pool-pink header { background: linear-gradient(#f79cc5, var(--pink)); color: #fff; }
+.pool-orange .progress, .pool-red .progress, .pool-blue .progress, .pool-green .progress, .pool-pink .progress { color: rgba(255, 255, 255, 0.85); }
 .pool-yellow .progress { color: rgba(58, 42, 0, 0.7); }
 
 .pool table { width: 100%; border-collapse: collapse; background: var(--panel); table-layout: fixed; }
