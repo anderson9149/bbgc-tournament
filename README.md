@@ -59,6 +59,10 @@ refuse to run on past years, so imported brackets can't be clobbered.
 round. Put whatever the year actually played in the history JSON; the importer writes that many rows
 and clears the rest. Games that were forfeited get `null` scores.
 
+**Ticker stories:** a history file can carry a `ticker` array — a play-by-play of that year's
+tournament. The importer writes it into the year's Ticker Messages tab, so picking that year on the
+site scrolls its story along the bottom.
+
 **Records without scores:** for a year where the W-L-T is known but the individual games aren't,
 put `4-1` or `3-1-1` in the Teams tab's **Record** column (or a `records` map in the history JSON).
 Standings use it and show `—` for +/−, since the scores aren't there to compute one.

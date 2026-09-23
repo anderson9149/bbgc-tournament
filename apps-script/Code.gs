@@ -525,9 +525,17 @@ function importHistory() {
     if (g.winner) bg.getRange(r, 5, 1, 2).setValues([g.winner === 'a' ? [g.scoreA || 1, g.scoreB || 0] : [g.scoreA || 0, g.scoreB || 1]]);
   });
 
+  // Ticker: the year's story, if the history file carries one.
+  if (h.ticker && h.ticker.length) {
+    var tk = ss.getSheetByName(TICKER_SHEET) || ss.insertSheet(TICKER_SHEET);
+    tk.clearContents();
+    tk.getRange(1, 1, h.ticker.length, 1).setValues(h.ticker.map(function (t) { return [t]; }));
+    tk.setColumnWidth(1, 700);
+  }
+
   CacheService.getScriptCache().remove('payload:' + year);
   ui.alert('Imported ' + year + ': ' + teams.filter(function (t) { return t[0]; }).length + ' teams, ' +
-           scores.filter(function (x) { return x[0] !== ''; }).length + ' pool games, ' + h.bracket.length + ' bracket games.');
+           scores.filter(function (x) { return x[0] !== ''; }).length + ' pool games, ' + h.bracket.length + ' bracket games' + (h.ticker && h.ticker.length ? ', ' + h.ticker.length + ' ticker messages' : '') + '.');
 }
 
 // ------------------------------------------------------------- PINs
