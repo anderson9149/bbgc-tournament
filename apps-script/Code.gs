@@ -516,6 +516,7 @@ function importHistory() {
 
   // BracketGames: typed names for the seeded slots, 1-0 / 0-1 for winners
   var bg = ss.getSheetByName('BracketGames');
+  bg.getRange(2, 5, BRACKET.length, 2).clearContent();   // old scores, if any
   var isRef = function (v) { return /^W\d+$/.test(v); }; // "W3" = winner of game 3
   h.bracket.forEach(function (g, i) {
     var r = i + 2;
