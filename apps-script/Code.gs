@@ -111,7 +111,7 @@ function header_(sh, row, values) {
 
 function setupTeams_(ss) {
   var sh = getOrCreate_(ss, 'Teams');
-  header_(sh, 1, ['Team', 'Pool', 'Seed Override', 'PIN']);
+  header_(sh, 1, ['Team', 'Pool', 'Seed Override', 'PIN', 'Record']);
   var poolRule = SpreadsheetApp.newDataValidation().requireValueInList(POOLS, true).build();
   sh.getRange(2, 2, 24, 1).setDataValidation(poolRule);
   var seedRule = SpreadsheetApp.newDataValidation().requireValueInList(['1', '2', '3', '4', '5', '6'], true).setAllowInvalid(false).build();
@@ -120,6 +120,10 @@ function setupTeams_(ss) {
   var pools = [];
   POOLS.forEach(function (p) { for (var i = 0; i < 6; i++) pools.push([p]); });
   sh.getRange(2, 2, 24, 1).setValues(pools);
+  sh.getRange(2, 5, 24, 1).setNumberFormat('@');
+  sh.setColumnWidth(5, 90);
+  sh.getRange(28, 1).setValue('Record: leave blank normally. Set "4-1" or "3-1-1" (W-L-T) for past years where the games weren\'t recorded but the record is known.')
+    .setFontStyle('italic').setFontColor('#666666');
   sh.getRange(27, 1).setValue('Seed Override: leave blank normally. Set 1–6 to force a team\'s finishing place in its pool (settles tiebreaker disputes).')
     .setFontStyle('italic').setFontColor('#666666');
   sh.setColumnWidth(1, 220);
@@ -277,10 +281,11 @@ function resetBracket_(ss) {
 // --------------------------------------------------------------- reading
 
 function readData_(ss) {
-  var teams = ss.getSheetByName('Teams').getRange(2, 1, 24, 4).getValues()
+  var teams = ss.getSheetByName('Teams').getRange(2, 1, 24, 5).getValues()
     .filter(function (r) { return r[0] !== ''; })
     .map(function (r) {
-      return { team: String(r[0]).trim(), pool: String(r[1]), override: r[2] === '' ? null : parseInt(r[2], 10), pin: String(r[3]).trim() };
+      return { team: String(r[0]).trim(), pool: String(r[1]), override: r[2] === '' ? null : parseInt(r[2], 10),
+               pin: String(r[3]).trim(), record: parseRecord_(r[4]) };
     });
 
   var poolGames = ss.getSheetByName('PoolGames').getRange(2, 1, 60, 8).getValues()
@@ -312,6 +317,12 @@ function readTicker_(ss) {
     .filter(function (t) { return t !== ''; });
 }
 
+// "4-1" or "3-1-1" -> {w, l, t}; anything else -> null.
+function parseRecord_(v) {
+  var m = String(v == null ? '' : v).trim().match(/^(\d+)\s*-\s*(\d+)(?:\s*-\s*(\d+))?$/);
+  return m ? { w: Number(m[1]), l: Number(m[2]), t: Number(m[3] || 0) } : null;
+}
+
 function num_(v) {
   if (v === '' || v === null) return null;
   var n = Number(v);
@@ -332,7 +343,7 @@ function computeStandings_(data) {
   poolsOf_(data).forEach(function (pool) {
     var stats = {};
     data.teams.filter(function (t) { return t.pool === pool; }).forEach(function (t) {
-      stats[t.team] = { team: t.team, w: 0, l: 0, pf: 0, pa: 0, diff: 0, override: t.override };
+      stats[t.team] = { team: t.team, w: 0, l: 0, t: 0, pf: 0, pa: 0, diff: 0, override: t.override, record: t.record };
     });
     var games = data.poolGames.filter(function (g) { return g.pool === pool; });
     var played = 0;
@@ -342,9 +353,15 @@ function computeStandings_(data) {
       if (!a || !b) return;
       played++;
       a.pf += g.scoreA; a.pa += g.scoreB; b.pf += g.scoreB; b.pa += g.scoreA;
-      if (g.scoreA > g.scoreB) { a.w++; b.l++; } else if (g.scoreB > g.scoreA) { b.w++; a.l++; }
+      if (g.scoreA > g.scoreB) { a.w++; b.l++; } else if (g.scoreB > g.scoreA) { b.w++; a.l++; } else { a.t++; b.t++; }
     });
-    var rows = Object.keys(stats).map(function (k) { var s = stats[k]; s.diff = s.pf - s.pa; return s; });
+    var rows = Object.keys(stats).map(function (k) {
+      var s = stats[k];
+      s.diff = s.pf - s.pa;
+      if (s.record) { s.w = s.record.w; s.l = s.record.l; s.t = s.record.t; s.recordOverride = true; }
+      delete s.record;
+      return s;
+    });
     rows.sort(function (x, y) {
       return (y.w - x.w) || (y.diff - x.diff) || (y.pf - x.pf) || x.team.localeCompare(y.team);
     });
@@ -469,12 +486,17 @@ function importHistory() {
   tsh.getRange(2, 2, 24, 1).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(pools, true).build());
 
   // Teams: name, pool, seed override (column D = PIN untouched)
-  var teams = [];
+  var teams = [], recs = [];
   pools.forEach(function (p) {
-    (h.teams[p] || []).forEach(function (t) { teams.push([t, p, (h.overrides || {})[t] || '']); });
+    (h.teams[p] || []).forEach(function (t) {
+      teams.push([t, p, (h.overrides || {})[t] || '']);
+      recs.push([(h.records || {})[t] || '']);
+    });
   });
-  while (teams.length < 24) teams.push(['', '', '']);
+  while (teams.length < 24) { teams.push(['', '', '']); recs.push(['']); }
   tsh.getRange(2, 1, 24, 3).setValues(teams);
+  tsh.getRange(1, 5).setValue('Record').setBackground(HEADER_BG).setFontColor('#ffffff').setFontWeight('bold');
+  tsh.getRange(2, 5, 24, 1).setNumberFormat('@').setValues(recs);
 
   // PoolGames: pool in A, round + slots in B:D, scores in G:H
   var rows = [], scores = [];

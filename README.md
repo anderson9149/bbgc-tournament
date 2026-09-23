@@ -55,6 +55,10 @@ then from the current year's sheet run **BBGC → Import a past year from GitHub
 `python3 history/make-paste.py <year>` and paste the blocks by hand.) Seed Bracket and Reset Bracket
 refuse to run on past years, so imported brackets can't be clobbered.
 
+**Records without scores:** for a year where the W-L-T is known but the individual games aren't,
+put `4-1` or `3-1-1` in the Teams tab's **Record** column (or a `records` map in the history JSON).
+Standings use it and show `—` for +/−, since the scores aren't there to compute one.
+
 **Past years with only win/loss records** (no scores): enter each win as `1`–`0`. Standings will be
 right; the +/− column just won't mean much.
 

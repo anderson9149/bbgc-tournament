@@ -14,7 +14,7 @@ export function Pools({ pools, order, tv }) {
 
 function Pool({ name, pool, tv, onDetails }) {
   if (!pool) return null
-  // Ties aren't counted server-side; derive them from the games list.
+  // Older deployments don't send ties; derive them from the games list.
   const ties = {}
   pool.games.forEach((g) => {
     if (g.scoreA != null && g.scoreB != null && g.scoreA === g.scoreB) {
@@ -35,7 +35,7 @@ function Pool({ name, pool, tv, onDetails }) {
         </thead>
         <tbody>
           {pool.standings.map((row) => {
-            const t = ties[row.team] || 0
+            const t = row.t ?? ties[row.team] ?? 0
             return (
               <tr key={row.team} className={row.seed <= 3 ? 'advancing' : ''}>
                 <td>{row.seed}</td>
@@ -43,7 +43,9 @@ function Pool({ name, pool, tv, onDetails }) {
                 <td>{row.w}</td>
                 <td>{row.l}</td>
                 <td>{t}</td>
-                <td>{row.diff > 0 ? `+${row.diff}` : row.diff}</td>
+                <td title={row.recordOverride ? 'Game scores were not recorded' : undefined}>
+                  {row.recordOverride ? '—' : row.diff > 0 ? `+${row.diff}` : row.diff}
+                </td>
               </tr>
             )
           })}

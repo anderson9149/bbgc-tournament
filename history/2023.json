@@ -7,7 +7,8 @@
     "Red's round 3-5 columns are cut off in the whiteboard photo, so only the games legible on the poster are entered (5 of 15). Loose Meats vs Vandelay in round 1 was a circled win with no score, entered 1-0.",
     "The 2023 round-robin schedule differs from the one setup() generates, so rounds and slots are imported explicitly.",
     "Ranks were decided by head-to-head, not point differential, so Seed Overrides pin each pool's top 3 as actually seeded.",
-    "Bracket is winners only; scores recorded as 1-0. Bros Boor beat Don Cuzzi in the final."
+    "Bracket is winners only; scores recorded as 1-0. Bros Boor beat Don Cuzzi in the final.",
+    "Red's records come from the whiteboard tallies and the ranking notes (Loose Meats 4-1 87, Ghetto Ballers 3-1-1 85, The Seekers 3-2 89); they are entered in the Teams tab's Record column because the individual game scores are cut off in the photo. Totals check out: 14 wins, 14 losses, 1 tied game = 15 games."
   ],
   "teams": {
     "Orange": [
@@ -554,5 +555,13 @@
       "b": "W10",
       "winner": "b"
     }
-  ]
+  ],
+  "records": {
+    "Brainard Bergs": "1-4",
+    "The Seekers": "3-2",
+    "Ghetto Ballers": "3-1-1",
+    "Loose Meats": "4-1",
+    "Vandelay": "1-4",
+    "Goldylichs": "2-2-1"
+  }
 }
