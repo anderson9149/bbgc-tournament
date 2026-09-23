@@ -12,18 +12,18 @@
   "teams": {
     "Pink": [
       "White Zin",
-      "Long Balls",
-      "Brothers Boos",
+      "Long Ballz",
+      "Brothers Boor",
       "Holy Rollers",
       "Double Doink",
       "CooCoo 4 Coconuts"
     ],
     "Green": [
-      "Seekers",
+      "The Seekers",
       "Trash n Stache",
       "Muck Fichigan",
       "Don Cuzzi",
-      "Vandalay Industries",
+      "Vandelay Industries",
       "Mag Dick"
     ],
     "Yellow": [
@@ -45,10 +45,10 @@
   },
   "overrides": {
     "White Zin": 1,
-    "Brothers Boos": 2,
+    "Brothers Boor": 2,
     "Holy Rollers": 3,
     "Muck Fichigan": 1,
-    "Seekers": 2,
+    "The Seekers": 2,
     "Mag Dick": 3,
     "Glory Holz": 1,
     "Guns n Rollers": 2,
@@ -502,13 +502,13 @@
     },
     {
       "game": 3,
-      "a": "Brothers Boos",
+      "a": "Brothers Boor",
       "b": "Hawkeyes",
       "winner": "a"
     },
     {
       "game": 4,
-      "a": "Seekers",
+      "a": "The Seekers",
       "b": "Mag Dick",
       "winner": "b"
     },
@@ -557,12 +557,12 @@
   ],
   "ticker": [
     "WELCOME TO THE 2025 B.B.G.C. \u2014 Twenty-four teams, four groups of six, five rounds each. Three from every group advance. And a defending champion with something to prove.",
-    "GROUP PLAY \u00b7 PINK \u2014 White Zin picked up exactly where they left off: 5-0, 97 points, nobody laid a glove on them. Then a straight dead heat for second \u2014 Brothers Boos and Holy Rollers both 3-2, 74 points to 75 \u2014 and it went to the head-to-head. CooCoo 4 Coconuts finished 0-5. WHITE ZIN, BROTHERS BOOS and HOLY ROLLERS advance.",
-    "GROUP PLAY \u00b7 GREEN \u2014 Muck Fichigan went through unbeaten at 4-0-1, the only team in the tournament nobody could beat. Seekers took second at 3-2 and Mag Dick third at 2-2-1 \u2014 file that name away. MUCK FICHIGAN, SEEKERS and MAG DICK advance.",
+    "GROUP PLAY \u00b7 PINK \u2014 White Zin picked up exactly where they left off: 5-0, 97 points, nobody laid a glove on them. Then a straight dead heat for second \u2014 Brothers Boor and Holy Rollers both 3-2, 74 points to 75 \u2014 and it went to the head-to-head. CooCoo 4 Coconuts finished 0-5. WHITE ZIN, BROTHERS BOOR and HOLY ROLLERS advance.",
+    "GROUP PLAY \u00b7 GREEN \u2014 Muck Fichigan went through unbeaten at 4-0-1, the only team in the tournament nobody could beat. The Seekers took second at 3-2 and Mag Dick third at 2-2-1 \u2014 file that name away. MUCK FICHIGAN, THE SEEKERS and MAG DICK advance.",
     "GROUP PLAY \u00b7 YELLOW \u2014 Glory Holz took it at 4-1 with 87 points. Guns n Rollers and the Hawkeyes both came home 3-2, split by a single point, 78 to 71. D-Boccery propped up the group at 1-4. GLORY HOLZ, GUNS N ROLLERS and HAWKEYES advance.",
     "GROUP PLAY \u00b7 BLUE \u2014 As tight as it gets at the top: Joanie Loves Bocce AND Smug Champs both 4-1, with Smug Champs scoring more, 88 to 83 \u2014 and Joanie taking the group anyway. Sparty Devils third at 2-3. JOANIE LOVES BOCCE, SMUG CHAMPS and SPARTY DEVILS advance.",
-    "ROUND ONE \u2014 Holy Rollers ended Guns n Rollers in an all-Rollers affair. Smug Champs put out Sparty Devils. Brothers Boos knocked out the Hawkeyes. And MAG DICK \u2014 third in their own group \u2014 took down the Seekers. The upsets had started early.",
-    "QUARTERFINALS \u2014 White Zin brushed past Holy Rollers. Muck Fichigan ended Brothers Boos. Smug Champs knocked out group champions Joanie Loves Bocce. And Mag Dick went and did it AGAIN, putting out Glory Holz, a group winner, to reach the final four from the eleven line.",
+    "ROUND ONE \u2014 Holy Rollers ended Guns n Rollers in an all-Rollers affair. Smug Champs put out Sparty Devils. Brothers Boor knocked out the Hawkeyes. And MAG DICK \u2014 third in their own group \u2014 took down the The Seekers. The upsets had started early.",
+    "QUARTERFINALS \u2014 White Zin brushed past Holy Rollers. Muck Fichigan ended Brothers Boor. Smug Champs knocked out group champions Joanie Loves Bocce. And Mag Dick went and did it AGAIN, putting out Glory Holz, a group winner, to reach the final four from the eleven line.",
     "SEMIFINALS \u2014 White Zin ended the Smug Champs' run, and Muck Fichigan finally stopped Mag Dick. The defending champions against the only team nobody had beaten all tournament.",
     "THE FINAL \u2014 Muck Fichigan: 4-0-1 in Green, unbeaten across the entire tournament, two bracket wins on the way. White Zin: 5-0 in Pink, 97 points, the defending champions, and a chance to do something nobody in the archive had ever done.",
     "\ud83c\udfc6 CHAMPIONS: WHITE ZIN \u2014 BACK-TO-BACK \ud83c\udfc6 \u2014 Perfect in the group, perfect in the bracket, and in the final they took down the last unbeaten team in the field. Two titles in two years, the first repeat champions in B.B.G.C. history \u2014 and from the club that lost the 2018 final and waited six years for the first one. A dynasty, written in red."

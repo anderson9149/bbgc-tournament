@@ -10,6 +10,7 @@
  *             Web app, "Execute as: Me", "Who has access: Anyone".
  *             ?year=2024 selects a year; the default is the latest year.
  *             ?action=game&a=<team>&b=<team> returns one game's hole scores.
+ *             ?action=stats returns the all-time table built by rebuildStats().
  *   doPost()  Used by the scorekeeper page (site/score/). Body is JSON:
  *             {action:'hole', year, a, b, hole, value} writes one hole
  *             (value > 0 = team A scored, < 0 = team B scored, 0 = no score);
@@ -32,6 +33,7 @@ var FOLDER_NAME = 'BBGC_ScoreCards';
 var FILE_PREFIX = 'BBGC_ScoreCardResults_';
 var FILE_PATTERN = /^BBGC_ScoreCardResults_(\d{4})$/;
 var FIRST_YEAR = 2016;
+var STATS_FILE = 'BBGC_AllTimeStats';
 var HISTORY_URL = 'https://raw.githubusercontent.com/anderson9149/bbgc-tournament/main/history/';
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
@@ -76,6 +78,8 @@ function onOpen() {
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addItem('Refresh year list', 'refreshYearList')
     .addItem('Import a past year from GitHub history…', 'importHistory')
+    .addSeparator()
+    .addItem('Rebuild all-time stats', 'rebuildStats')
     .addSeparator()
     .addItem('Lock past years (warn before editing)', 'lockPastYears')
     .addItem('Unlock past years', 'unlockPastYears')
@@ -458,6 +462,113 @@ function clearData_(ss) {
   if (t) t.clearContents();
 }
 
+// ---------------------------------------------------- all-time stats
+
+// Walks every year sheet and totals each team up. Writes the result to the
+// BBGC_AllTimeStats spreadsheet so the website can read it in one hit instead
+// of opening a dozen files per request.
+function rebuildStats() {
+  var ui = SpreadsheetApp.getUi();
+  var stats = computeAllTime_();
+  var folder = folder_();
+  var it = folder.getFilesByName(STATS_FILE);
+  var ss;
+  if (it.hasNext()) ss = SpreadsheetApp.openById(it.next().getId());
+  else { ss = SpreadsheetApp.create(STATS_FILE); DriveApp.getFileById(ss.getId()).moveTo(folder); }
+
+  var sh = ss.getSheetByName('AllTime') || ss.insertSheet('AllTime');
+  sh.clear();
+  header_(sh, 1, ['Team','Tournaments','Years','Titles','Title Years','W','L','T','Win%',
+                  'KO Years','KO W','KO L','Group Titles']);
+  var rows = stats.teams.map(function (t) {
+    return [t.team, t.years.length, t.years.join(' '), t.titles.length, t.titleYears.join(' '),
+            t.w, t.l, t.t, t.pct, t.koYears, t.koW, t.koL, t.groupTitles];
+  });
+  if (rows.length) sh.getRange(2, 1, rows.length, rows[0].length).setValues(rows);
+  sh.setColumnWidth(1, 220); sh.setColumnWidth(3, 200); sh.setColumnWidth(5, 120);
+  sh.getRange(2, 9, Math.max(rows.length, 1), 1).setNumberFormat('0.000');
+
+  var meta = ss.getSheetByName('Meta') || ss.insertSheet('Meta');
+  meta.clear();
+  meta.getRange(1, 1, 2, 2).setValues([['Updated', new Date()], ['Years', stats.years.join(' ')]]);
+
+  CacheService.getScriptCache().remove('stats');
+  ui.alert('All-time stats rebuilt: ' + rows.length + ' teams across ' + stats.years.length +
+           ' tournaments.\n\nStored in ' + STATS_FILE + '.');
+}
+
+function computeAllTime_() {
+  var years = yearFiles_(true);
+  var list = Object.keys(years).sort();
+  var by = {};
+  function T(name) {
+    if (!by[name]) by[name] = { team: name, years: [], titleYears: [], titles: [],
+                                w: 0, l: 0, t: 0, koYears: 0, koW: 0, koL: 0, groupTitles: 0 };
+    return by[name];
+  }
+  var played = [];
+  list.forEach(function (y) {
+    var ss = SpreadsheetApp.openById(years[y]);
+    var data;
+    try { data = readData_(ss); } catch (err) { return; }
+    if (!data.teams.length) return;
+    played.push(y);
+
+    var standings = computeStandings_(data);
+    poolsOf_(data).forEach(function (pool) {
+      var rows = standings[pool].rows;
+      rows.forEach(function (r, i) {
+        var e = T(r.team);
+        if (e.years.indexOf(y) < 0) e.years.push(y);
+        e.w += r.w; e.l += r.l; e.t += r.t || 0;
+        if (i === 0) e.groupTitles++;
+      });
+    });
+
+    // knockout: who appeared, who won, who took the trophy
+    var seen = {};
+    data.bracket.forEach(function (g) {
+      [g.teamA, g.teamB].forEach(function (n) { if (n) seen[n] = true; });
+      if (g.scoreA === null || g.scoreB === null || g.scoreA === g.scoreB) return;
+      var win = g.scoreA > g.scoreB ? g.teamA : g.teamB;
+      var lose = g.scoreA > g.scoreB ? g.teamB : g.teamA;
+      if (win) { T(win).koW++; T(win).w++; }
+      if (lose) { T(lose).koL++; T(lose).l++; }
+    });
+    Object.keys(seen).forEach(function (n) { T(n).koYears++; });
+
+    var last = data.bracket[data.bracket.length - 1];
+    if (last && last.winner) { var c = T(last.winner); c.titles.push(y); c.titleYears.push(y); }
+  });
+
+  var teams = Object.keys(by).map(function (k) {
+    var e = by[k];
+    var gp = e.w + e.l + e.t;
+    e.pct = gp ? Math.round((e.w + 0.5 * e.t) / gp * 1000) / 1000 : 0;
+    e.games = gp;
+    return e;
+  }).sort(function (a, b) { return b.w - a.w || a.team.localeCompare(b.team); });
+  return { teams: teams, years: played };
+}
+
+// Read the stored sheet back for the website.
+function readStats_() {
+  var it = folder_().getFilesByName(STATS_FILE);
+  if (!it.hasNext()) return { error: 'All-time stats have not been built yet — run BBGC > Rebuild all-time stats.' };
+  var ss = SpreadsheetApp.openById(it.next().getId());
+  var sh = ss.getSheetByName('AllTime');
+  if (!sh || sh.getLastRow() < 2) return { error: 'All-time stats sheet is empty.' };
+  var vals = sh.getRange(2, 1, sh.getLastRow() - 1, 13).getValues();
+  var teams = vals.filter(function (r) { return r[0] !== ''; }).map(function (r) {
+    return { team: String(r[0]), tournaments: Number(r[1]), years: String(r[2]).split(' ').filter(String).map(Number),
+             titles: Number(r[3]), titleYears: String(r[4]).split(' ').filter(String).map(Number),
+             w: Number(r[5]), l: Number(r[6]), t: Number(r[7]), pct: Number(r[8]),
+             koYears: Number(r[9]), koW: Number(r[10]), koL: Number(r[11]), groupTitles: Number(r[12]) };
+  });
+  var meta = ss.getSheetByName('Meta');
+  return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, teams: teams };
+}
+
 // --------------------------------------------------------- locking
 
 var LOCK_NOTE = 'BBGC: finished year — edit only on purpose';
@@ -809,6 +920,12 @@ function doPost(e) {
 
 function doGet(e) {
   var p = (e && e.parameter) || {};
+  if (p.action === 'stats') {
+    var cache = CacheService.getScriptCache();
+    var hit = cache.get('stats');
+    if (!hit) { hit = JSON.stringify(readStats_()); cache.put('stats', hit, 1800); }
+    return ContentService.createTextOutput(hit).setMimeType(ContentService.MimeType.JSON);
+  }
   if (p.action === 'game') {
     var target = spreadsheetForYear_(p.year);
     if (!target) return json_({ error: 'No results sheet for ' + p.year });

@@ -23,7 +23,7 @@
       "Joanie Loves Bocce",
       "Don Cuzzi",
       "Rolling Stones",
-      "The Big Le Bocce"
+      "The Big LeBocce"
     ],
     "Blue": [
       "Del Bocce Vista",
@@ -31,7 +31,7 @@
       "Hilltoppers",
       "The Richard Simmons Exp.",
       "Smug Champs",
-      "Vandelay"
+      "Vandelay Industries"
     ],
     "Yellow": [
       "Brothers Boor",
@@ -47,7 +47,7 @@
     "John-John, Inc": 2,
     "Trash n Stache": 3,
     "Muck Fichigan": 1,
-    "The Big Le Bocce": 2,
+    "The Big LeBocce": 2,
     "Joanie Loves Bocce": 3,
     "The Richard Simmons Exp.": 1,
     "Smug Champs": 2,
@@ -489,7 +489,7 @@
   "bracket": [
     {
       "game": 1,
-      "a": "The Big Le Bocce",
+      "a": "The Big LeBocce",
       "b": "Brothers Boor",
       "winner": "b"
     },
@@ -557,10 +557,10 @@
   "ticker": [
     "WELCOME TO THE 2021 B.B.G.C. \u2014 Twenty-four teams, four groups of six, five rounds each. Three advance from every group. Twelve go home.",
     "GROUP PLAY \u00b7 RED \u2014 White Zin were ruthless: 5-0, the only perfect record in the group, 91 points. And spare a thought for John-John, who went 4-1 and scored MORE than them \u2014 97 points, the biggest total in the tournament \u2014 and still finished second. Trash n Stache edged a 2-2-1 tiebreak for third. WHITE ZIN, JOHN-JOHN and TRASH N STACHE advance.",
-    "GROUP PLAY \u00b7 GREEN \u2014 Muck Fichigan took it at 4-1 with The Big Le Bocce right behind at 3-2. Then a dead heat for the last ticket: Joanie Loves Bocce and Don Cuzzi both 2-2-1, and Joanie's 75 points to 64 settled it. MUCK FICHIGAN, THE BIG LE BOCCE and JOANIE LOVES BOCCE advance.",
+    "GROUP PLAY \u00b7 GREEN \u2014 Muck Fichigan took it at 4-1 with The Big LeBocce right behind at 3-2. Then a dead heat for the last ticket: Joanie Loves Bocce and Don Cuzzi both 2-2-1, and Joanie's 75 points to 64 settled it. MUCK FICHIGAN, THE BIG LEBOCCE and JOANIE LOVES BOCCE advance.",
     "GROUP PLAY \u00b7 BLUE \u2014 The cruellest group on the board. FOUR teams inside one game of each other: Richard Simmons 3-1-1, Smug Champs 3-1-1, Hilltoppers 3-2 \u2014 and Del Bocce Vista, also 3-2, with 84 points, MORE than any of them. It wasn't enough. Del Bocce Vista miss out. THE RICHARD SIMMONS EXP., SMUG CHAMPS and HILLTOPPERS advance.",
     "GROUP PLAY \u00b7 YELLOW \u2014 The Seekers went through it untouched, 5-0 with 87 points. Hot Sauce took second at 3-1-1 and Brothers Boor third at 3-2 \u2014 which sent the Hawkeyes home at 2-3. THE SEEKERS, HOT SAUCE and BROTHERS BOOR advance.",
-    "ROUND ONE \u2014 Brothers Boor ended The Big Le Bocce. Smug Champs handled Hilltoppers. Trash n Stache put out Hot Sauce. And JOANIE LOVES BOCCE \u2014 the twelve seed, the last team into the field \u2014 took down John-John and that 97-point group campaign. The first tremor.",
+    "ROUND ONE \u2014 Brothers Boor ended The Big LeBocce. Smug Champs handled Hilltoppers. Trash n Stache put out Hot Sauce. And JOANIE LOVES BOCCE \u2014 the twelve seed, the last team into the field \u2014 took down John-John and that 97-point group campaign. The first tremor.",
     "QUARTERFINALS \u2014 White Zin brushed aside Brothers Boor, and Muck Fichigan ended Trash n Stache. But look at the seven line: SMUG CHAMPS knocked out The Seekers, 5-0 group champions. And Joanie did it again, putting out the Richard Simmons Exp. The twelve seed was in the final four.",
     "SEMIFINALS \u2014 And then the earthquake. JOANIE LOVES BOCCE, the LAST seed in the tournament, took down WHITE ZIN \u2014 5-0 in the group, the number one seed, unbeaten all day. On the other side Smug Champs ended Muck Fichigan. A 7 versus a 12 for the title.",
     "THE FINAL \u2014 Joanie Loves Bocce: twelfth and last into the bracket, then John-John, then Richard Simmons, then the unbeaten top seed. Three straight giants. Smug Champs: out of the four-way scrum in Blue, then Hilltoppers, then The Seekers, then Muck Fichigan. Neither one was supposed to be here.",

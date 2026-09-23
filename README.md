@@ -59,6 +59,11 @@ refuse to run on past years, so imported brackets can't be clobbered.
 round. Put whatever the year actually played in the history JSON; the importer writes that many rows
 and clears the rest. Games that were forfeited get `null` scores.
 
+**All-time stats:** **BBGC → Rebuild all-time stats** totals every year up and writes the result to a
+`BBGC_AllTimeStats` spreadsheet in the folder; the site's All-Time tab reads it via `?action=stats`.
+Re-run it after importing or editing any year. Team names must match across years for the totals to
+be right — stick to the spelling already in use (see the alias list applied in `history/`).
+
 **Protecting finished years:** **BBGC → Lock past years** puts warning-only protection on every
 sheet of every year before the current one — Google asks "are you sure?" before any hand edit, while
 the importer and the website carry on working. **Unlock past years** removes it.

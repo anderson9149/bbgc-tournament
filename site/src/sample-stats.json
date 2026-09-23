@@ -1,0 +1,1680 @@
+{
+  "updatedAt": null,
+  "teams": [
+    {
+      "team": "White Zin",
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 2,
+      "titleYears": [
+        2024,
+        2025
+      ],
+      "w": 35,
+      "l": 9,
+      "t": 3,
+      "koYears": 7,
+      "koW": 9,
+      "koL": 5,
+      "groupTitles": 5,
+      "tournaments": 7,
+      "pct": 0.777
+    },
+    {
+      "team": "Hawkeyes",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 1,
+      "titleYears": [
+        2018
+      ],
+      "w": 30,
+      "l": 16,
+      "t": 1,
+      "koYears": 5,
+      "koW": 7,
+      "koL": 4,
+      "groupTitles": 3,
+      "tournaments": 8,
+      "pct": 0.649
+    },
+    {
+      "team": "The Seekers",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 25,
+      "l": 12,
+      "t": 0,
+      "koYears": 6,
+      "koW": 3,
+      "koL": 6,
+      "groupTitles": 2,
+      "tournaments": 6,
+      "pct": 0.676
+    },
+    {
+      "team": "Joanie Loves Bocce",
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 24,
+      "l": 18,
+      "t": 2,
+      "koYears": 6,
+      "koW": 5,
+      "koL": 6,
+      "groupTitles": 2,
+      "tournaments": 7,
+      "pct": 0.568
+    },
+    {
+      "team": "Brothers Boor",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 1,
+      "titleYears": [
+        2023
+      ],
+      "w": 23,
+      "l": 18,
+      "t": 2,
+      "koYears": 5,
+      "koW": 6,
+      "koL": 4,
+      "groupTitles": 0,
+      "tournaments": 7,
+      "pct": 0.558
+    },
+    {
+      "team": "Muck Fichigan",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 22,
+      "l": 8,
+      "t": 1,
+      "koYears": 4,
+      "koW": 6,
+      "koL": 3,
+      "groupTitles": 4,
+      "tournaments": 5,
+      "pct": 0.726
+    },
+    {
+      "team": "Smug Champs",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titles": 1,
+      "titleYears": [
+        2021
+      ],
+      "w": 20,
+      "l": 7,
+      "t": 2,
+      "koYears": 3,
+      "koW": 7,
+      "koL": 2,
+      "groupTitles": 1,
+      "tournaments": 4,
+      "pct": 0.724
+    },
+    {
+      "team": "Don Cuzzi",
+      "years": [
+        2018,
+        2019,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 14,
+      "l": 17,
+      "t": 2,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 1,
+      "tournaments": 6,
+      "pct": 0.455
+    },
+    {
+      "team": "Hot Sauce",
+      "years": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 12,
+      "l": 11,
+      "t": 2,
+      "koYears": 3,
+      "koW": 2,
+      "koL": 3,
+      "groupTitles": 0,
+      "tournaments": 4,
+      "pct": 0.52
+    },
+    {
+      "team": "The Big LeBocce",
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 11,
+      "l": 8,
+      "t": 0,
+      "koYears": 3,
+      "koW": 2,
+      "koL": 3,
+      "groupTitles": 1,
+      "tournaments": 3,
+      "pct": 0.579
+    },
+    {
+      "team": "Vandelay Industries",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 11,
+      "l": 20,
+      "t": 1,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 0,
+      "tournaments": 6,
+      "pct": 0.359
+    },
+    {
+      "team": "Del Bocce Vista",
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 10,
+      "l": 7,
+      "t": 0,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 1,
+      "tournaments": 3,
+      "pct": 0.588
+    },
+    {
+      "team": "John-John, Inc",
+      "years": [
+        2018,
+        2019,
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 10,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "tournaments": 3,
+      "pct": 0.625
+    },
+    {
+      "team": "Trash n Stache",
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 10,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 4,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.583
+    },
+    {
+      "team": "Guns n Rollers",
+      "years": [
+        2020,
+        2022,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 8,
+      "l": 12,
+      "t": 0,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "tournaments": 4,
+      "pct": 0.4
+    },
+    {
+      "team": "On Wisconsin",
+      "years": [
+        2018,
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 8,
+      "l": 3,
+      "t": 1,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.708
+    },
+    {
+      "team": "Brainerd Bergs",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "titles": 1,
+      "titleYears": [
+        2022
+      ],
+      "w": 7,
+      "l": 11,
+      "t": 1,
+      "koYears": 1,
+      "koW": 4,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.395
+    },
+    {
+      "team": "Chi'Bocce",
+      "years": [
+        2019
+      ],
+      "titles": 1,
+      "titleYears": [
+        2019
+      ],
+      "w": 7,
+      "l": 0,
+      "t": 0,
+      "koYears": 1,
+      "koW": 3,
+      "koL": 0,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 1.0
+    },
+    {
+      "team": "Holy Rollers",
+      "years": [
+        2023,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "tournaments": 2,
+      "pct": 0.538
+    },
+    {
+      "team": "Long Ballz",
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 7,
+      "l": 10,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.412
+    },
+    {
+      "team": "Sister Swap",
+      "years": [
+        2023,
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 7,
+      "l": 4,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.625
+    },
+    {
+      "team": "Mustache Riders",
+      "years": [
+        2018,
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 6,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.5
+    },
+    {
+      "team": "Ohiowa",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 6,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.75
+    },
+    {
+      "team": "Sparty Devils",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 6,
+      "l": 15,
+      "t": 3,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 5,
+      "pct": 0.312
+    },
+    {
+      "team": "D-Boccery",
+      "years": [
+        2020,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 5,
+      "l": 10,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.333
+    },
+    {
+      "team": "Dickens Cider",
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 5,
+      "l": 9,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.357
+    },
+    {
+      "team": "Gumby Dammit",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 5,
+      "l": 1,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.833
+    },
+    {
+      "team": "Hide Your Moms",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 5,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.714
+    },
+    {
+      "team": "Royale w/ Cheese",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 5,
+      "l": 1,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.833
+    },
+    {
+      "team": "Brick Cock",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.667
+    },
+    {
+      "team": "Glory Holz",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.667
+    },
+    {
+      "team": "Kase-Kare-Cock",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.667
+    },
+    {
+      "team": "Laces Out",
+      "years": [
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.409
+    },
+    {
+      "team": "Loh Hang Balls",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.571
+    },
+    {
+      "team": "Loose Meats",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.667
+    },
+    {
+      "team": "Mag Dick",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 3,
+      "t": 1,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.562
+    },
+    {
+      "team": "Mickey the Mitcher",
+      "years": [
+        2022,
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.409
+    },
+    {
+      "team": "Trash Panda's",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 4,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.571
+    },
+    {
+      "team": "Be-Yotch-e, Please",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Dug z World",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Ghetto Ballers",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.583
+    },
+    {
+      "team": "Hilltoppers",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Loopers",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "TNT",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.6
+    },
+    {
+      "team": "The Richard Simmons Exp.",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.583
+    },
+    {
+      "team": "Tyson's Micropenis",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.6
+    },
+    {
+      "team": "Brownkowski",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Covid Cowboys",
+      "years": [
+        2020
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 1,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.625
+    },
+    {
+      "team": "Double Deuce",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Double Doink",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Flangers",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Goldylichs",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Hitchhikers",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Keen on Christ + Blue Balls",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Mistress Irrelevant",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Pink Ladies",
+      "years": [
+        2019,
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 7,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.25
+    },
+    {
+      "team": "Return of the Mesh",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Steve + Jake",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "The Best Looking Bocce Team",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "Top Gun",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Vivace do Tinge",
+      "years": [
+        2020
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "team": "B.K. Knights",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "Banana in the Tailpipe",
+      "years": [
+        2022,
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 8,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 2,
+      "pct": 0.15
+    },
+    {
+      "team": "Billy G.O.A.T.",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.375
+    },
+    {
+      "team": "Blues Bros",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
+      "team": "Bocce Balboa",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Bushwood",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Get Leid",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Grand Lakes",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Here 4 Beer",
+      "years": [
+        2023
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "I Can't Decide",
+      "years": [
+        2020
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "Inches From Glory",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "Magnum",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 2,
+      "t": 2,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
+      "team": "Merman",
+      "years": [
+        2022
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
+      "team": "Meshed Up",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Moist Baguette",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Noonan",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Reservations @ Dorsia",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
+      "team": "Rolling Stones",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "team": "Spencer Torkelson",
+      "years": [
+        2020
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "Steam Punks",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "Teabaggers",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "The Bryan Adams Show",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "team": "Balz Deep",
+      "years": [
+        2020
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "Boilers",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "CooCoo 4 Coconuts",
+      "years": [
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "Hung Like a HorsePower",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "Hurricane Ditka",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "The Boys r Back",
+      "years": [
+        2020
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "The M.J.s",
+      "years": [
+        2024
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "Trojan",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "Village People",
+      "years": [
+        2018
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "team": "Wildcat",
+      "years": [
+        2019
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    }
+  ]
+}

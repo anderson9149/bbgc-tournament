@@ -4,6 +4,7 @@ import { useMediaQuery, useStageScale } from './hooks.js'
 import { Pools } from './Pools.jsx'
 import { Bracket } from './Bracket.jsx'
 import { Ticker } from './Ticker.jsx'
+import { Stats, useStats } from './Stats.jsx'
 import { API_URL as CONFIGURED_URL } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
@@ -15,6 +16,7 @@ export default function App() {
   const [year, setYear] = useState(() => new URLSearchParams(window.location.search).get('year'))
   const { data, error, fetchedAt, loading, refresh } = useResults(year)
   const [tab, setTab] = useState('group')
+  const { stats, error: statsError } = useStats()
 
   const changeYear = (y) => {
     setYear(y)
@@ -27,7 +29,7 @@ export default function App() {
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
   const scale = useStageScale()
 
-  const bg = `${BASE}bg/${tab}-${isTV ? 'landscape' : 'portrait'}.webp`
+  const bg = `${BASE}bg/${tab === 'stats' ? 'knockout' : tab}-${isTV ? 'landscape' : 'portrait'}.webp`
 
   const content = (
     <>
@@ -37,6 +39,7 @@ export default function App() {
         <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
           <span className="icon">↻</span> Refresh
         </button>
+        <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>All-Time</button>
         {years && (
           <select className="year" value={data.year} onChange={(e) => changeYear(e.target.value)} aria-label="Tournament year">
             {years.map((y) => <option key={y} value={y}>{y}</option>)}
@@ -46,6 +49,8 @@ export default function App() {
 
       {!data ? (
         <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
+      ) : tab === 'stats' ? (
+        <Stats stats={stats} error={statsError} tv={isTV} />
       ) : tab === 'group' ? (
         <Pools pools={data.pools} order={Object.keys(data.pools)} tv={isTV} />
       ) : (

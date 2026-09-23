@@ -10,74 +10,74 @@
   ],
   "teams": {
     "Blue": [
-      "J.L.B!",
-      "Seekers",
+      "Joanie Loves Bocce",
+      "The Seekers",
       "Merman",
-      "Banana the Tailpipe",
+      "Banana in the Tailpipe",
       "Mickey the Mitcher",
       "Royale w/ Cheese"
     ],
     "Red": [
-      "Smug Champs!",
-      "Bro's Boor",
+      "Smug Champs",
+      "Brothers Boor",
       "Steve + Jake",
-      "Guns 'n Rollers",
+      "Guns n Rollers",
       "Top Gun",
       "Brainerd Bergs"
     ],
     "Yellow": [
-      "White Zin!",
+      "White Zin",
       "Hawkeyes",
       "Keen on Christ + Blue Balls",
       "Get Leid",
       "Brownkowski",
-      "Vandalay"
+      "Vandelay Industries"
     ],
     "Orange": [
-      "Muck Fichigan!",
-      "Big LeBocce",
+      "Muck Fichigan",
+      "The Big LeBocce",
       "Sparty Devils",
       "Be-Yotch-e, Please",
       "Billy G.O.A.T."
     ]
   },
   "records": {
-    "J.L.B!": "2-3",
-    "Seekers": "4-1",
+    "Joanie Loves Bocce": "2-3",
+    "The Seekers": "4-1",
     "Merman": "1-3-1",
-    "Banana the Tailpipe": "0-5",
+    "Banana in the Tailpipe": "0-5",
     "Mickey the Mitcher": "2-2-1",
     "Royale w/ Cheese": "5-0",
-    "Smug Champs!": "4-1",
-    "Bro's Boor": "2-2-1",
+    "Smug Champs": "4-1",
+    "Brothers Boor": "2-2-1",
     "Steve + Jake": "2-3",
-    "Guns 'n Rollers": "2-3",
+    "Guns n Rollers": "2-3",
     "Top Gun": "2-3",
     "Brainerd Bergs": "2-2-1",
-    "White Zin!": "3-1-1",
+    "White Zin": "3-1-1",
     "Hawkeyes": "4-0-1",
     "Keen on Christ + Blue Balls": "2-3",
     "Get Leid": "1-4",
     "Brownkowski": "2-2-1",
-    "Vandalay": "1-3-1",
-    "Muck Fichigan!": "3-1",
-    "Big LeBocce": "2-2",
+    "Vandelay Industries": "1-3-1",
+    "Muck Fichigan": "3-1",
+    "The Big LeBocce": "2-2",
     "Sparty Devils": "1-2-1",
     "Be-Yotch-e, Please": "2-2",
     "Billy G.O.A.T.": "1-2-1"
   },
   "overrides": {
     "Royale w/ Cheese": 1,
-    "Seekers": 2,
+    "The Seekers": 2,
     "Mickey the Mitcher": 3,
-    "Smug Champs!": 1,
-    "Bro's Boor": 2,
+    "Smug Champs": 1,
+    "Brothers Boor": 2,
     "Brainerd Bergs": 3,
     "Hawkeyes": 1,
-    "White Zin!": 2,
-    "Vandalay": 3,
-    "Muck Fichigan!": 1,
-    "Big LeBocce": 2,
+    "White Zin": 2,
+    "Vandelay Industries": 3,
+    "Muck Fichigan": 1,
+    "The Big LeBocce": 2,
     "Be-Yotch-e, Please": 3
   },
   "poolGames": {
@@ -484,20 +484,20 @@
     },
     {
       "game": 2,
-      "a": "Vandalay",
-      "b": "Seekers",
+      "a": "Vandelay Industries",
+      "b": "The Seekers",
       "winner": "b"
     },
     {
       "game": 3,
-      "a": "Big LeBocce",
-      "b": "Bro's Boor",
+      "a": "The Big LeBocce",
+      "b": "Brothers Boor",
       "winner": "a"
     },
     {
       "game": 4,
       "a": "Be-Yotch-e, Please",
-      "b": "White Zin!",
+      "b": "White Zin",
       "winner": "a"
     },
     {
@@ -508,7 +508,7 @@
     },
     {
       "game": 6,
-      "a": "Muck Fichigan!",
+      "a": "Muck Fichigan",
       "b": "W2",
       "winner": "a"
     },
@@ -520,7 +520,7 @@
     },
     {
       "game": 8,
-      "a": "Smug Champs!",
+      "a": "Smug Champs",
       "b": "W4",
       "winner": "a"
     },
@@ -545,12 +545,12 @@
   ],
   "ticker": [
     "WELCOME TO THE 2022 B.B.G.C. \u2014 Twenty-three teams across four groups \u2014 Blue, Red and Yellow with six, Orange with five. Three from each move on to the bracket.",
-    "GROUP PLAY \u00b7 BLUE \u2014 Royale w/ Cheese went through it without a scratch: 5-0, the only perfect record in the tournament. The Seekers took second at 4-1 and Mickey the Mitcher edged in at 2-2-1. Banana the Tailpipe never got off the mark. ROYALE W/ CHEESE, THE SEEKERS and MICKEY THE MITCHER advance.",
-    "GROUP PLAY \u00b7 RED \u2014 Smug Champs, the defending champions, looked every bit of it at 4-1. Behind them a genuine traffic jam: Bro's Boor and Brainerd Bergs both 2-2-1, with Steve + Jake, Guns 'n Rollers and Top Gun all at 2-3. Fine margins everywhere. SMUG CHAMPS, BRO'S BOOR and BRAINERD BERGS advance.",
-    "GROUP PLAY \u00b7 YELLOW \u2014 The Hawkeyes did not lose a game: 4-0-1, the only unbeaten card in the group stage. White Zin were right there at 3-1-1. Vandalay took the last ticket. HAWKEYES, WHITE ZIN and VANDALAY advance.",
-    "GROUP PLAY \u00b7 ORANGE \u2014 Five teams, four games each. Muck Fichigan came out on top at 3-1, and then a straight tie for second: Big LeBocce and Be-Yotch-e, Please, both 2-2. Sparty Devils and Billy G.O.A.T. both 1-2-1. MUCK FICHIGAN, BIG LeBOCCE and BE-YOTCH-E, PLEASE advance.",
-    "ROUND ONE \u2014 Brainerd Bergs edged out Mickey the Mitcher. The Seekers ended Vandalay. Big LeBocce upset Bro's Boor. And Be-Yotch-e, Please sent WHITE ZIN home in the first game they played. The eleven seed over the six.",
-    "QUARTERFINALS \u2014 Hawkeyes held firm over Big LeBocce, Smug Champs saw off Be-Yotch-e, and Muck Fichigan ended The Seekers. But the shock of the day came at the top of the board: BRAINERD BERGS TOOK DOWN ROYALE W/ CHEESE. Five and oh in the group, number one seed, out in a single game.",
+    "GROUP PLAY \u00b7 BLUE \u2014 Royale w/ Cheese went through it without a scratch: 5-0, the only perfect record in the tournament. The Seekers took second at 4-1 and Mickey the Mitcher edged in at 2-2-1. Banana in the Tailpipe never got off the mark. ROYALE W/ CHEESE, THE SEEKERS and MICKEY THE MITCHER advance.",
+    "GROUP PLAY \u00b7 RED \u2014 Smug Champs, the defending champions, looked every bit of it at 4-1. Behind them a genuine traffic jam: Brothers Boor and Brainerd Bergs both 2-2-1, with Steve + Jake, Guns n Rollers and Top Gun all at 2-3. Fine margins everywhere. SMUG CHAMPS, BROTHERS BOOR and BRAINERD BERGS advance.",
+    "GROUP PLAY \u00b7 YELLOW \u2014 The Hawkeyes did not lose a game: 4-0-1, the only unbeaten card in the group stage. White Zin were right there at 3-1-1. Vandelay Industries Industries took the last ticket. HAWKEYES, WHITE ZIN and VANDELAY INDUSTRIES INDUSTRIES advance.",
+    "GROUP PLAY \u00b7 ORANGE \u2014 Five teams, four games each. Muck Fichigan came out on top at 3-1, and then a straight tie for second: The Big LeBocce and Be-Yotch-e, Please, both 2-2. Sparty Devils and Billy G.O.A.T. both 1-2-1. MUCK FICHIGAN, BIG LeBOCCE and BE-YOTCH-E, PLEASE advance.",
+    "ROUND ONE \u2014 Brainerd Bergs edged out Mickey the Mitcher. The Seekers ended Vandelay Industries Industries. The Big LeBocce upset Brothers Boor. And Be-Yotch-e, Please sent WHITE ZIN home in the first game they played. The eleven seed over the six.",
+    "QUARTERFINALS \u2014 Hawkeyes held firm over The Big LeBocce, Smug Champs saw off Be-Yotch-e, and Muck Fichigan ended The Seekers. But the shock of the day came at the top of the board: BRAINERD BERGS TOOK DOWN ROYALE W/ CHEESE. Five and oh in the group, number one seed, out in a single game.",
     "SEMIFINALS \u2014 Brainerd Bergs weren't done \u2014 they ended Muck Fichigan too. And the Hawkeyes stopped the defending champion Smug Champs cold. An eight seed and a two seed for the trophy.",
     "THE FINAL \u2014 Hawkeyes: 4-0-1, the group stage's only unbeaten team, 2018 champions chasing a second. Brainerd Bergs: eighth seed out of a logjammed Red group, and a bracket run that had already buried the number one seed and a group champion.",
     "\ud83c\udfc6 CHAMPIONS: BRAINERD BERGS \ud83c\udfc6 \u2014 They came in eighth. They beat the top seed, they beat a group champion, and then they beat the only team that hadn't lost all day. The Hawkeyes' second title will have to wait. 2022 goes to the Brainerd Bergs."
