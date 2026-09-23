@@ -226,13 +226,8 @@ button { font: inherit; cursor: pointer; }
 .mobile { min-height: 100vh; padding: 0 12px 70px; }
 .mobile .ticker { position: fixed; left: 0; right: 0; bottom: 0; height: 40px; line-height: 38px; font-size: 15px; z-index: 5; }
 .mobile-bg { position: fixed; inset: 0; z-index: -1; background: var(--red) center top / cover no-repeat; }
-/* Each portrait image has its title baked in at a different height; push the
-   menu below whichever one is showing. Values are rows of the 941x1672 art. */
+/* All three portrait images bake their title into the top ~11.5%; keep content below it. */
 .mobile .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 200 + 8px); flex-wrap: wrap; gap: 8px; }
-.mobile.tab-stats .menu { padding-top: calc(100vw / 941 * 420 + 10px); }
-/* This title is wider than the others, so scale the art to the screen width
-   rather than cropping its edges off; the sampled colour continues below it. */
-.mobile.tab-stats .mobile-bg { background-size: 100% auto; background-color: #6b0208; }
 .mobile .menu button { font-size: 13px; padding: 8px 14px; }
 .mobile .menu select.year { font-size: 13px; padding: 8px 34px 8px 14px; background-position: right 12px center; }
 .mobile .pools { grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
