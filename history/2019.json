@@ -1,0 +1,521 @@
+{
+  "year": 2019,
+  "source": "history/2019-poster.webp (hand-written results poster)",
+  "notes": [
+    "23 teams: Yellow, Green (labelled WHITE/GREEN) and Red had 6 each; Blue had only 5, playing a 5-team round robin with a bye each round (10 games instead of 15).",
+    "The poster records each team's running point total after rounds 3, 4 and 5. Every one of those checkpoints reconciles with the reconstructed games, and all 23 W-L-T records match the tally marks.",
+    "Green round 5 Trojan vs Dickens Cider was a forfeit (FF on the poster) and is left with no score.",
+    "Seed Overrides pin each pool's top 3 as actually seeded into the bracket.",
+    "Bracket is winners only; scores recorded as 1-0. Chi'Bocce beat Ohiowa in the final."
+  ],
+  "teams": {
+    "Yellow": [
+      "Hawkeyes",
+      "Trash Panda's",
+      "Don Cuzzi",
+      "Loopers",
+      "Wildcat",
+      "John-John, Inc"
+    ],
+    "Green": [
+      "White Zin",
+      "Dickens Cider",
+      "Kase-Kare-Cock",
+      "Trojan",
+      "Joanie Loves Bocce",
+      "Boor Brothers"
+    ],
+    "Red": [
+      "On Wisconsin",
+      "Pink Ladies",
+      "Ohiowa",
+      "Reservations @ Dorsia",
+      "Del Bocce Vista",
+      "Noonan"
+    ],
+    "Blue": [
+      "Chi'Bocce",
+      "Dug z World",
+      "B.K. Knights",
+      "Teabaggers",
+      "Mustache Riders"
+    ]
+  },
+  "overrides": {
+    "John-John, Inc": 1,
+    "Trash Panda's": 2,
+    "Loopers": 3,
+    "Kase-Kare-Cock": 1,
+    "Joanie Loves Bocce": 2,
+    "White Zin": 3,
+    "Ohiowa": 1,
+    "On Wisconsin": 2,
+    "Del Bocce Vista": 3,
+    "Chi'Bocce": 1,
+    "Dug z World": 2,
+    "Mustache Riders": 3
+  },
+  "poolGames": {
+    "Yellow": [
+      [
+        1,
+        2,
+        1,
+        12,
+        17
+      ],
+      [
+        1,
+        3,
+        6,
+        12,
+        16
+      ],
+      [
+        1,
+        4,
+        5,
+        20,
+        3
+      ],
+      [
+        2,
+        3,
+        4,
+        10,
+        21
+      ],
+      [
+        2,
+        6,
+        1,
+        13,
+        17
+      ],
+      [
+        2,
+        2,
+        5,
+        20,
+        9
+      ],
+      [
+        3,
+        6,
+        4,
+        17,
+        12
+      ],
+      [
+        3,
+        2,
+        3,
+        17,
+        10
+      ],
+      [
+        3,
+        1,
+        5,
+        16,
+        15
+      ],
+      [
+        4,
+        4,
+        1,
+        17,
+        13
+      ],
+      [
+        4,
+        5,
+        3,
+        10,
+        15
+      ],
+      [
+        4,
+        6,
+        2,
+        14,
+        13
+      ],
+      [
+        5,
+        5,
+        6,
+        10,
+        17
+      ],
+      [
+        5,
+        1,
+        3,
+        16,
+        18
+      ],
+      [
+        5,
+        4,
+        2,
+        7,
+        22
+      ]
+    ],
+    "Green": [
+      [
+        1,
+        2,
+        1,
+        13,
+        17
+      ],
+      [
+        1,
+        3,
+        6,
+        14,
+        13
+      ],
+      [
+        1,
+        4,
+        5,
+        8,
+        21
+      ],
+      [
+        2,
+        3,
+        4,
+        16,
+        15
+      ],
+      [
+        2,
+        6,
+        1,
+        9,
+        17
+      ],
+      [
+        2,
+        2,
+        5,
+        10,
+        16
+      ],
+      [
+        3,
+        6,
+        4,
+        27,
+        7
+      ],
+      [
+        3,
+        2,
+        3,
+        13,
+        11
+      ],
+      [
+        3,
+        1,
+        5,
+        14,
+        14
+      ],
+      [
+        4,
+        4,
+        1,
+        6,
+        17
+      ],
+      [
+        4,
+        5,
+        3,
+        13,
+        16
+      ],
+      [
+        4,
+        6,
+        2,
+        14,
+        12
+      ],
+      [
+        5,
+        5,
+        6,
+        20,
+        12
+      ],
+      [
+        5,
+        1,
+        3,
+        14,
+        15
+      ],
+      [
+        5,
+        4,
+        2,
+        null,
+        null
+      ]
+    ],
+    "Red": [
+      [
+        1,
+        2,
+        1,
+        11,
+        20
+      ],
+      [
+        1,
+        3,
+        6,
+        23,
+        12
+      ],
+      [
+        1,
+        4,
+        5,
+        15,
+        16
+      ],
+      [
+        2,
+        3,
+        4,
+        13,
+        14
+      ],
+      [
+        2,
+        6,
+        1,
+        12,
+        19
+      ],
+      [
+        2,
+        2,
+        5,
+        11,
+        20
+      ],
+      [
+        3,
+        6,
+        4,
+        24,
+        8
+      ],
+      [
+        3,
+        2,
+        3,
+        7,
+        23
+      ],
+      [
+        3,
+        1,
+        5,
+        19,
+        13
+      ],
+      [
+        4,
+        4,
+        1,
+        6,
+        26
+      ],
+      [
+        4,
+        5,
+        3,
+        12,
+        17
+      ],
+      [
+        4,
+        6,
+        2,
+        10,
+        13
+      ],
+      [
+        5,
+        5,
+        6,
+        18,
+        15
+      ],
+      [
+        5,
+        1,
+        3,
+        10,
+        12
+      ],
+      [
+        5,
+        4,
+        2,
+        13,
+        13
+      ]
+    ],
+    "Blue": [
+      [
+        1,
+        1,
+        4,
+        30,
+        6
+      ],
+      [
+        1,
+        2,
+        3,
+        24,
+        7
+      ],
+      [
+        2,
+        3,
+        1,
+        10,
+        21
+      ],
+      [
+        2,
+        4,
+        5,
+        7,
+        12
+      ],
+      [
+        3,
+        1,
+        2,
+        16,
+        9
+      ],
+      [
+        3,
+        3,
+        5,
+        11,
+        16
+      ],
+      [
+        4,
+        2,
+        5,
+        15,
+        13
+      ],
+      [
+        4,
+        3,
+        4,
+        25,
+        12
+      ],
+      [
+        5,
+        4,
+        2,
+        19,
+        12
+      ],
+      [
+        5,
+        5,
+        1,
+        11,
+        22
+      ]
+    ]
+  },
+  "bracket": [
+    {
+      "game": 1,
+      "a": "Trash Panda's",
+      "b": "White Zin",
+      "winner": "a"
+    },
+    {
+      "game": 2,
+      "a": "On Wisconsin",
+      "b": "Mustache Riders",
+      "winner": "b"
+    },
+    {
+      "game": 3,
+      "a": "Dug z World",
+      "b": "Del Bocce Vista",
+      "winner": "a"
+    },
+    {
+      "game": 4,
+      "a": "Joanie Loves Bocce",
+      "b": "Loopers",
+      "winner": "a"
+    },
+    {
+      "game": 5,
+      "a": "Chi'Bocce",
+      "b": "W1",
+      "winner": "a"
+    },
+    {
+      "game": 6,
+      "a": "Kase-Kare-Cock",
+      "b": "W2",
+      "winner": "b"
+    },
+    {
+      "game": 7,
+      "a": "Ohiowa",
+      "b": "W3",
+      "winner": "a"
+    },
+    {
+      "game": 8,
+      "a": "John-John, Inc",
+      "b": "W4",
+      "winner": "a"
+    },
+    {
+      "game": 9,
+      "a": "W5",
+      "b": "W6",
+      "winner": "a"
+    },
+    {
+      "game": 10,
+      "a": "W7",
+      "b": "W8",
+      "winner": "a"
+    },
+    {
+      "game": 11,
+      "a": "W9",
+      "b": "W10",
+      "winner": "a"
+    }
+  ]
+}

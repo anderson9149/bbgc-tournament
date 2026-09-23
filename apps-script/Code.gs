@@ -508,6 +508,9 @@ function importHistory() {
     });
   });
   var pg = ss.getSheetByName('PoolGames');
+  var maxRows = Math.max(pg.getMaxRows() - 1, rows.length);
+  pg.getRange(2, 1, maxRows, 4).clearContent();
+  pg.getRange(2, 7, maxRows, 2).clearContent();
   pg.getRange(2, 1, rows.length, 4).setValues(rows);
   pg.getRange(2, 7, scores.length, 2).setValues(scores);
 
