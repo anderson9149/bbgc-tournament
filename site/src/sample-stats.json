@@ -25,7 +25,11 @@
       "koL": 5,
       "groupTitles": 5,
       "tournaments": 7,
-      "pct": 0.777
+      "pct": 0.777,
+      "facedMost": "Brothers Boor (5)",
+      "beatMost": "Brothers Boor (4)",
+      "lostMost": "Hawkeyes (1)",
+      "narrative": "The greatest dynasty the B.B.G.C. has produced, and it took them seven years and one broken heart to get going. White Zin lost the 2018 final, then spent five seasons collecting group titles \u2014 five of them, more than any club in the archive \u2014 without ever getting back to the last game. In 2024 they scraped out of their own group on a four-way tiebreak at 3-2 and won the whole thing anyway; in 2025 they went 5-0 and did it again, the only repeat champion on record. They are 35-9-3 all time at .777, and they have reached the bracket in every single year they have entered. Brothers Boor have played them five times and lost four."
     },
     {
       "team": "Hawkeyes",
@@ -51,7 +55,11 @@
       "koL": 4,
       "groupTitles": 3,
       "tournaments": 8,
-      "pct": 0.649
+      "pct": 0.649,
+      "facedMost": "Guns n Rollers (3)",
+      "beatMost": "Guns n Rollers (2)",
+      "lostMost": "Don Cuzzi (2)",
+      "narrative": "The only club to answer the bell at all eight tournaments, and the first name ever engraved on the trophy. The Hawkeyes swept their group in 2018 and rode it all the way home, then spent the next six years being very good and never quite getting back \u2014 a quarterfinal exit as defending champions in 2020, and a 2022 campaign that produced the only unbeaten card in the field and still ended in defeat in the final. Three group titles, 7-4 in the bracket, and semifinal appearances a full six years apart. Guns n Rollers have seen more of them than anyone and have the worst of it. Nobody has been around longer."
     },
     {
       "team": "The Seekers",
@@ -73,7 +81,11 @@
       "koL": 6,
       "groupTitles": 2,
       "tournaments": 6,
-      "pct": 0.676
+      "pct": 0.676,
+      "facedMost": "Vandelay Industries (3)",
+      "beatMost": "Vandelay Industries (3)",
+      "lostMost": "Muck Fichigan (2)",
+      "narrative": "The nearly-men. The Seekers are 25-12 all time with two group titles and one of the best win rates of any club with real mileage \u2014 and they have never won it. Six tournaments, six trips to the bracket, and a knockout record of 3-6 that tells the whole story. They went 5-0 in 2021 and lost in the quarterfinals; they went 5-0 again in 2024, reached the final, and lost that too. Vandelay Industries have never beaten them in three attempts. Somebody hand these men a trophy."
     },
     {
       "team": "Joanie Loves Bocce",
@@ -96,7 +108,11 @@
       "koL": 6,
       "groupTitles": 2,
       "tournaments": 7,
-      "pct": 0.568
+      "pct": 0.568,
+      "facedMost": "Smug Champs (4)",
+      "beatMost": "Smug Champs (2)",
+      "lostMost": "Smug Champs (2)",
+      "narrative": "Seven tournaments, two group titles, and one of the great runs this event has ever seen. In 2021 Joanie Loves Bocce came in as the twelfth and final seed and knocked over John-John, the Richard Simmons Exp. and the unbeaten top-seeded White Zin before falling in the final \u2014 the deepest run any last seed has ever managed. They have been a fixture since 2018 and took their group outright in both 2024 and 2025. The Smug Champs are the great rival: four meetings, honours dead even. Still hunting that first trophy."
     },
     {
       "team": "Brothers Boor",
@@ -121,7 +137,11 @@
       "koL": 4,
       "groupTitles": 0,
       "tournaments": 7,
-      "pct": 0.558
+      "pct": 0.558,
+      "facedMost": "White Zin (5)",
+      "beatMost": "Hawkeyes (2)",
+      "lostMost": "White Zin (4)",
+      "narrative": "Seven tournaments under five different spellings, and one unforgettable afternoon. Brothers Boor had never won a group \u2014 they still haven't \u2014 when they arrived at 2023 as the eleventh seed, third out of their own group, and then knocked over Sister Swap, Loose Meats, The Big LeBocce and Don Cuzzi to lift the thing. It remains the lowest seed ever to win it. The rest of the ledger is honest journeyman work: 23-18-2 overall, 6-4 in brackets, and a long-running beating from White Zin, who have faced them five times and won four. Proof you don't have to top the table to take the prize."
     },
     {
       "team": "Muck Fichigan",
@@ -142,7 +162,11 @@
       "koL": 3,
       "groupTitles": 4,
       "tournaments": 5,
-      "pct": 0.726
+      "pct": 0.726,
+      "facedMost": "Don Cuzzi (2)",
+      "beatMost": "Trash n Stache (2)",
+      "lostMost": "White Zin (2)",
+      "narrative": "Four group titles in five appearances \u2014 only White Zin has more \u2014 and still no trophy. Muck Fichigan went 3-0 in 2020, won Green in 2021, won Orange in 2022, and reached the semifinals in both. In 2025 they went 4-0-1, the only side nobody could beat all tournament, marched to the final, and ran into White Zin. Their .726 is bettered only by White Zin themselves. The last step is the one that keeps eluding them."
     },
     {
       "team": "Smug Champs",
@@ -164,7 +188,11 @@
       "koL": 2,
       "groupTitles": 1,
       "tournaments": 4,
-      "pct": 0.724
+      "pct": 0.724,
+      "facedMost": "Joanie Loves Bocce (4)",
+      "beatMost": "Sparty Devils (3)",
+      "lostMost": "Joanie Loves Bocce (2)",
+      "narrative": "Four appearances, one trophy, and the best bracket record in the game. Smug Champs came out of the most brutal group ever assembled \u2014 the 2021 Blue four-way logjam, where a team with more points than them didn't even qualify \u2014 as the seventh seed, then beat Hilltoppers, the 5-0 Seekers and Muck Fichigan to take the title. They are 7-2 in knockout games, a rate nobody with volume can touch. Semifinals again in 2022 and 2025. Joanie Loves Bocce are the recurring foil across four meetings."
     },
     {
       "team": "Don Cuzzi",
@@ -186,7 +214,11 @@
       "koL": 2,
       "groupTitles": 1,
       "tournaments": 6,
-      "pct": 0.455
+      "pct": 0.455,
+      "facedMost": "The Seekers (3)",
+      "beatMost": "Hawkeyes (2)",
+      "lostMost": "The Big LeBocce (2)",
+      "narrative": "A veteran of six tournaments whose best day came late. Don Cuzzi won their group unbeaten in 2018 and went out in the quarterfinals, then wandered through some lean years until 2023, when they took second in Orange on a head-to-head tiebreak, knocked out the unbeaten top-seeded White Zin, and went all the way to the final. They have slipped since \u2014 1-4 in each of the last two years. The overall 14-17-2 undersells a side that has beaten the Hawkeyes twice. The Big LeBocce remain the bogey team."
     },
     {
       "team": "Hot Sauce",
@@ -206,7 +238,11 @@
       "koL": 3,
       "groupTitles": 0,
       "tournaments": 4,
-      "pct": 0.52
+      "pct": 0.52,
+      "facedMost": "Sparty Devils (3)",
+      "beatMost": "Holy Rollers (2)",
+      "lostMost": "Sparty Devils (2)",
+      "narrative": "Four tournaments of almost. Hot Sauce reached the bracket in three of them and got as far as the 2023 semifinals before the run ended. They have never won a group and have never finished better than second in one. The record sits at 12-11-2 \u2014 the very definition of a side you don't want to draw and don't much fear either. Sparty Devils have taken two of their three meetings. Always in the mix, never quite in the picture."
     },
     {
       "team": "The Big LeBocce",
@@ -225,7 +261,11 @@
       "koL": 3,
       "groupTitles": 1,
       "tournaments": 3,
-      "pct": 0.579
+      "pct": 0.579,
+      "facedMost": "Brothers Boor (3)",
+      "beatMost": "Don Cuzzi (2)",
+      "lostMost": "Brothers Boor (2)",
+      "narrative": "Three tournaments, and they got better every single time. The Big LeBocce went out in round one in 2021, reached the quarterfinals in 2022, then took Orange outright in 2023 at 4-1 with 99 points \u2014 the biggest haul anyone posted that year \u2014 before the eventual champions stopped them in the semifinals. They are 11-8 all time and 2-3 in brackets. Brothers Boor have their number, winning two of three. A short career, steeply upward."
     },
     {
       "team": "Vandelay Industries",
@@ -247,7 +287,11 @@
       "koL": 2,
       "groupTitles": 0,
       "tournaments": 6,
-      "pct": 0.359
+      "pct": 0.359,
+      "facedMost": "The Seekers (3)",
+      "beatMost": "I Can't Decide (1)",
+      "lostMost": "The Seekers (3)",
+      "narrative": "Import, export, six tournaments, and one glorious afternoon. Vandelay Industries are 11-20-1 all time, the thinnest record of anyone who has shown up this often, but in 2020 they came second in Green and then knocked out the defending champion Hawkeyes in the quarterfinals before falling in the semis. That remains the high-water mark. They have reached the bracket just twice in six attempts and have never won a group. The Seekers have played them three times and won all three."
     },
     {
       "team": "Del Bocce Vista",
@@ -266,7 +310,11 @@
       "koL": 2,
       "groupTitles": 1,
       "tournaments": 3,
-      "pct": 0.588
+      "pct": 0.588,
+      "facedMost": "Reservations @ Dorsia (1)",
+      "beatMost": "Reservations @ Dorsia (1)",
+      "lostMost": "On Wisconsin (1)",
+      "narrative": "Three tournaments across two spellings \u2014 the 2020 board wrote them down as 'Bel' \u2014 and a semifinal to their name. Del Bocce Vista made the bracket in 2019, won Yellow in 2020 and reached the last four, then went 3-2 in 2021 without qualifying. A 10-7 career record and a group title in the bank. Not a long stay, but a good one."
     },
     {
       "team": "John-John, Inc",
@@ -285,7 +333,11 @@
       "koL": 2,
       "groupTitles": 1,
       "tournaments": 3,
-      "pct": 0.625
+      "pct": 0.625,
+      "facedMost": "White Zin (2)",
+      "beatMost": "Steam Punks (1)",
+      "lostMost": "White Zin (2)",
+      "narrative": "Three tournaments, one group title, and a habit of running into White Zin. John-John went 1-2 as newcomers in 2018, then won Yellow in 2019 at 4-1 and marched to the semifinals \u2014 the best day they had. In 2021 they went 4-1 again and racked up 97 points, more than anyone else in the tournament, finished second, and were bounced in round one by the last seed in the field. Both of their career losses to White Zin came in brackets. They went out at the top."
     },
     {
       "team": "Trash n Stache",
@@ -304,7 +356,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 3,
-      "pct": 0.583
+      "pct": 0.583,
+      "facedMost": "Dickens Cider (2)",
+      "beatMost": "Dickens Cider (2)",
+      "lostMost": "Muck Fichigan (2)",
+      "narrative": "Three tournaments and the strangest knockout record in the book: 4-1. Trash n Stache came out of a three-way logjam in 2020, beat the unbeaten Covid Cowboys and then the side that had just knocked out the defending champions, and reached a final that was never recorded \u2014 the Winner line on the 2020 bracket is blank to this day. They made the quarterfinals in 2021 and slipped to 2-3 in 2025. Muck Fichigan have beaten them twice. Somewhere out there is an answer about 2020."
     },
     {
       "team": "Guns n Rollers",
@@ -324,7 +380,11 @@
       "koL": 2,
       "groupTitles": 0,
       "tournaments": 4,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "Hawkeyes (3)",
+      "beatMost": "Inches From Glory (1)",
+      "lostMost": "Hawkeyes (2)",
+      "narrative": "Four tournaments, two trips to the bracket, and not one knockout win to show for it. Guns n Rollers opened with an 0-3 in 2020, improved steadily, and made the field in both 2024 and 2025 \u2014 losing in round one each time. Those back-to-back 3-2 group campaigns are the best work of their career. The Hawkeyes are the nemesis: three meetings, two defeats. The breakthrough is out there somewhere."
     },
     {
       "team": "On Wisconsin",
@@ -342,7 +402,11 @@
       "koL": 2,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.708
+      "pct": 0.708,
+      "facedMost": "Joanie Loves Bocce (1)",
+      "beatMost": "Joanie Loves Bocce (1)",
+      "lostMost": "White Zin (1)",
+      "narrative": "Two tournaments, two brackets, and the best win rate of any short-stay club. On Wisconsin went 2-0-1 in 2018 and reached the semifinals; in 2019 they went 4-1 and put up 94 points, the biggest total in the entire tournament \u2014 and were knocked out in round one by the last seed in the field. That is a cruel way to be remembered. Career 8-3-1 at .708. Came, conquered the group stage, left."
     },
     {
       "team": "Brainerd Bergs",
@@ -363,7 +427,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 3,
-      "pct": 0.395
+      "pct": 0.395,
+      "facedMost": "Mickey the Mitcher (1)",
+      "beatMost": "Mickey the Mitcher (1)",
+      "lostMost": "The Seekers (1)",
+      "narrative": "One perfect afternoon and two hangovers. The Brainerd Bergs were the eighth seed in 2022, third out of a logjammed Red group, and then went 4-0 in the bracket \u2014 knocking out the 5-0 top-seeded Royale w/ Cheese, then Muck Fichigan, then the unbeaten Hawkeyes in the final. They have never lost a knockout game. They have also never won another one: 1-4 in 2023, 0-5 in 2024, no bracket either year. Champions forever, all the same."
     },
     {
       "team": "Chi'Bocce",
@@ -382,7 +450,11 @@
       "koL": 0,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 1.0
+      "pct": 1.0,
+      "facedMost": "Mustache Riders (2)",
+      "beatMost": "Mustache Riders (2)",
+      "lostMost": "",
+      "narrative": "One tournament. One trophy. Chi'Bocce turned up in 2019, finished 1st in Blue at 4-0, and walked out of the bracket with everything. Four knockout wins, no losses, and a name on the trophy that nobody can ever take back. Mustache Riders were among the sides they put away. Never came back to defend it. Didn't need to."
     },
     {
       "team": "Holy Rollers",
@@ -400,7 +472,11 @@
       "koL": 2,
       "groupTitles": 1,
       "tournaments": 2,
-      "pct": 0.538
+      "pct": 0.538,
+      "facedMost": "Hot Sauce (2)",
+      "beatMost": "Smug Champs (1)",
+      "lostMost": "Hot Sauce (2)",
+      "narrative": "Two tournaments, two quarterfinals, two identical 3-2 records. The Holy Rollers won Green in 2023 \u2014 taking the group with fewer points than the side behind them \u2014 and came back in 2025 to finish third in Pink and reach the last eight again. Hot Sauce and White Zin have each beaten them twice. Consistent to a fault."
     },
     {
       "team": "Long Ballz",
@@ -419,7 +495,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 3,
-      "pct": 0.412
+      "pct": 0.412,
+      "facedMost": "Brothers Boor (2)",
+      "beatMost": "Brothers Boor (2)",
+      "lostMost": "White Zin (2)",
+      "narrative": "Three tournaments, one good one. Long Ballz finished bottom of Orange in 2023 at 1-4, then returned in 2024, went 3-2, made the bracket and reached the quarterfinals before White Zin ended it. A 2-3 season in 2025 followed. They are 7-10 all time and have beaten Brothers Boor twice. White Zin, on the other hand, have never lost to them."
     },
     {
       "team": "Sister Swap",
@@ -437,7 +517,11 @@
       "koL": 2,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.625
+      "pct": 0.625,
+      "facedMost": "Brothers Boor (2)",
+      "beatMost": "Grand Lakes (1)",
+      "lostMost": "Muck Fichigan (1)",
+      "narrative": "Two tournaments, two strong group campaigns, two round-one exits. Sister Swap went 3-1-1 in 2023 and 4-1 in 2024, finishing second both times \u2014 and lost their opening knockout game on both occasions. A .625 career win rate with absolutely nothing in the bracket to show for it. Brothers Boor have split their two meetings. The group stage has never been the problem."
     },
     {
       "team": "Mustache Riders",
@@ -455,7 +539,11 @@
       "koL": 2,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Chi'Bocce (2)",
+      "beatMost": "Flangers (1)",
+      "lostMost": "Chi'Bocce (2)",
+      "narrative": "Two tournaments and one of the great Cinderella runs. Mustache Riders went 1-2 in 2018 and still reached the quarterfinals; then in 2019, seeded twelfth and last out of the five-team Blue group, they knocked out On Wisconsin and that tournament-best 94-point campaign, took down group champions Kase-Kare-Cock, and made the semifinals before Chi'Bocce finally stopped them. They are 6-6 all time and 3-2 in brackets. Chi'Bocce beat them twice; nobody else managed it more than once."
     },
     {
       "team": "Ohiowa",
@@ -472,7 +560,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.75
+      "pct": 0.75,
+      "facedMost": "Noonan (1)",
+      "beatMost": "Noonan (1)",
+      "lostMost": "Reservations @ Dorsia (1)",
+      "narrative": "A single appearance, and they very nearly took it all. Ohiowa came 1st in Red in 2019 at 4-1 and rode it to the final. They won 2 knockout games and reached the final. They got the better of Noonan; Reservations @ Dorsia got the better of them. A career record of 6-2, and then they were gone."
     },
     {
       "team": "Sparty Devils",
@@ -493,7 +585,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 5,
-      "pct": 0.312
+      "pct": 0.312,
+      "facedMost": "Hot Sauce (3)",
+      "beatMost": "Hot Sauce (2)",
+      "lostMost": "Smug Champs (3)",
+      "narrative": "Five tournaments, and they keep coming back for more. The Sparty Devils are 6-15-3 all time and have reached the bracket exactly once, in 2025, where they lost their opening game. The nadir was 2021: 0-4-1 and dead last in Yellow. The high point was a respectable 2-2-1 in 2023. Smug Champs have played them three times and won the lot. Loyal, durable, and still waiting."
     },
     {
       "team": "D-Boccery",
@@ -512,7 +608,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 3,
-      "pct": 0.333
+      "pct": 0.333,
+      "facedMost": "Dickens Cider (1)",
+      "beatMost": "Brothers Boor (1)",
+      "lostMost": "Dickens Cider (1)",
+      "narrative": "Three tournaments under two spellings, with a very good middle chapter. D-Boccery went winless in 2020, then returned in 2024, finished second in Orange at 3-2, beat Hot Sauce in round one and reached the quarterfinals. 2025 undid a fair bit of it: 1-4 and bottom of Yellow. Career 5-10 with a single knockout win. When they're on, they're a problem."
     },
     {
       "team": "Dickens Cider",
@@ -531,7 +631,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 3,
-      "pct": 0.357
+      "pct": 0.357,
+      "facedMost": "White Zin (2)",
+      "beatMost": "Kase-Kare-Cock (1)",
+      "lostMost": "White Zin (2)",
+      "narrative": "Three tournaments, one quarterfinal. Dickens Cider went 1-3 in 2019, then had their moment in 2020 \u2014 2-1 in Yellow out of a three-way tie, into the bracket, past The Seekers in round one, out to Muck Fichigan in the quarters. A 1-4 in 2021 brought the road to an end. Career record 5-9. White Zin and Trash n Stache each beat them twice and were never beaten back."
     },
     {
       "team": "Gumby Dammit",
@@ -548,7 +652,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.833
+      "pct": 0.833,
+      "facedMost": "Brainerd Bergs (1)",
+      "beatMost": "Brainerd Bergs (1)",
+      "lostMost": "Hawkeyes (1)",
+      "narrative": "One tournament, and they owned their corner of it. Gumby Dammit won Yellow in 2024 at 5-0. They reached the quarterfinals. They got the better of Brainerd Bergs; Hawkeyes got the better of them. A career record of 5-1, and then they were gone."
     },
     {
       "team": "Hide Your Moms",
@@ -565,7 +673,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.714
+      "pct": 0.714,
+      "facedMost": "Laces Out (2)",
+      "beatMost": "Laces Out (2)",
+      "lostMost": "The Seekers (1)",
+      "narrative": "A one-season club with something to show for it. Hide Your Moms finished 2nd in Blue in 2024 at 4-1 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of Laces Out; The Seekers got the better of them. A career record of 5-2, and then they were gone."
     },
     {
       "team": "Royale w/ Cheese",
@@ -582,7 +694,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.833
+      "pct": 0.833,
+      "facedMost": "Brainerd Bergs (1)",
+      "beatMost": "",
+      "lostMost": "Brainerd Bergs (1)",
+      "narrative": "One tournament, and they owned their corner of it. Royale w/ Cheese won Blue in 2022 at 5-0. They reached the quarterfinals. Brainerd Bergs were one of the teams that saw them off. A career record of 5-1, and then they were gone."
     },
     {
       "team": "Brick Cock",
@@ -599,7 +715,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.667
+      "pct": 0.667,
+      "facedMost": "Double Deuce (1)",
+      "beatMost": "Double Deuce (1)",
+      "lostMost": "Flangers (1)",
+      "narrative": "A one-season club with something to show for it. Brick Cock finished 2nd in Red in 2018 at 2-1 and made the bracket. They won 2 knockout games and reached the semifinals. They got the better of Double Deuce; Flangers got the better of them. A career record of 4-2, and then they were gone."
     },
     {
       "team": "Glory Holz",
@@ -616,7 +736,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.667
+      "pct": 0.667,
+      "facedMost": "D-Boccery (1)",
+      "beatMost": "D-Boccery (1)",
+      "lostMost": "Hawkeyes (1)",
+      "narrative": "One tournament, and they owned their corner of it. Glory Holz won Yellow in 2025 at 4-1. They reached the quarterfinals. They got the better of D-Boccery; Hawkeyes got the better of them. A career record of 4-2, and then they were gone."
     },
     {
       "team": "Kase-Kare-Cock",
@@ -633,7 +757,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.667
+      "pct": 0.667,
+      "facedMost": "Brothers Boor (1)",
+      "beatMost": "Brothers Boor (1)",
+      "lostMost": "Dickens Cider (1)",
+      "narrative": "One tournament, and they owned their corner of it. Kase-Kare-Cock won Green in 2019 at 4-1. They reached the quarterfinals. They got the better of Brothers Boor; Dickens Cider got the better of them. A career record of 4-2, and then they were gone."
     },
     {
       "team": "Laces Out",
@@ -651,7 +779,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.409
+      "pct": 0.409,
+      "facedMost": "Hide Your Moms (2)",
+      "beatMost": "Don Cuzzi (1)",
+      "lostMost": "Hide Your Moms (2)",
+      "narrative": "Two tournaments in Blue, two mid-table finishes. Laces Out went 2-2-1 in 2024, squeaked into the bracket third, and lost in round one to Hide Your Moms \u2014 the very side that had already beaten them in the group. A 2-3 in 2025 left them outside. Career 4-6-1."
     },
     {
       "team": "Loh Hang Balls",
@@ -668,7 +800,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.571
+      "pct": 0.571,
+      "facedMost": "The Big LeBocce (2)",
+      "beatMost": "Long Ballz (1)",
+      "lostMost": "Don Cuzzi (1)",
+      "narrative": "A one-season club with something to show for it. Loh Hang Balls finished 3rd in Orange in 2023 at 3-2 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of Long Ballz; Don Cuzzi got the better of them. A career record of 4-3, and then they were gone."
     },
     {
       "team": "Loose Meats",
@@ -685,7 +821,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.667
+      "pct": 0.667,
+      "facedMost": "Vandelay Industries (1)",
+      "beatMost": "Vandelay Industries (1)",
+      "lostMost": "Brothers Boor (1)",
+      "narrative": "One tournament, and they owned their corner of it. Loose Meats won Red in 2023 at 4-1. They reached the quarterfinals. They got the better of Vandelay Industries; Brothers Boor got the better of them. A career record of 4-2, and then they were gone."
     },
     {
       "team": "Mag Dick",
@@ -702,7 +842,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.562
+      "pct": 0.562,
+      "facedMost": "Muck Fichigan (2)",
+      "beatMost": "The Seekers (2)",
+      "lostMost": "Don Cuzzi (1)",
+      "narrative": "A one-season club with something to show for it. Mag Dick finished 3rd in Green in 2025 at 2-2-1 and made the bracket. They won 2 knockout games and reached the semifinals. They got the better of The Seekers; Don Cuzzi got the better of them. A career record of 4-3-1, and then they were gone."
     },
     {
       "team": "Mickey the Mitcher",
@@ -720,7 +864,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.409
+      "pct": 0.409,
+      "facedMost": "Brainerd Bergs (1)",
+      "beatMost": "The M.J.s (1)",
+      "lostMost": "Brainerd Bergs (1)",
+      "narrative": "Two tournaments, one bracket, no knockout wins. Mickey the Mitcher went 2-2-1 in 2022, made the field as the nine seed, and lost their opener to the eventual champions. A 2-3 return in 2024 wasn't enough to qualify. Career 4-6-1. They did beat Joanie Loves Bocce once, which is more than most can say."
     },
     {
       "team": "Trash Panda's",
@@ -737,7 +885,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.571
+      "pct": 0.571,
+      "facedMost": "Hawkeyes (1)",
+      "beatMost": "Wildcat (1)",
+      "lostMost": "Hawkeyes (1)",
+      "narrative": "A one-season club with something to show for it. Trash Panda's finished 2nd in Yellow in 2019 at 3-2 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of Wildcat; Hawkeyes got the better of them. A career record of 4-3, and then they were gone."
     },
     {
       "team": "Be-Yotch-e, Please",
@@ -754,7 +906,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "White Zin (1)",
+      "beatMost": "White Zin (1)",
+      "lostMost": "Smug Champs (1)",
+      "narrative": "A one-season club with something to show for it. Be-Yotch-e, Please finished 3rd in Orange in 2022 at 2-2 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of White Zin; Smug Champs got the better of them. Final ledger: 3-3. One and done."
     },
     {
       "team": "Dug z World",
@@ -771,7 +927,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "B.K. Knights (1)",
+      "beatMost": "B.K. Knights (1)",
+      "lostMost": "Chi'Bocce (1)",
+      "narrative": "A one-season club with something to show for it. Dug z World finished 2nd in Blue in 2019 at 2-2 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of B.K. Knights; Chi'Bocce got the better of them. Final ledger: 3-3. One and done."
     },
     {
       "team": "Ghetto Ballers",
@@ -788,7 +948,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.583
+      "pct": 0.583,
+      "facedMost": "Goldylichs (1)",
+      "beatMost": "",
+      "lostMost": "Hot Sauce (1)",
+      "narrative": "A one-season club with something to show for it. Ghetto Ballers finished 2nd in Red in 2023 at 3-1-1 and made the bracket. They went out in round one. Hot Sauce were one of the teams that saw them off. A career record of 3-2-1, and then they were gone."
     },
     {
       "team": "Hilltoppers",
@@ -805,7 +969,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Smug Champs (2)",
+      "beatMost": "Vandelay Industries (1)",
+      "lostMost": "Smug Champs (2)",
+      "narrative": "A one-season club with something to show for it. Hilltoppers finished 3rd in Blue in 2021 at 3-2 and made the bracket. They went out in round one. They got the better of Vandelay Industries; Smug Champs got the better of them. Final ledger: 3-3. One and done."
     },
     {
       "team": "Loopers",
@@ -822,7 +990,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Wildcat (1)",
+      "beatMost": "Wildcat (1)",
+      "lostMost": "John-John, Inc (1)",
+      "narrative": "A one-season club with something to show for it. Loopers finished 3rd in Yellow in 2019 at 3-2 and made the bracket. They went out in round one. They got the better of Wildcat; John-John, Inc got the better of them. Final ledger: 3-3. One and done."
     },
     {
       "team": "TNT",
@@ -839,7 +1011,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.6
+      "pct": 0.6,
+      "facedMost": "The Bryan Adams Show (1)",
+      "beatMost": "The Bryan Adams Show (1)",
+      "lostMost": "Hawkeyes (1)",
+      "narrative": "A one-season club with something to show for it. TNT finished 2nd in Yellow in 2018 at 2-1 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of The Bryan Adams Show; Hawkeyes got the better of them. A career record of 3-2, and then they were gone."
     },
     {
       "team": "The Richard Simmons Exp.",
@@ -856,7 +1032,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.583
+      "pct": 0.583,
+      "facedMost": "Smug Champs (1)",
+      "beatMost": "Hilltoppers (1)",
+      "lostMost": "Del Bocce Vista (1)",
+      "narrative": "One tournament, and they owned their corner of it. The Richard Simmons Exp. won Blue in 2021 at 3-1-1. They reached the quarterfinals. They got the better of Hilltoppers; Del Bocce Vista got the better of them. A career record of 3-2-1, and then they were gone."
     },
     {
       "team": "Tyson's Micropenis",
@@ -873,7 +1053,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.6
+      "pct": 0.6,
+      "facedMost": "Mickey the Mitcher (1)",
+      "beatMost": "Mickey the Mitcher (1)",
+      "lostMost": "Joanie Loves Bocce (1)",
+      "narrative": "One appearance, in 2024. Tyson's Micropenis went 3-2 in Red, good for 4th, and the bracket stayed out of reach. They got the better of Mickey the Mitcher; Joanie Loves Bocce got the better of them. A career record of 3-2, and then they were gone."
     },
     {
       "team": "Brownkowski",
@@ -890,7 +1074,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Brownkowski went 2-2-1 in Yellow, good for 5th, and the bracket stayed out of reach. Final ledger: 2-2-1. One and done."
     },
     {
       "team": "Covid Cowboys",
@@ -907,7 +1095,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.625
+      "pct": 0.625,
+      "facedMost": "Trash n Stache (1)",
+      "beatMost": "",
+      "lostMost": "Trash n Stache (1)",
+      "narrative": "One tournament, and they owned their corner of it. Covid Cowboys won Green in 2020 at 2-0-1. They reached the quarterfinals. Trash n Stache were one of the teams that saw them off. A career record of 2-1-1, and then they were gone."
     },
     {
       "team": "Double Deuce",
@@ -924,7 +1116,11 @@
       "koL": 1,
       "groupTitles": 1,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Brick Cock (1)",
+      "beatMost": "Flangers (1)",
+      "lostMost": "Brick Cock (1)",
+      "narrative": "One tournament, and they owned their corner of it. Double Deuce won Red in 2018 at 2-1. They reached the quarterfinals. They got the better of Flangers; Brick Cock got the better of them. Final ledger: 2-2. One and done."
     },
     {
       "team": "Double Doink",
@@ -941,7 +1137,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "Holy Rollers (1)",
+      "beatMost": "Long Ballz (1)",
+      "lostMost": "Holy Rollers (1)",
+      "narrative": "One appearance, in 2025. Double Doink went 2-3 in Pink, good for 5th, and the bracket stayed out of reach. They got the better of Long Ballz; Holy Rollers got the better of them. Final ledger: 2-3. One and done."
     },
     {
       "team": "Flangers",
@@ -958,7 +1158,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Hurricane Ditka (1)",
+      "beatMost": "Hurricane Ditka (1)",
+      "lostMost": "Double Deuce (1)",
+      "narrative": "A one-season club with something to show for it. Flangers finished 3rd in Red in 2018 at 2-1 and made the bracket. They went out in round one. They got the better of Hurricane Ditka; Double Deuce got the better of them. Final ledger: 2-2. One and done."
     },
     {
       "team": "Goldylichs",
@@ -975,7 +1179,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Ghetto Ballers (1)",
+      "beatMost": "Vandelay Industries (1)",
+      "lostMost": "",
+      "narrative": "One appearance, in 2023. Goldylichs went 2-2-1 in Red, good for 4th, and the bracket stayed out of reach. Vandelay Industries were among the sides they put away. Final ledger: 2-2-1. One and done."
     },
     {
       "team": "Hitchhikers",
@@ -992,7 +1200,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "Mistress Irrelevant (1)",
+      "beatMost": "Mistress Irrelevant (1)",
+      "lostMost": "Guns n Rollers (1)",
+      "narrative": "One appearance, in 2025. Hitchhikers went 2-3 in Yellow, good for 4th, and the bracket stayed out of reach. They got the better of Mistress Irrelevant; Guns n Rollers got the better of them. Final ledger: 2-3. One and done."
     },
     {
       "team": "Keen on Christ + Blue Balls",
@@ -1009,7 +1221,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Keen on Christ + Blue Balls went 2-3 in Yellow, good for 4th, and the bracket stayed out of reach. Final ledger: 2-3. One and done."
     },
     {
       "team": "Mistress Irrelevant",
@@ -1026,7 +1242,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "Hitchhikers (1)",
+      "beatMost": "D-Boccery (1)",
+      "lostMost": "Hitchhikers (1)",
+      "narrative": "One appearance, in 2025. Mistress Irrelevant went 2-3 in Yellow, good for 5th, and the bracket stayed out of reach. They got the better of D-Boccery; Hitchhikers got the better of them. Final ledger: 2-3. One and done."
     },
     {
       "team": "Pink Ladies",
@@ -1044,7 +1264,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "On Wisconsin (1)",
+      "beatMost": "Noonan (1)",
+      "lostMost": "On Wisconsin (1)",
+      "narrative": "Two tournaments, no brackets, two wins in total. The Pink Ladies went 1-3-1 in 2019 and 1-4 in 2021, finishing fifth in their group on both occasions. They beat Noonan and they beat the Sparty Devils, and that is the whole ledger. Every tournament needs somebody to play against."
     },
     {
       "team": "Return of the Mesh",
@@ -1061,7 +1285,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "Don Cuzzi (1)",
+      "beatMost": "Don Cuzzi (1)",
+      "lostMost": "Loh Hang Balls (1)",
+      "narrative": "One appearance, in 2023. Return of the Mesh went 2-3 in Orange, good for 5th, and the bracket stayed out of reach. They got the better of Don Cuzzi; Loh Hang Balls got the better of them. Final ledger: 2-3. One and done."
     },
     {
       "team": "Steve + Jake",
@@ -1078,7 +1306,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Steve + Jake went 2-3 in Red, good for 4th, and the bracket stayed out of reach. Final ledger: 2-3. One and done."
     },
     {
       "team": "The Best Looking Bocce Team",
@@ -1095,7 +1327,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "John-John, Inc (1)",
+      "beatMost": "Dickens Cider (1)",
+      "lostMost": "John-John, Inc (1)",
+      "narrative": "One appearance, in 2021. The Best Looking Bocce Team went 2-2-1 in Red, good for 4th, and the bracket stayed out of reach. They got the better of Dickens Cider; John-John, Inc got the better of them. Final ledger: 2-2-1. One and done."
     },
     {
       "team": "Top Gun",
@@ -1112,7 +1348,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Top Gun went 2-3 in Red, good for 6th, and the bracket stayed out of reach. Final ledger: 2-3. One and done."
     },
     {
       "team": "Vivace do Tinge",
@@ -1129,7 +1369,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.5
+      "pct": 0.5,
+      "facedMost": "Muck Fichigan (1)",
+      "beatMost": "Spencer Torkelson (1)",
+      "lostMost": "Muck Fichigan (1)",
+      "narrative": "A one-season club with something to show for it. Vivace do Tinge finished 2nd in Blue in 2020 at 2-1 and made the bracket. They reached the quarterfinals. They got the better of Spencer Torkelson; Muck Fichigan got the better of them. Final ledger: 2-2. One and done."
     },
     {
       "team": "B.K. Knights",
@@ -1146,7 +1390,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "Dug z World (1)",
+      "beatMost": "Teabaggers (1)",
+      "lostMost": "Dug z World (1)",
+      "narrative": "One appearance, in 2019. B.K. Knights went 1-3 in Blue, good for 4th, and the bracket stayed out of reach. They got the better of Teabaggers; Dug z World got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "Banana in the Tailpipe",
@@ -1164,7 +1412,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 2,
-      "pct": 0.15
+      "pct": 0.15,
+      "facedMost": "Hide Your Moms (1)",
+      "beatMost": "Don Cuzzi (1)",
+      "lostMost": "Hide Your Moms (1)",
+      "narrative": "Two tournaments under two spellings, one win. Banana in the Tailpipe went 0-5 in 2022, dead last in Blue, then returned in 2024 to manage 1-3-1 \u2014 the solitary victory coming against Don Cuzzi. Career 1-8-1, a .150 win rate that is the lowest of any returning club. The name alone earns them a place in the record book."
     },
     {
       "team": "Billy G.O.A.T.",
@@ -1181,7 +1433,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.375
+      "pct": 0.375,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Billy G.O.A.T. went 1-2-1 in Orange, good for 5th, and the bracket stayed out of reach. Final ledger: 1-2-1. One and done."
     },
     {
       "team": "Blues Bros",
@@ -1198,7 +1454,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.3
+      "pct": 0.3,
+      "facedMost": "Sparty Devils (1)",
+      "beatMost": "Hot Sauce (1)",
+      "lostMost": "Holy Rollers (1)",
+      "narrative": "One appearance, in 2023. Blues Bros went 1-3-1 in Green, good for 6th, and the bracket stayed out of reach. They got the better of Hot Sauce; Holy Rollers got the better of them. Final ledger: 1-3-1. One and done."
     },
     {
       "team": "Bocce Balboa",
@@ -1215,7 +1475,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Vandelay Industries (1)",
+      "beatMost": "Vandelay Industries (1)",
+      "lostMost": "Long Ballz (1)",
+      "narrative": "One appearance, in 2024. Bocce Balboa went 1-4 in Orange, good for 6th, and the bracket stayed out of reach. They got the better of Vandelay Industries; Long Ballz got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Bushwood",
@@ -1232,7 +1496,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Sparty Devils (1)",
+      "beatMost": "Sparty Devils (1)",
+      "lostMost": "Hot Sauce (1)",
+      "narrative": "One appearance, in 2025. Bushwood went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Sparty Devils; Hot Sauce got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Get Leid",
@@ -1249,7 +1517,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Get Leid went 1-4 in Yellow, good for 6th, and the bracket stayed out of reach. Final ledger: 1-4. One and done."
     },
     {
       "team": "Grand Lakes",
@@ -1266,7 +1538,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Sister Swap (1)",
+      "beatMost": "Muck Fichigan (1)",
+      "lostMost": "Sister Swap (1)",
+      "narrative": "One appearance, in 2023. Grand Lakes went 1-4 in Blue, good for 5th, and the bracket stayed out of reach. They got the better of Muck Fichigan; Sister Swap got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Here 4 Beer",
@@ -1283,7 +1559,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Brothers Boor (1)",
+      "beatMost": "Grand Lakes (1)",
+      "lostMost": "Brothers Boor (1)",
+      "narrative": "One appearance, in 2023. Here 4 Beer went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Grand Lakes; Brothers Boor got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "I Can't Decide",
@@ -1300,7 +1580,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "The Seekers (1)",
+      "beatMost": "Guns n Rollers (1)",
+      "lostMost": "The Seekers (1)",
+      "narrative": "A one-season club with something to show for it. I Can't Decide finished 3rd in Red in 2020 at 1-2 and made the bracket. They went out in round one. They got the better of Guns n Rollers; The Seekers got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "Inches From Glory",
@@ -1317,7 +1601,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "Guns n Rollers (1)",
+      "beatMost": "Brainerd Bergs (1)",
+      "lostMost": "Guns n Rollers (1)",
+      "narrative": "One appearance, in 2024. Inches From Glory went 1-3 in Yellow, good for 4th, and the bracket stayed out of reach. They got the better of Brainerd Bergs; Guns n Rollers got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "Magnum",
@@ -1334,7 +1622,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.4
+      "pct": 0.4,
+      "facedMost": "Muck Fichigan (1)",
+      "beatMost": "Rolling Stones (1)",
+      "lostMost": "Muck Fichigan (1)",
+      "narrative": "One appearance, in 2021. Magnum went 1-2-2 in Green, good for 5th, and the bracket stayed out of reach. They got the better of Rolling Stones; Muck Fichigan got the better of them. Final ledger: 1-2-2. One and done."
     },
     {
       "team": "Merman",
@@ -1351,7 +1643,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.3
+      "pct": 0.3,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "One appearance, in 2022. Merman went 1-3-1 in Blue, good for 5th, and the bracket stayed out of reach. Final ledger: 1-3-1. One and done."
     },
     {
       "team": "Meshed Up",
@@ -1368,7 +1664,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Del Bocce Vista (1)",
+      "beatMost": "Smug Champs (1)",
+      "lostMost": "Del Bocce Vista (1)",
+      "narrative": "One appearance, in 2021. Meshed Up went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Smug Champs; Del Bocce Vista got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Moist Baguette",
@@ -1385,7 +1685,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "The Seekers (1)",
+      "beatMost": "Banana in the Tailpipe (1)",
+      "lostMost": "The Seekers (1)",
+      "narrative": "One appearance, in 2024. Moist Baguette went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Banana in the Tailpipe; The Seekers got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Noonan",
@@ -1402,7 +1706,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Ohiowa (1)",
+      "beatMost": "Reservations @ Dorsia (1)",
+      "lostMost": "Ohiowa (1)",
+      "narrative": "One appearance, in 2019. Noonan went 1-4 in Red, good for 4th, and the bracket stayed out of reach. They got the better of Reservations @ Dorsia; Ohiowa got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Reservations @ Dorsia",
@@ -1419,7 +1727,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.3
+      "pct": 0.3,
+      "facedMost": "Del Bocce Vista (1)",
+      "beatMost": "Ohiowa (1)",
+      "lostMost": "Del Bocce Vista (1)",
+      "narrative": "One appearance, in 2019. Reservations @ Dorsia went 1-3-1 in Red, good for 6th, and the bracket stayed out of reach. They got the better of Ohiowa; Del Bocce Vista got the better of them. Final ledger: 1-3-1. One and done."
     },
     {
       "team": "Rolling Stones",
@@ -1436,7 +1748,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.2
+      "pct": 0.2,
+      "facedMost": "Don Cuzzi (1)",
+      "beatMost": "Joanie Loves Bocce (1)",
+      "lostMost": "Don Cuzzi (1)",
+      "narrative": "One appearance, in 2021. Rolling Stones went 1-4 in Green, good for 6th, and the bracket stayed out of reach. They got the better of Joanie Loves Bocce; Don Cuzzi got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Spencer Torkelson",
@@ -1453,7 +1769,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "Balz Deep (1)",
+      "beatMost": "Balz Deep (1)",
+      "lostMost": "Vivace do Tinge (1)",
+      "narrative": "A one-season club with something to show for it. Spencer Torkelson finished 3rd in Blue in 2020 at 1-2 and made the bracket. They went out in round one. They got the better of Balz Deep; Vivace do Tinge got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "Steam Punks",
@@ -1470,7 +1790,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "The Bryan Adams Show (1)",
+      "beatMost": "The Bryan Adams Show (1)",
+      "lostMost": "White Zin (1)",
+      "narrative": "A one-season club with something to show for it. Steam Punks finished 3rd in Blue in 2018 at 1-2 and made the bracket. They went out in round one. They got the better of The Bryan Adams Show; White Zin got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "Teabaggers",
@@ -1487,7 +1811,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "Chi'Bocce (1)",
+      "beatMost": "Dug z World (1)",
+      "lostMost": "Chi'Bocce (1)",
+      "narrative": "One appearance, in 2019. Teabaggers went 1-3 in Blue, good for 5th, and the bracket stayed out of reach. They got the better of Dug z World; Chi'Bocce got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "The Bryan Adams Show",
@@ -1504,7 +1832,11 @@
       "koL": 1,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.25
+      "pct": 0.25,
+      "facedMost": "Steam Punks (1)",
+      "beatMost": "John-John, Inc (1)",
+      "lostMost": "Steam Punks (1)",
+      "narrative": "A one-season club with something to show for it. The Bryan Adams Show finished 2nd in Blue in 2018 at 1-2 and made the bracket. They went out in round one. They got the better of John-John, Inc; Steam Punks got the better of them. Final ledger: 1-3. One and done."
     },
     {
       "team": "Balz Deep",
@@ -1521,7 +1853,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Spencer Torkelson (1)",
+      "beatMost": "",
+      "lostMost": "Spencer Torkelson (1)",
+      "narrative": "Balz Deep entered once, in 2020, and Blue was unkind: 0-3, bottom of the pile, and no way out of the group. Spencer Torkelson were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "Boilers",
@@ -1538,7 +1874,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "Boilers entered once, in 2018, and Green was unkind: 0-3, bottom of the pile, and no way out of the group. They have not been seen since."
     },
     {
       "team": "CooCoo 4 Coconuts",
@@ -1555,7 +1895,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Brothers Boor (1)",
+      "beatMost": "",
+      "lostMost": "Brothers Boor (1)",
+      "narrative": "CooCoo 4 Coconuts entered once, in 2025, and Pink was unkind: 0-5, bottom of the pile, and no way out of the group. Brothers Boor were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "Hung Like a HorsePower",
@@ -1572,7 +1916,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Dickens Cider (1)",
+      "beatMost": "",
+      "lostMost": "Dickens Cider (1)",
+      "narrative": "Hung Like a HorsePower entered once, in 2021, and Red was unkind: 0-5, bottom of the pile, and no way out of the group. Dickens Cider were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "Hurricane Ditka",
@@ -1589,7 +1937,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Flangers (1)",
+      "beatMost": "",
+      "lostMost": "Flangers (1)",
+      "narrative": "Hurricane Ditka entered once, in 2018, and Red was unkind: 0-3, bottom of the pile, and no way out of the group. Flangers were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "The Boys r Back",
@@ -1606,7 +1958,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "The Boys r Back entered once, in 2020, and Green was unkind: 0-3, bottom of the pile, and no way out of the group. They have not been seen since."
     },
     {
       "team": "The M.J.s",
@@ -1623,7 +1979,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Joanie Loves Bocce (1)",
+      "beatMost": "",
+      "lostMost": "Joanie Loves Bocce (1)",
+      "narrative": "The M.J.s entered once, in 2024, and Red was unkind: 0-5, bottom of the pile, and no way out of the group. Joanie Loves Bocce were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "Trojan",
@@ -1640,7 +2000,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Joanie Loves Bocce (1)",
+      "beatMost": "",
+      "lostMost": "Joanie Loves Bocce (1)",
+      "narrative": "Trojan entered once, in 2019, and Green was unkind: 0-4, bottom of the pile, and no way out of the group. Joanie Loves Bocce were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "Village People",
@@ -1657,7 +2021,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "",
+      "beatMost": "",
+      "lostMost": "",
+      "narrative": "Village People entered once, in 2018, and Yellow was unkind: 0-3, bottom of the pile, and no way out of the group. They have not been seen since."
     },
     {
       "team": "Wildcat",
@@ -1674,7 +2042,11 @@
       "koL": 0,
       "groupTitles": 0,
       "tournaments": 1,
-      "pct": 0.0
+      "pct": 0.0,
+      "facedMost": "Loopers (1)",
+      "beatMost": "",
+      "lostMost": "Loopers (1)",
+      "narrative": "Wildcat entered once, in 2019, and Yellow was unkind: 0-5, bottom of the pile, and no way out of the group. Loopers were one of the teams that saw them off. They have not been seen since."
     }
   ]
 }

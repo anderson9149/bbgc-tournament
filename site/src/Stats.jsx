@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { API_URL, REFRESH_SECONDS } from './config.js'
 import sampleStats from './sample-stats.json'
 
@@ -23,8 +23,21 @@ export function useStats() {
 const MIN_GAMES = 15   // keep one-off teams out of the percentage table
 
 export function Stats({ stats, error, tv }) {
+  const [who, setWho] = useState('')          // '' = All Time, otherwise a team name
+  const ranked = useMemo(() => (stats ? [...stats.teams].sort((a, b) => b.w - a.w || a.team.localeCompare(b.team)) : []), [stats])
   if (error) return <p className="status center">{error}</p>
   if (!stats) return <p className="status center">Loading all-time stats…</p>
+
+  const picker = (
+    <select className="team-pick" value={who} onChange={(e) => setWho(e.target.value)} aria-label="All-time view">
+      <option value="">All Time</option>
+      {ranked.map((t) => <option key={t.team} value={t.team}>{t.team}</option>)}
+    </select>
+  )
+  if (who) {
+    const t = ranked.find((x) => x.team === who)
+    return t ? <TeamCard t={t} picker={picker} /> : null
+  }
 
   const teams = stats.teams
   const champs = teams.filter((t) => t.titles > 0).sort((a, b) => b.titles - a.titles || a.titleYears[0] - b.titleYears[0])
@@ -54,7 +67,7 @@ export function Stats({ stats, error, tv }) {
   return (
     <section className="stats">
       <div className="cabinet">
-        <h2>Champions</h2>
+        <h2>Champions {picker}</h2>
         <div className="cups">
           {champs.map((c) => (
             <div key={c.team} className={`cup ${c.titles > 1 ? 'multi' : ''}`}>
@@ -82,6 +95,43 @@ export function Stats({ stats, error, tv }) {
           </article>
         ))}
       </div>
+    </section>
+  )
+}
+
+function TeamCard({ t, picker }) {
+  const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
+  const cells = [
+    ['Team Record', rec],
+    ['Win Percentage', t.pct.toFixed(3).replace(/^0/, '')],
+    ['Tournaments Played', `${t.tournaments}`],
+    ['Group Titles', `${t.groupTitles}`],
+    ['Knockout Appearances', `${t.koYears}`],
+    ['Knockout Record', `${t.koW}-${t.koL}`],
+  ]
+  const h2h = [['Faced Most', t.facedMost], ['Beaten Most', t.beatMost], ['Lost To Most', t.lostMost]]
+  return (
+    <section className="stats team-view">
+      <div className="cabinet team-head">
+        <h2>
+          <span className="tname">{t.team}</span>
+          {t.titles > 0 && <span className="titles">{'🏆'.repeat(Math.min(t.titles, 3))} {t.titleYears.join(' · ')}</span>}
+          {picker}
+        </h2>
+        <span className="span">{t.years.join(' · ')}</span>
+      </div>
+      <div className="team-grid">
+        <div className="tiles">
+          {cells.map(([k, v]) => <div className="tile" key={k}><span className="k">{k}</span><span className="v">{v}</span></div>)}
+        </div>
+        <article className="board h2h">
+          <header><h3>Head to Head</h3><span>recorded games</span></header>
+          <ol>{h2h.map(([k, v]) => (
+            <li key={k}><span className="team">{k}</span><span className="val">{v || '—'}</span></li>
+          ))}</ol>
+        </article>
+      </div>
+      {t.narrative && <div className="narrative"><p>{t.narrative}</p></div>}
     </section>
   )
 }

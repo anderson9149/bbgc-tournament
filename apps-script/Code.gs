@@ -34,6 +34,7 @@ var FILE_PREFIX = 'BBGC_ScoreCardResults_';
 var FILE_PATTERN = /^BBGC_ScoreCardResults_(\d{4})$/;
 var FIRST_YEAR = 2016;
 var STATS_FILE = 'BBGC_AllTimeStats';
+var TEAMS_FILE = 'Team Summary';
 var HISTORY_URL = 'https://raw.githubusercontent.com/anderson9149/bbgc-tournament/main/history/';
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
@@ -478,11 +479,13 @@ function rebuildStats() {
 
   var sh = ss.getSheetByName('AllTime') || ss.insertSheet('AllTime');
   sh.clear();
+  var narr = fetchNarratives_();
   header_(sh, 1, ['Team','Tournaments','Years','Titles','Title Years','W','L','T','Win%',
-                  'KO Years','KO W','KO L','Group Titles']);
+                  'KO Years','KO W','KO L','Group Titles','Faced Most','Beaten Most','Lost To Most','Narrative']);
   var rows = stats.teams.map(function (t) {
     return [t.team, t.years.length, t.years.join(' '), t.titles.length, t.titleYears.join(' '),
-            t.w, t.l, t.t, t.pct, t.koYears, t.koW, t.koL, t.groupTitles];
+            t.w, t.l, t.t, t.pct, t.koYears, t.koW, t.koL, t.groupTitles,
+            t.facedMost, t.beatMost, t.lostMost, narr[t.team] || ''];
   });
   if (rows.length) sh.getRange(2, 1, rows.length, rows[0].length).setValues(rows);
   sh.setColumnWidth(1, 220); sh.setColumnWidth(3, 200); sh.setColumnWidth(5, 120);
@@ -492,9 +495,59 @@ function rebuildStats() {
   meta.clear();
   meta.getRange(1, 1, 2, 2).setValues([['Updated', new Date()], ['Years', stats.years.join(' ')]]);
 
+  writeTeamSummary_(stats, narr);
   CacheService.getScriptCache().remove('stats');
   ui.alert('All-time stats rebuilt: ' + rows.length + ' teams across ' + stats.years.length +
-           ' tournaments.\n\nStored in ' + STATS_FILE + '.');
+           ' tournaments.\n\nStored in ' + STATS_FILE + ', with a tab per team in "' + TEAMS_FILE + '".');
+}
+
+// Narratives live in the repo so they can be written and reviewed like code.
+function fetchNarratives_() {
+  var res = UrlFetchApp.fetch(HISTORY_URL + 'team-narratives.json', { muteHttpExceptions: true });
+  return res.getResponseCode() === 200 ? JSON.parse(res.getContentText()) : {};
+}
+
+// One tab per team, for browsing in Drive. The website reads the AllTime sheet
+// instead, so this is purely the human-readable copy.
+function writeTeamSummary_(stats, narr) {
+  var folder = folder_();
+  var it = folder.getFilesByName(TEAMS_FILE);
+  var ss;
+  if (it.hasNext()) ss = SpreadsheetApp.openById(it.next().getId());
+  else { ss = SpreadsheetApp.create(TEAMS_FILE); DriveApp.getFileById(ss.getId()).moveTo(folder); }
+
+  var keep = {};
+  stats.teams.forEach(function (t) {
+    var name = t.team.replace(/[\[\]\*\/\\?:]/g, '').substring(0, 99);
+    keep[name] = true;
+    var sh = ss.getSheetByName(name) || ss.insertSheet(name);
+    sh.clear();
+    var rec = t.w + '-' + t.l + (t.t ? '-' + t.t : '');
+    sh.getRange(1, 1, 11, 2).setValues([
+      [t.team, ''],
+      ['Team Record', rec],
+      ['Win Percentage', t.pct],
+      ['Tournaments Played', t.years.length],
+      ['Years', t.years.join(', ')],
+      ['Championships', t.titles.length + (t.titleYears.length ? ' (' + t.titleYears.join(', ') + ')' : '')],
+      ['Group Titles', t.groupTitles],
+      ['Knockout Appearances', t.koYears],
+      ['Knockout Record', t.koW + '-' + t.koL],
+      ['Faced Most', t.facedMost],
+      ['Beaten Most', t.beatMost],
+    ]);
+    sh.getRange(12, 1, 2, 2).setValues([['Lost To Most', t.lostMost], ['Narrative', narr[t.team] || '']]);
+    sh.getRange(1, 1, 1, 2).merge().setFontSize(14).setFontWeight('bold')
+      .setBackground(HEADER_BG).setFontColor('#ffffff');
+    sh.getRange(2, 1, 12, 1).setFontWeight('bold');
+    sh.getRange(13, 2).setWrap(true);
+    sh.setColumnWidth(1, 170); sh.setColumnWidth(2, 640);
+    sh.getRange(3, 2).setNumberFormat('0.000');
+  });
+  // drop tabs for teams that no longer exist, but never leave the book empty
+  ss.getSheets().forEach(function (sh) {
+    if (!keep[sh.getName()] && ss.getSheets().length > 1) ss.deleteSheet(sh);
+  });
 }
 
 function computeAllTime_() {
@@ -503,8 +556,15 @@ function computeAllTime_() {
   var by = {};
   function T(name) {
     if (!by[name]) by[name] = { team: name, years: [], titleYears: [], titles: [],
-                                w: 0, l: 0, t: 0, koYears: 0, koW: 0, koL: 0, groupTitles: 0 };
+                                w: 0, l: 0, t: 0, koYears: 0, koW: 0, koL: 0, groupTitles: 0,
+                                faced: {}, beat: {}, lost: {} };
     return by[name];
+  }
+  function bump(o, k) { if (k) o[k] = (o[k] || 0) + 1; }
+  function top(o) {
+    var best = null;
+    Object.keys(o).forEach(function (k) { if (!best || o[k] > o[best]) best = k; });
+    return best ? best + ' (' + o[best] + ')' : '';
   }
   var played = [];
   list.forEach(function (y) {
@@ -513,6 +573,14 @@ function computeAllTime_() {
     try { data = readData_(ss); } catch (err) { return; }
     if (!data.teams.length) return;
     played.push(y);
+
+    // head-to-head from every game with a real score
+    data.poolGames.forEach(function (g) {
+      if (g.scoreA === null || g.scoreB === null || !g.teamA || !g.teamB) return;
+      bump(T(g.teamA).faced, g.teamB); bump(T(g.teamB).faced, g.teamA);
+      if (g.scoreA > g.scoreB) { bump(T(g.teamA).beat, g.teamB); bump(T(g.teamB).lost, g.teamA); }
+      else if (g.scoreB > g.scoreA) { bump(T(g.teamB).beat, g.teamA); bump(T(g.teamA).lost, g.teamB); }
+    });
 
     var standings = computeStandings_(data);
     poolsOf_(data).forEach(function (pool) {
@@ -532,8 +600,8 @@ function computeAllTime_() {
       if (g.scoreA === null || g.scoreB === null || g.scoreA === g.scoreB) return;
       var win = g.scoreA > g.scoreB ? g.teamA : g.teamB;
       var lose = g.scoreA > g.scoreB ? g.teamB : g.teamA;
-      if (win) { T(win).koW++; T(win).w++; }
-      if (lose) { T(lose).koL++; T(lose).l++; }
+      if (win) { T(win).koW++; T(win).w++; bump(T(win).faced, lose); bump(T(win).beat, lose); }
+      if (lose) { T(lose).koL++; T(lose).l++; bump(T(lose).faced, win); bump(T(lose).lost, win); }
     });
     Object.keys(seen).forEach(function (n) { T(n).koYears++; });
 
@@ -546,6 +614,7 @@ function computeAllTime_() {
     var gp = e.w + e.l + e.t;
     e.pct = gp ? Math.round((e.w + 0.5 * e.t) / gp * 1000) / 1000 : 0;
     e.games = gp;
+    e.facedMost = top(e.faced); e.beatMost = top(e.beat); e.lostMost = top(e.lost);
     return e;
   }).sort(function (a, b) { return b.w - a.w || a.team.localeCompare(b.team); });
   return { teams: teams, years: played };
@@ -558,12 +627,14 @@ function readStats_() {
   var ss = SpreadsheetApp.openById(it.next().getId());
   var sh = ss.getSheetByName('AllTime');
   if (!sh || sh.getLastRow() < 2) return { error: 'All-time stats sheet is empty.' };
-  var vals = sh.getRange(2, 1, sh.getLastRow() - 1, 13).getValues();
+  var vals = sh.getRange(2, 1, sh.getLastRow() - 1, 17).getValues();
   var teams = vals.filter(function (r) { return r[0] !== ''; }).map(function (r) {
     return { team: String(r[0]), tournaments: Number(r[1]), years: String(r[2]).split(' ').filter(String).map(Number),
              titles: Number(r[3]), titleYears: String(r[4]).split(' ').filter(String).map(Number),
              w: Number(r[5]), l: Number(r[6]), t: Number(r[7]), pct: Number(r[8]),
-             koYears: Number(r[9]), koW: Number(r[10]), koL: Number(r[11]), groupTitles: Number(r[12]) };
+             koYears: Number(r[9]), koW: Number(r[10]), koL: Number(r[11]), groupTitles: Number(r[12]),
+             facedMost: String(r[13] || ''), beatMost: String(r[14] || ''), lostMost: String(r[15] || ''),
+             narrative: String(r[16] || '') };
   });
   var meta = ss.getSheetByName('Meta');
   return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, teams: teams };
