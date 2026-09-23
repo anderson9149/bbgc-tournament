@@ -1,0 +1,941 @@
+{
+  "bracket": [
+    {
+      "game": 1,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Orange#2",
+      "slotB": "Red#3",
+      "teamA": "The Seekers",
+      "teamB": "Don Cuzzi",
+      "winner": "Don Cuzzi"
+    },
+    {
+      "game": 2,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Red#2",
+      "slotB": "Orange#3",
+      "teamA": "Ghetto Ballers",
+      "teamB": "Hot Sauce",
+      "winner": "Hot Sauce"
+    },
+    {
+      "game": 3,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Blue#2",
+      "slotB": "Yellow#3",
+      "teamA": "Joanie Loves Bocce",
+      "teamB": "Loh Hang Balls",
+      "winner": "Loh Hang Balls"
+    },
+    {
+      "game": 4,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Yellow#2",
+      "slotB": "Blue#3",
+      "teamA": "Sister Swap",
+      "teamB": "Bros Boor",
+      "winner": "Bros Boor"
+    },
+    {
+      "game": 5,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Blue#1",
+      "slotB": "W1",
+      "teamA": "White Zin",
+      "teamB": "Don Cuzzi",
+      "winner": "Don Cuzzi"
+    },
+    {
+      "game": 6,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Yellow#1",
+      "slotB": "W2",
+      "teamA": "Holy Rollers",
+      "teamB": "Hot Sauce",
+      "winner": "Hot Sauce"
+    },
+    {
+      "game": 7,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#1",
+      "slotB": "W3",
+      "teamA": "The Big LeBocce",
+      "teamB": "Loh Hang Balls",
+      "winner": "The Big LeBocce"
+    },
+    {
+      "game": 8,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Red#1",
+      "slotB": "W4",
+      "teamA": "Loose Meats",
+      "teamB": "Bros Boor",
+      "winner": "Bros Boor"
+    },
+    {
+      "game": 9,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W5",
+      "slotB": "W6",
+      "teamA": "Don Cuzzi",
+      "teamB": "Hot Sauce",
+      "winner": "Don Cuzzi"
+    },
+    {
+      "game": 10,
+      "round": "Semifinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "W7",
+      "slotB": "W8",
+      "teamA": "The Big LeBocce",
+      "teamB": "Bros Boor",
+      "winner": "Bros Boor"
+    },
+    {
+      "game": 11,
+      "round": "Final",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "W9",
+      "slotB": "W10",
+      "teamA": "Don Cuzzi",
+      "teamB": "Bros Boor",
+      "winner": "Bros Boor"
+    }
+  ],
+  "bracketSeeded": true,
+  "pools": {
+    "Blue": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 17,
+          "scoreB": 12,
+          "teamA": "White Zin",
+          "teamB": "Muck Fichigan"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 22,
+          "scoreB": 10,
+          "teamA": "Bros Boor",
+          "teamB": "Here 4 Beer"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 17,
+          "scoreB": 10,
+          "teamA": "Sister Swap",
+          "teamB": "Grand Lakes"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 13,
+          "scoreB": 15,
+          "teamA": "Bros Boor",
+          "teamB": "Sister Swap"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 11,
+          "scoreB": 19,
+          "teamA": "Here 4 Beer",
+          "teamB": "Muck Fichigan"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 21,
+          "scoreB": 9,
+          "teamA": "White Zin",
+          "teamB": "Grand Lakes"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 6,
+          "scoreB": 17,
+          "teamA": "Here 4 Beer",
+          "teamB": "Sister Swap"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 15,
+          "scoreB": 13,
+          "teamA": "White Zin",
+          "teamB": "Bros Boor"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 11,
+          "scoreB": 14,
+          "teamA": "Muck Fichigan",
+          "teamB": "Grand Lakes"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 10,
+          "scoreB": 20,
+          "teamA": "Sister Swap",
+          "teamB": "Muck Fichigan"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 11,
+          "scoreB": 17,
+          "teamA": "Grand Lakes",
+          "teamB": "Bros Boor"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 13,
+          "scoreB": 16,
+          "teamA": "Here 4 Beer",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 13,
+          "scoreB": 16,
+          "teamA": "Grand Lakes",
+          "teamB": "Here 4 Beer"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 9,
+          "scoreB": 14,
+          "teamA": "Muck Fichigan",
+          "teamB": "Bros Boor"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 12,
+          "scoreB": 12,
+          "teamA": "Sister Swap",
+          "teamB": "White Zin"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 22,
+          "l": 0,
+          "override": 1,
+          "pa": 59,
+          "pf": 81,
+          "seed": 1,
+          "t": 1,
+          "team": "White Zin",
+          "w": 4
+        },
+        {
+          "diff": 10,
+          "l": 1,
+          "override": 2,
+          "pa": 61,
+          "pf": 71,
+          "seed": 2,
+          "t": 1,
+          "team": "Sister Swap",
+          "w": 3
+        },
+        {
+          "diff": 19,
+          "l": 2,
+          "override": 3,
+          "pa": 60,
+          "pf": 79,
+          "seed": 3,
+          "t": 0,
+          "team": "Bros Boor",
+          "w": 3
+        },
+        {
+          "diff": 5,
+          "l": 3,
+          "override": null,
+          "pa": 66,
+          "pf": 71,
+          "seed": 4,
+          "t": 0,
+          "team": "Muck Fichigan",
+          "w": 2
+        },
+        {
+          "diff": -25,
+          "l": 4,
+          "override": null,
+          "pa": 82,
+          "pf": 57,
+          "seed": 5,
+          "t": 0,
+          "team": "Grand Lakes",
+          "w": 1
+        },
+        {
+          "diff": -31,
+          "l": 4,
+          "override": null,
+          "pa": 87,
+          "pf": 56,
+          "seed": 6,
+          "t": 0,
+          "team": "Here 4 Beer",
+          "w": 1
+        }
+      ],
+      "total": 15
+    },
+    "Green": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": 15,
+          "scoreB": 11,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Smug Champs"
+        },
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": 16,
+          "scoreB": 13,
+          "teamA": "Hot Sauce",
+          "teamB": "Holy Rollers"
+        },
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": 13,
+          "scoreB": 13,
+          "teamA": "Blues Bros",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": 12,
+          "scoreB": 20,
+          "teamA": "Hot Sauce",
+          "teamB": "Blues Bros"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": 14,
+          "scoreB": 8,
+          "teamA": "Holy Rollers",
+          "teamB": "Smug Champs"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": 19,
+          "scoreB": 9,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": 13,
+          "scoreB": 9,
+          "teamA": "Holy Rollers",
+          "teamB": "Blues Bros"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": 17,
+          "scoreB": 22,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Hot Sauce"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": 18,
+          "scoreB": 7,
+          "teamA": "Smug Champs",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Green",
+          "round": 4,
+          "scoreA": 15,
+          "scoreB": 16,
+          "teamA": "Blues Bros",
+          "teamB": "Smug Champs"
+        },
+        {
+          "pool": "Green",
+          "round": 4,
+          "scoreA": 13,
+          "scoreB": 10,
+          "teamA": "Sparty Devils",
+          "teamB": "Hot Sauce"
+        },
+        {
+          "pool": "Green",
+          "round": 4,
+          "scoreA": 19,
+          "scoreB": 13,
+          "teamA": "Holy Rollers",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Green",
+          "round": 5,
+          "scoreA": 13,
+          "scoreB": 12,
+          "teamA": "Sparty Devils",
+          "teamB": "Holy Rollers"
+        },
+        {
+          "pool": "Green",
+          "round": 5,
+          "scoreA": 13,
+          "scoreB": 13,
+          "teamA": "Smug Champs",
+          "teamB": "Hot Sauce"
+        },
+        {
+          "pool": "Green",
+          "round": 5,
+          "scoreA": 6,
+          "scoreB": 20,
+          "teamA": "Blues Bros",
+          "teamB": "Joanie Loves Bocce"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 12,
+          "l": 2,
+          "override": 1,
+          "pa": 59,
+          "pf": 71,
+          "seed": 1,
+          "t": 0,
+          "team": "Holy Rollers",
+          "w": 3
+        },
+        {
+          "diff": 17,
+          "l": 2,
+          "override": 2,
+          "pa": 67,
+          "pf": 84,
+          "seed": 2,
+          "t": 0,
+          "team": "Joanie Loves Bocce",
+          "w": 3
+        },
+        {
+          "diff": -3,
+          "l": 2,
+          "override": 3,
+          "pa": 76,
+          "pf": 73,
+          "seed": 3,
+          "t": 1,
+          "team": "Hot Sauce",
+          "w": 2
+        },
+        {
+          "diff": 2,
+          "l": 2,
+          "override": null,
+          "pa": 64,
+          "pf": 66,
+          "seed": 4,
+          "t": 1,
+          "team": "Smug Champs",
+          "w": 2
+        },
+        {
+          "diff": -17,
+          "l": 2,
+          "override": null,
+          "pa": 72,
+          "pf": 55,
+          "seed": 5,
+          "t": 1,
+          "team": "Sparty Devils",
+          "w": 2
+        },
+        {
+          "diff": -11,
+          "l": 3,
+          "override": null,
+          "pa": 74,
+          "pf": 63,
+          "seed": 6,
+          "t": 1,
+          "team": "Blues Bros",
+          "w": 1
+        }
+      ],
+      "total": 15
+    },
+    "Orange": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": 18,
+          "scoreB": 14,
+          "teamA": "The Big LeBocce",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": 16,
+          "scoreB": 18,
+          "teamA": "Don Cuzzi",
+          "teamB": "Return of the Mesh"
+        },
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": 17,
+          "scoreB": 14,
+          "teamA": "Loh Hang Balls",
+          "teamB": "Long Ballz"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": 15,
+          "scoreB": 12,
+          "teamA": "Don Cuzzi",
+          "teamB": "Loh Hang Balls"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": 19,
+          "scoreB": 10,
+          "teamA": "Return of the Mesh",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": 27,
+          "scoreB": 8,
+          "teamA": "The Big LeBocce",
+          "teamB": "Long Ballz"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": 9,
+          "scoreB": 24,
+          "teamA": "Return of the Mesh",
+          "teamB": "Loh Hang Balls"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": 23,
+          "scoreB": 10,
+          "teamA": "The Big LeBocce",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": 15,
+          "scoreB": 9,
+          "teamA": "Hawkeyes",
+          "teamB": "Long Ballz"
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": 14,
+          "scoreB": 17,
+          "teamA": "Loh Hang Balls",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": 9,
+          "scoreB": 18,
+          "teamA": "Long Ballz",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": 8,
+          "scoreB": 20,
+          "teamA": "Return of the Mesh",
+          "teamB": "The Big LeBocce"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": 17,
+          "scoreB": 10,
+          "teamA": "Long Ballz",
+          "teamB": "Return of the Mesh"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": 11,
+          "scoreB": 19,
+          "teamA": "Hawkeyes",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": 17,
+          "scoreB": 11,
+          "teamA": "Loh Hang Balls",
+          "teamB": "The Big LeBocce"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 42,
+          "l": 1,
+          "override": 1,
+          "pa": 57,
+          "pf": 99,
+          "seed": 1,
+          "t": 0,
+          "team": "The Big LeBocce",
+          "w": 4
+        },
+        {
+          "diff": 5,
+          "l": 2,
+          "override": 2,
+          "pa": 73,
+          "pf": 78,
+          "seed": 2,
+          "t": 0,
+          "team": "Don Cuzzi",
+          "w": 3
+        },
+        {
+          "diff": 18,
+          "l": 2,
+          "override": 3,
+          "pa": 66,
+          "pf": 84,
+          "seed": 3,
+          "t": 0,
+          "team": "Loh Hang Balls",
+          "w": 3
+        },
+        {
+          "diff": -12,
+          "l": 3,
+          "override": null,
+          "pa": 79,
+          "pf": 67,
+          "seed": 4,
+          "t": 0,
+          "team": "Hawkeyes",
+          "w": 2
+        },
+        {
+          "diff": -23,
+          "l": 3,
+          "override": null,
+          "pa": 87,
+          "pf": 64,
+          "seed": 5,
+          "t": 0,
+          "team": "Return of the Mesh",
+          "w": 2
+        },
+        {
+          "diff": -30,
+          "l": 4,
+          "override": null,
+          "pa": 87,
+          "pf": 57,
+          "seed": 6,
+          "t": 0,
+          "team": "Long Ballz",
+          "w": 1
+        }
+      ],
+      "total": 15
+    },
+    "Red": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 22,
+          "scoreB": 8,
+          "teamA": "The Seekers",
+          "teamB": "Brainard Bergs"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 12,
+          "scoreB": 12,
+          "teamA": "Ghetto Ballers",
+          "teamB": "Goldylichs"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 1,
+          "scoreB": 0,
+          "teamA": "Loose Meats",
+          "teamB": "Vandelay"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Ghetto Ballers",
+          "teamB": "Loose Meats"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Goldylichs",
+          "teamB": "Brainard Bergs"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 24,
+          "scoreB": 16,
+          "teamA": "The Seekers",
+          "teamB": "Vandelay"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Goldylichs",
+          "teamB": "Loose Meats"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "The Seekers",
+          "teamB": "Ghetto Ballers"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brainard Bergs",
+          "teamB": "Vandelay"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Loose Meats",
+          "teamB": "Brainard Bergs"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Vandelay",
+          "teamB": "Ghetto Ballers"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Goldylichs",
+          "teamB": "The Seekers"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 8,
+          "scoreB": 13,
+          "teamA": "Vandelay",
+          "teamB": "Goldylichs"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brainard Bergs",
+          "teamB": "Ghetto Ballers"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Loose Meats",
+          "teamB": "The Seekers"
+        }
+      ],
+      "played": 5,
+      "standings": [
+        {
+          "diff": 1,
+          "l": 1,
+          "override": 1,
+          "pa": 0,
+          "pf": 1,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 0,
+          "team": "Loose Meats",
+          "w": 4
+        },
+        {
+          "diff": 0,
+          "l": 1,
+          "override": 2,
+          "pa": 12,
+          "pf": 12,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 1,
+          "team": "Ghetto Ballers",
+          "w": 3
+        },
+        {
+          "diff": 22,
+          "l": 2,
+          "override": 3,
+          "pa": 24,
+          "pf": 46,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 0,
+          "team": "The Seekers",
+          "w": 3
+        },
+        {
+          "diff": 5,
+          "l": 2,
+          "override": null,
+          "pa": 20,
+          "pf": 25,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 1,
+          "team": "Goldylichs",
+          "w": 2
+        },
+        {
+          "diff": -14,
+          "l": 4,
+          "override": null,
+          "pa": 38,
+          "pf": 24,
+          "recordOverride": true,
+          "seed": 5,
+          "t": 0,
+          "team": "Vandelay",
+          "w": 1
+        },
+        {
+          "diff": -14,
+          "l": 4,
+          "override": null,
+          "pa": 22,
+          "pf": 8,
+          "recordOverride": true,
+          "seed": 6,
+          "t": 0,
+          "team": "Brainard Bergs",
+          "w": 1
+        }
+      ],
+      "total": 15
+    }
+  },
+  "ticker": [
+    "WELCOME TO THE 2023 B.B.G.C. \u2014 Twenty-four teams, four groups of six, five rounds each. Three advance from every group.",
+    "GROUP PLAY \u00b7 ORANGE \u2014 The Big LeBocce were the class of it: 4-1 and 99 points, the biggest haul in the tournament. Then a dead heat \u2014 Don Cuzzi and Loh Hang Balls both 3-2, Loh Hang with MORE points (84 to 78), and Don Cuzzi took the higher seed on the head-to-head. The Hawkeyes missed out at 2-3. THE BIG LeBOCCE, DON CUZZI and LOH HANG BALLS advance.",
+    "GROUP PLAY \u00b7 GREEN \u2014 Another photo finish. Holy Rollers and Joanie Loves Bocce both finished 3-2, and again the team with fewer points took the group \u2014 Holy Rollers 71, Joanie 84. Hot Sauce came third out of a three-way 2-2-1 pile-up. HOLY ROLLERS, JOANIE LOVES BOCCE and HOT SAUCE advance.",
+    "GROUP PLAY \u00b7 BLUE \u2014 White Zin did not lose: 4-0-1, the only unbeaten record in the field. Sister Swap 3-1-1 behind them, and Bros Boor squeezed through third at 3-2 \u2014 which turned out to matter rather a lot. WHITE ZIN, SISTER SWAP and BROS BOOR advance.",
+    "GROUP PLAY \u00b7 RED \u2014 Loose Meats took it at 4-1, Ghetto Ballers 3-1-1, The Seekers 3-2. A tight, scrappy group from start to finish. LOOSE MEATS, GHETTO BALLERS and THE SEEKERS advance.",
+    "ROUND ONE \u2014 Don Cuzzi ended The Seekers. Hot Sauce put out Ghetto Ballers. Loh Hang Balls ousted Joanie Loves Bocce. And Bros Boor \u2014 eleventh seed, third out of their own group \u2014 quietly took care of Sister Swap. Nobody was watching them yet.",
+    "QUARTERFINALS \u2014 And the top seed went down. DON CUZZI KNOCKED OUT WHITE ZIN, 4-0-1 in the group and unbeaten all day, in their very first game of the bracket. Hot Sauce ended Holy Rollers. The Big LeBocce held off Loh Hang Balls. And Bros Boor took down group champions Loose Meats.",
+    "SEMIFINALS \u2014 Don Cuzzi kept rolling, ending Hot Sauce. And Bros Boor struck again \u2014 this time burying The Big LeBocce and that tournament-best 99-point campaign. The eleven seed was one win from the trophy.",
+    "THE FINAL \u2014 Don Cuzzi: second out of Orange on a head-to-head tiebreak, then the unbeaten number one seed, then Hot Sauce. Bros Boor: ELEVENTH seed, third in their own group, and already the scalps of two group champions.",
+    "\ud83c\udfc6 CHAMPIONS: BROS BOOR \ud83c\udfc6 \u2014 Eleventh seed. Third in their own group. And then they went out and beat Sister Swap, Loose Meats, The Big LeBocce and Don Cuzzi to lift the thing. One of the great runs in B.B.G.C. history. 2023 belongs to Bros Boor."
+  ],
+  "updatedAt": "2026-09-23T04:28:56.570Z",
+  "year": 2023,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

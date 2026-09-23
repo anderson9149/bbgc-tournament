@@ -1,0 +1,907 @@
+{
+  "bracket": [
+    {
+      "game": 1,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Orange#2",
+      "slotB": "Red#3",
+      "teamA": "Mickey the Mitcher",
+      "teamB": "Brainerd Bergs",
+      "winner": "Brainerd Bergs"
+    },
+    {
+      "game": 2,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Red#2",
+      "slotB": "Orange#3",
+      "teamA": "Vandalay",
+      "teamB": "Seekers",
+      "winner": "Seekers"
+    },
+    {
+      "game": 3,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Blue#2",
+      "slotB": "Yellow#3",
+      "teamA": "Big LeBocce",
+      "teamB": "Bro's Boor",
+      "winner": "Big LeBocce"
+    },
+    {
+      "game": 4,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Yellow#2",
+      "slotB": "Blue#3",
+      "teamA": "Be-Yotch-e, Please",
+      "teamB": "White Zin!",
+      "winner": "Be-Yotch-e, Please"
+    },
+    {
+      "game": 5,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Blue#1",
+      "slotB": "W1",
+      "teamA": "Royale w/ Cheese",
+      "teamB": "Brainerd Bergs",
+      "winner": "Brainerd Bergs"
+    },
+    {
+      "game": 6,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Yellow#1",
+      "slotB": "W2",
+      "teamA": "Muck Fichigan!",
+      "teamB": "Seekers",
+      "winner": "Muck Fichigan!"
+    },
+    {
+      "game": 7,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#1",
+      "slotB": "W3",
+      "teamA": "Hawkeyes",
+      "teamB": "Big LeBocce",
+      "winner": "Hawkeyes"
+    },
+    {
+      "game": 8,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Red#1",
+      "slotB": "W4",
+      "teamA": "Smug Champs!",
+      "teamB": "Be-Yotch-e, Please",
+      "winner": "Smug Champs!"
+    },
+    {
+      "game": 9,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W5",
+      "slotB": "W6",
+      "teamA": "Brainerd Bergs",
+      "teamB": "Muck Fichigan!",
+      "winner": "Brainerd Bergs"
+    },
+    {
+      "game": 10,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W7",
+      "slotB": "W8",
+      "teamA": "Hawkeyes",
+      "teamB": "Smug Champs!",
+      "winner": "Hawkeyes"
+    },
+    {
+      "game": 11,
+      "round": "Final",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W9",
+      "slotB": "W10",
+      "teamA": "Brainerd Bergs",
+      "teamB": "Hawkeyes",
+      "winner": "Brainerd Bergs"
+    }
+  ],
+  "bracketSeeded": true,
+  "pools": {
+    "Blue": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Seekers",
+          "teamB": "J.L.B!"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Merman",
+          "teamB": "Royale w/ Cheese"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Banana the Tailpipe",
+          "teamB": "Mickey the Mitcher"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Merman",
+          "teamB": "Banana the Tailpipe"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Royale w/ Cheese",
+          "teamB": "J.L.B!"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Seekers",
+          "teamB": "Mickey the Mitcher"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Royale w/ Cheese",
+          "teamB": "Banana the Tailpipe"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Seekers",
+          "teamB": "Merman"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "J.L.B!",
+          "teamB": "Mickey the Mitcher"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Banana the Tailpipe",
+          "teamB": "J.L.B!"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Mickey the Mitcher",
+          "teamB": "Merman"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Royale w/ Cheese",
+          "teamB": "Seekers"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Mickey the Mitcher",
+          "teamB": "Royale w/ Cheese"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "J.L.B!",
+          "teamB": "Merman"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Banana the Tailpipe",
+          "teamB": "Seekers"
+        }
+      ],
+      "played": 0,
+      "standings": [
+        {
+          "diff": 0,
+          "l": 0,
+          "override": 1,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 0,
+          "team": "Royale w/ Cheese",
+          "w": 5
+        },
+        {
+          "diff": 0,
+          "l": 1,
+          "override": 2,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 0,
+          "team": "Seekers",
+          "w": 4
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 3,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 1,
+          "team": "Mickey the Mitcher",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 0,
+          "team": "J.L.B!",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 5,
+          "t": 1,
+          "team": "Merman",
+          "w": 1
+        },
+        {
+          "diff": 0,
+          "l": 5,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 6,
+          "t": 0,
+          "team": "Banana the Tailpipe",
+          "w": 0
+        }
+      ],
+      "total": 15
+    },
+    "Orange": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Muck Fichigan!",
+          "teamB": "Be-Yotch-e, Please"
+        },
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Big LeBocce",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Sparty Devils",
+          "teamB": "Muck Fichigan!"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Be-Yotch-e, Please",
+          "teamB": "Billy G.O.A.T."
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Muck Fichigan!",
+          "teamB": "Big LeBocce"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Sparty Devils",
+          "teamB": "Billy G.O.A.T."
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Big LeBocce",
+          "teamB": "Billy G.O.A.T."
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Sparty Devils",
+          "teamB": "Be-Yotch-e, Please"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Be-Yotch-e, Please",
+          "teamB": "Big LeBocce"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Billy G.O.A.T.",
+          "teamB": "Muck Fichigan!"
+        }
+      ],
+      "played": 0,
+      "standings": [
+        {
+          "diff": 0,
+          "l": 1,
+          "override": 1,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 0,
+          "team": "Muck Fichigan!",
+          "w": 3
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 2,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 0,
+          "team": "Big LeBocce",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 3,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 0,
+          "team": "Be-Yotch-e, Please",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 1,
+          "team": "Billy G.O.A.T.",
+          "w": 1
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 5,
+          "t": 1,
+          "team": "Sparty Devils",
+          "w": 1
+        }
+      ],
+      "total": 10
+    },
+    "Red": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Bro's Boor",
+          "teamB": "Smug Champs!"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Steve + Jake",
+          "teamB": "Brainerd Bergs"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Guns 'n Rollers",
+          "teamB": "Top Gun"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Steve + Jake",
+          "teamB": "Guns 'n Rollers"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brainerd Bergs",
+          "teamB": "Smug Champs!"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Bro's Boor",
+          "teamB": "Top Gun"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brainerd Bergs",
+          "teamB": "Guns 'n Rollers"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Bro's Boor",
+          "teamB": "Steve + Jake"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Smug Champs!",
+          "teamB": "Top Gun"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Guns 'n Rollers",
+          "teamB": "Smug Champs!"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Top Gun",
+          "teamB": "Steve + Jake"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brainerd Bergs",
+          "teamB": "Bro's Boor"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Top Gun",
+          "teamB": "Brainerd Bergs"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Smug Champs!",
+          "teamB": "Steve + Jake"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Guns 'n Rollers",
+          "teamB": "Bro's Boor"
+        }
+      ],
+      "played": 0,
+      "standings": [
+        {
+          "diff": 0,
+          "l": 1,
+          "override": 1,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 0,
+          "team": "Smug Champs!",
+          "w": 4
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 2,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 1,
+          "team": "Bro's Boor",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 3,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 1,
+          "team": "Brainerd Bergs",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 0,
+          "team": "Guns 'n Rollers",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 5,
+          "t": 0,
+          "team": "Steve + Jake",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 6,
+          "t": 0,
+          "team": "Top Gun",
+          "w": 2
+        }
+      ],
+      "total": 15
+    },
+    "Yellow": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Hawkeyes",
+          "teamB": "White Zin!"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Keen on Christ + Blue Balls",
+          "teamB": "Vandalay"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Get Leid",
+          "teamB": "Brownkowski"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Keen on Christ + Blue Balls",
+          "teamB": "Get Leid"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Vandalay",
+          "teamB": "White Zin!"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Hawkeyes",
+          "teamB": "Brownkowski"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Vandalay",
+          "teamB": "Get Leid"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Hawkeyes",
+          "teamB": "Keen on Christ + Blue Balls"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "White Zin!",
+          "teamB": "Brownkowski"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Get Leid",
+          "teamB": "White Zin!"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brownkowski",
+          "teamB": "Keen on Christ + Blue Balls"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Vandalay",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Brownkowski",
+          "teamB": "Vandalay"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "White Zin!",
+          "teamB": "Keen on Christ + Blue Balls"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Get Leid",
+          "teamB": "Hawkeyes"
+        }
+      ],
+      "played": 0,
+      "standings": [
+        {
+          "diff": 0,
+          "l": 0,
+          "override": 1,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 1,
+          "team": "Hawkeyes",
+          "w": 4
+        },
+        {
+          "diff": 0,
+          "l": 1,
+          "override": 2,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 1,
+          "team": "White Zin!",
+          "w": 3
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": 3,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 1,
+          "team": "Vandalay",
+          "w": 1
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 1,
+          "team": "Brownkowski",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 5,
+          "t": 0,
+          "team": "Keen on Christ + Blue Balls",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 4,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 6,
+          "t": 0,
+          "team": "Get Leid",
+          "w": 1
+        }
+      ],
+      "total": 15
+    }
+  },
+  "ticker": [
+    "WELCOME TO THE 2022 B.B.G.C. \u2014 Twenty-three teams across four groups \u2014 Blue, Red and Yellow with six, Orange with five. Three from each move on to the bracket.",
+    "GROUP PLAY \u00b7 BLUE \u2014 Royale w/ Cheese went through it without a scratch: 5-0, the only perfect record in the tournament. The Seekers took second at 4-1 and Mickey the Mitcher edged in at 2-2-1. Banana the Tailpipe never got off the mark. ROYALE W/ CHEESE, THE SEEKERS and MICKEY THE MITCHER advance.",
+    "GROUP PLAY \u00b7 RED \u2014 Smug Champs, the defending champions, looked every bit of it at 4-1. Behind them a genuine traffic jam: Bro's Boor and Brainerd Bergs both 2-2-1, with Steve + Jake, Guns 'n Rollers and Top Gun all at 2-3. Fine margins everywhere. SMUG CHAMPS, BRO'S BOOR and BRAINERD BERGS advance.",
+    "GROUP PLAY \u00b7 YELLOW \u2014 The Hawkeyes did not lose a game: 4-0-1, the only unbeaten card in the group stage. White Zin were right there at 3-1-1. Vandalay took the last ticket. HAWKEYES, WHITE ZIN and VANDALAY advance.",
+    "GROUP PLAY \u00b7 ORANGE \u2014 Five teams, four games each. Muck Fichigan came out on top at 3-1, and then a straight tie for second: Big LeBocce and Be-Yotch-e, Please, both 2-2. Sparty Devils and Billy G.O.A.T. both 1-2-1. MUCK FICHIGAN, BIG LeBOCCE and BE-YOTCH-E, PLEASE advance.",
+    "ROUND ONE \u2014 Brainerd Bergs edged out Mickey the Mitcher. The Seekers ended Vandalay. Big LeBocce upset Bro's Boor. And Be-Yotch-e, Please sent WHITE ZIN home in the first game they played. The eleven seed over the six.",
+    "QUARTERFINALS \u2014 Hawkeyes held firm over Big LeBocce, Smug Champs saw off Be-Yotch-e, and Muck Fichigan ended The Seekers. But the shock of the day came at the top of the board: BRAINERD BERGS TOOK DOWN ROYALE W/ CHEESE. Five and oh in the group, number one seed, out in a single game.",
+    "SEMIFINALS \u2014 Brainerd Bergs weren't done \u2014 they ended Muck Fichigan too. And the Hawkeyes stopped the defending champion Smug Champs cold. An eight seed and a two seed for the trophy.",
+    "THE FINAL \u2014 Hawkeyes: 4-0-1, the group stage's only unbeaten team, 2018 champions chasing a second. Brainerd Bergs: eighth seed out of a logjammed Red group, and a bracket run that had already buried the number one seed and a group champion.",
+    "\ud83c\udfc6 CHAMPIONS: BRAINERD BERGS \ud83c\udfc6 \u2014 They came in eighth. They beat the top seed, they beat a group champion, and then they beat the only team that hadn't lost all day. The Hawkeyes' second title will have to wait. 2022 goes to the Brainerd Bergs."
+  ],
+  "updatedAt": "2026-09-23T04:28:54.905Z",
+  "year": 2022,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

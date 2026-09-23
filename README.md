@@ -59,6 +59,14 @@ refuse to run on past years, so imported brackets can't be clobbered.
 round. Put whatever the year actually played in the history JSON; the importer writes that many rows
 and clears the rest. Games that were forfeited get `null` scores.
 
+**Protecting finished years:** **BBGC → Lock past years** puts warning-only protection on every
+sheet of every year before the current one — Google asks "are you sure?" before any hand edit, while
+the importer and the website carry on working. **Unlock past years** removes it.
+
+**Backups:** `history/<year>.json` is the source of truth and can rebuild a year's sheet from
+scratch via the importer. `history/snapshots/<year>.json` is a dump of what the live API actually
+returned, refreshed with `history/snapshot.sh` — useful for spotting a sheet that has drifted.
+
 **Ticker stories:** a history file can carry a `ticker` array — a play-by-play of that year's
 tournament. The importer writes it into the year's Ticker Messages tab, so picking that year on the
 site scrolls its story along the bottom.

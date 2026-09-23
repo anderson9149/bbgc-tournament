@@ -1,0 +1,935 @@
+{
+  "bracket": [
+    {
+      "game": 1,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#2",
+      "slotB": "Red#3",
+      "teamA": "Hawkeye",
+      "teamB": "Guns n Rollers",
+      "winner": "Hawkeye"
+    },
+    {
+      "game": 2,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Red#2",
+      "slotB": "Orange#3",
+      "teamA": "Hide Your Moms",
+      "teamB": "Laces Out",
+      "winner": "Hide Your Moms"
+    },
+    {
+      "game": 3,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Blue#2",
+      "slotB": "Yellow#3",
+      "teamA": "D-Boccery",
+      "teamB": "Hot Sauce",
+      "winner": "D-Boccery"
+    },
+    {
+      "game": 4,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Yellow#2",
+      "slotB": "Blue#3",
+      "teamA": "Sister Swap",
+      "teamB": "Long Ballz",
+      "winner": "Long Ballz"
+    },
+    {
+      "game": 5,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Blue#1",
+      "slotB": "W1",
+      "teamA": "Gumby Dammit",
+      "teamB": "Hawkeye",
+      "winner": "Hawkeye"
+    },
+    {
+      "game": 6,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Yellow#1",
+      "slotB": "W2",
+      "teamA": "White Zin",
+      "teamB": "Hide Your Moms",
+      "winner": "White Zin"
+    },
+    {
+      "game": 7,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#1",
+      "slotB": "W3",
+      "teamA": "The Seekers",
+      "teamB": "D-Boccery",
+      "winner": "The Seekers"
+    },
+    {
+      "game": 8,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Red#1",
+      "slotB": "W4",
+      "teamA": "Joanie Loves Bocce",
+      "teamB": "Long Ballz",
+      "winner": "Joanie Loves Bocce"
+    },
+    {
+      "game": 9,
+      "round": "Semifinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "W5",
+      "slotB": "W6",
+      "teamA": "Hawkeye",
+      "teamB": "White Zin",
+      "winner": "White Zin"
+    },
+    {
+      "game": 10,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W7",
+      "slotB": "W8",
+      "teamA": "The Seekers",
+      "teamB": "Joanie Loves Bocce",
+      "winner": "The Seekers"
+    },
+    {
+      "game": 11,
+      "round": "Final",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W9",
+      "slotB": "W10",
+      "teamA": "White Zin",
+      "teamB": "The Seekers",
+      "winner": "White Zin"
+    }
+  ],
+  "bracketSeeded": true,
+  "pools": {
+    "Blue": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 13,
+          "scoreB": 9,
+          "teamA": "Laces Out",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 22,
+          "scoreB": 5,
+          "teamA": "Hide Your Moms",
+          "teamB": "Banana in Your Tailpipe"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 15,
+          "scoreB": 5,
+          "teamA": "The Seekers",
+          "teamB": "Moist Baguette"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 14,
+          "scoreB": 18,
+          "teamA": "Hide Your Moms",
+          "teamB": "The Seekers"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 20,
+          "scoreB": 11,
+          "teamA": "Banana in Your Tailpipe",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 22,
+          "scoreB": 7,
+          "teamA": "Laces Out",
+          "teamB": "Moist Baguette"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 13,
+          "scoreB": 17,
+          "teamA": "Banana in Your Tailpipe",
+          "teamB": "The Seekers"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 10,
+          "scoreB": 29,
+          "teamA": "Laces Out",
+          "teamB": "Hide Your Moms"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 20,
+          "scoreB": 8,
+          "teamA": "Don Cuzzi",
+          "teamB": "Moist Baguette"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 16,
+          "scoreB": 14,
+          "teamA": "The Seekers",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 16,
+          "scoreB": 17,
+          "teamA": "Moist Baguette",
+          "teamB": "Hide Your Moms"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 14,
+          "scoreB": 14,
+          "teamA": "Banana in Your Tailpipe",
+          "teamB": "Laces Out"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 14,
+          "scoreB": 13,
+          "teamA": "Moist Baguette",
+          "teamB": "Banana in Your Tailpipe"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 13,
+          "scoreB": 19,
+          "teamA": "Don Cuzzi",
+          "teamB": "Hide Your Moms"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 15,
+          "scoreB": 14,
+          "teamA": "The Seekers",
+          "teamB": "Laces Out"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 21,
+          "l": 0,
+          "override": null,
+          "pa": 60,
+          "pf": 81,
+          "seed": 1,
+          "t": 0,
+          "team": "The Seekers",
+          "w": 5
+        },
+        {
+          "diff": 39,
+          "l": 1,
+          "override": null,
+          "pa": 62,
+          "pf": 101,
+          "seed": 2,
+          "t": 0,
+          "team": "Hide Your Moms",
+          "w": 4
+        },
+        {
+          "diff": -1,
+          "l": 2,
+          "override": null,
+          "pa": 74,
+          "pf": 73,
+          "seed": 3,
+          "t": 1,
+          "team": "Laces Out",
+          "w": 2
+        },
+        {
+          "diff": -9,
+          "l": 4,
+          "override": null,
+          "pa": 76,
+          "pf": 67,
+          "seed": 4,
+          "t": 0,
+          "team": "Don Cuzzi",
+          "w": 1
+        },
+        {
+          "diff": -13,
+          "l": 3,
+          "override": null,
+          "pa": 78,
+          "pf": 65,
+          "seed": 5,
+          "t": 1,
+          "team": "Banana in Your Tailpipe",
+          "w": 1
+        },
+        {
+          "diff": -37,
+          "l": 4,
+          "override": null,
+          "pa": 87,
+          "pf": 50,
+          "seed": 6,
+          "t": 0,
+          "team": "Moist Baguette",
+          "w": 1
+        }
+      ],
+      "total": 15
+    },
+    "Orange": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": 17,
+          "scoreB": 12,
+          "teamA": "Long Ballz",
+          "teamB": "Brothers Boor"
+        },
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": 20,
+          "scoreB": 18,
+          "teamA": "White Zin",
+          "teamB": "D-Boccery"
+        },
+        {
+          "pool": "Orange",
+          "round": 1,
+          "scoreA": 14,
+          "scoreB": 15,
+          "teamA": "Vandalay Industries",
+          "teamB": "Bocce Balboa"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": 11,
+          "scoreB": 17,
+          "teamA": "White Zin",
+          "teamB": "Vandalay Industries"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": 19,
+          "scoreB": 12,
+          "teamA": "D-Boccery",
+          "teamB": "Brothers Boor"
+        },
+        {
+          "pool": "Orange",
+          "round": 2,
+          "scoreA": 19,
+          "scoreB": 12,
+          "teamA": "Long Ballz",
+          "teamB": "Bocce Balboa"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": 15,
+          "scoreB": 11,
+          "teamA": "D-Boccery",
+          "teamB": "Vandalay Industries"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": 10,
+          "scoreB": 25,
+          "teamA": "Long Ballz",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Orange",
+          "round": 3,
+          "scoreA": 17,
+          "scoreB": 11,
+          "teamA": "Brothers Boor",
+          "teamB": "Bocce Balboa"
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": 17,
+          "scoreB": 24,
+          "teamA": "Vandalay Industries",
+          "teamB": "Brothers Boor"
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": 3,
+          "scoreB": 28,
+          "teamA": "Bocce Balboa",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Orange",
+          "round": 4,
+          "scoreA": 12,
+          "scoreB": 17,
+          "teamA": "D-Boccery",
+          "teamB": "Long Ballz"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": 13,
+          "scoreB": 19,
+          "teamA": "Bocce Balboa",
+          "teamB": "D-Boccery"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": 18,
+          "scoreB": 13,
+          "teamA": "Brothers Boor",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Orange",
+          "round": 5,
+          "scoreA": 14,
+          "scoreB": 12,
+          "teamA": "Vandalay Industries",
+          "teamB": "Long Ballz"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 31,
+          "l": 2,
+          "override": null,
+          "pa": 66,
+          "pf": 97,
+          "seed": 1,
+          "t": 0,
+          "team": "White Zin",
+          "w": 3
+        },
+        {
+          "diff": 10,
+          "l": 2,
+          "override": null,
+          "pa": 73,
+          "pf": 83,
+          "seed": 2,
+          "t": 0,
+          "team": "D-Boccery",
+          "w": 3
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 3,
+          "pa": 75,
+          "pf": 75,
+          "seed": 3,
+          "t": 0,
+          "team": "Long Ballz",
+          "w": 3
+        },
+        {
+          "diff": 6,
+          "l": 2,
+          "override": null,
+          "pa": 77,
+          "pf": 83,
+          "seed": 4,
+          "t": 0,
+          "team": "Brothers Boor",
+          "w": 3
+        },
+        {
+          "diff": -4,
+          "l": 3,
+          "override": null,
+          "pa": 77,
+          "pf": 73,
+          "seed": 5,
+          "t": 0,
+          "team": "Vandalay Industries",
+          "w": 2
+        },
+        {
+          "diff": -43,
+          "l": 4,
+          "override": null,
+          "pa": 97,
+          "pf": 54,
+          "seed": 6,
+          "t": 0,
+          "team": "Bocce Balboa",
+          "w": 1
+        }
+      ],
+      "total": 15
+    },
+    "Red": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 10,
+          "scoreB": 16,
+          "teamA": "Hot Sauce",
+          "teamB": "Hawkeye"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 11,
+          "scoreB": 16,
+          "teamA": "The M.J.s",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 16,
+          "scoreB": 9,
+          "teamA": "Tyson's Micropenis",
+          "teamB": "Mickey Mitcher"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 13,
+          "scoreB": 15,
+          "teamA": "The M.J.s",
+          "teamB": "Tyson's Micropenis"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 14,
+          "scoreB": 12,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Hawkeye"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 14,
+          "scoreB": 13,
+          "teamA": "Hot Sauce",
+          "teamB": "Mickey Mitcher"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 14,
+          "scoreB": 10,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Tyson's Micropenis"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 17,
+          "scoreB": 8,
+          "teamA": "Hot Sauce",
+          "teamB": "The M.J.s"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 17,
+          "scoreB": 9,
+          "teamA": "Hawkeye",
+          "teamB": "Mickey Mitcher"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": 17,
+          "scoreB": 13,
+          "teamA": "Tyson's Micropenis",
+          "teamB": "Hawkeye"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": 17,
+          "scoreB": 14,
+          "teamA": "Mickey Mitcher",
+          "teamB": "The M.J.s"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": 15,
+          "scoreB": 11,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Hot Sauce"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 17,
+          "scoreB": 14,
+          "teamA": "Mickey Mitcher",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 17,
+          "scoreB": 11,
+          "teamA": "Hawkeye",
+          "teamB": "The M.J.s"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 6,
+          "scoreB": 24,
+          "teamA": "Tyson's Micropenis",
+          "teamB": "Hot Sauce"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 12,
+          "l": 1,
+          "override": null,
+          "pa": 61,
+          "pf": 73,
+          "seed": 1,
+          "t": 0,
+          "team": "Joanie Loves Bocce",
+          "w": 4
+        },
+        {
+          "diff": 18,
+          "l": 2,
+          "override": null,
+          "pa": 58,
+          "pf": 76,
+          "seed": 2,
+          "t": 0,
+          "team": "Hot Sauce",
+          "w": 3
+        },
+        {
+          "diff": 14,
+          "l": 2,
+          "override": null,
+          "pa": 61,
+          "pf": 75,
+          "seed": 3,
+          "t": 0,
+          "team": "Hawkeye",
+          "w": 3
+        },
+        {
+          "diff": -9,
+          "l": 2,
+          "override": null,
+          "pa": 73,
+          "pf": 64,
+          "seed": 4,
+          "t": 0,
+          "team": "Tyson's Micropenis",
+          "w": 3
+        },
+        {
+          "diff": -10,
+          "l": 3,
+          "override": null,
+          "pa": 75,
+          "pf": 65,
+          "seed": 5,
+          "t": 0,
+          "team": "Mickey Mitcher",
+          "w": 2
+        },
+        {
+          "diff": -25,
+          "l": 5,
+          "override": null,
+          "pa": 82,
+          "pf": 57,
+          "seed": 6,
+          "t": 0,
+          "team": "The M.J.s",
+          "w": 0
+        }
+      ],
+      "total": 15
+    },
+    "Yellow": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": 20,
+          "scoreB": 10,
+          "teamA": "Gumby Dammit",
+          "teamB": "Brainerdbergs"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": 18,
+          "scoreB": 12,
+          "teamA": "Guns n Rollers",
+          "teamB": "Inches From Glory"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": 24,
+          "scoreB": 8,
+          "teamA": "Sister Swap",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": 10,
+          "scoreB": 16,
+          "teamA": "Guns n Rollers",
+          "teamB": "Sister Swap"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": 19,
+          "scoreB": 6,
+          "teamA": "Inches From Glory",
+          "teamB": "Brainerdbergs"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": 19,
+          "scoreB": 12,
+          "teamA": "Gumby Dammit",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": 13,
+          "scoreB": 17,
+          "teamA": "Inches From Glory",
+          "teamB": "Sister Swap"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": 19,
+          "scoreB": 11,
+          "teamA": "Gumby Dammit",
+          "teamB": "Guns n Rollers"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": 9,
+          "scoreB": 15,
+          "teamA": "Brainerdbergs",
+          "teamB": "Sparty Devils"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": 22,
+          "scoreB": 6,
+          "teamA": "Sister Swap",
+          "teamB": "Brainerdbergs"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": 6,
+          "scoreB": 23,
+          "teamA": "Sparty Devils",
+          "teamB": "Guns n Rollers"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": 9,
+          "scoreB": 18,
+          "teamA": "Inches From Glory",
+          "teamB": "Gumby Dammit"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Sparty Devils",
+          "teamB": "Inches From Glory"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": 9,
+          "scoreB": 13,
+          "teamA": "Brainerdbergs",
+          "teamB": "Guns n Rollers"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": 10,
+          "scoreB": 22,
+          "teamA": "Sister Swap",
+          "teamB": "Gumby Dammit"
+        }
+      ],
+      "played": 14,
+      "standings": [
+        {
+          "diff": 46,
+          "l": 0,
+          "override": null,
+          "pa": 52,
+          "pf": 98,
+          "seed": 1,
+          "t": 0,
+          "team": "Gumby Dammit",
+          "w": 5
+        },
+        {
+          "diff": 30,
+          "l": 1,
+          "override": null,
+          "pa": 59,
+          "pf": 89,
+          "seed": 2,
+          "t": 0,
+          "team": "Sister Swap",
+          "w": 4
+        },
+        {
+          "diff": 13,
+          "l": 2,
+          "override": null,
+          "pa": 62,
+          "pf": 75,
+          "seed": 3,
+          "t": 0,
+          "team": "Guns n Rollers",
+          "w": 3
+        },
+        {
+          "diff": -6,
+          "l": 3,
+          "override": null,
+          "pa": 59,
+          "pf": 53,
+          "seed": 4,
+          "t": 0,
+          "team": "Inches From Glory",
+          "w": 1
+        },
+        {
+          "diff": -34,
+          "l": 3,
+          "override": null,
+          "pa": 75,
+          "pf": 41,
+          "seed": 5,
+          "t": 0,
+          "team": "Sparty Devils",
+          "w": 1
+        },
+        {
+          "diff": -49,
+          "l": 5,
+          "override": null,
+          "pa": 89,
+          "pf": 40,
+          "seed": 6,
+          "t": 0,
+          "team": "Brainerdbergs",
+          "w": 0
+        }
+      ],
+      "total": 15
+    }
+  },
+  "ticker": [
+    "WELCOME TO THE 2024 B.B.G.C. \u2014 Twenty-four teams, four groups of six, five rounds each. Three from every group into the bracket.",
+    "GROUP PLAY \u00b7 ORANGE \u2014 Pure gridlock. FOUR teams finished 3-2 \u2014 White Zin, D-Boccery, Brothers Boor and Long Ballz \u2014 and the whole group came down to the points column. White Zin's 97 led the way, and Brothers Boor were the ones left out despite matching every record. WHITE ZIN, D-BOCCERY and LONG BALLZ advance.",
+    "GROUP PLAY \u00b7 RED \u2014 Joanie Loves Bocce took it at 4-1. Then, naturally, another traffic jam: Hot Sauce, Hawkeye and Tyson's Micropenis ALL 3-2, sorted on points, 76 to 75 to 64. The M.J.s went home 0-5. JOANIE LOVES BOCCE, HOT SAUCE and HAWKEYE advance.",
+    "GROUP PLAY \u00b7 BLUE \u2014 The Seekers were perfect: 5-0. But look behind them \u2014 Hide Your Moms went 4-1 and racked up 101 POINTS, the biggest single-group total anywhere in the archive, and still finished second. Laces Out took third. THE SEEKERS, HIDE YOUR MOMS and LACES OUT advance.",
+    "GROUP PLAY \u00b7 YELLOW \u2014 Gumby Dammit ran the table, 5-0 with 98 points. Sister Swap chased them home at 4-1, Guns n Rollers third at 3-2. GUMBY DAMMIT, SISTER SWAP and GUNS N ROLLERS advance.",
+    "ROUND ONE \u2014 Hawkeye saw off Guns n Rollers. Hide Your Moms and those 101 points ended Laces Out. D-Boccery put out Hot Sauce. And Long Ballz upset Sister Swap. The board was set for the big seeds.",
+    "QUARTERFINALS \u2014 And one of them didn't survive it. HAWKEYE KNOCKED OUT GUMBY DAMMIT \u2014 5-0 in the group, 98 points, gone in one game. White Zin ended the Hide Your Moms juggernaut. The Seekers put out D-Boccery, and Joanie Loves Bocce ended Long Ballz.",
+    "SEMIFINALS \u2014 White Zin stopped the Hawkeye upset train. The Seekers turned back Joanie Loves Bocce. A team that had only gone 3-2 in its group against a team that hadn't lost at all.",
+    "THE FINAL \u2014 The Seekers: 5-0 in Blue, two clean bracket wins, unbeaten from the first ball to the last. White Zin: third-best record of the four group winners, through a four-way tiebreak just to get out of Orange \u2014 and now one win from everything.",
+    "\ud83c\udfc6 CHAMPIONS: WHITE ZIN \ud83c\udfc6 \u2014 They finished 3-2. They needed a points tiebreak to even win their group. And then they beat Hide Your Moms, they beat Hawkeye, and they beat the unbeaten Seekers in the final. A first B.B.G.C. title \u2014 six years after losing the 2018 final. They'd been waiting."
+  ],
+  "updatedAt": "2026-09-23T04:28:58.373Z",
+  "year": 2024,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

@@ -1,0 +1,884 @@
+{
+  "bracket": [
+    {
+      "game": 1,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#2",
+      "slotB": "Red#3",
+      "teamA": "Trash Panda's",
+      "teamB": "White Zin",
+      "winner": "Trash Panda's"
+    },
+    {
+      "game": 2,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Red#2",
+      "slotB": "Orange#3",
+      "teamA": "On Wisconsin",
+      "teamB": "Mustache Riders",
+      "winner": "Mustache Riders"
+    },
+    {
+      "game": 3,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Blue#2",
+      "slotB": "Yellow#3",
+      "teamA": "Dug z World",
+      "teamB": "Del Bocce Vista",
+      "winner": "Dug z World"
+    },
+    {
+      "game": 4,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Yellow#2",
+      "slotB": "Blue#3",
+      "teamA": "Joanie Loves Bocce",
+      "teamB": "Loopers",
+      "winner": "Joanie Loves Bocce"
+    },
+    {
+      "game": 5,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Blue#1",
+      "slotB": "W1",
+      "teamA": "Chi'Bocce",
+      "teamB": "Trash Panda's",
+      "winner": "Chi'Bocce"
+    },
+    {
+      "game": 6,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Yellow#1",
+      "slotB": "W2",
+      "teamA": "Kase-Kare-Cock",
+      "teamB": "Mustache Riders",
+      "winner": "Mustache Riders"
+    },
+    {
+      "game": 7,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#1",
+      "slotB": "W3",
+      "teamA": "Ohiowa",
+      "teamB": "Dug z World",
+      "winner": "Ohiowa"
+    },
+    {
+      "game": 8,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Red#1",
+      "slotB": "W4",
+      "teamA": "John-John, Inc",
+      "teamB": "Joanie Loves Bocce",
+      "winner": "John-John, Inc"
+    },
+    {
+      "game": 9,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W5",
+      "slotB": "W6",
+      "teamA": "Chi'Bocce",
+      "teamB": "Mustache Riders",
+      "winner": "Chi'Bocce"
+    },
+    {
+      "game": 10,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W7",
+      "slotB": "W8",
+      "teamA": "Ohiowa",
+      "teamB": "John-John, Inc",
+      "winner": "Ohiowa"
+    },
+    {
+      "game": 11,
+      "round": "Final",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W9",
+      "slotB": "W10",
+      "teamA": "Chi'Bocce",
+      "teamB": "Ohiowa",
+      "winner": "Chi'Bocce"
+    }
+  ],
+  "bracketSeeded": true,
+  "pools": {
+    "Blue": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 30,
+          "scoreB": 6,
+          "teamA": "Chi'Bocce",
+          "teamB": "Teabaggers"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 24,
+          "scoreB": 7,
+          "teamA": "Dug z World",
+          "teamB": "B.K. Knights"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 10,
+          "scoreB": 21,
+          "teamA": "B.K. Knights",
+          "teamB": "Chi'Bocce"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 7,
+          "scoreB": 12,
+          "teamA": "Teabaggers",
+          "teamB": "Mustache Riders"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 16,
+          "scoreB": 9,
+          "teamA": "Chi'Bocce",
+          "teamB": "Dug z World"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 11,
+          "scoreB": 16,
+          "teamA": "B.K. Knights",
+          "teamB": "Mustache Riders"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 15,
+          "scoreB": 13,
+          "teamA": "Dug z World",
+          "teamB": "Mustache Riders"
+        },
+        {
+          "pool": "Blue",
+          "round": 4,
+          "scoreA": 25,
+          "scoreB": 12,
+          "teamA": "B.K. Knights",
+          "teamB": "Teabaggers"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 19,
+          "scoreB": 12,
+          "teamA": "Teabaggers",
+          "teamB": "Dug z World"
+        },
+        {
+          "pool": "Blue",
+          "round": 5,
+          "scoreA": 11,
+          "scoreB": 22,
+          "teamA": "Mustache Riders",
+          "teamB": "Chi'Bocce"
+        }
+      ],
+      "played": 10,
+      "standings": [
+        {
+          "diff": 53,
+          "l": 0,
+          "override": 1,
+          "pa": 36,
+          "pf": 89,
+          "seed": 1,
+          "t": 0,
+          "team": "Chi'Bocce",
+          "w": 4
+        },
+        {
+          "diff": 5,
+          "l": 2,
+          "override": 2,
+          "pa": 55,
+          "pf": 60,
+          "seed": 2,
+          "t": 0,
+          "team": "Dug z World",
+          "w": 2
+        },
+        {
+          "diff": -3,
+          "l": 2,
+          "override": 3,
+          "pa": 55,
+          "pf": 52,
+          "seed": 3,
+          "t": 0,
+          "team": "Mustache Riders",
+          "w": 2
+        },
+        {
+          "diff": -20,
+          "l": 3,
+          "override": null,
+          "pa": 73,
+          "pf": 53,
+          "seed": 4,
+          "t": 0,
+          "team": "B.K. Knights",
+          "w": 1
+        },
+        {
+          "diff": -35,
+          "l": 3,
+          "override": null,
+          "pa": 79,
+          "pf": 44,
+          "seed": 5,
+          "t": 0,
+          "team": "Teabaggers",
+          "w": 1
+        }
+      ],
+      "total": 10
+    },
+    "Green": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": 13,
+          "scoreB": 17,
+          "teamA": "Dickens Cider",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": 14,
+          "scoreB": 13,
+          "teamA": "Kase-Kare-Cock",
+          "teamB": "Boor Brothers"
+        },
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": 8,
+          "scoreB": 21,
+          "teamA": "Trojan",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": 16,
+          "scoreB": 15,
+          "teamA": "Kase-Kare-Cock",
+          "teamB": "Trojan"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": 9,
+          "scoreB": 17,
+          "teamA": "Boor Brothers",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": 10,
+          "scoreB": 16,
+          "teamA": "Dickens Cider",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": 27,
+          "scoreB": 7,
+          "teamA": "Boor Brothers",
+          "teamB": "Trojan"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": 13,
+          "scoreB": 11,
+          "teamA": "Dickens Cider",
+          "teamB": "Kase-Kare-Cock"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": 14,
+          "scoreB": 14,
+          "teamA": "White Zin",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Green",
+          "round": 4,
+          "scoreA": 6,
+          "scoreB": 17,
+          "teamA": "Trojan",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Green",
+          "round": 4,
+          "scoreA": 13,
+          "scoreB": 16,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Kase-Kare-Cock"
+        },
+        {
+          "pool": "Green",
+          "round": 4,
+          "scoreA": 14,
+          "scoreB": 12,
+          "teamA": "Boor Brothers",
+          "teamB": "Dickens Cider"
+        },
+        {
+          "pool": "Green",
+          "round": 5,
+          "scoreA": 20,
+          "scoreB": 12,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Boor Brothers"
+        },
+        {
+          "pool": "Green",
+          "round": 5,
+          "scoreA": 14,
+          "scoreB": 15,
+          "teamA": "White Zin",
+          "teamB": "Kase-Kare-Cock"
+        },
+        {
+          "pool": "Green",
+          "round": 5,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Trojan",
+          "teamB": "Dickens Cider"
+        }
+      ],
+      "played": 14,
+      "standings": [
+        {
+          "diff": 4,
+          "l": 1,
+          "override": 1,
+          "pa": 68,
+          "pf": 72,
+          "seed": 1,
+          "t": 0,
+          "team": "Kase-Kare-Cock",
+          "w": 4
+        },
+        {
+          "diff": 24,
+          "l": 1,
+          "override": 2,
+          "pa": 60,
+          "pf": 84,
+          "seed": 2,
+          "t": 1,
+          "team": "Joanie Loves Bocce",
+          "w": 3
+        },
+        {
+          "diff": 22,
+          "l": 1,
+          "override": 3,
+          "pa": 57,
+          "pf": 79,
+          "seed": 3,
+          "t": 1,
+          "team": "White Zin",
+          "w": 3
+        },
+        {
+          "diff": 5,
+          "l": 3,
+          "override": null,
+          "pa": 70,
+          "pf": 75,
+          "seed": 4,
+          "t": 0,
+          "team": "Boor Brothers",
+          "w": 2
+        },
+        {
+          "diff": -10,
+          "l": 3,
+          "override": null,
+          "pa": 58,
+          "pf": 48,
+          "seed": 5,
+          "t": 0,
+          "team": "Dickens Cider",
+          "w": 1
+        },
+        {
+          "diff": -45,
+          "l": 4,
+          "override": null,
+          "pa": 81,
+          "pf": 36,
+          "seed": 6,
+          "t": 0,
+          "team": "Trojan",
+          "w": 0
+        }
+      ],
+      "total": 15
+    },
+    "Red": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 11,
+          "scoreB": 20,
+          "teamA": "Pink Ladies",
+          "teamB": "On Wisconsin"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 23,
+          "scoreB": 12,
+          "teamA": "Ohiowa",
+          "teamB": "Noonan"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 15,
+          "scoreB": 16,
+          "teamA": "Reservations @ Dorsia",
+          "teamB": "Del Bocce Vista"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 13,
+          "scoreB": 14,
+          "teamA": "Ohiowa",
+          "teamB": "Reservations @ Dorsia"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 12,
+          "scoreB": 19,
+          "teamA": "Noonan",
+          "teamB": "On Wisconsin"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 11,
+          "scoreB": 20,
+          "teamA": "Pink Ladies",
+          "teamB": "Del Bocce Vista"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 24,
+          "scoreB": 8,
+          "teamA": "Noonan",
+          "teamB": "Reservations @ Dorsia"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 7,
+          "scoreB": 23,
+          "teamA": "Pink Ladies",
+          "teamB": "Ohiowa"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 19,
+          "scoreB": 13,
+          "teamA": "On Wisconsin",
+          "teamB": "Del Bocce Vista"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": 6,
+          "scoreB": 26,
+          "teamA": "Reservations @ Dorsia",
+          "teamB": "On Wisconsin"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": 12,
+          "scoreB": 17,
+          "teamA": "Del Bocce Vista",
+          "teamB": "Ohiowa"
+        },
+        {
+          "pool": "Red",
+          "round": 4,
+          "scoreA": 10,
+          "scoreB": 13,
+          "teamA": "Noonan",
+          "teamB": "Pink Ladies"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 18,
+          "scoreB": 15,
+          "teamA": "Del Bocce Vista",
+          "teamB": "Noonan"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 10,
+          "scoreB": 12,
+          "teamA": "On Wisconsin",
+          "teamB": "Ohiowa"
+        },
+        {
+          "pool": "Red",
+          "round": 5,
+          "scoreA": 13,
+          "scoreB": 13,
+          "teamA": "Reservations @ Dorsia",
+          "teamB": "Pink Ladies"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 33,
+          "l": 1,
+          "override": 1,
+          "pa": 55,
+          "pf": 88,
+          "seed": 1,
+          "t": 0,
+          "team": "Ohiowa",
+          "w": 4
+        },
+        {
+          "diff": 40,
+          "l": 1,
+          "override": 2,
+          "pa": 54,
+          "pf": 94,
+          "seed": 2,
+          "t": 0,
+          "team": "On Wisconsin",
+          "w": 4
+        },
+        {
+          "diff": 2,
+          "l": 2,
+          "override": 3,
+          "pa": 77,
+          "pf": 79,
+          "seed": 3,
+          "t": 0,
+          "team": "Del Bocce Vista",
+          "w": 3
+        },
+        {
+          "diff": -8,
+          "l": 4,
+          "override": null,
+          "pa": 81,
+          "pf": 73,
+          "seed": 4,
+          "t": 0,
+          "team": "Noonan",
+          "w": 1
+        },
+        {
+          "diff": -31,
+          "l": 3,
+          "override": null,
+          "pa": 86,
+          "pf": 55,
+          "seed": 5,
+          "t": 1,
+          "team": "Pink Ladies",
+          "w": 1
+        },
+        {
+          "diff": -36,
+          "l": 3,
+          "override": null,
+          "pa": 92,
+          "pf": 56,
+          "seed": 6,
+          "t": 1,
+          "team": "Reservations @ Dorsia",
+          "w": 1
+        }
+      ],
+      "total": 15
+    },
+    "Yellow": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": 12,
+          "scoreB": 17,
+          "teamA": "Trash Panda's",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": 12,
+          "scoreB": 16,
+          "teamA": "Don Cuzzi",
+          "teamB": "John-John, Inc"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": 20,
+          "scoreB": 3,
+          "teamA": "Loopers",
+          "teamB": "Wildcat"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": 10,
+          "scoreB": 21,
+          "teamA": "Don Cuzzi",
+          "teamB": "Loopers"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": 13,
+          "scoreB": 17,
+          "teamA": "John-John, Inc",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": 20,
+          "scoreB": 9,
+          "teamA": "Trash Panda's",
+          "teamB": "Wildcat"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": 17,
+          "scoreB": 12,
+          "teamA": "John-John, Inc",
+          "teamB": "Loopers"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": 17,
+          "scoreB": 10,
+          "teamA": "Trash Panda's",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": 16,
+          "scoreB": 15,
+          "teamA": "Hawkeyes",
+          "teamB": "Wildcat"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": 17,
+          "scoreB": 13,
+          "teamA": "Loopers",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": 10,
+          "scoreB": 15,
+          "teamA": "Wildcat",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Yellow",
+          "round": 4,
+          "scoreA": 14,
+          "scoreB": 13,
+          "teamA": "John-John, Inc",
+          "teamB": "Trash Panda's"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": 10,
+          "scoreB": 17,
+          "teamA": "Wildcat",
+          "teamB": "John-John, Inc"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": 16,
+          "scoreB": 18,
+          "teamA": "Hawkeyes",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Yellow",
+          "round": 5,
+          "scoreA": 7,
+          "scoreB": 22,
+          "teamA": "Loopers",
+          "teamB": "Trash Panda's"
+        }
+      ],
+      "played": 15,
+      "standings": [
+        {
+          "diff": 13,
+          "l": 1,
+          "override": 1,
+          "pa": 64,
+          "pf": 77,
+          "seed": 1,
+          "t": 0,
+          "team": "John-John, Inc",
+          "w": 4
+        },
+        {
+          "diff": 27,
+          "l": 2,
+          "override": 2,
+          "pa": 57,
+          "pf": 84,
+          "seed": 2,
+          "t": 0,
+          "team": "Trash Panda's",
+          "w": 3
+        },
+        {
+          "diff": 12,
+          "l": 2,
+          "override": 3,
+          "pa": 65,
+          "pf": 77,
+          "seed": 3,
+          "t": 0,
+          "team": "Loopers",
+          "w": 3
+        },
+        {
+          "diff": 4,
+          "l": 2,
+          "override": null,
+          "pa": 75,
+          "pf": 79,
+          "seed": 4,
+          "t": 0,
+          "team": "Hawkeyes",
+          "w": 3
+        },
+        {
+          "diff": -15,
+          "l": 3,
+          "override": null,
+          "pa": 80,
+          "pf": 65,
+          "seed": 5,
+          "t": 0,
+          "team": "Don Cuzzi",
+          "w": 2
+        },
+        {
+          "diff": -41,
+          "l": 5,
+          "override": null,
+          "pa": 88,
+          "pf": 47,
+          "seed": 6,
+          "t": 0,
+          "team": "Wildcat",
+          "w": 0
+        }
+      ],
+      "total": 15
+    }
+  },
+  "ticker": [
+    "WELCOME TO THE 2019 B.B.G.C. \u2014 Twenty-three teams, four groups, one trophy. Three from every group move on. And one group was a man short \u2014 Blue played five.",
+    "GROUP PLAY \u00b7 YELLOW \u2014 Carnage at the top: John-John took it at 4-1, and behind them THREE teams finished 3-2. Hawkeyes had 79 points, Loopers 77, Trash Panda's 84 \u2014 and it was Trash Panda's points and a head-to-head loss that pushed the Hawkeyes out. Wildcat never found it, 0-5. JOHN-JOHN, TRASH PANDA'S and LOOPERS advance.",
+    "GROUP PLAY \u00b7 GREEN \u2014 Kase-Kare-Cock went 4-1 and took the group. Joanie Loves Bocce and White Zin both came home 3-1-1, unbeaten but for one apiece, and Joanie's 84 points to White Zin's 79 decided the order. KASE-KARE-COCK, JOANIE LOVES BOCCE and WHITE ZIN advance.",
+    "GROUP PLAY \u00b7 RED \u2014 Read this one twice. On Wisconsin put up 94 points, the biggest number in the whole tournament. Ohiowa put up 88. BOTH went 4-1 \u2014 and Ohiowa got the higher seed anyway. Del Bocce Vista took third at 3-2. OHIOWA, ON WISCONSIN and DEL BOCCE VISTA advance.",
+    "GROUP PLAY \u00b7 BLUE \u2014 Five teams, four games each, and Chi'Bocce didn't lose any of them. 4-0, 89 points, the last unbeaten side standing. Dug z World and Mustache Riders squeezed through at 2-2. CHI'BOCCE, DUG Z WORLD and MUSTACHE RIDERS advance.",
+    "ROUND ONE \u2014 And the bracket bares its teeth immediately. Trash Panda's put out White Zin. Dug z World ended Del Bocce Vista. Joanie handled Loopers. But the headline: MUSTACHE RIDERS, the twelve seed, the very last team in the field, knocked out On Wisconsin and that 94-point group campaign. Gone in one game.",
+    "QUARTERFINALS \u2014 Chi'Bocce rolled past Trash Panda's. Ohiowa put down Dug z World. John-John ended Joanie's run. And Mustache Riders did it AGAIN \u2014 the last seed in the tournament took down Kase-Kare-Cock, a group winner, and walked into the final four.",
+    "SEMIFINALS \u2014 Chi'Bocce finally stopped the Mustache Riders fairy tale, and the glass slipper came off at the very last step. On the other side, Ohiowa ended John-John's day. The unbeaten met the team that had beaten everybody else.",
+    "THE FINAL \u2014 Chi'Bocce: 4-0 in the group, 89 points, three straight in the bracket, not one loss all day. Ohiowa: 4-1, a group title won on a tiebreak, and scalps in every round. Six wins each. One of them was about to get a seventh.",
+    "\ud83c\udfc6 CHAMPIONS: CHI'BOCCE \ud83c\udfc6 \u2014 Perfect. Not a single loss from the first hole of group play to the last ball of the final. Four in the group, three in the bracket, seven for seven, and the 2019 trophy never had another name on it. Flawless."
+  ],
+  "updatedAt": "2026-09-23T04:28:49.091Z",
+  "year": 2019,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

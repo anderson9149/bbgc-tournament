@@ -76,6 +76,9 @@ function onOpen() {
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addItem('Refresh year list', 'refreshYearList')
     .addItem('Import a past year from GitHub history…', 'importHistory')
+    .addSeparator()
+    .addItem('Lock past years (warn before editing)', 'lockPastYears')
+    .addItem('Unlock past years', 'unlockPastYears')
     .addToUi();
 }
 
@@ -453,6 +456,43 @@ function clearData_(ss) {
   resetBracket_(ss);
   var t = ss.getSheetByName(TICKER_SHEET);
   if (t) t.clearContents();
+}
+
+// --------------------------------------------------------- locking
+
+var LOCK_NOTE = 'BBGC: finished year — edit only on purpose';
+
+// Warning-only protection on every sheet of every past year. Google then asks
+// "are you sure?" before any hand edit, while scripts (and the importer) still
+// write normally. Nothing is made permanently read-only.
+function lockPastYears() { setPastYearLock_(true); }
+function unlockPastYears() { setPastYearLock_(false); }
+
+function setPastYearLock_(on) {
+  var ui = SpreadsheetApp.getUi();
+  var years = yearFiles_(true);
+  var thisYear = new Date().getFullYear();
+  var past = Object.keys(years).filter(function (y) { return parseInt(y, 10) < thisYear; }).sort();
+  if (!past.length) { ui.alert('No past-year sheets found in ' + FOLDER_NAME + '.'); return; }
+  var resp = ui.alert((on ? 'Lock ' : 'Unlock ') + past.length + ' past year(s)?',
+    past.join(', ') + '\n\n' + (on
+      ? 'Google will warn you before any hand edit to these sheets. The importer and the website are unaffected.'
+      : 'Removes that warning so these sheets edit normally again.'),
+    ui.ButtonSet.YES_NO);
+  if (resp !== ui.Button.YES) return;
+
+  var done = 0;
+  past.forEach(function (y) {
+    var ss = SpreadsheetApp.openById(years[y]);
+    ss.getSheets().forEach(function (sh) {
+      sh.getProtections(SpreadsheetApp.ProtectionType.SHEET).forEach(function (pr) {
+        if (pr.getDescription() === LOCK_NOTE) pr.remove();
+      });
+      if (on) sh.protect().setDescription(LOCK_NOTE).setWarningOnly(true);
+    });
+    done++;
+  });
+  ui.alert((on ? 'Locked ' : 'Unlocked ') + done + ' year(s): ' + past.join(', '));
 }
 
 // ------------------------------------------------------- history import

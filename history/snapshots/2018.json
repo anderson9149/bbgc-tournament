@@ -1,0 +1,567 @@
+{
+  "bracket": [
+    {
+      "game": 1,
+      "round": "Round 1",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Orange#2",
+      "slotB": "Red#3",
+      "teamA": "Flangers",
+      "teamB": "Mustache Riders",
+      "winner": "Mustache Riders"
+    },
+    {
+      "game": 2,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Red#2",
+      "slotB": "Orange#3",
+      "teamA": "On Wisconsin",
+      "teamB": "Joanie Loves Bocce",
+      "winner": "On Wisconsin"
+    },
+    {
+      "game": 3,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Blue#2",
+      "slotB": "Yellow#3",
+      "teamA": "TNT",
+      "teamB": "The Bryan Adams Show",
+      "winner": "TNT"
+    },
+    {
+      "game": 4,
+      "round": "Round 1",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Yellow#2",
+      "slotB": "Blue#3",
+      "teamA": "Brick Cock",
+      "teamB": "Steam Punks",
+      "winner": "Brick Cock"
+    },
+    {
+      "game": 5,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Blue#1",
+      "slotB": "W1",
+      "teamA": "White Zin",
+      "teamB": "Mustache Riders",
+      "winner": "White Zin"
+    },
+    {
+      "game": 6,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Yellow#1",
+      "slotB": "W2",
+      "teamA": "Double Deuce",
+      "teamB": "On Wisconsin",
+      "winner": "On Wisconsin"
+    },
+    {
+      "game": 7,
+      "round": "Quarterfinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "Orange#1",
+      "slotB": "W3",
+      "teamA": "Hawkeyes",
+      "teamB": "TNT",
+      "winner": "Hawkeyes"
+    },
+    {
+      "game": 8,
+      "round": "Quarterfinal",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "Red#1",
+      "slotB": "W4",
+      "teamA": "Don Cuzzi",
+      "teamB": "Brick Cock",
+      "winner": "Brick Cock"
+    },
+    {
+      "game": 9,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W5",
+      "slotB": "W6",
+      "teamA": "White Zin",
+      "teamB": "On Wisconsin",
+      "winner": "White Zin"
+    },
+    {
+      "game": 10,
+      "round": "Semifinal",
+      "scoreA": 1,
+      "scoreB": 0,
+      "slotA": "W7",
+      "slotB": "W8",
+      "teamA": "Hawkeyes",
+      "teamB": "Brick Cock",
+      "winner": "Hawkeyes"
+    },
+    {
+      "game": 11,
+      "round": "Final",
+      "scoreA": 0,
+      "scoreB": 1,
+      "slotA": "W9",
+      "slotB": "W10",
+      "teamA": "White Zin",
+      "teamB": "Hawkeyes",
+      "winner": "Hawkeyes"
+    }
+  ],
+  "bracketSeeded": true,
+  "pools": {
+    "Blue": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 8,
+          "scoreB": 15,
+          "teamA": "The Bryan Adams Show",
+          "teamB": "Steam Punks"
+        },
+        {
+          "pool": "Blue",
+          "round": 1,
+          "scoreA": 21,
+          "scoreB": 12,
+          "teamA": "White Zin",
+          "teamB": "John-John, Inc"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 9,
+          "scoreB": 27,
+          "teamA": "John-John, Inc",
+          "teamB": "The Bryan Adams Show"
+        },
+        {
+          "pool": "Blue",
+          "round": 2,
+          "scoreA": 9,
+          "scoreB": 29,
+          "teamA": "Steam Punks",
+          "teamB": "White Zin"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 18,
+          "scoreB": 17,
+          "teamA": "John-John, Inc",
+          "teamB": "Steam Punks"
+        },
+        {
+          "pool": "Blue",
+          "round": 3,
+          "scoreA": 9,
+          "scoreB": 15,
+          "teamA": "The Bryan Adams Show",
+          "teamB": "White Zin"
+        }
+      ],
+      "played": 6,
+      "standings": [
+        {
+          "diff": 35,
+          "l": 0,
+          "override": 1,
+          "pa": 30,
+          "pf": 65,
+          "seed": 1,
+          "t": 0,
+          "team": "White Zin",
+          "w": 3
+        },
+        {
+          "diff": 5,
+          "l": 2,
+          "override": 2,
+          "pa": 39,
+          "pf": 44,
+          "seed": 2,
+          "t": 0,
+          "team": "The Bryan Adams Show",
+          "w": 1
+        },
+        {
+          "diff": -14,
+          "l": 2,
+          "override": 3,
+          "pa": 55,
+          "pf": 41,
+          "seed": 3,
+          "t": 0,
+          "team": "Steam Punks",
+          "w": 1
+        },
+        {
+          "diff": -26,
+          "l": 2,
+          "override": null,
+          "pa": 65,
+          "pf": 39,
+          "seed": 4,
+          "t": 0,
+          "team": "John-John, Inc",
+          "w": 1
+        }
+      ],
+      "total": 6
+    },
+    "Green": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "Boilers"
+        },
+        {
+          "pool": "Green",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "On Wisconsin",
+          "teamB": "Don Cuzzi"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Don Cuzzi",
+          "teamB": "Joanie Loves Bocce"
+        },
+        {
+          "pool": "Green",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Boilers",
+          "teamB": "On Wisconsin"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Don Cuzzi",
+          "teamB": "Boilers"
+        },
+        {
+          "pool": "Green",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Joanie Loves Bocce",
+          "teamB": "On Wisconsin"
+        }
+      ],
+      "played": 0,
+      "standings": [
+        {
+          "diff": 0,
+          "l": 0,
+          "override": 1,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 1,
+          "team": "Don Cuzzi",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 0,
+          "override": 2,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 1,
+          "team": "On Wisconsin",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 3,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 0,
+          "team": "Joanie Loves Bocce",
+          "w": 1
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 0,
+          "team": "Boilers",
+          "w": 0
+        }
+      ],
+      "total": 6
+    },
+    "Red": {
+      "complete": true,
+      "games": [
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 6,
+          "scoreB": 22,
+          "teamA": "Double Deuce",
+          "teamB": "Brick Cock"
+        },
+        {
+          "pool": "Red",
+          "round": 1,
+          "scoreA": 6,
+          "scoreB": 20,
+          "teamA": "Hurricane Ditka",
+          "teamB": "Flangers"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 7,
+          "scoreB": 21,
+          "teamA": "Flangers",
+          "teamB": "Double Deuce"
+        },
+        {
+          "pool": "Red",
+          "round": 2,
+          "scoreA": 15,
+          "scoreB": 8,
+          "teamA": "Brick Cock",
+          "teamB": "Hurricane Ditka"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 14,
+          "scoreB": 13,
+          "teamA": "Flangers",
+          "teamB": "Brick Cock"
+        },
+        {
+          "pool": "Red",
+          "round": 3,
+          "scoreA": 24,
+          "scoreB": 8,
+          "teamA": "Double Deuce",
+          "teamB": "Hurricane Ditka"
+        }
+      ],
+      "played": 6,
+      "standings": [
+        {
+          "diff": 14,
+          "l": 1,
+          "override": 1,
+          "pa": 37,
+          "pf": 51,
+          "seed": 1,
+          "t": 0,
+          "team": "Double Deuce",
+          "w": 2
+        },
+        {
+          "diff": 22,
+          "l": 1,
+          "override": 2,
+          "pa": 28,
+          "pf": 50,
+          "seed": 2,
+          "t": 0,
+          "team": "Brick Cock",
+          "w": 2
+        },
+        {
+          "diff": 1,
+          "l": 1,
+          "override": 3,
+          "pa": 40,
+          "pf": 41,
+          "seed": 3,
+          "t": 0,
+          "team": "Flangers",
+          "w": 2
+        },
+        {
+          "diff": -37,
+          "l": 3,
+          "override": null,
+          "pa": 59,
+          "pf": 22,
+          "seed": 4,
+          "t": 0,
+          "team": "Hurricane Ditka",
+          "w": 0
+        }
+      ],
+      "total": 6
+    },
+    "Yellow": {
+      "complete": false,
+      "games": [
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "TNT",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Yellow",
+          "round": 1,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Village People",
+          "teamB": "Mustache Riders"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Mustache Riders",
+          "teamB": "TNT"
+        },
+        {
+          "pool": "Yellow",
+          "round": 2,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Hawkeyes",
+          "teamB": "Village People"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "Mustache Riders",
+          "teamB": "Hawkeyes"
+        },
+        {
+          "pool": "Yellow",
+          "round": 3,
+          "scoreA": null,
+          "scoreB": null,
+          "teamA": "TNT",
+          "teamB": "Village People"
+        }
+      ],
+      "played": 0,
+      "standings": [
+        {
+          "diff": 0,
+          "l": 0,
+          "override": 1,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 1,
+          "t": 0,
+          "team": "Hawkeyes",
+          "w": 3
+        },
+        {
+          "diff": 0,
+          "l": 1,
+          "override": 2,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 2,
+          "t": 0,
+          "team": "TNT",
+          "w": 2
+        },
+        {
+          "diff": 0,
+          "l": 2,
+          "override": 3,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 3,
+          "t": 0,
+          "team": "Mustache Riders",
+          "w": 1
+        },
+        {
+          "diff": 0,
+          "l": 3,
+          "override": null,
+          "pa": 0,
+          "pf": 0,
+          "recordOverride": true,
+          "seed": 4,
+          "t": 0,
+          "team": "Village People",
+          "w": 0
+        }
+      ],
+      "total": 6
+    }
+  },
+  "ticker": [
+    "WELCOME TO THE 2018 B.B.G.C. \u2014 Sixteen teams, four groups, one trophy. Three from every group would move on to the bracket. The other four would be watching.",
+    "GROUP PLAY \u00b7 RED \u2014 A perfect circle of chaos. Brick Cock buried Double Deuce 22-6. Double Deuce ran past Flangers 21-7. Then Flangers stunned Brick Cock 14-13. Three teams locked at 2-1 and only the points column to split them. DOUBLE DEUCE, BRICK COCK and FLANGERS advance.",
+    "GROUP PLAY \u00b7 BLUE \u2014 White Zin was untouchable: 3-0 and 65 points, the biggest number anybody posted all day. Behind them, three teams deadlocked at 1-2 \u2014 and John-John's 18-17 thriller over Steam Punks came one point too late. WHITE ZIN, THE BRYAN ADAMS SHOW and STEAM PUNKS advance.",
+    "GROUP PLAY \u00b7 GREEN \u2014 Don Cuzzi and On Wisconsin went the whole way without losing. Both 2-0-1. Deadlocked. Separated by one solitary point, 50 to 49. DON CUZZI, ON WISCONSIN and JOANIE LOVES BOCCE advance.",
+    "GROUP PLAY \u00b7 YELLOW \u2014 The Hawkeyes swept it 3-0 and never looked troubled. And spare a thought for Mustache Riders: 49 points, MORE than TNT's 47, but a 1-2 record dropped them to the nine line. HAWKEYES, TNT and MUSTACHE RIDERS advance.",
+    "ROUND ONE \u2014 Mustache Riders sent Flangers home. On Wisconsin handled group-mate Joanie Loves Bocce for the second time in a day. TNT ended the Bryan Adams Show. And Brick Cock closed the book on the Steam Punks. Four in, four out, and the bracket was set.",
+    "QUARTERFINALS \u2014 White Zin rolled on. The Hawkeyes turned back TNT, the group rival they'd already beaten once. But the noise came from the bottom half: Brick Cock, the SIX seed, took down unbeaten Don Cuzzi \u2014 and On Wisconsin ousted Double Deuce. Both top-four seeds, gone.",
+    "SEMIFINALS \u2014 White Zin ended On Wisconsin's unbeaten day to punch the first ticket. On the other side the Hawkeyes stopped the Brick Cock giant-killers cold. Two group winners left standing. Neither one of them had lost a game all tournament.",
+    "THE FINAL \u2014 White Zin: the one seed, 3-0 in the group, a tournament-best 65 points, five straight wins, not a blemish on them. The Hawkeyes: 3-0 themselves, the two seed, three straight in the bracket including a revenge game over TNT. Something had to give.",
+    "\ud83c\udfc6 CHAMPIONS: THE HAWKEYES \ud83c\udfc6 \u2014 They swept their group, beat back a group rival who wanted them badly, buried the bracket's biggest giant-killer, and then took down the number one seed with the trophy sitting on the table. Perfect from the first hole to the last. 2018 belongs to the Hawkeyes."
+  ],
+  "updatedAt": "2026-09-23T04:28:46.407Z",
+  "year": 2018,
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}
