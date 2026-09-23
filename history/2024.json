@@ -8,53 +8,550 @@
     "Orange finished with a 4-way tie at 3-2; the bracket used Long Ballz as the 3rd seed (Seed Override = 3)."
   ],
   "teams": {
-    "Orange": ["Brothers Boor", "Long Ballz", "White Zin", "Vandalay Industries", "Bocce Balboa", "D-Boccery"],
-    "Red": ["Hawkeye", "Hot Sauce", "The M.J.s", "Tyson's Micropenis", "Mickey Mitcher", "Joanie Loves Bocce"],
-    "Blue": ["Don Cuzzi", "Laces Out", "Hide Your Moms", "The Seekers", "Moist Baguette", "Banana in Your Tailpipe"],
-    "Yellow": ["Brainerdbergs", "Gumby Dammit", "Guns n Rollers", "Sister Swap", "Sparty Devils", "Inches From Glory"]
-  },
-  "overrides": { "Long Ballz": 3 },
-  "poolGames": {
     "Orange": [
-      [1, 2, 1, 17, 12], [1, 3, 6, 20, 18], [1, 4, 5, 14, 15],
-      [2, 3, 4, 11, 17], [2, 6, 1, 19, 12], [2, 2, 5, 19, 12],
-      [3, 6, 4, 15, 11], [3, 2, 3, 10, 25], [3, 1, 5, 17, 11],
-      [4, 4, 1, 17, 24], [4, 5, 3, 3, 28],  [4, 6, 2, 12, 17],
-      [5, 5, 6, 13, 19], [5, 1, 3, 18, 13], [5, 4, 2, 14, 12]
+      "Brothers Boor",
+      "Long Ballz",
+      "White Zin",
+      "Vandalay Industries",
+      "Bocce Balboa",
+      "D-Boccery"
     ],
     "Red": [
-      [1, 2, 1, 10, 16], [1, 3, 6, 11, 16], [1, 4, 5, 16, 9],
-      [2, 3, 4, 13, 15], [2, 6, 1, 14, 12], [2, 2, 5, 14, 13],
-      [3, 6, 4, 14, 10], [3, 2, 3, 17, 8],  [3, 1, 5, 17, 9],
-      [4, 4, 1, 17, 13], [4, 5, 3, 17, 14], [4, 6, 2, 15, 11],
-      [5, 5, 6, 17, 14], [5, 1, 3, 17, 11], [5, 4, 2, 6, 24]
+      "Hawkeye",
+      "Hot Sauce",
+      "The M.J.s",
+      "Tyson's Micropenis",
+      "Mickey Mitcher",
+      "Joanie Loves Bocce"
     ],
     "Blue": [
-      [1, 2, 1, 13, 9],  [1, 3, 6, 22, 5],  [1, 4, 5, 15, 5],
-      [2, 3, 4, 14, 18], [2, 6, 1, 20, 11], [2, 2, 5, 22, 7],
-      [3, 6, 4, 13, 17], [3, 2, 3, 10, 29], [3, 1, 5, 20, 8],
-      [4, 4, 1, 16, 14], [4, 5, 3, 16, 17], [4, 6, 2, 14, 14],
-      [5, 5, 6, 14, 13], [5, 1, 3, 13, 19], [5, 4, 2, 15, 14]
+      "Don Cuzzi",
+      "Laces Out",
+      "Hide Your Moms",
+      "The Seekers",
+      "Moist Baguette",
+      "Banana in Your Tailpipe"
     ],
     "Yellow": [
-      [1, 2, 1, 20, 10], [1, 3, 6, 18, 12], [1, 4, 5, 24, 8],
-      [2, 3, 4, 10, 16], [2, 6, 1, 19, 6],  [2, 2, 5, 19, 12],
-      [3, 6, 4, 13, 17], [3, 2, 3, 19, 11], [3, 1, 5, 9, 15],
-      [4, 4, 1, 22, 6],  [4, 5, 3, 6, 23],  [4, 6, 2, 9, 18],
-      [5, 5, 6, null, null], [5, 1, 3, 9, 13], [5, 4, 2, 10, 22]
+      "Brainerdbergs",
+      "Gumby Dammit",
+      "Guns n Rollers",
+      "Sister Swap",
+      "Sparty Devils",
+      "Inches From Glory"
+    ]
+  },
+  "overrides": {
+    "Long Ballz": 3
+  },
+  "poolGames": {
+    "Orange": [
+      [
+        1,
+        2,
+        1,
+        17,
+        12
+      ],
+      [
+        1,
+        3,
+        6,
+        20,
+        18
+      ],
+      [
+        1,
+        4,
+        5,
+        14,
+        15
+      ],
+      [
+        2,
+        3,
+        4,
+        11,
+        17
+      ],
+      [
+        2,
+        6,
+        1,
+        19,
+        12
+      ],
+      [
+        2,
+        2,
+        5,
+        19,
+        12
+      ],
+      [
+        3,
+        6,
+        4,
+        15,
+        11
+      ],
+      [
+        3,
+        2,
+        3,
+        10,
+        25
+      ],
+      [
+        3,
+        1,
+        5,
+        17,
+        11
+      ],
+      [
+        4,
+        4,
+        1,
+        17,
+        24
+      ],
+      [
+        4,
+        5,
+        3,
+        3,
+        28
+      ],
+      [
+        4,
+        6,
+        2,
+        12,
+        17
+      ],
+      [
+        5,
+        5,
+        6,
+        13,
+        19
+      ],
+      [
+        5,
+        1,
+        3,
+        18,
+        13
+      ],
+      [
+        5,
+        4,
+        2,
+        14,
+        12
+      ]
+    ],
+    "Red": [
+      [
+        1,
+        2,
+        1,
+        10,
+        16
+      ],
+      [
+        1,
+        3,
+        6,
+        11,
+        16
+      ],
+      [
+        1,
+        4,
+        5,
+        16,
+        9
+      ],
+      [
+        2,
+        3,
+        4,
+        13,
+        15
+      ],
+      [
+        2,
+        6,
+        1,
+        14,
+        12
+      ],
+      [
+        2,
+        2,
+        5,
+        14,
+        13
+      ],
+      [
+        3,
+        6,
+        4,
+        14,
+        10
+      ],
+      [
+        3,
+        2,
+        3,
+        17,
+        8
+      ],
+      [
+        3,
+        1,
+        5,
+        17,
+        9
+      ],
+      [
+        4,
+        4,
+        1,
+        17,
+        13
+      ],
+      [
+        4,
+        5,
+        3,
+        17,
+        14
+      ],
+      [
+        4,
+        6,
+        2,
+        15,
+        11
+      ],
+      [
+        5,
+        5,
+        6,
+        17,
+        14
+      ],
+      [
+        5,
+        1,
+        3,
+        17,
+        11
+      ],
+      [
+        5,
+        4,
+        2,
+        6,
+        24
+      ]
+    ],
+    "Blue": [
+      [
+        1,
+        2,
+        1,
+        13,
+        9
+      ],
+      [
+        1,
+        3,
+        6,
+        22,
+        5
+      ],
+      [
+        1,
+        4,
+        5,
+        15,
+        5
+      ],
+      [
+        2,
+        3,
+        4,
+        14,
+        18
+      ],
+      [
+        2,
+        6,
+        1,
+        20,
+        11
+      ],
+      [
+        2,
+        2,
+        5,
+        22,
+        7
+      ],
+      [
+        3,
+        6,
+        4,
+        13,
+        17
+      ],
+      [
+        3,
+        2,
+        3,
+        10,
+        29
+      ],
+      [
+        3,
+        1,
+        5,
+        20,
+        8
+      ],
+      [
+        4,
+        4,
+        1,
+        16,
+        14
+      ],
+      [
+        4,
+        5,
+        3,
+        16,
+        17
+      ],
+      [
+        4,
+        6,
+        2,
+        14,
+        14
+      ],
+      [
+        5,
+        5,
+        6,
+        14,
+        13
+      ],
+      [
+        5,
+        1,
+        3,
+        13,
+        19
+      ],
+      [
+        5,
+        4,
+        2,
+        15,
+        14
+      ]
+    ],
+    "Yellow": [
+      [
+        1,
+        2,
+        1,
+        20,
+        10
+      ],
+      [
+        1,
+        3,
+        6,
+        18,
+        12
+      ],
+      [
+        1,
+        4,
+        5,
+        24,
+        8
+      ],
+      [
+        2,
+        3,
+        4,
+        10,
+        16
+      ],
+      [
+        2,
+        6,
+        1,
+        19,
+        6
+      ],
+      [
+        2,
+        2,
+        5,
+        19,
+        12
+      ],
+      [
+        3,
+        6,
+        4,
+        13,
+        17
+      ],
+      [
+        3,
+        2,
+        3,
+        19,
+        11
+      ],
+      [
+        3,
+        1,
+        5,
+        9,
+        15
+      ],
+      [
+        4,
+        4,
+        1,
+        22,
+        6
+      ],
+      [
+        4,
+        5,
+        3,
+        6,
+        23
+      ],
+      [
+        4,
+        6,
+        2,
+        9,
+        18
+      ],
+      [
+        5,
+        5,
+        6,
+        null,
+        null
+      ],
+      [
+        5,
+        1,
+        3,
+        9,
+        13
+      ],
+      [
+        5,
+        4,
+        2,
+        10,
+        22
+      ]
     ]
   },
   "bracket": [
-    { "game": 1,  "a": "Hawkeye",            "b": "Guns n Rollers", "winner": "a" },
-    { "game": 2,  "a": "Hide Your Moms",     "b": "Laces Out",      "winner": "a" },
-    { "game": 3,  "a": "D-Boccery",          "b": "Hot Sauce",      "winner": "a" },
-    { "game": 4,  "a": "Sister Swap",        "b": "Long Ballz",     "winner": "b" },
-    { "game": 5,  "a": "Gumby Dammit",       "b": "W1",             "winner": "b" },
-    { "game": 6,  "a": "White Zin",          "b": "W2",             "winner": "a" },
-    { "game": 7,  "a": "The Seekers",        "b": "W3",             "winner": "a" },
-    { "game": 8,  "a": "Joanie Loves Bocce", "b": "W4",             "winner": "a" },
-    { "game": 9,  "a": "W5",                 "b": "W6",             "winner": "b" },
-    { "game": 10, "a": "W7",                 "b": "W8",             "winner": "a" },
-    { "game": 11, "a": "W9",                 "b": "W10",            "winner": "a" }
+    {
+      "game": 1,
+      "a": "Hawkeye",
+      "b": "Guns n Rollers",
+      "winner": "a"
+    },
+    {
+      "game": 2,
+      "a": "Hide Your Moms",
+      "b": "Laces Out",
+      "winner": "a"
+    },
+    {
+      "game": 3,
+      "a": "D-Boccery",
+      "b": "Hot Sauce",
+      "winner": "a"
+    },
+    {
+      "game": 4,
+      "a": "Sister Swap",
+      "b": "Long Ballz",
+      "winner": "b"
+    },
+    {
+      "game": 5,
+      "a": "Gumby Dammit",
+      "b": "W1",
+      "winner": "b"
+    },
+    {
+      "game": 6,
+      "a": "White Zin",
+      "b": "W2",
+      "winner": "a"
+    },
+    {
+      "game": 7,
+      "a": "The Seekers",
+      "b": "W3",
+      "winner": "a"
+    },
+    {
+      "game": 8,
+      "a": "Joanie Loves Bocce",
+      "b": "W4",
+      "winner": "a"
+    },
+    {
+      "game": 9,
+      "a": "W5",
+      "b": "W6",
+      "winner": "b"
+    },
+    {
+      "game": 10,
+      "a": "W7",
+      "b": "W8",
+      "winner": "a"
+    },
+    {
+      "game": 11,
+      "a": "W9",
+      "b": "W10",
+      "winner": "a"
+    }
+  ],
+  "ticker": [
+    "WELCOME TO THE 2024 B.B.G.C. \u2014 Twenty-four teams, four groups of six, five rounds each. Three from every group into the bracket.",
+    "GROUP PLAY \u00b7 ORANGE \u2014 Pure gridlock. FOUR teams finished 3-2 \u2014 White Zin, D-Boccery, Brothers Boor and Long Ballz \u2014 and the whole group came down to the points column. White Zin's 97 led the way, and Brothers Boor were the ones left out despite matching every record. WHITE ZIN, D-BOCCERY and LONG BALLZ advance.",
+    "GROUP PLAY \u00b7 RED \u2014 Joanie Loves Bocce took it at 4-1. Then, naturally, another traffic jam: Hot Sauce, Hawkeye and Tyson's Micropenis ALL 3-2, sorted on points, 76 to 75 to 64. The M.J.s went home 0-5. JOANIE LOVES BOCCE, HOT SAUCE and HAWKEYE advance.",
+    "GROUP PLAY \u00b7 BLUE \u2014 The Seekers were perfect: 5-0. But look behind them \u2014 Hide Your Moms went 4-1 and racked up 101 POINTS, the biggest single-group total anywhere in the archive, and still finished second. Laces Out took third. THE SEEKERS, HIDE YOUR MOMS and LACES OUT advance.",
+    "GROUP PLAY \u00b7 YELLOW \u2014 Gumby Dammit ran the table, 5-0 with 98 points. Sister Swap chased them home at 4-1, Guns n Rollers third at 3-2. GUMBY DAMMIT, SISTER SWAP and GUNS N ROLLERS advance.",
+    "ROUND ONE \u2014 Hawkeye saw off Guns n Rollers. Hide Your Moms and those 101 points ended Laces Out. D-Boccery put out Hot Sauce. And Long Ballz upset Sister Swap. The board was set for the big seeds.",
+    "QUARTERFINALS \u2014 And one of them didn't survive it. HAWKEYE KNOCKED OUT GUMBY DAMMIT \u2014 5-0 in the group, 98 points, gone in one game. White Zin ended the Hide Your Moms juggernaut. The Seekers put out D-Boccery, and Joanie Loves Bocce ended Long Ballz.",
+    "SEMIFINALS \u2014 White Zin stopped the Hawkeye upset train. The Seekers turned back Joanie Loves Bocce. A team that had only gone 3-2 in its group against a team that hadn't lost at all.",
+    "THE FINAL \u2014 The Seekers: 5-0 in Blue, two clean bracket wins, unbeaten from the first ball to the last. White Zin: third-best record of the four group winners, through a four-way tiebreak just to get out of Orange \u2014 and now one win from everything.",
+    "\ud83c\udfc6 CHAMPIONS: WHITE ZIN \ud83c\udfc6 \u2014 They finished 3-2. They needed a points tiebreak to even win their group. And then they beat Hide Your Moms, they beat Hawkeye, and they beat the unbeaten Seekers in the final. A first B.B.G.C. title \u2014 six years after losing the 2018 final. They'd been waiting."
   ]
 }
