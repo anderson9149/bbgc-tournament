@@ -1,66 +1,558 @@
 {
   "year": 2023,
-  "source": "history/2023-poster.jpg (hand-written results poster)",
+  "source": "history/2023-poster.jpg (bracket + schedule) and history/2023-pools-whiteboard.jpg (per-round pool scores)",
   "notes": [
     "Pools were labelled A/Orange, B/Green, C/Blue, D/Red.",
-    "Pool play was only partly recorded: Orange 12 of 15 games, Blue 8, Red 4, Green 0 (one winner circled, no score).",
-    "Games with a circled winner but no score are entered as 1-0.",
-    "Seed Overrides pin each pool's top 3 to the bracket as it was actually played, since the recorded games alone can't reproduce it.",
-    "Bracket results are winners only; scores recorded as 1-0. Bros Boor beat Don Cuzzi in the final."
+    "Pool scores come from the whiteboard, whose SCORE columns are each team's points in rounds 1-5; games were rebuilt by pairing them with the poster's round-robin schedule. All 18 W-L-T records in Orange, Green and Blue reproduce the whiteboard tallies exactly.",
+    "Red's round 3-5 columns are cut off in the whiteboard photo, so only the games legible on the poster are entered (5 of 15). Loose Meats vs Vandelay in round 1 was a circled win with no score, entered 1-0.",
+    "The 2023 round-robin schedule differs from the one setup() generates, so rounds and slots are imported explicitly.",
+    "Ranks were decided by head-to-head, not point differential, so Seed Overrides pin each pool's top 3 as actually seeded.",
+    "Bracket is winners only; scores recorded as 1-0. Bros Boor beat Don Cuzzi in the final."
   ],
   "teams": {
-    "Orange": ["Hawkeyes", "The Big LeBocce", "Don Cuzzi", "Loh Hang Bawls", "Long Ballz", "Return of the Mesh"],
-    "Green": ["Smug Champs", "Joanie Loves Bocce", "Hot Sauce", "Blues Bros", "Sparty Devils", "Holy Rollers"],
-    "Blue": ["Muck Fichigan", "White Zin", "Bros Boor", "Sister Swap", "Grand Lakes", "Here 4 Beer"],
-    "Red": ["Brainardbergs", "The Seekers", "Ghetto Ballers", "Loose Meats", "Vandelay", "Goldylichs"]
+    "Orange": [
+      "Hawkeyes",
+      "The Big LeBocce",
+      "Don Cuzzi",
+      "Loh Hang Balls",
+      "Long Ballz",
+      "Return of the Mesh"
+    ],
+    "Green": [
+      "Smug Champs",
+      "Joanie Loves Bocce",
+      "Hot Sauce",
+      "Blues Bros",
+      "Sparty Devils",
+      "Holy Rollers"
+    ],
+    "Blue": [
+      "Muck Fichigan",
+      "White Zin",
+      "Bros Boor",
+      "Sister Swap",
+      "Grand Lakes",
+      "Here 4 Beer"
+    ],
+    "Red": [
+      "Brainard Bergs",
+      "The Seekers",
+      "Ghetto Ballers",
+      "Loose Meats",
+      "Vandelay",
+      "Goldylichs"
+    ]
   },
   "overrides": {
-    "The Big LeBocce": 1, "Don Cuzzi": 2, "Loh Hang Bawls": 3,
-    "Holy Rollers": 1, "Sparty Devils": 2, "Hot Sauce": 3,
-    "White Zin": 1, "Sister Swap": 2, "Bros Boor": 3,
-    "Loose Meats": 1, "Ghetto Ballers": 2, "The Seekers": 3
+    "The Big LeBocce": 1,
+    "Don Cuzzi": 2,
+    "Loh Hang Balls": 3,
+    "Holy Rollers": 1,
+    "Joanie Loves Bocce": 2,
+    "Hot Sauce": 3,
+    "White Zin": 1,
+    "Sister Swap": 2,
+    "Bros Boor": 3,
+    "Loose Meats": 1,
+    "Ghetto Ballers": 2,
+    "The Seekers": 3
   },
   "poolGames": {
     "Orange": [
-      [1, 2, 1, 18, 14], [1, 3, 6, 16, 18], [1, 4, 5, 17, 14],
-      [2, 3, 4, null, null], [2, 6, 1, 17, 10], [2, 2, 5, 27, 8],
-      [3, 6, 4, null, null], [3, 2, 3, 13, 10], [3, 1, 5, 15, 9],
-      [4, 4, 1, 14, 17], [4, 5, 3, null, null], [4, 6, 2, 8, 20],
-      [5, 5, 6, 17, 10], [5, 1, 3, 11, 19], [5, 4, 2, 17, 11]
+      [
+        1,
+        2,
+        1,
+        18,
+        14
+      ],
+      [
+        1,
+        3,
+        6,
+        16,
+        18
+      ],
+      [
+        1,
+        4,
+        5,
+        17,
+        14
+      ],
+      [
+        2,
+        3,
+        4,
+        15,
+        12
+      ],
+      [
+        2,
+        6,
+        1,
+        19,
+        10
+      ],
+      [
+        2,
+        2,
+        5,
+        27,
+        8
+      ],
+      [
+        3,
+        6,
+        4,
+        9,
+        24
+      ],
+      [
+        3,
+        2,
+        3,
+        23,
+        10
+      ],
+      [
+        3,
+        1,
+        5,
+        15,
+        9
+      ],
+      [
+        4,
+        4,
+        1,
+        14,
+        17
+      ],
+      [
+        4,
+        5,
+        3,
+        9,
+        18
+      ],
+      [
+        4,
+        6,
+        2,
+        8,
+        20
+      ],
+      [
+        5,
+        5,
+        6,
+        17,
+        10
+      ],
+      [
+        5,
+        1,
+        3,
+        11,
+        19
+      ],
+      [
+        5,
+        4,
+        2,
+        17,
+        11
+      ]
     ],
     "Green": [
-      [1, 2, 1, 1, 0], [1, 3, 6, null, null], [1, 4, 5, null, null],
-      [2, 3, 4, null, null], [2, 6, 1, null, null], [2, 2, 5, null, null],
-      [3, 6, 4, null, null], [3, 2, 3, null, null], [3, 1, 5, null, null],
-      [4, 4, 1, null, null], [4, 5, 3, null, null], [4, 6, 2, null, null],
-      [5, 5, 6, null, null], [5, 1, 3, null, null], [5, 4, 2, null, null]
+      [
+        1,
+        2,
+        1,
+        15,
+        11
+      ],
+      [
+        1,
+        3,
+        6,
+        16,
+        13
+      ],
+      [
+        1,
+        4,
+        5,
+        13,
+        13
+      ],
+      [
+        2,
+        3,
+        4,
+        12,
+        20
+      ],
+      [
+        2,
+        6,
+        1,
+        14,
+        8
+      ],
+      [
+        2,
+        2,
+        5,
+        19,
+        9
+      ],
+      [
+        3,
+        6,
+        4,
+        13,
+        9
+      ],
+      [
+        3,
+        2,
+        3,
+        17,
+        22
+      ],
+      [
+        3,
+        1,
+        5,
+        18,
+        7
+      ],
+      [
+        4,
+        4,
+        1,
+        15,
+        16
+      ],
+      [
+        4,
+        5,
+        3,
+        13,
+        10
+      ],
+      [
+        4,
+        6,
+        2,
+        19,
+        13
+      ],
+      [
+        5,
+        5,
+        6,
+        13,
+        12
+      ],
+      [
+        5,
+        1,
+        3,
+        13,
+        13
+      ],
+      [
+        5,
+        4,
+        2,
+        6,
+        20
+      ]
     ],
     "Blue": [
-      [1, 2, 1, 17, 12], [1, 3, 6, null, null], [1, 4, 5, 17, 10],
-      [2, 3, 4, 13, 15], [2, 6, 1, null, null], [2, 2, 5, 21, 9],
-      [3, 6, 4, 6, 17], [3, 2, 3, 15, 13], [3, 1, 5, null, null],
-      [4, 4, 1, 10, 20], [4, 5, 3, null, null], [4, 6, 2, null, null],
-      [5, 5, 6, null, null], [5, 1, 3, null, null], [5, 4, 2, 12, 12]
+      [
+        1,
+        2,
+        1,
+        17,
+        12
+      ],
+      [
+        1,
+        3,
+        6,
+        22,
+        10
+      ],
+      [
+        1,
+        4,
+        5,
+        17,
+        10
+      ],
+      [
+        2,
+        3,
+        4,
+        13,
+        15
+      ],
+      [
+        2,
+        6,
+        1,
+        11,
+        19
+      ],
+      [
+        2,
+        2,
+        5,
+        21,
+        9
+      ],
+      [
+        3,
+        6,
+        4,
+        6,
+        17
+      ],
+      [
+        3,
+        2,
+        3,
+        15,
+        13
+      ],
+      [
+        3,
+        1,
+        5,
+        11,
+        14
+      ],
+      [
+        4,
+        4,
+        1,
+        10,
+        20
+      ],
+      [
+        4,
+        5,
+        3,
+        11,
+        17
+      ],
+      [
+        4,
+        6,
+        2,
+        13,
+        16
+      ],
+      [
+        5,
+        5,
+        6,
+        13,
+        16
+      ],
+      [
+        5,
+        1,
+        3,
+        9,
+        14
+      ],
+      [
+        5,
+        4,
+        2,
+        12,
+        12
+      ]
     ],
     "Red": [
-      [1, 2, 1, 22, 8], [1, 3, 6, 12, 12], [1, 4, 5, 1, 0],
-      [2, 3, 4, null, null], [2, 6, 1, null, null], [2, 2, 5, 24, 16],
-      [3, 6, 4, null, null], [3, 2, 3, null, null], [3, 1, 5, null, null],
-      [4, 4, 1, null, null], [4, 5, 3, null, null], [4, 6, 2, null, null],
-      [5, 5, 6, 8, 13], [5, 1, 3, null, null], [5, 4, 2, null, null]
+      [
+        1,
+        2,
+        1,
+        22,
+        8
+      ],
+      [
+        1,
+        3,
+        6,
+        12,
+        12
+      ],
+      [
+        1,
+        4,
+        5,
+        1,
+        0
+      ],
+      [
+        2,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        2,
+        6,
+        1,
+        null,
+        null
+      ],
+      [
+        2,
+        2,
+        5,
+        24,
+        16
+      ],
+      [
+        3,
+        6,
+        4,
+        null,
+        null
+      ],
+      [
+        3,
+        2,
+        3,
+        null,
+        null
+      ],
+      [
+        3,
+        1,
+        5,
+        null,
+        null
+      ],
+      [
+        4,
+        4,
+        1,
+        null,
+        null
+      ],
+      [
+        4,
+        5,
+        3,
+        null,
+        null
+      ],
+      [
+        4,
+        6,
+        2,
+        null,
+        null
+      ],
+      [
+        5,
+        5,
+        6,
+        8,
+        13
+      ],
+      [
+        5,
+        1,
+        3,
+        null,
+        null
+      ],
+      [
+        5,
+        4,
+        2,
+        null,
+        null
+      ]
     ]
   },
   "bracket": [
-    { "game": 1,  "a": "The Seekers",    "b": "Don Cuzzi",      "winner": "b" },
-    { "game": 2,  "a": "Hot Sauce",      "b": "Ghetto Ballers", "winner": "a" },
-    { "game": 3,  "a": "Loh Hang Bawls", "b": "Sparty Devils",  "winner": "a" },
-    { "game": 4,  "a": "Bros Boor",      "b": "Sister Swap",    "winner": "a" },
-    { "game": 5,  "a": "White Zin",      "b": "W1",             "winner": "b" },
-    { "game": 6,  "a": "Holy Rollers",   "b": "W2",             "winner": "b" },
-    { "game": 7,  "a": "The Big LeBocce","b": "W3",             "winner": "a" },
-    { "game": 8,  "a": "Loose Meats",    "b": "W4",             "winner": "b" },
-    { "game": 9,  "a": "W5",             "b": "W6",             "winner": "a" },
-    { "game": 10, "a": "W7",             "b": "W8",             "winner": "b" },
-    { "game": 11, "a": "W9",             "b": "W10",            "winner": "b" }
+    {
+      "game": 1,
+      "a": "The Seekers",
+      "b": "Don Cuzzi",
+      "winner": "b"
+    },
+    {
+      "game": 2,
+      "a": "Ghetto Ballers",
+      "b": "Hot Sauce",
+      "winner": "b"
+    },
+    {
+      "game": 3,
+      "a": "Joanie Loves Bocce",
+      "b": "Loh Hang Balls",
+      "winner": "b"
+    },
+    {
+      "game": 4,
+      "a": "Sister Swap",
+      "b": "Bros Boor",
+      "winner": "b"
+    },
+    {
+      "game": 5,
+      "a": "White Zin",
+      "b": "W1",
+      "winner": "b"
+    },
+    {
+      "game": 6,
+      "a": "Holy Rollers",
+      "b": "W2",
+      "winner": "b"
+    },
+    {
+      "game": 7,
+      "a": "The Big LeBocce",
+      "b": "W3",
+      "winner": "a"
+    },
+    {
+      "game": 8,
+      "a": "Loose Meats",
+      "b": "W4",
+      "winner": "b"
+    },
+    {
+      "game": 9,
+      "a": "W5",
+      "b": "W6",
+      "winner": "a"
+    },
+    {
+      "game": 10,
+      "a": "W7",
+      "b": "W8",
+      "winner": "b"
+    },
+    {
+      "game": 11,
+      "a": "W9",
+      "b": "W10",
+      "winner": "b"
+    }
   ]
 }
