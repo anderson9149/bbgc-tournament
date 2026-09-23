@@ -1,0 +1,307 @@
+{
+  "year": 2018,
+  "source": "history/2018-poster.webp (hand-written results poster)",
+  "notes": [
+    "16 teams in four 4-team pools (1-Red, 2-Blue, 3-Yellow, 4-Green), 3 rounds of 2 games each. Top 12 made the bracket; the four winless teams did not.",
+    "The poster lists every bracket team's record and point total in the corner, which fixes the seeding: White Zin 1, Hawkeyes 2, Don Cuzzi 3, Double Deuce 4, On Wisconsin 5, Brick Cock 6, TNT 7, Flangers 8, Mustache Riders 9, Bryan Adams Show 10, Steam Punks 11, Joanie Loves Bocce 12.",
+    "Red and Blue games are reconstructed from the round tables and reproduce every listed point total exactly (Brick Cock 50, Double Deuce 51, Flangers 41, White Zin 65, Bryan Adams 44, Steam Punks 42).",
+    "Yellow and Green round tables have several digits that can't be read confidently (and one reading would contradict TNT's listed 2-1), so those two pools are entered as records only.",
+    "Bracket is winners only; scores recorded as 1-0. Hawkeyes beat White Zin in the final."
+  ],
+  "teams": {
+    "Red": [
+      "Brick Cock",
+      "Double Deuce",
+      "Hurricane Ditka",
+      "Flangers"
+    ],
+    "Blue": [
+      "Steam Punks",
+      "The Bryan Adams Show",
+      "White Zin",
+      "John-John, Inc"
+    ],
+    "Yellow": [
+      "Hawkeyes",
+      "TNT",
+      "Village People",
+      "Mustache Riders"
+    ],
+    "Green": [
+      "Boilers",
+      "Joanie Loves Bocce",
+      "On Wisconsin",
+      "Don Cuzzi"
+    ]
+  },
+  "records": {
+    "Hawkeyes": "3-0",
+    "TNT": "2-1",
+    "Village People": "0-3",
+    "Mustache Riders": "1-2",
+    "Boilers": "0-3",
+    "Joanie Loves Bocce": "1-2",
+    "On Wisconsin": "2-0-1",
+    "Don Cuzzi": "2-0-1"
+  },
+  "overrides": {
+    "Double Deuce": 1,
+    "Brick Cock": 2,
+    "Flangers": 3,
+    "White Zin": 1,
+    "The Bryan Adams Show": 2,
+    "Steam Punks": 3,
+    "Hawkeyes": 1,
+    "TNT": 2,
+    "Mustache Riders": 3,
+    "Don Cuzzi": 1,
+    "On Wisconsin": 2,
+    "Joanie Loves Bocce": 3
+  },
+  "poolGames": {
+    "Red": [
+      [
+        1,
+        2,
+        1,
+        6,
+        22
+      ],
+      [
+        1,
+        3,
+        4,
+        6,
+        20
+      ],
+      [
+        2,
+        4,
+        2,
+        7,
+        21
+      ],
+      [
+        2,
+        1,
+        3,
+        15,
+        8
+      ],
+      [
+        3,
+        4,
+        1,
+        14,
+        13
+      ],
+      [
+        3,
+        2,
+        3,
+        24,
+        8
+      ]
+    ],
+    "Blue": [
+      [
+        1,
+        2,
+        1,
+        8,
+        15
+      ],
+      [
+        1,
+        3,
+        4,
+        21,
+        12
+      ],
+      [
+        2,
+        4,
+        2,
+        9,
+        27
+      ],
+      [
+        2,
+        1,
+        3,
+        9,
+        29
+      ],
+      [
+        3,
+        4,
+        1,
+        18,
+        17
+      ],
+      [
+        3,
+        2,
+        3,
+        9,
+        15
+      ]
+    ],
+    "Yellow": [
+      [
+        1,
+        2,
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        2,
+        4,
+        2,
+        null,
+        null
+      ],
+      [
+        2,
+        1,
+        3,
+        null,
+        null
+      ],
+      [
+        3,
+        4,
+        1,
+        null,
+        null
+      ],
+      [
+        3,
+        2,
+        3,
+        null,
+        null
+      ]
+    ],
+    "Green": [
+      [
+        1,
+        2,
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        3,
+        4,
+        null,
+        null
+      ],
+      [
+        2,
+        4,
+        2,
+        null,
+        null
+      ],
+      [
+        2,
+        1,
+        3,
+        null,
+        null
+      ],
+      [
+        3,
+        4,
+        1,
+        null,
+        null
+      ],
+      [
+        3,
+        2,
+        3,
+        null,
+        null
+      ]
+    ]
+  },
+  "bracket": [
+    {
+      "game": 1,
+      "a": "Flangers",
+      "b": "Mustache Riders",
+      "winner": "b"
+    },
+    {
+      "game": 2,
+      "a": "On Wisconsin",
+      "b": "Joanie Loves Bocce",
+      "winner": "a"
+    },
+    {
+      "game": 3,
+      "a": "TNT",
+      "b": "The Bryan Adams Show",
+      "winner": "a"
+    },
+    {
+      "game": 4,
+      "a": "Brick Cock",
+      "b": "Steam Punks",
+      "winner": "a"
+    },
+    {
+      "game": 5,
+      "a": "White Zin",
+      "b": "W1",
+      "winner": "a"
+    },
+    {
+      "game": 6,
+      "a": "Double Deuce",
+      "b": "W2",
+      "winner": "b"
+    },
+    {
+      "game": 7,
+      "a": "Hawkeyes",
+      "b": "W3",
+      "winner": "a"
+    },
+    {
+      "game": 8,
+      "a": "Don Cuzzi",
+      "b": "W4",
+      "winner": "b"
+    },
+    {
+      "game": 9,
+      "a": "W5",
+      "b": "W6",
+      "winner": "a"
+    },
+    {
+      "game": 10,
+      "a": "W7",
+      "b": "W8",
+      "winner": "a"
+    },
+    {
+      "game": 11,
+      "a": "W9",
+      "b": "W10",
+      "winner": "b"
+    }
+  ]
+}
