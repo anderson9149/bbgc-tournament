@@ -488,7 +488,7 @@ function rebuildCourseGuide() {
   var sh = ss.getSheetByName('Holes');
   if (!sh) {
     sh = ss.insertSheet('Holes');
-    header_(sh, 1, ['Hole', 'Name', 'Narrative', 'Photo']);
+    header_(sh, 1, ['Hole', 'Name', 'Narrative', 'Photos']);
     sh.setColumnWidth(2, 220); sh.setColumnWidth(3, 760); sh.setColumnWidth(4, 110);
   }
   var existing = sh.getLastRow() > 1 ? sh.getRange(2, 1, sh.getLastRow() - 1, 4).getValues() : [];
@@ -500,7 +500,7 @@ function rebuildCourseGuide() {
     var cur = byHole[h.hole] || ['', '', '', ''];
     var name = String(cur[1] || '').trim() || h.name || '';
     var narr = String(cur[2] || '').trim() || h.narrative || '';
-    var photo = String(cur[3] || '').trim() || h.photo || '';
+    var photo = String(cur[3] || '').trim() || (h.photos || []).join(', ');
     if (narr) filled++;
     rows.push([h.hole, name, narr, photo]);
   });
@@ -520,7 +520,8 @@ function readHoles_() {
   if (!sh || sh.getLastRow() < 2) return { error: 'Course guide sheet is empty.' };
   var vals = sh.getRange(2, 1, sh.getLastRow() - 1, 4).getValues();
   return { holes: vals.filter(function (r) { return r[0] !== ''; }).map(function (r) {
-    return { hole: Number(r[0]), name: String(r[1] || ''), narrative: String(r[2] || ''), photo: String(r[3] || '') };
+    return { hole: Number(r[0]), name: String(r[1] || ''), narrative: String(r[2] || ''),
+             photos: String(r[3] || '').split(',').map(function (x) { return x.trim(); }).filter(String) };
   }) };
 }
 

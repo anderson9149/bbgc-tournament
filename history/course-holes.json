@@ -2,109 +2,118 @@
  {
   "hole": 1,
   "name": "Banner Drive",
-  "photo": "01.webp",
-  "narrative": "Where the adventure begins\u2026 Formally elevated pallet tee box. Lots of festivity behind you. Lots of potential glory in front of you. Relatively flat fairway. Slightly breaks left. Need to be wary of the actual banner streaking diagonally across. Can be a difficult range to calibrate to off the bat with pre-round nerves. A fairly long distance to pin but very easy, especially with the dry October conditions, to blow by it. You're off n runnin!"
+  "narrative": "Where the adventure begins\u2026 Formally elevated pallet tee box. Lots of festivity behind you. Lots of potential glory in front of you. Relatively flat fairway. Slightly breaks left. Need to be wary of the actual banner streaking diagonally across. Can be a difficult range to calibrate to off the bat with pre-round nerves. A fairly long distance to pin but very easy, especially with the dry October conditions, to blow by it. You're off n runnin!",
+  "photos": [
+   "01-1.webp"
+  ]
  },
  {
   "hole": 2,
   "name": "Dick Basket",
-  "photo": "02.webp",
-  "narrative": "The lovable enigma. The Dick Basket. Any asshole can throw a dick at a basket. But can he get it to STICK??? So many approach angle options, but everyone's got a strategy until they get hit in the face with a DICK. Despite all of the above, this is still a fan favorite! Nothing captures the drama and suspense of the BBGC better than a ball teetering on the rim of the DB. Enjoy"
+  "narrative": "The lovable enigma. The Dick Basket. Any asshole can throw a dick at a basket. But can he get it to STICK??? So many approach angle options, but everyone's got a strategy until they get hit in the face with a DICK. Despite all of the above, this is still a fan favorite! Nothing captures the drama and suspense of the BBGC better than a ball teetering on the rim of the DB. Enjoy",
+  "photos": [
+   "02-1.webp"
+  ]
  },
  {
   "hole": 3,
   "name": "Slippery Slope",
-  "photo": "03.webp",
-  "narrative": "Okay, again, I ask for your understanding and grace with the imperfections of this course this year after having multiple tractors and semi-trucks drive through and rip up my lawn in the process of tearing out our septic tank earlier this summer. Slippery Slope is one of the fairways impacted, at least visually, as your target landing zone wouldn't likely be before the tire treads anyway. As the name implies, this one gets SLICK, especially as the day progresses and the track gets smoothed out. One of the longer drives, but because it's downhill, muscle isn't the requirement, touch is."
+  "narrative": "Okay, again, I ask for your understanding and grace with the imperfections of this course this year after having multiple tractors and semi-trucks drive through and rip up my lawn in the process of tearing out our septic tank earlier this summer. Slippery Slope is one of the fairways impacted, at least visually, as your target landing zone wouldn't likely be before the tire treads anyway. As the name implies, this one gets SLICK, especially as the day progresses and the track gets smoothed out. One of the longer drives, but because it's downhill, muscle isn't the requirement, touch is.",
+  "photos": [
+   "03-1.webp",
+   "03-2.webp",
+   "03-3.webp",
+   "03-4.webp"
+  ]
  },
  {
   "hole": 4,
   "name": "Ol Smokey",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 5,
   "name": "Up N At Em",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 6,
   "name": "Bump N Run",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 7,
   "name": "The Vice",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 8,
   "name": "Heartbreak Ridge",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 9,
   "name": "The Island",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 10,
   "name": "Lagoni Lane",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 11,
   "name": "South Hill Sling",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 12,
   "name": "The Playpen",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 13,
   "name": "South Mouth",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 14,
   "name": "Rustlers Gambit Windmill",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 15,
   "name": "Border Creek Rock",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 16,
   "name": "Cancelled Cliffs of Latrell",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 17,
   "name": "Fairway to Heaven",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  },
  {
   "hole": 18,
   "name": "Bombs Over Barrington",
-  "photo": "",
-  "narrative": ""
+  "narrative": "",
+  "photos": []
  }
 ]
