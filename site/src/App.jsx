@@ -8,6 +8,7 @@ import { Stats, useStats } from './Stats.jsx'
 import { Overlay, Story } from './Overlay.jsx'
 import { CourseMap, useHoles } from './CourseMap.jsx'
 import { Live, useLive } from './Live.jsx'
+import { Hype } from './Hype.jsx'
 import { API_URL as CONFIGURED_URL } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
@@ -36,6 +37,7 @@ export default function App() {
   // Past years have no Stats or Course Map tab; bounce back to the group stage.
   useEffect(() => {
     if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live')) setTab('group')
+    if (isCurrentYear && tab === 'hype') setTab('group')
   }, [isCurrentYear, tab])
   // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
@@ -58,9 +60,12 @@ export default function App() {
             <button className={tab === 'live' ? 'active' : ''} onClick={() => setTab('live')}>Live</button>
           </>
         ) : (
-          <button className={popup === 'story' ? 'active' : ''} onClick={() => setPopup(popup === 'story' ? null : 'story')}>
-            <span className="year-word">{data?.year} </span>Story
-          </button>
+          <>
+            <button className={popup === 'story' ? 'active' : ''} onClick={() => setPopup(popup === 'story' ? null : 'story')}>
+              <span className="year-word">{data?.year} </span>Story
+            </button>
+            <button className={tab === 'hype' ? 'active' : ''} onClick={() => setTab('hype')}>Hype Video</button>
+          </>
         )}
         {years && (
           <select className="year" value={data.year} onChange={(e) => changeYear(e.target.value)} aria-label="Tournament year">
@@ -71,6 +76,8 @@ export default function App() {
 
       {!data ? (
         <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
+      ) : tab === 'hype' ? (
+        <Hype year={data.year} />
       ) : tab === 'live' ? (
         <Live data={live} />
       ) : tab === 'coursemap' ? (

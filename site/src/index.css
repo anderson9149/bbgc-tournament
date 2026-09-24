@@ -232,6 +232,14 @@ button { font: inherit; cursor: pointer; }
   font-size: .58em; font-weight: 800; text-transform: uppercase; letter-spacing: .1em;
   opacity: .55; writing-mode: vertical-rl; }
 
+/* ------------------------------------------------------ hype video */
+/* the reel sits where the pools or the bracket would be, letterboxed to 16:9 */
+.hype { display: flex; align-items: center; justify-content: center; min-height: 0; }
+.hype-frame { position: relative; width: 100%; aspect-ratio: 16 / 9;
+  background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.55);
+  border: 2px solid rgba(255,255,255,.85); }
+.hype-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
 /* ----------------------------------------------------- course map */
 /* the box must hug the image exactly, or the percentage-positioned pins drift */
 .map { position: relative; line-height: 0; align-self: start; justify-self: start; }
@@ -349,6 +357,11 @@ button { font: inherit; cursor: pointer; }
 .tv .overlay { left: 300px; right: 300px; top: 300px; bottom: 120px; }
 .tv .overlay h2 { font-size: 26px; }
 .tv .story li { font-size: 22px; padding: 14px 0; }
+.tv .hype { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px; }
+/* height drives it, so aspect-ratio settles the width and the reel letterboxes
+   inside the box rather than stretching across it */
+.tv .hype-frame { height: 100%; width: auto; }
+
 .tv .coursemap-tv { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
   display: grid; grid-template-columns: 1070px 1fr; gap: 22px; align-items: start; }
 .tv .coursemap-tv .map { width: 1070px; }
@@ -368,6 +381,7 @@ button { font: inherit; cursor: pointer; }
 /* All three portrait images bake their title into the top ~11.5%; keep content below it. */
 .mobile .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 200 + 8px); flex-wrap: wrap; gap: 8px; }
 .mobile.tab-coursemap .menu,
+.mobile.tab-hype .menu,
 .mobile.tab-live .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 240 + 8px); }
 .mobile .menu button { font-size: 13px; padding: 8px 14px; }
 .mobile .menu select.year { font-size: 13px; padding: 8px 34px 8px 14px; background-position: right 12px center; }
@@ -395,6 +409,8 @@ button { font: inherit; cursor: pointer; }
 .mobile .hole-text { font-size: .92rem; }
 .mobile .year-word { display: none; }
 .mobile .live { margin-top: 16px; --who: 140px; --tot: 46px; }
+.mobile .hype { margin-top: 16px; }
+.mobile .hype-frame { max-width: 100%; }
 .mobile .live-scroll { overflow-x: auto; }
 .mobile .live-head, .mobile .live-game { min-width: 620px; }
 .mobile .live-row { font-size: .85rem; }
