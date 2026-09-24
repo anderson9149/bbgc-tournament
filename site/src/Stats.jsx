@@ -29,6 +29,7 @@ export function Stats({ stats, error, tv }) {
   if (!stats) return <p className="status center">Loading all-time stats…</p>
 
   const span = stats.years?.length ? `${stats.years[0]}–${stats.years[stats.years.length - 1]}` : null
+  const note = span ? <p className="stats-note">*Stats only encompass BBGC modern era {span}</p> : null
   const picker = (
     <select className="team-pick" value={who} onChange={(e) => setWho(e.target.value)} aria-label="All-time view">
       <option value="">All Time</option>
@@ -37,7 +38,7 @@ export function Stats({ stats, error, tv }) {
   )
   if (who) {
     const t = ranked.find((x) => x.team === who)
-    return t ? <TeamCard t={t} picker={picker} span={span} /> : null
+    return t ? <TeamCard t={t} picker={picker} note={note} /> : null
   }
 
   const teams = stats.teams
@@ -68,7 +69,7 @@ export function Stats({ stats, error, tv }) {
   return (
     <section className="stats">
       <div className="cabinet">
-        <h2>Champions {span && <span className="span">{span}</span>} {picker}</h2>
+        <h2>Champions {picker}</h2>
         <div className="cups">
           {champs.map((c) => (
             <div key={c.team} className={`cup ${c.titles > 1 ? 'multi' : ''}`}>
@@ -96,11 +97,12 @@ export function Stats({ stats, error, tv }) {
           </article>
         ))}
       </div>
+      {note}
     </section>
   )
 }
 
-function TeamCard({ t, picker, span }) {
+function TeamCard({ t, picker, note }) {
   const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
   const cells = [
     ['Team Record', rec],
@@ -119,7 +121,7 @@ function TeamCard({ t, picker, span }) {
           {t.titles > 0 && <span className="titles">{'🏆'.repeat(Math.min(t.titles, 3))} {t.titleYears.join(' · ')}</span>}
           {picker}
         </h2>
-        <span className="span">{t.years.join(' · ')}{span ? ` — all-time ${span}` : ''}</span>
+        <span className="span">{t.years.join(' · ')}</span>
       </div>
       <div className="team-grid">
         <div className="tiles">
@@ -133,6 +135,7 @@ function TeamCard({ t, picker, span }) {
         </article>
       </div>
       {t.narrative && <div className="narrative"><p>{t.narrative}</p></div>}
+      {note}
     </section>
   )
 }
