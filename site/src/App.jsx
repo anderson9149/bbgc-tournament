@@ -49,7 +49,7 @@ export default function App() {
         </button>
         {isCurrentYear ? (
           <>
-            <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>All-Time</button>
+            <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>Stats</button>
             <button className={tab === 'coursemap' ? 'active' : ''} onClick={() => setTab('coursemap')}>Course Map</button>
           </>
         ) : (
