@@ -44,10 +44,12 @@ export function CourseMap({ holes, tv }) {
 
   const panel = (
     <div className="hole-panel">
-      <img className="hole-sign" src={`${BASE}holes/${pad(hole.hole)}.webp`} alt={`Hole ${hole.hole}, ${hole.name}`} />
-      {hole.photos?.[0] && (
-        <figure className="hole-photo"><img src={`${BASE}course/${hole.photos[0]}`} alt={`Hole ${hole.hole}`} /></figure>
-      )}
+      <div className="hole-top">
+        <img className="hole-sign" src={`${BASE}holes/${pad(hole.hole)}.webp`} alt={`Hole ${hole.hole}, ${hole.name}`} />
+        {hole.photos?.[0] && (
+          <figure className="hole-photo"><img src={`${BASE}course/${hole.photos[0]}`} alt={`Hole ${hole.hole}`} /></figure>
+        )}
+      </div>
       <p className="hole-text">{hole.narrative || 'No description for this hole yet.'}</p>
     </div>
   )
