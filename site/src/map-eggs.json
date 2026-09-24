@@ -34,5 +34,15 @@
   "h": 9.43,
   "img": "egg-house.webp",
   "alt": "The keg"
+ },
+ {
+  "id": "roof",
+  "left": 61.3,
+  "top": 32.46,
+  "w": 7.1,
+  "h": 7.73,
+  "img": "egg-roof.gif",
+  "alt": "A knowing glance",
+  "maxw": 520
  }
 ]

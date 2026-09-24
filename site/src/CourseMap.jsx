@@ -51,7 +51,7 @@ export function CourseMap({ holes, tv }) {
 
   const panel = egg ? (
     <div className="hole-panel egg-panel">
-      <img src={`${BASE}${egg.img}`} alt={egg.alt} />
+      <img src={`${BASE}${egg.img}`} alt={egg.alt} style={egg.maxw ? { width: `min(100%, ${egg.maxw}px)`, height: 'auto' } : undefined} />
       <button className="egg-close" onClick={() => setEgg(null)}>✕</button>
     </div>
   ) : (
