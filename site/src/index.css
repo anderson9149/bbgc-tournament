@@ -203,6 +203,13 @@ button { font: inherit; cursor: pointer; }
 .pin.on { background: var(--yellow); color: #22300f; border-color: #fff; transform: translate(-50%, -50%) scale(1.25); }
 
 .hole-panel { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+/* invisible hotspots hiding on the map artwork */
+.egg-spot { position: absolute; border: 0; background: none; padding: 0; }
+.egg-panel { position: relative; align-items: center; justify-content: center; }
+.egg-panel img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.55); }
+.egg-close { position: absolute; top: 6px; right: 6px; border: 0; background: rgba(0,0,0,.55); color: #fff;
+  border-radius: 999px; width: 2em; height: 2em; font-weight: 800; }
 /* sign on the left, photo on the right */
 .hole-top { display: flex; gap: 12px; align-items: flex-start; min-height: 0; }
 .hole-sign { width: 100%; max-width: 330px; border-radius: 8px; flex: 0 0 auto; }

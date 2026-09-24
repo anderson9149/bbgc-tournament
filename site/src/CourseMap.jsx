@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { API_URL } from './config.js'
 import PINS from './map-pins.json'
+import EGGS from './map-eggs.json'
 import sampleHoles from './sample-holes.json'
 
 const BASE = import.meta.env.BASE_URL
@@ -26,6 +27,7 @@ export function useHoles() {
 
 export function CourseMap({ holes, tv }) {
   const [sel, setSel] = useState(1)
+  const [egg, setEgg] = useState(null)   // an easter egg showing in place of the hole panel
   const list = holes || sampleHoles.holes
   const hole = list.find((h) => h.hole === sel) || list[0]
 
@@ -35,14 +37,24 @@ export function CourseMap({ holes, tv }) {
       {tv && PINS.map((p) => (
         <button key={p.hole} className={`pin ${p.hole === sel ? 'on' : ''}`}
           style={{ left: `${p.x}%`, top: `${p.y}%` }}
-          onClick={() => setSel(p.hole)} aria-label={`Hole ${p.hole}`}>
+          onClick={() => { setSel(p.hole); setEgg(null) }} aria-label={`Hole ${p.hole}`}>
           {p.hole}
         </button>
+      ))}
+      {tv && EGGS.map((e) => (
+        <button key={e.id} className="egg-spot" aria-hidden="true" tabIndex={-1}
+          style={{ left: `${e.left}%`, top: `${e.top}%`, width: `${e.w}%`, height: `${e.h}%` }}
+          onClick={() => setEgg(egg?.id === e.id ? null : e)} />
       ))}
     </div>
   )
 
-  const panel = (
+  const panel = egg ? (
+    <div className="hole-panel egg-panel">
+      <img src={`${BASE}${egg.img}`} alt={egg.alt} />
+      <button className="egg-close" onClick={() => setEgg(null)}>✕</button>
+    </div>
+  ) : (
     <div className="hole-panel">
       <div className="hole-top">
         <img className="hole-sign" src={`${BASE}holes/${pad(hole.hole)}.webp`} alt={`Hole ${hole.hole}, ${hole.name}`} />
