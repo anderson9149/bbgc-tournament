@@ -60,8 +60,8 @@ export function Live({ data }) {
             <div className={`live-row ${won ? 'win' : ''}`}>
               <span className="who">{name}</span>
               {g.holes.map((h, j) => (
-                <span key={j} className={`cell ${h === null ? 'blank' : side(h, isA) ? 'scored' : 'zero'}`}>
-                  {side(h, isA)}
+                <span key={j} className={`cell ${h === null ? 'unplayed' : side(h, isA) ? 'scored' : 'zero'}`}>
+                  {h === null ? '–' : side(h, isA)}
                 </span>
               ))}
               <span className="tot">{total}</span>

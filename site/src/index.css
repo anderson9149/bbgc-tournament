@@ -215,7 +215,8 @@ button { font: inherit; cursor: pointer; }
 .live-head .cell:nth-child(odd) { background: rgba(255,255,255,.045); }
 .live-row .cell.zero { opacity: .28; }
 .live-row .cell.scored { font-weight: 800; color: var(--yellow); }
-.live-row .cell.blank { opacity: 0; }
+/* a dash marks a hole that has not been played yet */
+.live-row .cell.unplayed { color: #fff; font-weight: 800; opacity: .9; }
 .live-row .tot { text-align: center; font-weight: 800; font-variant-numeric: tabular-nums;
   background: rgba(0,0,0,.28); border-radius: 6px; margin-right: 10px; }
 .live-row.win .tot { background: var(--pool-red); }
