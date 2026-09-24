@@ -10,6 +10,7 @@
  *             Web app, "Execute as: Me", "Who has access: Anyone".
  *             ?year=2024 selects a year; the default is the latest year.
  *             ?action=game&a=<team>&b=<team> returns one game's hole scores.
+ *             ?action=holes returns the course guide (hole names + narratives).
  *             ?action=stats returns the all-time table built by rebuildStats()
  *             (finished tournaments only — the current year is excluded).
  *   doPost()  Used by the scorekeeper page (site/score/). Body is JSON:
@@ -36,6 +37,7 @@ var FILE_PATTERN = /^BBGC_ScoreCardResults_(\d{4})$/;
 var FIRST_YEAR = 2016;
 var STATS_FILE = 'BBGC_AllTimeStats';
 var TEAMS_FILE = 'Team Summary';
+var COURSE_FILE = 'BBGC_CourseGuide';
 var HISTORY_URL = 'https://raw.githubusercontent.com/anderson9149/bbgc-tournament/main/history/';
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
@@ -82,6 +84,7 @@ function onOpen() {
     .addItem('Import a past year from GitHub history…', 'importHistory')
     .addSeparator()
     .addItem('Rebuild all-time stats', 'rebuildStats')
+    .addItem('Rebuild course guide', 'rebuildCourseGuide')
     .addItem('Clear website cache', 'clearWebCache')
     .addSeparator()
     .addItem('Lock past years (warn before editing)', 'lockPastYears')
@@ -465,10 +468,66 @@ function clearData_(ss) {
   if (t) t.clearContents();
 }
 
+// ---------------------------------------------------- course guide
+
+// One row per hole in a "Holes" tab. Seeded from history/course-holes.json in
+// the repo, but ONLY into cells that are still blank — anything typed into the
+// sheet is treated as the truth and is never overwritten.
+function rebuildCourseGuide() {
+  var ui = SpreadsheetApp.getUi();
+  var res = UrlFetchApp.fetch(HISTORY_URL + 'course-holes.json', { muteHttpExceptions: true });
+  if (res.getResponseCode() !== 200) { ui.alert('Could not read course-holes.json from the repo.'); return; }
+  var seed = JSON.parse(res.getContentText());
+
+  var folder = folder_();
+  var it = folder.getFilesByName(COURSE_FILE);
+  var ss;
+  if (it.hasNext()) ss = SpreadsheetApp.openById(it.next().getId());
+  else { ss = SpreadsheetApp.create(COURSE_FILE); DriveApp.getFileById(ss.getId()).moveTo(folder); }
+
+  var sh = ss.getSheetByName('Holes');
+  if (!sh) {
+    sh = ss.insertSheet('Holes');
+    header_(sh, 1, ['Hole', 'Name', 'Narrative', 'Photo']);
+    sh.setColumnWidth(2, 220); sh.setColumnWidth(3, 760); sh.setColumnWidth(4, 110);
+  }
+  var existing = sh.getLastRow() > 1 ? sh.getRange(2, 1, sh.getLastRow() - 1, 4).getValues() : [];
+  var byHole = {};
+  existing.forEach(function (r) { if (r[0]) byHole[Number(r[0])] = r; });
+
+  var rows = [], filled = 0;
+  seed.forEach(function (h) {
+    var cur = byHole[h.hole] || ['', '', '', ''];
+    var name = String(cur[1] || '').trim() || h.name || '';
+    var narr = String(cur[2] || '').trim() || h.narrative || '';
+    var photo = String(cur[3] || '').trim() || h.photo || '';
+    if (narr) filled++;
+    rows.push([h.hole, name, narr, photo]);
+  });
+  sh.getRange(2, 1, rows.length, 4).setValues(rows);
+  sh.getRange(2, 3, rows.length, 1).setWrap(true);
+  sh.getRange(2, 1, rows.length, 1).setHorizontalAlignment('center');
+
+  CacheService.getScriptCache().remove('holes');
+  ui.alert('Course guide updated: ' + filled + ' of ' + rows.length + ' holes have a narrative.\n\n' +
+           'Edit them in "' + COURSE_FILE + '" — this never overwrites text you have typed.');
+}
+
+function readHoles_() {
+  var it = folder_().getFilesByName(COURSE_FILE);
+  if (!it.hasNext()) return { error: 'Course guide has not been built yet — run BBGC > Rebuild course guide.' };
+  var sh = SpreadsheetApp.openById(it.next().getId()).getSheetByName('Holes');
+  if (!sh || sh.getLastRow() < 2) return { error: 'Course guide sheet is empty.' };
+  var vals = sh.getRange(2, 1, sh.getLastRow() - 1, 4).getValues();
+  return { holes: vals.filter(function (r) { return r[0] !== ''; }).map(function (r) {
+    return { hole: Number(r[0]), name: String(r[1] || ''), narrative: String(r[2] || ''), photo: String(r[3] || '') };
+  }) };
+}
+
 // Drops every cached API response so the site re-reads the sheets at once.
 function clearWebCache() {
   var cache = CacheService.getScriptCache();
-  var keys = ['stats', 'years'];
+  var keys = ['stats', 'years', 'holes'];
   Object.keys(yearFiles_(true)).forEach(function (y) { keys.push('payload:' + y); });
   cache.removeAll(keys);
   SpreadsheetApp.getUi().alert('Cleared. The website will re-read the sheets on its next refresh.');
@@ -1015,6 +1074,16 @@ function doPost(e) {
 
 function doGet(e) {
   var p = (e && e.parameter) || {};
+  if (p.action === 'holes') {
+    var hc = CacheService.getScriptCache();
+    var hh = hc.get('holes');
+    if (!hh) {
+      var hp = readHoles_();
+      hh = JSON.stringify(hp);
+      if (!hp.error) hc.put('holes', hh, 600);
+    }
+    return ContentService.createTextOutput(hh).setMimeType(ContentService.MimeType.JSON);
+  }
   if (p.action === 'stats') {
     var cache = CacheService.getScriptCache();
     var hit = cache.get('stats');
