@@ -44,11 +44,11 @@ export default function App() {
       <nav className="menu">
         <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
         <button className={tab === 'knockout' ? 'active' : ''} onClick={() => setTab('knockout')}>Knockout Round</button>
-        <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
-          <span className="icon">↻</span> Refresh
-        </button>
         {isCurrentYear ? (
           <>
+            <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
+              <span className="icon">↻</span> Refresh
+            </button>
             <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>Stats</button>
             <button className={tab === 'coursemap' ? 'active' : ''} onClick={() => setTab('coursemap')}>Course Map</button>
           </>
