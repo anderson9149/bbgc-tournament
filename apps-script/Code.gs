@@ -82,6 +82,7 @@ function onOpen() {
     .addItem('Import a past year from GitHub history…', 'importHistory')
     .addSeparator()
     .addItem('Rebuild all-time stats', 'rebuildStats')
+    .addItem('Clear website cache', 'clearWebCache')
     .addSeparator()
     .addItem('Lock past years (warn before editing)', 'lockPastYears')
     .addItem('Unlock past years', 'unlockPastYears')
@@ -464,6 +465,15 @@ function clearData_(ss) {
   if (t) t.clearContents();
 }
 
+// Drops every cached API response so the site re-reads the sheets at once.
+function clearWebCache() {
+  var cache = CacheService.getScriptCache();
+  var keys = ['stats', 'years'];
+  Object.keys(yearFiles_(true)).forEach(function (y) { keys.push('payload:' + y); });
+  cache.removeAll(keys);
+  SpreadsheetApp.getUi().alert('Cleared. The website will re-read the sheets on its next refresh.');
+}
+
 // ---------------------------------------------------- all-time stats
 
 // Walks every year sheet and totals each team up. Writes the result to the
@@ -496,11 +506,19 @@ function rebuildStats() {
   meta.clear();
   meta.getRange(1, 1, 2, 2).setValues([['Updated', new Date()], ['Years', stats.years.join(' ')]]);
 
-  writeTeamSummary_(stats, narr);
+  CacheService.getScriptCache().remove('stats');   // site can serve the new table immediately
+
+  var teamNote = '';
+  try {
+    writeTeamSummary_(stats, narr);
+  } catch (err) {
+    teamNote = '\n\nNote: the per-team workbook did not finish (' + err.message +
+               '). The website is unaffected — re-run this to retry it.';
+  }
   CacheService.getScriptCache().remove('stats');
   ui.alert('All-time stats rebuilt: ' + rows.length + ' teams across ' + stats.years.length +
            ' finished tournaments (' + stats.years[0] + '-' + stats.years[stats.years.length - 1] + ').\n' +
-           '\nStored in ' + STATS_FILE + ', with a tab per team in "' + TEAMS_FILE + '".');
+           '\nStored in ' + STATS_FILE + ', with a tab per team in "' + TEAMS_FILE + '".' + teamNote);
 }
 
 // Narratives live in the repo so they can be written and reviewed like code.
@@ -1000,7 +1018,13 @@ function doGet(e) {
   if (p.action === 'stats') {
     var cache = CacheService.getScriptCache();
     var hit = cache.get('stats');
-    if (!hit) { hit = JSON.stringify(readStats_()); cache.put('stats', hit, 1800); }
+    if (!hit) {
+      var payload = readStats_();
+      hit = JSON.stringify(payload);
+      // Only cache a good answer. Caching an error would keep serving it long
+      // after the sheet was fixed.
+      if (!payload.error) cache.put('stats', hit, 600);
+    }
     return ContentService.createTextOutput(hit).setMimeType(ContentService.MimeType.JSON);
   }
   if (p.action === 'game') {
