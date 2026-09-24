@@ -6,8 +6,8 @@
     "Top 3 from each pool made a 12-team bracket; the four winless teams did not advance.",
     "Red, Blue and Yellow games are reconstructed from the round tables; every team's point total matches the figure written beside its name.",
     "Green's round 3 is covered by tape in the photo, so that pool is entered as records only (Teams tab Record column) with no game scores.",
-    "The final was never filled in on the bracket, so game 11 has both finalists but no result.",
-    "Seed Overrides pin each pool's top 3 as seeded into the bracket."
+    "Seed Overrides pin each pool's top 3 as seeded into the bracket.",
+    "The 2020 final was not written on the bracket at the time; the result \u2014 Trash n Stache over Muck Fichigan \u2014 was confirmed later from memory."
   ],
   "teams": {
     "Red": [
@@ -302,7 +302,7 @@
       "game": 11,
       "a": "W9",
       "b": "W10",
-      "winner": null
+      "winner": "b"
     }
   ],
   "ticker": [
@@ -315,6 +315,6 @@
     "QUARTERFINALS \u2014 And the giants fell. Muck Fichigan held serve over Dickens Cider, but Del Bocce Vista upset Vivace do Tinge, Trash n Stache ran through the unbeaten Covid Cowboys, and then the big one: VANDELAY INDUSTRIES INDUSTRIES KNOCKED OUT THE HAWKEYES. The defending champions, 3-0 in the group, out in one game.",
     "SEMIFINALS \u2014 Muck Fichigan turned back Del Bocce Vista to reach the final unbeaten. And Trash n Stache, who'd already taken down the Covid Cowboys, did it again \u2014 ending Vandelay Industries Industries's giant-killing run. Two teams left.",
     "THE FINAL \u2014 Muck Fichigan: 3-0, 61 points, group champions, two clean bracket wins, not a blemish anywhere. Trash n Stache: out of the three-way logjam in Yellow, and then the hardest road in the tournament \u2014 the undefeated Covid Cowboys AND the team that put out the champions.",
-    "\u26a0\ufe0f 2020 \u2014 AND THEN THE RECORD STOPS. Muck Fichigan and Trash n Stache took the mat for the title... and nobody ever wrote down who won. The Winner line on the 2020 bracket is blank to this day. If you were there \u2014 we'd love to know."
+    "\ud83c\udfc6 CHAMPIONS: TRASH N STACHE \ud83c\udfc6 \u2014 Out of a three-way logjam in Yellow, past the unbeaten Covid Cowboys, past the side that had just knocked out the defending champions, and then past Muck Fichigan \u2014 3-0 in their group and unbeaten all day \u2014 with the trophy on the line. And a word for Spencer: the drunkest man ever to win this tournament. The covid year belongs to Trash n Stache."
   ]
 }

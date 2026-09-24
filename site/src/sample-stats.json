@@ -1,5 +1,15 @@
 {
   "updatedAt": null,
+  "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
   "teams": [
     {
       "team": "White Zin",
@@ -155,18 +165,18 @@
       "titles": 0,
       "titleYears": [],
       "w": 22,
-      "l": 8,
+      "l": 9,
       "t": 1,
       "koYears": 4,
       "koW": 6,
-      "koL": 3,
+      "koL": 4,
       "groupTitles": 4,
       "tournaments": 5,
-      "pct": 0.726,
-      "facedMost": "Don Cuzzi (2)",
+      "pct": 0.703,
+      "facedMost": "Trash n Stache (3)",
       "beatMost": "Trash n Stache (2)",
       "lostMost": "White Zin (2)",
-      "narrative": "Four group titles in five appearances \u2014 only White Zin has more \u2014 and still no trophy. Muck Fichigan went 3-0 in 2020, won Green in 2021, won Orange in 2022, and reached the semifinals in both. In 2025 they went 4-0-1, the only side nobody could beat all tournament, marched to the final, and ran into White Zin. Their .726 is bettered only by White Zin themselves. The last step is the one that keeps eluding them."
+      "narrative": "Four group titles in five appearances \u2014 only White Zin has more \u2014 and still no trophy, though they have come within one game of it twice. Muck Fichigan went 3-0 in 2020 and reached the final, only for Trash n Stache to take it off them. They won Green in 2021 and Orange in 2022, reaching the semifinals in both. In 2025 they went 4-0-1, the only side nobody could beat all tournament, marched to the final again, and ran into White Zin. Their .726 is bettered only by White Zin themselves. Twice a finalist, twice denied."
     },
     {
       "team": "Smug Champs",
@@ -268,6 +278,31 @@
       "narrative": "Three tournaments, and they got better every single time. The Big LeBocce went out in round one in 2021, reached the quarterfinals in 2022, then took Orange outright in 2023 at 4-1 with 99 points \u2014 the biggest haul anyone posted that year \u2014 before the eventual champions stopped them in the semifinals. They are 11-8 all time and 2-3 in brackets. Brothers Boor have their number, winning two of three. A short career, steeply upward."
     },
     {
+      "team": "Trash n Stache",
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "titles": 1,
+      "titleYears": [
+        2020
+      ],
+      "w": 11,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 5,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.605,
+      "facedMost": "Muck Fichigan (3)",
+      "beatMost": "Dickens Cider (2)",
+      "lostMost": "Muck Fichigan (2)",
+      "narrative": "Three tournaments, one trophy, and the best knockout record in the game. Trash n Stache came out of a three-way logjam in Yellow in 2020, then beat Bros Boor, the unbeaten Covid Cowboys, Vandelay Industry \u2014 the side that had just knocked out the defending champions \u2014 and finally Muck Fichigan, 3-0 in their group and unbeaten all day, in the final. Five knockout wins against a single defeat. They reached the quarterfinals again in 2021 and slipped to 2-3 in 2025. And one honour is theirs alone: Spencer, the drunkest man ever to win this thing."
+    },
+    {
       "team": "Vandelay Industries",
       "years": [
         2020,
@@ -338,29 +373,6 @@
       "beatMost": "Steam Punks (1)",
       "lostMost": "White Zin (2)",
       "narrative": "Three tournaments, one group title, and a habit of running into White Zin. John-John went 1-2 as newcomers in 2018, then won Yellow in 2019 at 4-1 and marched to the semifinals \u2014 the best day they had. In 2021 they went 4-1 again and racked up 97 points, more than anyone else in the tournament, finished second, and were bounced in round one by the last seed in the field. Both of their career losses to White Zin came in brackets. They went out at the top."
-    },
-    {
-      "team": "Trash n Stache",
-      "years": [
-        2020,
-        2021,
-        2025
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 10,
-      "l": 7,
-      "t": 1,
-      "koYears": 2,
-      "koW": 4,
-      "koL": 1,
-      "groupTitles": 0,
-      "tournaments": 3,
-      "pct": 0.583,
-      "facedMost": "Dickens Cider (2)",
-      "beatMost": "Dickens Cider (2)",
-      "lostMost": "Muck Fichigan (2)",
-      "narrative": "Three tournaments and the strangest knockout record in the book: 4-1. Trash n Stache came out of a three-way logjam in 2020, beat the unbeaten Covid Cowboys and then the side that had just knocked out the defending champions, and reached a final that was never recorded \u2014 the Winner line on the 2020 bracket is blank to this day. They made the quarterfinals in 2021 and slipped to 2-3 in 2025. Muck Fichigan have beaten them twice. Somewhere out there is an answer about 2020."
     },
     {
       "team": "Guns n Rollers",
@@ -2048,15 +2060,5 @@
       "lostMost": "Loopers (1)",
       "narrative": "Wildcat entered once, in 2019, and Yellow was unkind: 0-5, bottom of the pile, and no way out of the group. Loopers were one of the teams that saw them off. They have not been seen since."
     }
-  ],
-  "years": [
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025
   ]
 }
