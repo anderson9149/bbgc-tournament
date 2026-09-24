@@ -39,6 +39,8 @@ var FIRST_YEAR = 2016;
 var STATS_FILE = 'BBGC_AllTimeStats';
 var TEAMS_FILE = 'Team Summary';
 var COURSE_FILE = 'BBGC_CourseGuide';
+var ROSTER_FILE = 'BBGC_TeamRosters';
+var ROSTER_PLAYERS = 4;   // blank columns for the names, widen by hand if a team needs more
 var HISTORY_URL = 'https://raw.githubusercontent.com/anderson9149/bbgc-tournament/main/history/';
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
@@ -86,6 +88,7 @@ function onOpen() {
     .addSeparator()
     .addItem('Rebuild all-time stats', 'rebuildStats')
     .addItem('Rebuild course guide', 'rebuildCourseGuide')
+    .addItem('Build team roster sheet', 'buildTeamRoster')
     .addItem('Clear website cache', 'clearWebCache')
     .addSeparator()
     .addItem('Lock past years (warn before editing)', 'lockPastYears')
@@ -710,6 +713,67 @@ function computeAllTime_() {
   // with no per-game scores, so the site says which years it can actually count.
   return { teams: teams, years: played,
            h2hGroup: Object.keys(h2hGroup).sort(), h2hKo: Object.keys(h2hKo).sort() };
+}
+
+// ---------------------------------------------------- team rosters
+
+// A sheet with one row per team that has ever played, for filling in who was
+// on it. Re-running keeps every name already typed: rows are matched on the
+// team name, so a rebuild only adds teams and refreshes the year columns.
+function buildTeamRoster() {
+  var ui = SpreadsheetApp.getUi();
+  var stats = readStats_();
+  if (stats.error) { ui.alert(stats.error); return; }
+  if (!stats.teams.length) { ui.alert('No teams in the all-time sheet yet.'); return; }
+
+  var folder = folder_();
+  var it = folder.getFilesByName(ROSTER_FILE);
+  var ss;
+  if (it.hasNext()) ss = SpreadsheetApp.openById(it.next().getId());
+  else { ss = SpreadsheetApp.create(ROSTER_FILE); DriveApp.getFileById(ss.getId()).moveTo(folder); }
+
+  // whatever is already filled in, keyed by team
+  var sh = ss.getSheetByName('Rosters');
+  var kept = {};
+  if (sh && sh.getLastRow() > 1 && sh.getLastColumn() >= 4) {
+    sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues().forEach(function (r) {
+      if (r[0]) kept[String(r[0])] = r.slice(3);
+    });
+  }
+  if (!sh) sh = ss.insertSheet('Rosters');
+  var oldFilter = sh.getFilter();
+  if (oldFilter) oldFilter.remove();   // clear() leaves it behind, and a second one throws
+
+  var players = [];
+  for (var i = 1; i <= ROSTER_PLAYERS; i++) players.push('Player ' + i);
+  var head = ['Team', 'Years Played', 'Tournaments'].concat(players).concat(['Notes']);
+
+  var teams = stats.teams.slice().sort(function (a, b) { return a.team.localeCompare(b.team); });
+  var rows = teams.map(function (t) {
+    var tail = kept[t.team] || [];
+    var row = [t.team, t.years.join(' '), t.years.length];
+    for (var i = 0; i < head.length - 3; i++) row.push(tail[i] === undefined ? '' : tail[i]);
+    return row;
+  });
+
+  sh.clear();
+  sh.clearFormats();
+  header_(sh, 1, head);
+  sh.getRange(2, 1, rows.length, head.length).setValues(rows);
+  sh.setColumnWidth(1, 220);
+  sh.setColumnWidth(2, 200);
+  sh.setColumnWidth(3, 100);
+  for (var c = 4; c < head.length; c++) sh.setColumnWidth(c, 160);
+  sh.setColumnWidth(head.length, 260);
+  sh.getRange(2, 3, rows.length, 1).setHorizontalAlignment('center');
+  sh.getRange(1, 1, rows.length + 1, head.length).createFilter();
+
+  var extra = ss.getSheetByName('Sheet1');
+  if (extra && ss.getSheets().length > 1) ss.deleteSheet(extra);
+
+  var added = rows.filter(function (r) { return !kept[r[0]]; }).length;
+  ui.alert(ROSTER_FILE + ' is ready in ' + FOLDER_NAME + ': ' + rows.length + ' teams' +
+           (added && Object.keys(kept).length ? ' (' + added + ' new)' : '') + '.\n\n' + ss.getUrl());
 }
 
 // Read the stored sheet back for the website.
