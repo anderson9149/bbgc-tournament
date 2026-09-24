@@ -10,6 +10,7 @@
  *             Web app, "Execute as: Me", "Who has access: Anyone".
  *             ?year=2024 selects a year; the default is the latest year.
  *             ?action=game&a=<team>&b=<team> returns one game's hole scores.
+ *             ?action=live returns every game on the HoleScores tab.
  *             ?action=holes returns the course guide (hole names + narratives).
  *             ?action=stats returns the all-time table built by rebuildStats()
  *             (finished tournaments only — the current year is excluded).
@@ -529,6 +530,7 @@ function readHoles_() {
 function clearWebCache() {
   var cache = CacheService.getScriptCache();
   var keys = ['stats', 'years', 'holes'];
+  Object.keys(yearFiles_(true)).forEach(function (y) { keys.push('live:' + y); });
   Object.keys(yearFiles_(true)).forEach(function (y) { keys.push('payload:' + y); });
   cache.removeAll(keys);
   SpreadsheetApp.getUi().alert('Cleared. The website will re-read the sheets on its next refresh.');
@@ -844,6 +846,32 @@ function importHistory() {
            scores.filter(function (x) { return x[0] !== ''; }).length + ' pool games, ' + h.bracket.length + ' bracket games' + (h.ticker && h.ticker.length ? ', ' + h.ticker.length + ' ticker messages' : '') + '.');
 }
 
+// Every game on the HoleScores tab, for the website's Live Look In.
+function readLive_(ss) {
+  var sh = ss.getSheetByName(HOLE_SHEET);
+  if (!sh || sh.getLastRow() < 2) return { games: [] };
+  var vals = sh.getRange(2, 1, sh.getLastRow() - 1, UPD_COL).getValues();
+  var games = [];
+  vals.forEach(function (r) {
+    if (!r[0] || !r[1]) return;
+    var holes = [], a = 0, b = 0, played = 0;
+    for (var i = 0; i < HOLES; i++) {
+      var v = r[HOLE_COL - 1 + i];
+      if (v === '' || v === null) { holes.push(null); continue; }
+      var n = Number(v);
+      if (isNaN(n)) { holes.push(null); continue; }
+      holes.push(n); played++;
+      if (n > 0) a += n; else if (n < 0) b += -n;
+    }
+    var upd = r[UPD_COL - 1];
+    games.push({ teamA: String(r[0]), teamB: String(r[1]), holes: holes,
+                 scoreA: a, scoreB: b, played: played,
+                 done: r[DONE_COL - 1] === true,
+                 updated: upd instanceof Date ? upd.toISOString() : '' });
+  });
+  return { games: games };
+}
+
 // ------------------------------------------------------------- PINs
 
 // Fills column D of Teams with unique random 4-digit PINs. Cells that already
@@ -1075,6 +1103,15 @@ function doPost(e) {
 
 function doGet(e) {
   var p = (e && e.parameter) || {};
+  if (p.action === 'live') {
+    var lt = spreadsheetForYear_(p.year);
+    if (!lt) return json_({ error: 'No results sheet for ' + p.year });
+    var lc = CacheService.getScriptCache();
+    var lkey = 'live:' + lt.year;
+    var lh = lc.get(lkey);
+    if (!lh) { lh = JSON.stringify(readLive_(lt.ss)); lc.put(lkey, lh, 10); }
+    return ContentService.createTextOutput(lh).setMimeType(ContentService.MimeType.JSON);
+  }
   if (p.action === 'holes') {
     var hc = CacheService.getScriptCache();
     var hh = hc.get('holes');

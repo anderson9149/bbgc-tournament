@@ -7,6 +7,7 @@ import { Ticker } from './Ticker.jsx'
 import { Stats, useStats } from './Stats.jsx'
 import { Overlay, Story } from './Overlay.jsx'
 import { CourseMap, useHoles } from './CourseMap.jsx'
+import { Live, useLive } from './Live.jsx'
 import { API_URL as CONFIGURED_URL } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
@@ -21,6 +22,7 @@ export default function App() {
   const [popup, setPopup] = useState(null)   // 'story' | 'map' | null
   const { stats, error: statsError } = useStats()
   const holes = useHoles()
+  const live = useLive(tab === 'live')
 
   const changeYear = (y) => {
     setYear(y)
@@ -33,13 +35,14 @@ export default function App() {
 
   // Past years have no Stats or Course Map tab; bounce back to the group stage.
   useEffect(() => {
-    if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap')) setTab('group')
+    if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live')) setTab('group')
   }, [isCurrentYear, tab])
   // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
   const scale = useStageScale()
 
-  const bg = `${BASE}bg/${tab}-${isTV ? 'landscape' : 'portrait'}.webp`
+  const bgTab = tab === 'live' ? 'group' : tab
+  const bg = `${BASE}bg/${bgTab}-${isTV ? 'landscape' : 'portrait'}.webp`
 
   const content = (
     <>
@@ -53,6 +56,7 @@ export default function App() {
             </button>
             <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>Stats</button>
             <button className={tab === 'coursemap' ? 'active' : ''} onClick={() => setTab('coursemap')}>Course Map</button>
+            <button className={tab === 'live' ? 'active' : ''} onClick={() => setTab('live')}>Live</button>
           </>
         ) : (
           <button className={popup === 'story' ? 'active' : ''} onClick={() => setPopup(popup === 'story' ? null : 'story')}>
@@ -68,6 +72,8 @@ export default function App() {
 
       {!data ? (
         <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
+      ) : tab === 'live' ? (
+        <Live data={live} />
       ) : tab === 'coursemap' ? (
         <CourseMap holes={holes} tv={isTV} />
       ) : tab === 'stats' ? (
@@ -98,7 +104,7 @@ export default function App() {
     )
   }
   return (
-    <div className={`mobile tab-${tab}`}>
+    <div className={`mobile tab-${bgTab}`}>
       <div className="mobile-bg" style={{ backgroundImage: `url(${bg})` }} />
       {content}
     </div>

@@ -59,6 +59,10 @@ refuse to run on past years, so imported brackets can't be clobbered.
 round. Put whatever the year actually played in the history JSON; the importer writes that many rows
 and clears the rest. Games that were forfeited get `null` scores.
 
+**Live Look In:** the current year's **Live** tab reads the `HoleScores` tab via `?action=live` and
+polls every 20 seconds while it is open. Each game is two rows (one per team) across the 18 holes
+with a total; **Active** is anything not yet marked Done, **Complete** is the rest.
+
 **Course map:** the Course Map tab reads hole names and narratives from `BBGC_CourseGuide`
 (`?action=holes`), with photos served from `site/public/course/`. On TV, green markers sit over the
 numbers printed on the map artwork — their positions live in `site/src/map-pins.json` as percentages,

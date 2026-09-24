@@ -190,6 +190,38 @@ button { font: inherit; cursor: pointer; }
 .story li:last-child { border-bottom: 0; }
 .story li:first-child, .story li:last-child { font-weight: 800; }
 
+/* ------------------------------------------------------ live look in */
+.live { display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.live-tabs { display: flex; gap: 8px; }
+.live-tabs button { border: 2px solid rgba(255,255,255,.6); background: rgba(0,0,0,.3); color: #fff;
+  border-radius: 999px; padding: 6px 18px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+.live-tabs button.on { background: #fff; color: var(--red); border-color: #fff; }
+.live-scroll { overflow: auto; min-height: 0; }
+/* one shared column template keeps the header and every game aligned */
+.live-head, .live-row { display: grid; grid-template-columns: var(--who) repeat(18, 1fr) var(--tot); align-items: center; }
+.live-head { position: sticky; top: 0; z-index: 2; background: rgba(46,0,6,.96); padding: 4px 0;
+  font-weight: 800; color: rgba(255,255,255,.75); }
+.live-head .cell, .live-head .tot { text-align: center; font-size: .72em; }
+.live-game { position: relative; background: rgba(38, 0, 5, .88); border-radius: 10px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.16); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
+.live-game + .live-game { margin-top: 14px; }
+.live-row { padding: 5px 0; }
+.live-row + .live-row { border-top: 1px solid var(--panel-line); }
+.live-row.win { background: rgba(255,255,255,.08); }
+.live-row .who { padding-left: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.live-row .cell { text-align: center; font-variant-numeric: tabular-nums; }
+.live-row .cell:nth-child(even) { background: rgba(255,255,255,.045); }
+.live-head .cell:nth-child(odd) { background: rgba(255,255,255,.045); }
+.live-row .cell.zero { opacity: .28; }
+.live-row .cell.scored { font-weight: 800; color: var(--yellow); }
+.live-row .cell.blank { opacity: 0; }
+.live-row .tot { text-align: center; font-weight: 800; font-variant-numeric: tabular-nums;
+  background: rgba(0,0,0,.28); border-radius: 6px; margin-right: 10px; }
+.live-row.win .tot { background: var(--pool-red); }
+.thru { position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font-size: .58em; font-weight: 800; text-transform: uppercase; letter-spacing: .1em;
+  opacity: .55; writing-mode: vertical-rl; }
+
 /* ----------------------------------------------------- course map */
 /* the box must hug the image exactly, or the percentage-positioned pins drift */
 .map { position: relative; line-height: 0; align-self: start; justify-self: start; }
@@ -245,6 +277,13 @@ button { font: inherit; cursor: pointer; }
 .tv .narrative p { font-size: 22px; }
 .tv .stats-note { font-size: 16px; }
 .tv .team-grid { flex: 1; }
+
+.tv .live { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
+  --who: 300px; --tot: 92px; }
+.tv .live-tabs button { font-size: 19px; }
+.tv .live-row { font-size: 23px; padding: 9px 0; }
+.tv .live-head { font-size: 22px; }
+.tv .live-row .who { font-size: 22px; }
 
 /* ============================================================ TV */
 .tv .stage {
@@ -343,6 +382,11 @@ button { font: inherit; cursor: pointer; }
 .mobile .hole-photo img { max-height: 46vh; }
 .mobile .hole-text { font-size: .92rem; }
 .mobile .year-word { display: none; }
+.mobile .live { margin-top: 16px; --who: 140px; --tot: 46px; }
+.mobile .live-scroll { overflow-x: auto; }
+.mobile .live-head, .mobile .live-row { min-width: 620px; }
+.mobile .live-row { font-size: .85rem; }
+.mobile .live-row .who { font-size: .8rem; }
 .mobile .stats { margin-top: 16px; }
 .mobile .boards { grid-template-columns: 1fr; }
 .mobile .team-grid { grid-template-columns: 1fr; }
