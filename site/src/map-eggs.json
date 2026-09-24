@@ -2,10 +2,37 @@
  {
   "id": "car",
   "left": 47.0,
-  "top": 63.4,
+  "top": 63.37,
   "w": 5.4,
   "h": 10.2,
   "img": "egg-car.webp",
   "alt": "Boner On The Dancefloor"
+ },
+ {
+  "id": "16",
+  "left": 70.5,
+  "top": 38.25,
+  "w": 4.0,
+  "h": 6.96,
+  "img": "egg-16.webp",
+  "alt": "Spectators at 16"
+ },
+ {
+  "id": "potty",
+  "left": 66.4,
+  "top": 55.95,
+  "w": 2.6,
+  "h": 4.79,
+  "img": "egg-potty.webp",
+  "alt": "Glory Hole Inspector"
+ },
+ {
+  "id": "house",
+  "left": 62.45,
+  "top": 45.67,
+  "w": 8.6,
+  "h": 9.43,
+  "img": "egg-house.webp",
+  "alt": "The keg"
  }
 ]
