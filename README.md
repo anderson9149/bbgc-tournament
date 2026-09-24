@@ -64,7 +64,8 @@ fetches it from GitHub, so edit + push, then rebuild.
 
 **All-time stats:** **BBGC → Rebuild all-time stats** totals every year up and writes the result to a
 `BBGC_AllTimeStats` spreadsheet in the folder; the site's All-Time tab reads it via `?action=stats`.
-Re-run it after importing or editing any year. It also writes a `Team Summary` workbook with one tab
+It covers **finished tournaments only** — the current calendar year is excluded, since it is still
+being played. Re-run it after importing or editing any year. It also writes a `Team Summary` workbook with one tab
 per team (stats + narrative) for browsing in Drive; the site reads the AllTime sheet, not that one. Team names must match across years for the totals to
 be right — stick to the spelling already in use (see the alias list applied in `history/`).
 

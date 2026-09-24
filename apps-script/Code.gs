@@ -10,7 +10,8 @@
  *             Web app, "Execute as: Me", "Who has access: Anyone".
  *             ?year=2024 selects a year; the default is the latest year.
  *             ?action=game&a=<team>&b=<team> returns one game's hole scores.
- *             ?action=stats returns the all-time table built by rebuildStats().
+ *             ?action=stats returns the all-time table built by rebuildStats()
+ *             (finished tournaments only — the current year is excluded).
  *   doPost()  Used by the scorekeeper page (site/score/). Body is JSON:
  *             {action:'hole', year, a, b, hole, value} writes one hole
  *             (value > 0 = team A scored, < 0 = team B scored, 0 = no score);
@@ -498,7 +499,8 @@ function rebuildStats() {
   writeTeamSummary_(stats, narr);
   CacheService.getScriptCache().remove('stats');
   ui.alert('All-time stats rebuilt: ' + rows.length + ' teams across ' + stats.years.length +
-           ' tournaments.\n\nStored in ' + STATS_FILE + ', with a tab per team in "' + TEAMS_FILE + '".');
+           ' finished tournaments (' + stats.years[0] + '-' + stats.years[stats.years.length - 1] + ').\n' +
+           '\nStored in ' + STATS_FILE + ', with a tab per team in "' + TEAMS_FILE + '".');
 }
 
 // Narratives live in the repo so they can be written and reviewed like code.
@@ -552,7 +554,10 @@ function writeTeamSummary_(stats, narr) {
 
 function computeAllTime_() {
   var years = yearFiles_(true);
-  var list = Object.keys(years).sort();
+  var thisYear = new Date().getFullYear();
+  // All-time stats cover finished tournaments only. The current year is still
+  // being played (and may hold test data), so it is left out entirely.
+  var list = Object.keys(years).filter(function (y) { return parseInt(y, 10) < thisYear; }).sort();
   var by = {};
   function T(name) {
     if (!by[name]) by[name] = { team: name, years: [], titleYears: [], titles: [],
@@ -637,7 +642,8 @@ function readStats_() {
              narrative: String(r[16] || '') };
   });
   var meta = ss.getSheetByName('Meta');
-  return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, teams: teams };
+  var covered = meta ? String(meta.getRange(2, 2).getValue()).split(' ').filter(String).map(Number) : [];
+  return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, years: covered, teams: teams };
 }
 
 // --------------------------------------------------------- locking

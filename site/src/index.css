@@ -112,6 +112,7 @@ button { font: inherit; cursor: pointer; }
 .team-pick option { color: #000; }
 .team-head .tname { font-size: 1.5em; }
 .team-head .titles { font-weight: 700; color: var(--yellow); letter-spacing: 0; text-transform: none; }
+.cabinet h2 .span { font-weight: 600; opacity: .7; letter-spacing: .06em; font-size: .8em; }
 .team-head .span { font-weight: 600; opacity: .75; font-size: .8rem; letter-spacing: .06em; }
 .team-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 12px 16px; }
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
