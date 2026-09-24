@@ -59,6 +59,11 @@ refuse to run on past years, so imported brackets can't be clobbered.
 round. Put whatever the year actually played in the history JSON; the importer writes that many rows
 and clears the rest. Games that were forfeited get `null` scores.
 
+**Course map:** the Course Map tab reads hole names and narratives from `BBGC_CourseGuide`
+(`?action=holes`), with photos served from `site/public/course/`. On TV, green markers sit over the
+numbers printed on the map artwork — their positions live in `site/src/map-pins.json` as percentages,
+so they scale with the image. On phones the markers are replaced by a 3x6 grid of the hole signs.
+
 **Team narratives:** `history/team-narratives.json` holds one paragraph per team. The stats rebuild
 fetches it from GitHub, so edit + push, then rebuild.
 

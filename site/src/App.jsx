@@ -6,6 +6,7 @@ import { Bracket } from './Bracket.jsx'
 import { Ticker } from './Ticker.jsx'
 import { Stats, useStats } from './Stats.jsx'
 import { Overlay, Story } from './Overlay.jsx'
+import { CourseMap, useHoles } from './CourseMap.jsx'
 import { API_URL as CONFIGURED_URL } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
@@ -19,6 +20,7 @@ export default function App() {
   const [tab, setTab] = useState('group')
   const [popup, setPopup] = useState(null)   // 'story' | 'map' | null
   const { stats, error: statsError } = useStats()
+  const holes = useHoles()
 
   const changeYear = (y) => {
     setYear(y)
@@ -67,7 +69,7 @@ export default function App() {
       {!data ? (
         <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
       ) : tab === 'coursemap' ? (
-        <figure className="coursemap"><img src={`${BASE}course-map.webp`} alt="Lagoni National B.G.C course map" /></figure>
+        <CourseMap holes={holes} tv={isTV} />
       ) : tab === 'stats' ? (
         <Stats stats={stats} error={statsError} tv={isTV} />
       ) : tab === 'group' ? (
