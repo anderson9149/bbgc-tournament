@@ -41,8 +41,7 @@ export default function App() {
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
   const scale = useStageScale()
 
-  const bgTab = tab === 'live' ? 'group' : tab
-  const bg = `${BASE}bg/${bgTab}-${isTV ? 'landscape' : 'portrait'}.webp`
+  const bg = `${BASE}bg/${tab}-${isTV ? 'landscape' : 'portrait'}.webp`
 
   const content = (
     <>
@@ -104,7 +103,7 @@ export default function App() {
     )
   }
   return (
-    <div className={`mobile tab-${bgTab}`}>
+    <div className={`mobile tab-${tab}`}>
       <div className="mobile-bg" style={{ backgroundImage: `url(${bg})` }} />
       {content}
     </div>

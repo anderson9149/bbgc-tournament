@@ -202,11 +202,12 @@ button { font: inherit; cursor: pointer; }
 .live-head { position: sticky; top: 0; z-index: 2; background: rgba(46,0,6,.96); padding: 4px 0;
   font-weight: 800; color: rgba(255,255,255,.75); }
 .live-head .cell, .live-head .tot { text-align: center; font-size: .72em; }
-.live-game { position: relative; background: rgba(38, 0, 5, .88); border-radius: 10px; overflow: hidden;
-  border: 1px solid rgba(255,255,255,.16); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-.live-game + .live-game { margin-top: 14px; }
+/* a full white border around both rows makes each game read as one unit */
+.live-game { position: relative; background: rgba(30, 0, 4, .9); border-radius: 10px; overflow: hidden;
+  border: 2px solid rgba(255,255,255,.85); box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+.live-game + .live-game { margin-top: 16px; }
 .live-row { padding: 5px 0; }
-.live-row + .live-row { border-top: 1px solid var(--panel-line); }
+.live-row + .live-row { border-top: 1px solid rgba(255,255,255,.28); }
 .live-row.win { background: rgba(255,255,255,.08); }
 .live-row .who { padding-left: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .live-row .cell { text-align: center; font-variant-numeric: tabular-nums; }
@@ -356,7 +357,8 @@ button { font: inherit; cursor: pointer; }
 .mobile-bg { position: fixed; inset: 0; z-index: -1; background: var(--red) center top / cover no-repeat; }
 /* All three portrait images bake their title into the top ~11.5%; keep content below it. */
 .mobile .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 200 + 8px); flex-wrap: wrap; gap: 8px; }
-.mobile.tab-coursemap .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 240 + 8px); }
+.mobile.tab-coursemap .menu,
+.mobile.tab-live .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 240 + 8px); }
 .mobile .menu button { font-size: 13px; padding: 8px 14px; }
 .mobile .menu select.year { font-size: 13px; padding: 8px 34px 8px 14px; background-position: right 12px center; }
 .mobile .pools { grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
