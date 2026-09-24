@@ -305,10 +305,10 @@ button { font: inherit; cursor: pointer; }
 .tv .coursemap-tv .hole-panel { height: 692px; justify-content: center; }
 .tv .pin { font-size: 17px; width: 2.5em; height: 2.5em; }
 .tv .coursemap-tv .hole-top { flex: 0 1 auto; }
-.tv .hole-photo img { max-height: 430px; }
+.tv .hole-photo img { max-height: 340px; }
 .tv .hole-sign { width: 300px; max-width: 300px; flex: 0 0 auto; align-self: center; }
 /* let the text take what it needs; the photo absorbs the slack */
-.tv .hole-text { font-size: 17px; line-height: 1.4; flex: 0 0 auto; }
+.tv .hole-text { font-size: 22px; line-height: 1.42; flex: 0 0 auto; padding: 12px 16px; }
 .tv .hole-panel { gap: 12px; }
 
 /* ======================================================== mobile */
