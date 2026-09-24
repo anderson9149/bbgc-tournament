@@ -40,7 +40,7 @@ var STATS_FILE = 'BBGC_AllTimeStats';
 var TEAMS_FILE = 'Team Summary';
 var COURSE_FILE = 'BBGC_CourseGuide';
 var ROSTER_FILE = 'BBGC_TeamRosters';
-var ROSTER_PLAYERS = 4;   // blank columns for the names, widen by hand if a team needs more
+var ROSTER_PLAYERS = 2;   // two per team
 var HISTORY_URL = 'https://raw.githubusercontent.com/anderson9149/bbgc-tournament/main/history/';
 
 var POOLS = ['Orange', 'Red', 'Blue', 'Yellow'];
@@ -746,13 +746,26 @@ function buildTeamRoster() {
 
   var players = [];
   for (var i = 1; i <= ROSTER_PLAYERS; i++) players.push('Player ' + i);
-  var head = ['Team', 'Years Played', 'Tournaments'].concat(players).concat(['Notes']);
+  var head = ['Team', 'Years Played', 'Tournaments'].concat(players).concat(['Photo', 'Notes']);
+
+  // Names transcribed into the repo. A cell already filled in here wins, so a
+  // rebuild never overwrites something typed by hand.
+  var repo = fetchRosters_();
 
   var teams = stats.teams.slice().sort(function (a, b) { return a.team.localeCompare(b.team); });
+  var filled = 0;
   var rows = teams.map(function (t) {
     var tail = kept[t.team] || [];
+    var r = repo[t.team] || {};
+    var fromRepo = (r.players || []).slice(0, ROSTER_PLAYERS);
+    while (fromRepo.length < ROSTER_PLAYERS) fromRepo.push('');
+    fromRepo.push(r.photo || '');
     var row = [t.team, t.years.join(' '), t.years.length];
-    for (var i = 0; i < head.length - 3; i++) row.push(tail[i] === undefined ? '' : tail[i]);
+    for (var i = 0; i < head.length - 3; i++) {
+      var typed = tail[i] === undefined ? '' : tail[i];
+      row.push(typed !== '' ? typed : (fromRepo[i] === undefined ? '' : fromRepo[i]));
+    }
+    if (r.players && r.players.length) filled++;
     return row;
   });
 
@@ -773,7 +786,14 @@ function buildTeamRoster() {
 
   var added = rows.filter(function (r) { return !kept[r[0]]; }).length;
   ui.alert(ROSTER_FILE + ' is ready in ' + FOLDER_NAME + ': ' + rows.length + ' teams' +
-           (added && Object.keys(kept).length ? ' (' + added + ' new)' : '') + '.\n\n' + ss.getUrl());
+           (added && Object.keys(kept).length ? ' (' + added + ' new)' : '') +
+           ', ' + filled + ' with names from the repo.\n\n' + ss.getUrl());
+}
+
+// { 'White Zin': { players: ['…','…'], photo: 'white-zin.webp' }, … }
+function fetchRosters_() {
+  var res = UrlFetchApp.fetch(HISTORY_URL + 'team-rosters.json', { muteHttpExceptions: true });
+  return res.getResponseCode() === 200 ? JSON.parse(res.getContentText()) : {};
 }
 
 // Read the stored sheet back for the website.
