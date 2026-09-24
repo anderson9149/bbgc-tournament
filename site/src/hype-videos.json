@@ -1,8 +1,8 @@
 {
- "_comment": "year -> YouTube video id (the part after youtu.be/ or v=). Unlisted works; private does not, and neither does a video a Content ID claim has blocked.",
+ "_comment": "year -> a YouTube id (the part after youtu.be/ or v=), or {\"drive\": \"<file id>\"} for a Google Drive file shared with 'anyone with the link'. Private videos do not embed, and neither does one a Content ID claim has blocked.",
  "2021": "zgSLBq05DX0",
+ "2022": { "drive": "1dIX0AT3z2nvL5jbkyAPWmsvgubN4srEz" },
  "2023": "fRwbiEQTb98",
  "2024": "2_xv5md_S4M",
- "2025": "wLd2lDRqmQQ",
- "_2022_blocked": "lKnYbpqdcGc — uploads fine but WMG blocked playback on a Content ID claim; restore this line as \"2022\" once the claim is cleared in Studio"
+ "2025": "wLd2lDRqmQQ"
 }
