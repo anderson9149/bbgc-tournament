@@ -210,12 +210,12 @@ button { font: inherit; cursor: pointer; }
   box-shadow: 0 12px 40px rgba(0,0,0,.55); }
 .egg-close { position: absolute; top: 6px; right: 6px; border: 0; background: rgba(0,0,0,.55); color: #fff;
   border-radius: 999px; width: 2em; height: 2em; font-weight: 800; }
-/* sign on the left, photo on the right */
-.hole-top { display: flex; gap: 12px; align-items: flex-start; min-height: 0; }
-.hole-sign { width: 100%; max-width: 330px; border-radius: 8px; flex: 0 0 auto; }
-.hole-photo { margin: 0; flex: 1; min-width: 0; min-height: 0; display: flex; align-items: center; justify-content: center;
-  background: rgba(0,0,0,.25); border-radius: 10px; overflow: hidden; }
-.hole-photo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+/* sign on the left, photo on the right, sign centred on the photo's midline */
+.hole-top { display: flex; gap: 12px; align-items: center; min-height: 0; }
+.hole-sign { width: 100%; max-width: 330px; border-radius: 8px; flex: 0 0 auto; align-self: center; }
+.hole-photo { margin: 0; flex: 0 1 auto; min-width: 0; min-height: 0; line-height: 0;
+  border-radius: 10px; overflow: hidden; }
+.hole-photo img { display: block; max-width: 100%; object-fit: contain; }
 .hole-text { margin: 0; background: var(--panel); border-radius: 10px; padding: 10px 14px;
   font-weight: 600; line-height: 1.45; }
 
@@ -302,12 +302,14 @@ button { font: inherit; cursor: pointer; }
 .tv .coursemap-tv { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
   display: grid; grid-template-columns: 1070px 1fr; gap: 22px; align-items: start; }
 .tv .coursemap-tv .map { width: 1070px; }
-.tv .coursemap-tv .hole-panel { height: 692px; }
+.tv .coursemap-tv .hole-panel { height: 692px; justify-content: center; }
 .tv .pin { font-size: 17px; width: 2.5em; height: 2.5em; }
-.tv .coursemap-tv .hole-top { flex: 1; min-height: 0; }
-.tv .hole-sign { width: 300px; max-width: 300px; flex: 0 0 auto; align-self: flex-start; }
+.tv .coursemap-tv .hole-top { flex: 0 1 auto; }
+.tv .hole-photo img { max-height: 430px; }
+.tv .hole-sign { width: 300px; max-width: 300px; flex: 0 0 auto; align-self: center; }
 /* let the text take what it needs; the photo absorbs the slack */
 .tv .hole-text { font-size: 17px; line-height: 1.4; flex: 0 0 auto; }
+.tv .hole-panel { gap: 12px; }
 
 /* ======================================================== mobile */
 .mobile { min-height: 100vh; padding: 0 12px 70px; }
@@ -338,7 +340,7 @@ button { font: inherit; cursor: pointer; }
 .mobile .hole-grid button.on { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(242,194,48,.35); }
 .mobile .hole-grid img { width: 100%; display: block; border-radius: 6px; }
 .mobile .hole-sign { width: 46%; max-width: 46%; }
-.mobile .hole-photo { max-height: 46vh; }
+.mobile .hole-photo img { max-height: 46vh; }
 .mobile .hole-text { font-size: .92rem; }
 .mobile .year-word { display: none; }
 .mobile .stats { margin-top: 16px; }
