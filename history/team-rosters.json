@@ -34,11 +34,25 @@
   ],
   "photo": "the-big-lebocce.webp"
  },
+ "The Mesh Strikes Back": {
+  "players": [
+   "Jeff Polk",
+   "Mayank Srivastava"
+  ],
+  "photo": ""
+ },
  "The Seekers": {
   "players": [
    "Jeff Bauman",
    "Tim Provost"
   ],
   "photo": "the-seekers.webp"
+ },
+ "Vandelay Industries": {
+  "players": [
+   "Steve Nuzzo",
+   "Mike Boyum"
+  ],
+  "photo": ""
  }
 }

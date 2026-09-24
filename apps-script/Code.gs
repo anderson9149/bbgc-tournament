@@ -784,10 +784,18 @@ function buildTeamRoster() {
   var extra = ss.getSheetByName('Sheet1');
   if (extra && ss.getSheets().length > 1) ss.deleteSheet(extra);
 
+  // A roster keyed to a name that is not in the all-time list would never
+  // reach the sheet, so say so rather than dropping it quietly.
+  var known = {};
+  teams.forEach(function (t) { known[t.team] = true; });
+  var orphans = Object.keys(repo).filter(function (k) { return !known[k]; });
+
   var added = rows.filter(function (r) { return !kept[r[0]]; }).length;
   ui.alert(ROSTER_FILE + ' is ready in ' + FOLDER_NAME + ': ' + rows.length + ' teams' +
            (added && Object.keys(kept).length ? ' (' + added + ' new)' : '') +
-           ', ' + filled + ' with names from the repo.\n\n' + ss.getUrl());
+           ', ' + filled + ' with names from the repo.' +
+           (orphans.length ? '\n\nNot in the all-time list, so not written: ' + orphans.join(', ') : '') +
+           '\n\n' + ss.getUrl());
 }
 
 // { 'White Zin': { players: ['…','…'], photo: 'white-zin.webp' }, … }
