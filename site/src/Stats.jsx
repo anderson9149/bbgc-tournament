@@ -22,6 +22,32 @@ export function useStats() {
 
 const MIN_GAMES = 15   // keep one-off teams out of the percentage table
 
+// [2018,2019,2020,2021,2023,2024,2025] -> "2018–2021, 2023–2025"
+function yearSpans(years) {
+  if (!years?.length) return ''
+  const ys = [...new Set(years)].sort((a, b) => a - b)
+  const out = []
+  let start = ys[0], end = ys[0]
+  for (let i = 1; i <= ys.length; i++) {
+    if (ys[i] === end + 1) { end = ys[i]; continue }
+    out.push(start === end ? `${start}` : `${start}–${end}`)
+    start = end = ys[i]
+  }
+  return out.join(', ')
+}
+
+// Head-to-head only counts games whose score was recorded. Some years came off
+// a poster with records but no matchups, so say plainly what is behind it.
+function h2hCoverage(stats) {
+  const ko = yearSpans(stats.h2h?.ko || stats.years)
+  const group = yearSpans(stats.h2h?.group || stats.years)
+  const parts = []
+  if (ko) parts.push(`knockout rounds ${ko}`)
+  if (group) parts.push(`group play ${group}`)
+  if (!parts.length) return null
+  return `*Head to head counts only games with a recorded score — ${parts.join(', ')}.`
+}
+
 export function Stats({ stats, error, tv }) {
   const [who, setWho] = useState('')          // '' = All Time, otherwise a team name
   const ranked = useMemo(() => (stats ? [...stats.teams].sort((a, b) => b.w - a.w || a.team.localeCompare(b.team)) : []), [stats])
@@ -38,7 +64,7 @@ export function Stats({ stats, error, tv }) {
   )
   if (who) {
     const t = ranked.find((x) => x.team === who)
-    return t ? <TeamCard t={t} picker={picker} note={note} /> : null
+    return t ? <TeamCard t={t} picker={picker} note={note} h2hNote={h2hCoverage(stats)} /> : null
   }
 
   const teams = stats.teams
@@ -102,7 +128,7 @@ export function Stats({ stats, error, tv }) {
   )
 }
 
-function TeamCard({ t, picker, note }) {
+function TeamCard({ t, picker, note, h2hNote }) {
   const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
   const cells = [
     ['Team Record', rec],
@@ -132,6 +158,7 @@ function TeamCard({ t, picker, note }) {
           <ol>{h2h.map(([k, v]) => (
             <li key={k}><span className="team">{k}</span><span className="val">{v || '—'}</span></li>
           ))}</ol>
+          {h2hNote && <p className="h2h-note">{h2hNote}</p>}
         </article>
       </div>
       {t.narrative && <div className="narrative"><p>{t.narrative}</p></div>}

@@ -120,6 +120,10 @@ button { font: inherit; cursor: pointer; }
 .tile .k { display: block; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; opacity: .75; }
 .tile .v { display: block; font-size: 1.8rem; font-weight: 800; font-variant-numeric: tabular-nums; }
 .h2h li { justify-content: space-between; }
+/* the coverage note sits at the foot of the box, under the empty space */
+.board.h2h { display: flex; flex-direction: column; }
+.h2h-note { margin: auto 0 0; padding: 10px 14px 12px; font-size: .72rem; font-weight: 600; font-style: italic;
+  line-height: 1.45; opacity: .65; border-top: 1px solid rgba(255,255,255,.14); }
 .narrative { background: var(--panel); border-radius: 12px; padding: 12px 18px; box-shadow: 0 8px 30px rgba(0,0,0,.35); }
 .stats-note { margin: 0; text-align: center; font-weight: 600; font-style: italic; opacity: .7; font-size: .78rem; }
 .narrative p { margin: 0; line-height: 1.5; font-weight: 600; }
@@ -278,6 +282,7 @@ button { font: inherit; cursor: pointer; }
 .tv .tile .v { font-size: 38px; }
 .tv .narrative p { font-size: 22px; }
 .tv .stats-note { font-size: 16px; }
+.tv .h2h-note { font-size: 15px; padding: 12px 18px 14px; }
 .tv .team-grid { flex: 1; }
 
 .tv .live { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;

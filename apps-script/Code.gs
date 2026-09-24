@@ -566,7 +566,9 @@ function rebuildStats() {
 
   var meta = ss.getSheetByName('Meta') || ss.insertSheet('Meta');
   meta.clear();
-  meta.getRange(1, 1, 2, 2).setValues([['Updated', new Date()], ['Years', stats.years.join(' ')]]);
+  meta.getRange(1, 1, 4, 2).setValues([['Updated', new Date()], ['Years', stats.years.join(' ')],
+                                       ['H2H Group Years', stats.h2hGroup.join(' ')],
+                                       ['H2H Knockout Years', stats.h2hKo.join(' ')]]);
 
   CacheService.getScriptCache().remove('stats');   // site can serve the new table immediately
 
@@ -651,7 +653,7 @@ function computeAllTime_() {
     Object.keys(o).forEach(function (k) { if (!best || o[k] > o[best]) best = k; });
     return best ? best + ' (' + o[best] + ')' : '';
   }
-  var played = [];
+  var played = [], h2hGroup = {}, h2hKo = {};
   list.forEach(function (y) {
     var ss = SpreadsheetApp.openById(years[y]);
     var data;
@@ -662,6 +664,7 @@ function computeAllTime_() {
     // head-to-head from every game with a real score
     data.poolGames.forEach(function (g) {
       if (g.scoreA === null || g.scoreB === null || !g.teamA || !g.teamB) return;
+      h2hGroup[y] = true;
       bump(T(g.teamA).faced, g.teamB); bump(T(g.teamB).faced, g.teamA);
       if (g.scoreA > g.scoreB) { bump(T(g.teamA).beat, g.teamB); bump(T(g.teamB).lost, g.teamA); }
       else if (g.scoreB > g.scoreA) { bump(T(g.teamB).beat, g.teamA); bump(T(g.teamA).lost, g.teamB); }
@@ -683,6 +686,7 @@ function computeAllTime_() {
     data.bracket.forEach(function (g) {
       [g.teamA, g.teamB].forEach(function (n) { if (n) seen[n] = true; });
       if (g.scoreA === null || g.scoreB === null || g.scoreA === g.scoreB) return;
+      h2hKo[y] = true;
       var win = g.scoreA > g.scoreB ? g.teamA : g.teamB;
       var lose = g.scoreA > g.scoreB ? g.teamB : g.teamA;
       if (win) { T(win).koW++; T(win).w++; bump(T(win).faced, lose); bump(T(win).beat, lose); }
@@ -702,7 +706,10 @@ function computeAllTime_() {
     e.facedMost = top(e.faced); e.beatMost = top(e.beat); e.lostMost = top(e.lost);
     return e;
   }).sort(function (a, b) { return b.w - a.w || a.team.localeCompare(b.team); });
-  return { teams: teams, years: played };
+  // Head-to-head is thinner than the rest: some years survive only as records,
+  // with no per-game scores, so the site says which years it can actually count.
+  return { teams: teams, years: played,
+           h2hGroup: Object.keys(h2hGroup).sort(), h2hKo: Object.keys(h2hKo).sort() };
 }
 
 // Read the stored sheet back for the website.
@@ -722,8 +729,11 @@ function readStats_() {
              narrative: String(r[16] || '') };
   });
   var meta = ss.getSheetByName('Meta');
-  var covered = meta ? String(meta.getRange(2, 2).getValue()).split(' ').filter(String).map(Number) : [];
-  return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, years: covered, teams: teams };
+  var metaYears = function (row) {
+    return meta ? String(meta.getRange(row, 2).getValue()).split(' ').filter(String).map(Number) : [];
+  };
+  return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, years: metaYears(2), teams: teams,
+           h2h: { group: metaYears(3), ko: metaYears(4) } };
 }
 
 // --------------------------------------------------------- locking
