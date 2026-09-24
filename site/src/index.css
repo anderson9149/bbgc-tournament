@@ -195,7 +195,7 @@ button { font: inherit; cursor: pointer; }
 .story li:first-child, .story li:last-child { font-weight: 800; }
 
 /* ------------------------------------------------------ live look in */
-.live { display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.live { display: flex; flex-direction: column; gap: 10px; min-height: 0; --gutter: 20px; }
 .live-tabs { display: flex; gap: 8px; }
 .live-tabs button { border: 2px solid rgba(255,255,255,.6); background: rgba(0,0,0,.3); color: #fff;
   border-radius: 999px; padding: 6px 18px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
@@ -203,12 +203,16 @@ button { font: inherit; cursor: pointer; }
 .live-scroll { overflow: auto; min-height: 0; }
 /* one shared column template keeps the header and every game aligned */
 .live-head, .live-row { display: grid; grid-template-columns: var(--who) repeat(18, 1fr) var(--tot); align-items: center; }
+/* header and game box carry the same border and right gutter, so their
+   columns line up; the gutter is where the vertical "thru N" badge sits */
 .live-head { position: sticky; top: 0; z-index: 2; background: rgba(46,0,6,.96); padding: 4px 0;
-  font-weight: 800; color: rgba(255,255,255,.75); }
+  font-weight: 800; color: rgba(255,255,255,.75);
+  border: 2px solid transparent; padding-right: var(--gutter); }
 .live-head .cell, .live-head .tot { text-align: center; font-size: .72em; }
 /* a full white border around both rows makes each game read as one unit */
 .live-game { position: relative; background: rgba(30, 0, 4, .9); border-radius: 10px; overflow: hidden;
-  border: 2px solid rgba(255,255,255,.85); box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+  border: 2px solid rgba(255,255,255,.85); box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  padding-right: var(--gutter); }
 .live-game + .live-game { margin-top: 16px; }
 .live-row { padding: 5px 0; }
 .live-row + .live-row { border-top: 1px solid rgba(255,255,255,.28); }
@@ -222,9 +226,9 @@ button { font: inherit; cursor: pointer; }
 /* a dash marks a hole that has not been played yet */
 .live-row .cell.unplayed { color: #fff; font-weight: 800; opacity: .9; }
 .live-row .tot { text-align: center; font-weight: 800; font-variant-numeric: tabular-nums;
-  background: rgba(0,0,0,.28); border-radius: 6px; margin-right: 10px; }
+  background: rgba(0,0,0,.28); border-radius: 6px; margin-right: 6px; }
 .live-row.win .tot { background: var(--pool-red); }
-.thru { position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+.thru { position: absolute; right: 1px; top: 50%; transform: translateY(-50%);
   font-size: .58em; font-weight: 800; text-transform: uppercase; letter-spacing: .1em;
   opacity: .55; writing-mode: vertical-rl; }
 
@@ -392,7 +396,7 @@ button { font: inherit; cursor: pointer; }
 .mobile .year-word { display: none; }
 .mobile .live { margin-top: 16px; --who: 140px; --tot: 46px; }
 .mobile .live-scroll { overflow-x: auto; }
-.mobile .live-head, .mobile .live-row { min-width: 620px; }
+.mobile .live-head, .mobile .live-game { min-width: 620px; }
 .mobile .live-row { font-size: .85rem; }
 .mobile .live-row .who { font-size: .8rem; }
 .mobile .stats { margin-top: 16px; }
