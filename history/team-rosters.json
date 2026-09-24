@@ -20,6 +20,13 @@
   ],
   "photo": "guns-n-rollers.webp"
  },
+ "Long Ballz": {
+  "players": [
+   "Mike Seiffer",
+   "Graham Whalen"
+  ],
+  "photo": "long-ballz.webp"
+ },
  "Sparty Devils": {
   "players": [
    "Mike DiMucci",
@@ -39,7 +46,7 @@
    "Jeff Polk",
    "Mayank Srivastava"
   ],
-  "photo": ""
+  "photo": "the-mesh-strikes-back.webp"
  },
  "The Seekers": {
   "players": [
@@ -53,6 +60,6 @@
    "Steve Nuzzo",
    "Mike Boyum"
   ],
-  "photo": ""
+  "photo": "vandelay-industries.webp"
  }
 }
