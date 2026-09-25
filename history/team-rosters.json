@@ -13,6 +13,13 @@
   ],
   "photo": ""
  },
+ "Boilers": {
+  "players": [
+   "Jeff Polk",
+   "Ian Rodnick"
+  ],
+  "photo": ""
+ },
  "Brainerd Bergs": {
   "players": [
    "Justin Lindberg",
@@ -48,6 +55,13 @@
   ],
   "photo": "cock-a-doodle-lou.webp"
  },
+ "Covid Cowboys": {
+  "players": [
+   "Tyson Lagoni",
+   "Adam Kneisler"
+  ],
+  "photo": ""
+ },
  "D-Boccery": {
   "players": [
    "Chris Dely",
@@ -75,6 +89,13 @@
    "Lou Donzelli"
   ],
   "photo": "don-cuzzi.webp"
+ },
+ "Double Doink, The Mesh": {
+  "players": [
+   "Jeff Polk",
+   "Mayank Srivastava"
+  ],
+  "photo": "the-mesh-strikes-back.webp"
  },
  "Goldylichs": {
   "players": [
@@ -108,6 +129,13 @@
   "players": [
    "Eric Nelson",
    "Kumar Nathan"
+  ],
+  "photo": ""
+ },
+ "Hilltoppers": {
+  "players": [
+   "Adam Kneisler",
+   "Dan Hrankowsky"
   ],
   "photo": ""
  },
@@ -145,6 +173,13 @@
   ],
   "photo": ""
  },
+ "Laces Out": {
+  "players": [
+   "Jake Feit",
+   "Steve Shanfeld"
+  ],
+  "photo": ""
+ },
  "Loh Hang Balls": {
   "players": [
    "Eric Lohmyer",
@@ -162,7 +197,14 @@
  "Loose Meats": {
   "players": [
    "Ryan Marvin",
-   "Dan Hrankowky"
+   "Dan Hrankowsky"
+  ],
+  "photo": ""
+ },
+ "Mag Dick": {
+  "players": [
+   "Jerry Magee",
+   "Don Eustice"
   ],
   "photo": ""
  },
@@ -173,12 +215,26 @@
   ],
   "photo": "mickey-the-mitcher.webp"
  },
+ "Moist Baguette": {
+  "players": [
+   "John Hart",
+   "Mayank Srivastava"
+  ],
+  "photo": "moist-baguette.webp"
+ },
  "Muck Fichigan": {
   "players": [
    "Steve Livingston",
    "Tim Ostergaard"
   ],
   "photo": "muck-fichigan.webp"
+ },
+ "Mustache Riders": {
+  "players": [
+   "Spencer Shully",
+   "Jamie Bolger"
+  ],
+  "photo": ""
  },
  "On Wisconsin": {
   "players": [
@@ -189,6 +245,17 @@
   "titles": [
    2017
   ]
+ },
+ "Pink Ladies": {
+  "players": [],
+  "photo": "pink-ladies.webp"
+ },
+ "Reservations @ Dorsia": {
+  "players": [
+   "Adam Kneisler",
+   "Chris Goluba"
+  ],
+  "photo": ""
  },
  "Sister Swap": {
   "players": [
@@ -228,12 +295,19 @@
    2016
   ]
  },
- "The Mesh": {
+ "The Bryan Adams Show": {
   "players": [
-   "Jeff Polk",
-   "Mayank Srivastava"
+   "Adam Kneisler",
+   "Adam Sheridan"
   ],
-  "photo": "the-mesh-strikes-back.webp"
+  "photo": ""
+ },
+ "The M.J.s": {
+  "players": [
+   "Jerry Magee",
+   "Mike Brawley"
+  ],
+  "photo": ""
  },
  "The Seekers": {
   "players": [
@@ -241,6 +315,13 @@
    "Tim Provost"
   ],
   "photo": "the-seekers.webp"
+ },
+ "Trash Panda's": {
+  "players": [
+   "John Gwin",
+   "Tim Provost"
+  ],
+  "photo": ""
  },
  "Trash n Stache": {
   "players": [
@@ -276,5 +357,12 @@
    "Chad \"Chanderson\" Anderson"
   ],
   "photo": "white-zin.webp"
+ },
+ "Wildcat": {
+  "players": [
+   "Eric Fischer",
+   "Sean Devine"
+  ],
+  "photo": ""
  }
 }

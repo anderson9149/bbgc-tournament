@@ -33,13 +33,15 @@
   },
   "players": [
     {
-      "player": "Chad \"Chanderson\" Anderson",
+      "player": "Tyson Lagoni",
       "teams": [
+        "Covid Cowboys",
         "White Zin"
       ],
       "years": [
         2018,
         2019,
+        2020,
         2021,
         2022,
         2023,
@@ -50,19 +52,19 @@
         2024,
         2025
       ],
-      "w": 35,
-      "l": 9,
-      "t": 3,
-      "koYears": 7,
+      "w": 37,
+      "l": 10,
+      "t": 4,
+      "koYears": 8,
       "koW": 9,
-      "koL": 5,
-      "groupTitles": 5,
+      "koL": 6,
+      "groupTitles": 6,
       "titles": 2,
-      "tournaments": 7,
-      "pct": 0.777
+      "tournaments": 8,
+      "pct": 0.765
     },
     {
-      "player": "Tyson Lagoni",
+      "player": "Chad \"Chanderson\" Anderson",
       "teams": [
         "White Zin"
       ],
@@ -183,6 +185,33 @@
       "pct": 0.649
     },
     {
+      "player": "Tim Provost",
+      "teams": [
+        "The Seekers",
+        "Trash Panda's"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 29,
+      "l": 15,
+      "t": 0,
+      "koYears": 7,
+      "koW": 4,
+      "koL": 7,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 7,
+      "pct": 0.659
+    },
+    {
       "player": "Alex Haycock",
       "teams": [
         "Brick Cock",
@@ -238,31 +267,6 @@
       "titles": 0,
       "tournaments": 8,
       "pct": 0.562
-    },
-    {
-      "player": "Tim Provost",
-      "teams": [
-        "The Seekers"
-      ],
-      "years": [
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 25,
-      "l": 12,
-      "t": 0,
-      "koYears": 6,
-      "koW": 3,
-      "koL": 6,
-      "groupTitles": 2,
-      "titles": 0,
-      "tournaments": 6,
-      "pct": 0.676
     },
     {
       "player": "Tony Sacket",
@@ -445,6 +449,33 @@
       "titles": 1,
       "tournaments": 5,
       "pct": 0.625
+    },
+    {
+      "player": "Spencer Shully",
+      "teams": [
+        "Mustache Riders",
+        "Trash n Stache"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2025
+      ],
+      "titleYears": [
+        2020
+      ],
+      "w": 17,
+      "l": 13,
+      "t": 1,
+      "koYears": 4,
+      "koW": 8,
+      "koL": 3,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 5,
+      "pct": 0.565
     },
     {
       "player": "David Iacuzzi",
@@ -635,30 +666,6 @@
       "titles": 0,
       "tournaments": 6,
       "pct": 0.359
-    },
-    {
-      "player": "Spencer Shully",
-      "teams": [
-        "Trash n Stache"
-      ],
-      "years": [
-        2020,
-        2021,
-        2025
-      ],
-      "titleYears": [
-        2020
-      ],
-      "w": 11,
-      "l": 7,
-      "t": 1,
-      "koYears": 2,
-      "koW": 5,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 1,
-      "tournaments": 3,
-      "pct": 0.605
     },
     {
       "player": "Steve Nuzzo",
@@ -892,6 +899,32 @@
       "pct": 0.4
     },
     {
+      "player": "Adam Kneisler",
+      "teams": [
+        "Covid Cowboys",
+        "Hilltoppers",
+        "Reservations @ Dorsia",
+        "The Bryan Adams Show"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 10,
+      "t": 2,
+      "koYears": 3,
+      "koW": 0,
+      "koL": 3,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.421
+    },
+    {
       "player": "Brad Johnson",
       "teams": [
         "Chi'Bocce"
@@ -912,6 +945,28 @@
       "titles": 1,
       "tournaments": 1,
       "pct": 1.0
+    },
+    {
+      "player": "Dan Hrankowsky",
+      "teams": [
+        "Hilltoppers",
+        "Loose Meats"
+      ],
+      "years": [
+        2021,
+        2023
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 5,
+      "t": 0,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.583
     },
     {
       "player": "Graham Whalen",
@@ -938,9 +993,11 @@
     {
       "player": "Ian Rodnick",
       "teams": [
+        "Boilers",
         "Brainerd Bergs"
       ],
       "years": [
+        2018,
         2022,
         2023,
         2024
@@ -949,15 +1006,15 @@
         2022
       ],
       "w": 7,
-      "l": 11,
+      "l": 14,
       "t": 1,
       "koYears": 1,
       "koW": 4,
       "koL": 0,
       "groupTitles": 0,
       "titles": 1,
-      "tournaments": 3,
-      "pct": 0.395
+      "tournaments": 4,
+      "pct": 0.341
     },
     {
       "player": "Jason Ehlert",
@@ -1096,6 +1153,51 @@
       "pct": 0.3
     },
     {
+      "player": "Jamie Bolger",
+      "teams": [
+        "Mustache Riders"
+      ],
+      "years": [
+        2018,
+        2019
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.5
+    },
+    {
+      "player": "Mayank Srivastava",
+      "teams": [
+        "Double Doink, The Mesh",
+        "Moist Baguette"
+      ],
+      "years": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 14,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.3
+    },
+    {
       "player": "Mike DiMucci",
       "teams": [
         "Sparty Devils"
@@ -1164,24 +1266,48 @@
       "pct": 0.357
     },
     {
-      "player": "Dan Hrankowky",
+      "player": "Jeff Polk",
       "teams": [
-        "Loose Meats"
+        "Boilers",
+        "Double Doink, The Mesh"
       ],
       "years": [
-        2023
+        2018,
+        2021,
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 5,
+      "l": 13,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.278
+    },
+    {
+      "player": "Don Eustice",
+      "teams": [
+        "Mag Dick"
+      ],
+      "years": [
+        2025
       ],
       "titleYears": [],
       "w": 4,
-      "l": 2,
-      "t": 0,
+      "l": 3,
+      "t": 1,
       "koYears": 1,
-      "koW": 0,
+      "koW": 2,
       "koL": 1,
-      "groupTitles": 1,
+      "groupTitles": 0,
       "titles": 0,
       "tournaments": 1,
-      "pct": 0.667
+      "pct": 0.562
     },
     {
       "player": "Eric Lohmyer",
@@ -1190,6 +1316,69 @@
       ],
       "years": [
         2023
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.571
+    },
+    {
+      "player": "Jake Feit",
+      "teams": [
+        "Laces Out"
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.409
+    },
+    {
+      "player": "Jerry Magee",
+      "teams": [
+        "Mag Dick",
+        "The M.J.s"
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 8,
+      "t": 1,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.346
+    },
+    {
+      "player": "John Gwin",
+      "teams": [
+        "Trash Panda's"
+      ],
+      "years": [
+        2019
       ],
       "titleYears": [],
       "w": 4,
@@ -1226,22 +1415,24 @@
     {
       "player": "Mike Brawley",
       "teams": [
-        "Loh Hang Balls"
+        "Loh Hang Balls",
+        "The M.J.s"
       ],
       "years": [
-        2023
+        2023,
+        2024
       ],
       "titleYears": [],
       "w": 4,
-      "l": 3,
+      "l": 8,
       "t": 0,
       "koYears": 1,
       "koW": 1,
       "koL": 1,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 1,
-      "pct": 0.571
+      "tournaments": 2,
+      "pct": 0.333
     },
     {
       "player": "Mike Fenske",
@@ -1286,6 +1477,27 @@
       "pct": 0.409
     },
     {
+      "player": "Steve Shanfeld",
+      "teams": [
+        "Laces Out"
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.409
+    },
+    {
       "player": "Aaron Jais",
       "teams": [
         "Tyson's Micropenis"
@@ -1306,27 +1518,6 @@
       "pct": 0.6
     },
     {
-      "player": "Jeff Polk",
-      "teams": [
-        "The Mesh"
-      ],
-      "years": [
-        2021,
-        2023
-      ],
-      "titleYears": [],
-      "w": 3,
-      "l": 7,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.3
-    },
-    {
       "player": "Marc Tozi",
       "teams": [
         "Tyson's Micropenis"
@@ -1345,27 +1536,6 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.6
-    },
-    {
-      "player": "Mayank Srivastava",
-      "teams": [
-        "The Mesh"
-      ],
-      "years": [
-        2021,
-        2023
-      ],
-      "titleYears": [],
-      "w": 3,
-      "l": 7,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.3
     },
     {
       "player": "Ben Wunderlich",
@@ -1448,6 +1618,26 @@
       "pct": 0.4
     },
     {
+      "player": "Adam Sheridan",
+      "teams": [
+        "The Bryan Adams Show"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
       "player": "Brian Kuta",
       "teams": [
         "Grand Lakes"
@@ -1488,12 +1678,52 @@
       "pct": 0.3
     },
     {
+      "player": "Chris Goluba",
+      "teams": [
+        "Reservations @ Dorsia"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
       "player": "Eric Nelson",
       "teams": [
         "Here 4 Beer"
       ],
       "years": [
         2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "player": "John Hart",
+      "teams": [
+        "Moist Baguette"
+      ],
+      "years": [
+        2024
       ],
       "titleYears": [],
       "w": 1,
@@ -1548,6 +1778,26 @@
       "pct": 0.2
     },
     {
+      "player": "Eric Fischer",
+      "teams": [
+        "Wildcat"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
       "player": "Rich Matonis",
       "teams": [
         "The Boners"
@@ -1568,6 +1818,26 @@
       "titles": 1,
       "tournaments": 1,
       "pct": 0
+    },
+    {
+      "player": "Sean Devine",
+      "teams": [
+        "Wildcat"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.0
     }
   ],
   "teams": [
@@ -2212,6 +2482,29 @@
       "narrative": "Three tournaments, one quarterfinal. Dickens Cider went 1-3 in 2019, then had their moment in 2020 — 2-1 in Yellow out of a three-way tie, into the bracket, past The Seekers in round one, out to Muck Fichigan in the quarters. A 1-4 in 2021 brought the road to an end. Career record 5-9. White Zin and Trash n Stache each beat them twice and were never beaten back."
     },
     {
+      "team": "Double Doink, The Mesh",
+      "years": [
+        2021,
+        2023,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 5,
+      "l": 10,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.333,
+      "facedMost": "Del Bocce Vista (1)",
+      "beatMost": "Smug Champs (1)",
+      "lostMost": "Del Bocce Vista (1)",
+      "narrative": "Three tournaments and four names, and not one of them stuck. They were Meshed Up in 2021, Return of the Mesh in 2023 and Double Doink in 2025, with an All Meshed Up somewhere in the unrecorded years for good measure. The bocce has been steadier than the branding without ever being good: 1-4, then 2-3, then 2-3 again, no group better than fifth, and the bracket has never once been in reach. Career 5-10. Jeff Polk and Mayank Srivastava have spent more effort on the marquee than on the scoreboard, and both have played for other clubs since."
+    },
+    {
       "team": "Gumby Dammit",
       "years": [
         2024
@@ -2592,28 +2885,6 @@
       "narrative": "A one-season club with something to show for it. TNT finished 2nd in Yellow in 2018 at 2-1 and made the bracket. They won 1 knockout game and reached the quarterfinals. They got the better of The Bryan Adams Show; Hawkeyes got the better of them. A career record of 3-2, and then they were gone."
     },
     {
-      "team": "The Mesh",
-      "years": [
-        2021,
-        2023
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 3,
-      "l": 7,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "tournaments": 2,
-      "pct": 0.3,
-      "facedMost": "Del Bocce Vista (1)",
-      "beatMost": "Smug Champs (1)",
-      "lostMost": "Del Bocce Vista (1)",
-      "narrative": "Two appearances under three different names. Meshed Up went 1-4 in Blue in 2021; two years later the same pair came back as Return of the Mesh and went 2-3 in Orange, so the sequel at least outscored the original. Neither trip got near the bracket. Smug Champs and Don Cuzzi are the scalps on the wall; Del Bocce Vista and Loh Hang Balls did the damage coming the other way. Final ledger: 3-7, from a franchise that has spent more effort on the marquee than on the scoreboard."
-    },
-    {
       "team": "The Richard Simmons Exp.",
       "years": [
         2021
@@ -2717,27 +2988,6 @@
       "beatMost": "Flangers (1)",
       "lostMost": "Brick Cock (1)",
       "narrative": "One tournament, and they owned their corner of it. Double Deuce won Red in 2018 at 2-1. They reached the quarterfinals. They got the better of Flangers; Brick Cock got the better of them. Final ledger: 2-2. One and done."
-    },
-    {
-      "team": "Double Doink",
-      "years": [
-        2025
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 2,
-      "l": 3,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "tournaments": 1,
-      "pct": 0.4,
-      "facedMost": "Holy Rollers (1)",
-      "beatMost": "Long Ballz (1)",
-      "lostMost": "Holy Rollers (1)",
-      "narrative": "One appearance, in 2025. Double Doink went 2-3 in Pink, good for 5th, and the bracket stayed out of reach. They got the better of Long Ballz; Holy Rollers got the better of them. Final ledger: 2-3. One and done."
     },
     {
       "team": "Flangers",
