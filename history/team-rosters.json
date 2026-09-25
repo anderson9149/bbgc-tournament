@@ -20,6 +20,13 @@
   ],
   "photo": "brainerd-bergs.webp"
  },
+ "Brick Cock": {
+  "players": [
+   "Alex Haycock",
+   "Michael Brickhouse"
+  ],
+  "photo": ""
+ },
  "Brothers Boor": {
   "players": [
    "Adam Boor",
@@ -33,6 +40,13 @@
    "Brad Johnson"
   ],
   "photo": "chi-bocce.webp"
+ },
+ "Cock-a-Doodle-Lou": {
+  "players": [
+   "Alex Haycock",
+   "Lou Donzelli"
+  ],
+  "photo": ""
  },
  "D-Boccery": {
   "players": [
@@ -124,6 +138,12 @@
    "John Kuenstar"
   ],
   "photo": "john-john-inc.webp"
+ },
+ "Kase-Kare-Cock": {
+  "players": [
+   "Alex Haycock"
+  ],
+  "photo": ""
  },
  "Loh Hang Balls": {
   "players": [

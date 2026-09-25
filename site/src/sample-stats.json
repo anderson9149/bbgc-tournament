@@ -183,6 +183,35 @@
       "pct": 0.649
     },
     {
+      "player": "Alex Haycock",
+      "teams": [
+        "Brick Cock",
+        "Kase-Kare-Cock",
+        "Smug Champs"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [
+        2021
+      ],
+      "w": 28,
+      "l": 11,
+      "t": 2,
+      "koYears": 5,
+      "koW": 9,
+      "koL": 4,
+      "groupTitles": 2,
+      "titles": 1,
+      "tournaments": 6,
+      "pct": 0.707
+    },
+    {
       "player": "Pete Anderson",
       "teams": [
         "Joanie Loves Bocce",
@@ -364,31 +393,6 @@
       "titles": 0,
       "tournaments": 5,
       "pct": 0.703
-    },
-    {
-      "player": "Alex Haycock",
-      "teams": [
-        "Smug Champs"
-      ],
-      "years": [
-        2021,
-        2022,
-        2023,
-        2025
-      ],
-      "titleYears": [
-        2021
-      ],
-      "w": 20,
-      "l": 7,
-      "t": 2,
-      "koYears": 3,
-      "koW": 7,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 1,
-      "tournaments": 4,
-      "pct": 0.724
     },
     {
       "player": "Justin Davenport",
@@ -1198,6 +1202,26 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.571
+    },
+    {
+      "player": "Michael Brickhouse",
+      "teams": [
+        "Brick Cock"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.667
     },
     {
       "player": "Mike Brawley",
