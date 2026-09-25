@@ -760,6 +760,30 @@
       "pct": 0.588
     },
     {
+      "player": "Dan Hrankowsky",
+      "teams": [
+        "Brownkowski",
+        "Hilltoppers",
+        "Loose Meats"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "titleYears": [],
+      "w": 9,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.559
+    },
+    {
       "player": "Eric Lohmyer",
       "teams": [
         "Gumby Dammit",
@@ -992,28 +1016,6 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.469
-    },
-    {
-      "player": "Dan Hrankowsky",
-      "teams": [
-        "Hilltoppers",
-        "Loose Meats"
-      ],
-      "years": [
-        2021,
-        2023
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 5,
-      "t": 0,
-      "koYears": 2,
-      "koW": 0,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.583
     },
     {
       "player": "Graham Whalen",
@@ -1664,6 +1666,26 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.4
+    },
+    {
+      "player": "Horace Seeley-Brown",
+      "teams": [
+        "Brownkowski"
+      ],
+      "years": [
+        2022
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.5
     },
     {
       "player": "Justin Green",
