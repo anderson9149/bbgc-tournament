@@ -97,6 +97,7 @@
         "The Seekers"
       ],
       "years": [
+        2017,
         2018,
         2019,
         2020,
@@ -106,7 +107,9 @@
         2024,
         2025
       ],
-      "titleYears": [],
+      "titleYears": [
+        2017
+      ],
       "w": 33,
       "l": 15,
       "t": 1,
@@ -114,8 +117,8 @@
       "koW": 5,
       "koL": 8,
       "groupTitles": 2,
-      "titles": 0,
-      "tournaments": 8,
+      "titles": 1,
+      "tournaments": 9,
       "pct": 0.684
     },
     {
@@ -150,9 +153,11 @@
     {
       "player": "Tone Bone Dierickx",
       "teams": [
-        "Hawkeyes"
+        "Hawkeyes",
+        "The Boners"
       ],
       "years": [
+        2016,
         2018,
         2019,
         2020,
@@ -163,6 +168,7 @@
         2025
       ],
       "titleYears": [
+        2016,
         2018
       ],
       "w": 30,
@@ -172,8 +178,8 @@
       "koW": 7,
       "koL": 4,
       "groupTitles": 3,
-      "titles": 1,
-      "tournaments": 8,
+      "titles": 2,
+      "tournaments": 9,
       "pct": 0.649
     },
     {
@@ -750,10 +756,13 @@
         "On Wisconsin"
       ],
       "years": [
+        2017,
         2018,
         2019
       ],
-      "titleYears": [],
+      "titleYears": [
+        2017
+      ],
       "w": 8,
       "l": 3,
       "t": 1,
@@ -761,8 +770,8 @@
       "koW": 2,
       "koL": 2,
       "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
+      "titles": 1,
+      "tournaments": 3,
       "pct": 0.708
     },
     {
@@ -1381,6 +1390,28 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.2
+    },
+    {
+      "player": "Rich Matonis",
+      "teams": [
+        "The Boners"
+      ],
+      "years": [
+        2016
+      ],
+      "titleYears": [
+        2016
+      ],
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 1,
+      "pct": 0
     }
   ],
   "teams": [

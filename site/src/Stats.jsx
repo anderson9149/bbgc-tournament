@@ -53,6 +53,37 @@ function h2hCoverage(stats) {
 
 const TABS = [['all', 'All Time'], ['teams', 'Teams'], ['individual', 'Individual']]
 
+// 2016 and 2017 were played but never written down, so their champions live in
+// the roster file. They count towards trophies without pretending there are
+// games behind them.
+const earlyTitles = (team) => rosters[team]?.titles || []
+
+function titleYearsFor(t) {
+  const all = new Set([...(t.titleYears || []), ...earlyTitles(t.team)])
+  return [...all].sort((a, b) => a - b)
+}
+
+// Champions from the all-time table, plus any pre-record winner missing from it.
+function championsOf(teams) {
+  const known = new Set(teams.map((t) => t.team))
+  const extra = Object.keys(rosters)
+    .filter((name) => !known.has(name) && earlyTitles(name).length)
+    .map((name) => ({ team: name, titleYears: earlyTitles(name), w: 0, l: 0, t: 0 }))
+  return [...teams, ...extra]
+    .map((t) => ({ ...t, titleYears: titleYearsFor(t) }))
+    .filter((t) => t.titleYears.length)
+    .map((t) => ({ ...t, titles: t.titleYears.length }))
+    .sort((a, b) => b.titles - a.titles || a.titleYears[0] - b.titleYears[0])
+}
+
+// Years that carry a trophy but no game record.
+function unrecordedTitleYears(stats) {
+  const recorded = new Set(stats.years || [])
+  const out = new Set()
+  Object.keys(rosters).forEach((name) => earlyTitles(name).forEach((y) => { if (!recorded.has(y)) out.add(y) }))
+  return [...out].sort((a, b) => a - b)
+}
+
 export function Stats({ stats, error, tv }) {
   const [view, setView] = useState('all')
   const [story, setStory] = useState(null)   // the team whose full narrative is open
@@ -61,7 +92,13 @@ export function Stats({ stats, error, tv }) {
   if (!stats) return <p className="status center">Loading all-time stats…</p>
 
   const span = stats.years?.length ? `${stats.years[0]}–${stats.years[stats.years.length - 1]}` : null
-  const note = span ? <p className="stats-note">*Stats only encompass BBGC modern era {span}</p> : null
+  const early = unrecordedTitleYears(stats)
+  const note = span ? (
+    <p className="stats-note">
+      *Records only encompass BBGC modern era {span}
+      {early.length ? `; ${early.join(' and ')} ${early.length > 1 ? 'were' : 'was'} played but never recorded, so only the trophy counts` : ''}
+    </p>
+  ) : null
 
   const tabs = (
     <nav className="stats-tabs">
@@ -90,7 +127,7 @@ export function Stats({ stats, error, tv }) {
 
 function AllTime({ stats, tv, note }) {
   const teams = stats.teams
-  const champs = teams.filter((t) => t.titles > 0).sort((a, b) => b.titles - a.titles || a.titleYears[0] - b.titleYears[0])
+  const champs = championsOf(teams)
   const top = (cmp, filter) => [...(filter ? teams.filter(filter) : teams)].sort(cmp).slice(0, tv ? 6 : 8)
 
   const boards = [
@@ -198,6 +235,7 @@ function TeamList({ teams, h2hNote, onStory }) {
 function TeamRow({ t, h2hNote, onStory }) {
   const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
   const photo = rosters[t.team]?.photo
+  const titleYears = titleYearsFor(t)
   const stats = [
     ['Record', rec],
     ['Win %', t.pct.toFixed(3).replace(/^0/, '')],
@@ -212,7 +250,9 @@ function TeamRow({ t, h2hNote, onStory }) {
     <article className="team-row">
       <header className="tr-head">
         <span className="tname">{t.team}</span>
-        {t.titles > 0 && <span className="titles">{'🏆'.repeat(Math.min(t.titles, 3))} {t.titleYears.join(' · ')}</span>}
+        {titleYears.length > 0 && (
+          <span className="titles">{'🏆'.repeat(Math.min(titleYears.length, 3))} {titleYears.join(' · ')}</span>
+        )}
         <span className="span">{t.years.join(' · ')}</span>
       </header>
 

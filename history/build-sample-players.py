@@ -13,14 +13,23 @@ by_team = {t['team']: t for t in stats['teams']}
 by = {}
 for team, entry in repo.items():
     t = by_team.get(team)
-    if not t:
-        continue                      # a team from before the recorded era
+    # 2016 and 2017 were played but never written down. The roster file carries
+    # those champions, so the trophy and the year on the field both count while
+    # the win-loss record stays empty — there are no games to add.
+    early = entry.get('titles') or []
+    if not t and not early:
+        continue
     for name in entry.get('players', []):
         if not name:
             continue
         e = by.setdefault(name, dict(player=name, teams=[], years=set(), titleYears=set(),
                                      w=0, l=0, t=0, koYears=0, koW=0, koL=0, groupTitles=0))
-        e['teams'].append(team)
+        if team not in e['teams']:
+            e['teams'].append(team)
+        e['titleYears'] |= set(early)
+        e['years'] |= set(early)
+        if not t:
+            continue
         e['years'] |= set(t['years'])
         e['titleYears'] |= set(t.get('titleYears') or [])
         for k in ('w', 'l', 't', 'koYears', 'koW', 'koL', 'groupTitles'):
@@ -40,6 +49,8 @@ players.sort(key=lambda p: (-p['w'], p['player']))
 
 out = collections.OrderedDict()
 for k, v in stats.items():
+    if k == 'players':
+        continue          # replaced below; copying it here would undo the rebuild
     out[k] = v
     if k == 'h2h':
         out['players'] = players

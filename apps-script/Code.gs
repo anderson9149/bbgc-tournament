@@ -825,12 +825,21 @@ function computePlayers_(teams, repo) {
   var by = {};
   Object.keys(repo).forEach(function (team) {
     var t = byTeam[team];
-    if (!t) return;                       // a team from before the recorded era
+    // 2016 and 2017 were played but never written down. The roster file carries
+    // those champions, so the trophy and the year on the field both count while
+    // the win-loss record stays empty — there are no games to add.
+    var early = repo[team].titles || [];
+    if (!t && !early.length) return;
     (repo[team].players || []).forEach(function (name) {
       if (!name) return;
       var e = by[name] || (by[name] = { player: name, teams: [], years: [], titleYears: [],
                                         w: 0, l: 0, t: 0, koYears: 0, koW: 0, koL: 0, groupTitles: 0 });
-      e.teams.push(team);
+      if (e.teams.indexOf(team) < 0) e.teams.push(team);
+      early.forEach(function (y) {
+        if (e.titleYears.indexOf(y) < 0) e.titleYears.push(y);
+        if (e.years.indexOf(y) < 0) e.years.push(y);
+      });
+      if (!t) return;
       t.years.forEach(function (y) { if (e.years.indexOf(y) < 0) e.years.push(y); });
       (t.titleYears || []).forEach(function (y) { if (e.titleYears.indexOf(y) < 0) e.titleYears.push(y); });
       e.w += t.w; e.l += t.l; e.t += t.t;
