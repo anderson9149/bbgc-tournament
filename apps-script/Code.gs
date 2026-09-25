@@ -1254,10 +1254,11 @@ function doPost(e) {
       var hole = Number(body.hole);
       if (!(hole >= 1 && hole <= HOLES)) return json_({ error: 'Bad hole number' });
       writeHole_(target.ss, a, b, hole, body.value === null ? null : Number(body.value));
+      CacheService.getScriptCache().remove('live:' + target.year);
       game = readGame_(target.ss, a, b);
     } else if (body.action === 'finish') {
       game = finishGame_(target.ss, a, b);
-      CacheService.getScriptCache().remove('payload:' + target.year);
+      CacheService.getScriptCache().removeAll(['payload:' + target.year, 'live:' + target.year]);
     } else {
       return json_({ error: 'Unknown action' });
     }
@@ -1278,7 +1279,10 @@ function doGet(e) {
     var lc = CacheService.getScriptCache();
     var lkey = 'live:' + lt.year;
     var lh = lc.get(lkey);
-    if (!lh) { lh = JSON.stringify(readLive_(lt.ss)); lc.put(lkey, lh, 10); }
+    // Writing a hole clears this key, so the board is never stale by more than
+    // one scorekeeper tap; the TTL only spreads the cost across the watchers
+    // who arrive between taps.
+    if (!lh) { lh = JSON.stringify(readLive_(lt.ss)); lc.put(lkey, lh, 25); }
     return ContentService.createTextOutput(lh).setMimeType(ContentService.MimeType.JSON);
   }
   if (p.action === 'holes') {
@@ -1326,7 +1330,11 @@ function doGet(e) {
       payload.years = list.map(Number);
     }
     cached = JSON.stringify(payload);
-    cache.put(key, cached, 10); // seconds
+    // 90s, not 10. Every visitor's page load lands here, and a miss is a full
+    // spreadsheet read — under a crowd that queued the script into HTML error
+    // pages. Committing a game clears this key, so a finished score still
+    // shows up at once; between commits the board does not change anyway.
+    cache.put(key, cached, 90);
   }
   return ContentService.createTextOutput(cached).setMimeType(ContentService.MimeType.JSON);
 }
