@@ -31,6 +31,1358 @@
       2025
     ]
   },
+  "players": [
+    {
+      "player": "Chad \"Chanderson\" Anderson",
+      "teams": [
+        "White Zin"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2024,
+        2025
+      ],
+      "w": 35,
+      "l": 9,
+      "t": 3,
+      "koYears": 7,
+      "koW": 9,
+      "koL": 5,
+      "groupTitles": 5,
+      "titles": 2,
+      "tournaments": 7,
+      "pct": 0.777
+    },
+    {
+      "player": "Tyson Lagoni",
+      "teams": [
+        "White Zin"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2024,
+        2025
+      ],
+      "w": 35,
+      "l": 9,
+      "t": 3,
+      "koYears": 7,
+      "koW": 9,
+      "koL": 5,
+      "groupTitles": 5,
+      "titles": 2,
+      "tournaments": 7,
+      "pct": 0.777
+    },
+    {
+      "player": "Jeff Bauman",
+      "teams": [
+        "On Wisconsin",
+        "The Seekers"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 33,
+      "l": 15,
+      "t": 1,
+      "koYears": 8,
+      "koW": 5,
+      "koL": 8,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 8,
+      "pct": 0.684
+    },
+    {
+      "player": "Ryan Miller",
+      "teams": [
+        "Hawkeyes"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2018
+      ],
+      "w": 30,
+      "l": 16,
+      "t": 1,
+      "koYears": 5,
+      "koW": 7,
+      "koL": 4,
+      "groupTitles": 3,
+      "titles": 1,
+      "tournaments": 8,
+      "pct": 0.649
+    },
+    {
+      "player": "Tone Bone Dierickx",
+      "teams": [
+        "Hawkeyes"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2018
+      ],
+      "w": 30,
+      "l": 16,
+      "t": 1,
+      "koYears": 5,
+      "koW": 7,
+      "koL": 4,
+      "groupTitles": 3,
+      "titles": 1,
+      "tournaments": 8,
+      "pct": 0.649
+    },
+    {
+      "player": "Pete Anderson",
+      "teams": [
+        "Joanie Loves Bocce",
+        "Vivace do Tinge"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 26,
+      "l": 20,
+      "t": 2,
+      "koYears": 7,
+      "koW": 5,
+      "koL": 7,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 8,
+      "pct": 0.562
+    },
+    {
+      "player": "Tim Provost",
+      "teams": [
+        "The Seekers"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 25,
+      "l": 12,
+      "t": 0,
+      "koYears": 6,
+      "koW": 3,
+      "koL": 6,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.676
+    },
+    {
+      "player": "Tony Sacket",
+      "teams": [
+        "Joanie Loves Bocce"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 24,
+      "l": 18,
+      "t": 2,
+      "koYears": 6,
+      "koW": 5,
+      "koL": 6,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 7,
+      "pct": 0.568
+    },
+    {
+      "player": "Adam Boor",
+      "teams": [
+        "Brothers Boor"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2023
+      ],
+      "w": 23,
+      "l": 18,
+      "t": 2,
+      "koYears": 5,
+      "koW": 6,
+      "koL": 4,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 7,
+      "pct": 0.558
+    },
+    {
+      "player": "Brett Boor",
+      "teams": [
+        "Brothers Boor"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2023
+      ],
+      "w": 23,
+      "l": 18,
+      "t": 2,
+      "koYears": 5,
+      "koW": 6,
+      "koL": 4,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 7,
+      "pct": 0.558
+    },
+    {
+      "player": "Steve Livingston",
+      "teams": [
+        "Muck Fichigan"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 22,
+      "l": 9,
+      "t": 1,
+      "koYears": 4,
+      "koW": 6,
+      "koL": 4,
+      "groupTitles": 4,
+      "titles": 0,
+      "tournaments": 5,
+      "pct": 0.703
+    },
+    {
+      "player": "Tim Ostergaard",
+      "teams": [
+        "Muck Fichigan"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 22,
+      "l": 9,
+      "t": 1,
+      "koYears": 4,
+      "koW": 6,
+      "koL": 4,
+      "groupTitles": 4,
+      "titles": 0,
+      "tournaments": 5,
+      "pct": 0.703
+    },
+    {
+      "player": "Alex Haycock",
+      "teams": [
+        "Smug Champs"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [
+        2021
+      ],
+      "w": 20,
+      "l": 7,
+      "t": 2,
+      "koYears": 3,
+      "koW": 7,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 1,
+      "tournaments": 4,
+      "pct": 0.724
+    },
+    {
+      "player": "Justin Davenport",
+      "teams": [
+        "Smug Champs"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [
+        2021
+      ],
+      "w": 20,
+      "l": 7,
+      "t": 2,
+      "koYears": 3,
+      "koW": 7,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 1,
+      "tournaments": 4,
+      "pct": 0.724
+    },
+    {
+      "player": "Trevor Essig",
+      "teams": [
+        "Chi'Bocce",
+        "Hot Sauce"
+      ],
+      "years": [
+        2019,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2019
+      ],
+      "w": 19,
+      "l": 11,
+      "t": 2,
+      "koYears": 4,
+      "koW": 5,
+      "koL": 3,
+      "groupTitles": 1,
+      "titles": 1,
+      "tournaments": 5,
+      "pct": 0.625
+    },
+    {
+      "player": "David Iacuzzi",
+      "teams": [
+        "Don Cuzzi"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 14,
+      "l": 17,
+      "t": 2,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.455
+    },
+    {
+      "player": "Lou Donzelli",
+      "teams": [
+        "Don Cuzzi"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 14,
+      "l": 17,
+      "t": 2,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.455
+    },
+    {
+      "player": "John Batner",
+      "teams": [
+        "John-John, Inc",
+        "Vivace do Tinge"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 12,
+      "l": 8,
+      "t": 0,
+      "koYears": 3,
+      "koW": 1,
+      "koL": 3,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.6
+    },
+    {
+      "player": "Mike Oberholtzer",
+      "teams": [
+        "Hot Sauce"
+      ],
+      "years": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 12,
+      "l": 11,
+      "t": 2,
+      "koYears": 3,
+      "koW": 2,
+      "koL": 3,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.52
+    },
+    {
+      "player": "Brett Koenig",
+      "teams": [
+        "The Big LeBocce"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "titleYears": [],
+      "w": 11,
+      "l": 8,
+      "t": 0,
+      "koYears": 3,
+      "koW": 2,
+      "koL": 3,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.579
+    },
+    {
+      "player": "Brian Watson",
+      "teams": [
+        "Trash n Stache"
+      ],
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "titleYears": [
+        2020
+      ],
+      "w": 11,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 5,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 3,
+      "pct": 0.605
+    },
+    {
+      "player": "Jay Hackney",
+      "teams": [
+        "The Big LeBocce"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "titleYears": [],
+      "w": 11,
+      "l": 8,
+      "t": 0,
+      "koYears": 3,
+      "koW": 2,
+      "koL": 3,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.579
+    },
+    {
+      "player": "Mike Boyum",
+      "teams": [
+        "Vandelay Industries"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 11,
+      "l": 20,
+      "t": 1,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.359
+    },
+    {
+      "player": "Spencer Shully",
+      "teams": [
+        "Trash n Stache"
+      ],
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "titleYears": [
+        2020
+      ],
+      "w": 11,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 5,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 3,
+      "pct": 0.605
+    },
+    {
+      "player": "Steve Nuzzo",
+      "teams": [
+        "Vandelay Industries"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 11,
+      "l": 20,
+      "t": 1,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.359
+    },
+    {
+      "player": "John Kuenstar",
+      "teams": [
+        "John-John, Inc"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021
+      ],
+      "titleYears": [],
+      "w": 10,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.625
+    },
+    {
+      "player": "Ryan Marvin",
+      "teams": [
+        "D-Boccery",
+        "Loose Meats"
+      ],
+      "years": [
+        2020,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 9,
+      "l": 12,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.429
+    },
+    {
+      "player": "Brian Kutka",
+      "teams": [
+        "Guns n Rollers"
+      ],
+      "years": [
+        2020,
+        2022,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 12,
+      "t": 0,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.4
+    },
+    {
+      "player": "Nick Kelliher",
+      "teams": [
+        "On Wisconsin"
+      ],
+      "years": [
+        2018,
+        2019
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 3,
+      "t": 1,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.708
+    },
+    {
+      "player": "Tom Palmer",
+      "teams": [
+        "Guns n Rollers"
+      ],
+      "years": [
+        2020,
+        2022,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 12,
+      "t": 0,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.4
+    },
+    {
+      "player": "Brad Johnson",
+      "teams": [
+        "Chi'Bocce"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [
+        2019
+      ],
+      "w": 7,
+      "l": 0,
+      "t": 0,
+      "koYears": 1,
+      "koW": 3,
+      "koL": 0,
+      "groupTitles": 1,
+      "titles": 1,
+      "tournaments": 1,
+      "pct": 1.0
+    },
+    {
+      "player": "Eric Schneider",
+      "teams": [
+        "Holy Rollers"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.538
+    },
+    {
+      "player": "Graham Whalen",
+      "teams": [
+        "Long Ballz"
+      ],
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 10,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.412
+    },
+    {
+      "player": "Ian Rodnick",
+      "teams": [
+        "Brainerd Bergs"
+      ],
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "titleYears": [
+        2022
+      ],
+      "w": 7,
+      "l": 11,
+      "t": 1,
+      "koYears": 1,
+      "koW": 4,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 3,
+      "pct": 0.395
+    },
+    {
+      "player": "Jason Ehlert",
+      "teams": [
+        "Sister Swap"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 4,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.625
+    },
+    {
+      "player": "Jay Robert",
+      "teams": [
+        "Sister Swap"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 4,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.625
+    },
+    {
+      "player": "Justin Lindberg",
+      "teams": [
+        "Brainerd Bergs"
+      ],
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "titleYears": [
+        2022
+      ],
+      "w": 7,
+      "l": 11,
+      "t": 1,
+      "koYears": 1,
+      "koW": 4,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 3,
+      "pct": 0.395
+    },
+    {
+      "player": "Mark Diol",
+      "teams": [
+        "Holy Rollers"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.538
+    },
+    {
+      "player": "Mike Seiffer",
+      "teams": [
+        "Long Ballz"
+      ],
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 10,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.412
+    },
+    {
+      "player": "Brian Connors",
+      "teams": [
+        "Sparty Devils"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 15,
+      "t": 3,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 5,
+      "pct": 0.312
+    },
+    {
+      "player": "Chris Dely",
+      "teams": [
+        "D-Boccery",
+        "Grand Lakes"
+      ],
+      "years": [
+        2020,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 14,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.3
+    },
+    {
+      "player": "Mike DiMucci",
+      "teams": [
+        "Sparty Devils"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 15,
+      "t": 3,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 5,
+      "pct": 0.312
+    },
+    {
+      "player": "Dan Hrankowky",
+      "teams": [
+        "Loose Meats"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.667
+    },
+    {
+      "player": "Eric Lohmyer",
+      "teams": [
+        "Loh Hang Balls"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.571
+    },
+    {
+      "player": "Mike Brawley",
+      "teams": [
+        "Loh Hang Balls"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.571
+    },
+    {
+      "player": "Mike Fenske",
+      "teams": [
+        "Mickey the Mitcher"
+      ],
+      "years": [
+        2022,
+        2024
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.409
+    },
+    {
+      "player": "Mitch Izenstark",
+      "teams": [
+        "Mickey the Mitcher"
+      ],
+      "years": [
+        2022,
+        2024
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.409
+    },
+    {
+      "player": "Aaron Jais",
+      "teams": [
+        "Tyson's Micropenis"
+      ],
+      "years": [
+        2024
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.6
+    },
+    {
+      "player": "Jeff Polk",
+      "teams": [
+        "The Mesh"
+      ],
+      "years": [
+        2021,
+        2023
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 7,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.3
+    },
+    {
+      "player": "Marc Tozi",
+      "teams": [
+        "Tyson's Micropenis"
+      ],
+      "years": [
+        2024
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.6
+    },
+    {
+      "player": "Mayank Srivastava",
+      "teams": [
+        "The Mesh"
+      ],
+      "years": [
+        2021,
+        2023
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 7,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.3
+    },
+    {
+      "player": "Ben Wunderlich",
+      "teams": [
+        "Goldylichs"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "player": "Ryan Goldstien",
+      "teams": [
+        "Goldylichs"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
+      "player": "Brian Kuta",
+      "teams": [
+        "Grand Lakes"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "player": "Brian Rosenburg",
+      "teams": [
+        "Blues Bros"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
+      "player": "Eric Nelson",
+      "teams": [
+        "Here 4 Beer"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "player": "Kevin Mcquire",
+      "teams": [
+        "Blues Bros"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
+      "player": "Kumar Nathan",
+      "teams": [
+        "Here 4 Beer"
+      ],
+      "years": [
+        2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    }
+  ],
   "teams": [
     {
       "team": "White Zin",

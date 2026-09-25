@@ -76,7 +76,7 @@ export function Stats({ stats, error, tv }) {
       {tabs}
       {view === 'all' && <AllTime stats={stats} tv={tv} note={note} />}
       {view === 'teams' && <TeamList teams={ranked} h2hNote={h2hCoverage(stats)} onStory={setStory} />}
-      {view === 'individual' && <p className="status center">Individual records are not in yet.</p>}
+      {view === 'individual' && <Individuals players={stats.players} />}
       {story && (
         <Overlay title={story.team} subtitle="the write-up" onClose={() => setStory(null)} className="story">
           <p>{story.narrative}</p>
@@ -143,6 +143,45 @@ function AllTime({ stats, tv, note }) {
       </div>
       {note}
     </>
+  )
+}
+
+// -------------------------------------------------------- individual
+
+// Every column is a total of the teams the player has played for, so the
+// headings match the Teams view. Written by BBGC > Rebuild all-time stats.
+const PLAYER_COLS = [
+  ['Record', (p) => `${p.w}-${p.l}${p.t ? `-${p.t}` : ''}`, 'num'],
+  ['Win %', (p) => p.pct.toFixed(3).replace(/^0/, ''), 'num'],
+  ['Played', (p) => p.tournaments, 'num'],
+  ['Titles', (p) => p.titles || '—', 'num'],
+  ['Group Titles', (p) => p.groupTitles, 'num'],
+  ['KO Years', (p) => p.koYears, 'num'],
+  ['KO Record', (p) => `${p.koW}-${p.koL}`, 'num'],
+]
+
+function Individuals({ players }) {
+  if (!players?.length) {
+    return <p className="status center">No individual records yet — run BBGC &gt; Rebuild all-time stats.</p>
+  }
+  return (
+    <div className="player-grid">
+      <div className="pg-row pg-head">
+        <span className="pg-name">Player</span>
+        {PLAYER_COLS.map(([label]) => <span key={label} className="num">{label}</span>)}
+      </div>
+      {players.map((p) => (
+        <div className="pg-row" key={p.player}>
+          <span className="pg-name">
+            <strong>{p.player}</strong>
+            <small>{p.teams.join(' · ')}</small>
+          </span>
+          {PLAYER_COLS.map(([label, val]) => (
+            <span key={label} className="num" data-label={label}>{val(p)}</span>
+          ))}
+        </div>
+      ))}
+    </div>
   )
 }
 

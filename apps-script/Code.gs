@@ -567,6 +567,19 @@ function rebuildStats() {
   sh.setColumnWidth(1, 220); sh.setColumnWidth(3, 200); sh.setColumnWidth(5, 120);
   sh.getRange(2, 9, Math.max(rows.length, 1), 1).setNumberFormat('0.000');
 
+  var players = computePlayers_(stats.teams, fetchRosters_());
+  var psh = ss.getSheetByName('Individual') || ss.insertSheet('Individual');
+  psh.clear();
+  header_(psh, 1, ['Player','Teams','Tournaments','Years','Titles','Title Years',
+                   'W','L','T','Win%','KO Years','KO W','KO L','Group Titles']);
+  var prows = players.map(function (p) {
+    return [p.player, p.teams.join(', '), p.tournaments, p.years.join(' '), p.titles, p.titleYears.join(' '),
+            p.w, p.l, p.t, p.pct, p.koYears, p.koW, p.koL, p.groupTitles];
+  });
+  if (prows.length) psh.getRange(2, 1, prows.length, prows[0].length).setValues(prows);
+  psh.setColumnWidth(1, 200); psh.setColumnWidth(2, 260); psh.setColumnWidth(4, 180);
+  psh.getRange(2, 10, Math.max(prows.length, 1), 1).setNumberFormat('0.000');
+
   var meta = ss.getSheetByName('Meta') || ss.insertSheet('Meta');
   meta.clear();
   meta.getRange(1, 1, 4, 2).setValues([['Updated', new Date()], ['Years', stats.years.join(' ')],
@@ -804,6 +817,38 @@ function fetchRosters_() {
   return res.getResponseCode() === 200 ? JSON.parse(res.getContentText()) : {};
 }
 
+// One row per person, totalled from the teams they have played for. A player's
+// teams never overlap in a year (checked), so the records simply add up.
+function computePlayers_(teams, repo) {
+  var byTeam = {};
+  teams.forEach(function (t) { byTeam[t.team] = t; });
+  var by = {};
+  Object.keys(repo).forEach(function (team) {
+    var t = byTeam[team];
+    if (!t) return;                       // a team from before the recorded era
+    (repo[team].players || []).forEach(function (name) {
+      if (!name) return;
+      var e = by[name] || (by[name] = { player: name, teams: [], years: [], titleYears: [],
+                                        w: 0, l: 0, t: 0, koYears: 0, koW: 0, koL: 0, groupTitles: 0 });
+      e.teams.push(team);
+      t.years.forEach(function (y) { if (e.years.indexOf(y) < 0) e.years.push(y); });
+      (t.titleYears || []).forEach(function (y) { if (e.titleYears.indexOf(y) < 0) e.titleYears.push(y); });
+      e.w += t.w; e.l += t.l; e.t += t.t;
+      e.koYears += t.koYears; e.koW += t.koW; e.koL += t.koL;
+      e.groupTitles += t.groupTitles;
+    });
+  });
+  return Object.keys(by).map(function (k) {
+    var e = by[k];
+    e.teams.sort(); e.years.sort(); e.titleYears.sort();
+    e.titles = e.titleYears.length;
+    e.tournaments = e.years.length;
+    var gp = e.w + e.l + e.t;
+    e.pct = gp ? Math.round((e.w + 0.5 * e.t) / gp * 1000) / 1000 : 0;
+    return e;
+  }).sort(function (a, b) { return b.w - a.w || a.player.localeCompare(b.player); });
+}
+
 // Read the stored sheet back for the website.
 function readStats_() {
   var it = folder_().getFilesByName(STATS_FILE);
@@ -824,8 +869,21 @@ function readStats_() {
   var metaYears = function (row) {
     return meta ? String(meta.getRange(row, 2).getValue()).split(' ').filter(String).map(Number) : [];
   };
+  var psh = ss.getSheetByName('Individual');
+  var players = [];
+  if (psh && psh.getLastRow() > 1) {
+    players = psh.getRange(2, 1, psh.getLastRow() - 1, 14).getValues()
+      .filter(function (r) { return r[0] !== ''; })
+      .map(function (r) {
+        return { player: String(r[0]), teams: String(r[1]).split(', ').filter(String),
+                 tournaments: Number(r[2]), years: String(r[3]).split(' ').filter(String).map(Number),
+                 titles: Number(r[4]), titleYears: String(r[5]).split(' ').filter(String).map(Number),
+                 w: Number(r[6]), l: Number(r[7]), t: Number(r[8]), pct: Number(r[9]),
+                 koYears: Number(r[10]), koW: Number(r[11]), koL: Number(r[12]), groupTitles: Number(r[13]) };
+      });
+  }
   return { updatedAt: meta ? meta.getRange(1, 2).getValue() : null, years: metaYears(2), teams: teams,
-           h2h: { group: metaYears(3), ko: metaYears(4) } };
+           players: players, h2h: { group: metaYears(3), ko: metaYears(4) } };
 }
 
 // --------------------------------------------------------- locking
