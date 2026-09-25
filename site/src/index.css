@@ -225,6 +225,18 @@ button { font: inherit; cursor: pointer; }
 .live-row .cell.scored { font-weight: 800; color: var(--yellow); }
 /* a dash marks a hole that has not been played yet */
 .live-row .cell.unplayed { color: #fff; font-weight: 800; opacity: .9; }
+/* a hole that just came in: 500ms up, 5s held, 500ms down (8.33% / 91.67% of 6s).
+   Only the backdrop animates, so the new number is readable the whole way. */
+@keyframes live-flash {
+  0%      { background: rgba(242, 194, 48, 0); box-shadow: 0 0 0 0 rgba(242, 194, 48, 0); }
+  8.33%   { background: rgba(242, 194, 48, .42); box-shadow: 0 0 14px 1px rgba(242, 194, 48, .5); }
+  91.67%  { background: rgba(242, 194, 48, .42); box-shadow: 0 0 14px 1px rgba(242, 194, 48, .5); }
+  100%    { background: rgba(242, 194, 48, 0); box-shadow: 0 0 0 0 rgba(242, 194, 48, 0); }
+}
+.live-row .cell.flash { animation: live-flash 6s linear; border-radius: 4px; opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .live-row .cell.flash { animation-duration: 6s; animation-timing-function: steps(1, end); }
+}
 .live-row .tot { text-align: center; font-weight: 800; font-variant-numeric: tabular-nums;
   background: rgba(0,0,0,.28); border-radius: 6px; margin-right: 6px; }
 .live-row.win .tot { background: var(--pool-red); }
