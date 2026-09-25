@@ -682,6 +682,28 @@
       "pct": 0.359
     },
     {
+      "player": "Dan Chomicz",
+      "teams": [
+        "Del Bocce Vista"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 10,
+      "l": 7,
+      "t": 0,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.588
+    },
+    {
       "player": "John Kuenstar",
       "teams": [
         "John-John, Inc"
@@ -702,6 +724,28 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.625
+    },
+    {
+      "player": "Tom Chomicz",
+      "teams": [
+        "Del Bocce Vista"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 10,
+      "l": 7,
+      "t": 0,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.588
     },
     {
       "player": "Ryan Marvin",
