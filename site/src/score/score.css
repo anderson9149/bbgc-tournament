@@ -82,5 +82,13 @@ button.link { background: none; border: 0; color: #fff; opacity: 0.75; text-deco
 .sync { text-align: center; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; opacity: 0.45; margin-top: 10px; }
 .sync.on { opacity: 0.9; }
 
+/* confirm — the last stop before the score is committed */
+.confirm h2 { text-align: center; margin: 0 0 4px; font-size: 1.6rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.confirm .teams { margin-top: 10px; }
+.verdict { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 16px 0 18px; text-align: center; }
+.verdict span { font-weight: 800; font-size: 1.15rem; line-height: 1.2; }
+.verdict em { font-style: normal; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.75; }
+.nav.one { grid-template-columns: 1fr; }
+
 /* done */
 .done h2 { text-align: center; margin: 0; font-size: 2rem; text-transform: uppercase; }

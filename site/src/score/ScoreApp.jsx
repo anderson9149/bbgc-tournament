@@ -162,6 +162,7 @@ function Scoring({ initial, onExit }) {
   const [winner, setWinner] = useState(null) // 'A' | 'B' | null
   const [err, setErr] = useState(null)
   const [finished, setFinished] = useState(null)
+  const [confirming, setConfirming] = useState(false)
   const [finishing, setFinishing] = useState(false)
   const [pending, setPending] = useState(0)     // saves in flight
   const [failed, setFailed] = useState({})      // hole -> value that didn't save
@@ -195,19 +196,55 @@ function Scoring({ initial, onExit }) {
     inflight.current.push(p)
   }
 
-  const next = async () => {
+  const next = () => {
     if (points > 0 && !winner) { setErr('Tap the team that scored this hole'); return }
     save(hole, current)
     if (hole < HOLES) { setHole(hole + 1); return }
+    setErr(null)
+    setConfirming(true)   // holes keep saving; the game stays live until Commit
+  }
+
+  // The only thing that marks the game done and puts it on the main board.
+  const commit = async () => {
     setFinishing(true); setErr(null)
     try {
       await Promise.all(inflight.current)
       if (Object.keys(failed).length) throw new Error('Some holes did not save — retry them first')
       setFinished(await finishGame(teamA, teamB, pin))
-    } catch (e) { setErr(`Couldn't finish: ${e.message}`) } finally { setFinishing(false) }
+    } catch (e) { setErr(`Couldn't commit: ${e.message}`) } finally { setFinishing(false) }
   }
 
   const failedHoles = Object.keys(failed).map(Number).sort((x, y) => x - y)
+
+  if (confirming && !finished) {
+    const verb = scoreA === scoreB ? 'ties' : 'defeats'
+    const top = scoreA >= scoreB ? teamA : teamB
+    const bottom = scoreA >= scoreB ? teamB : teamA
+    return (
+      <section className="card confirm">
+        <h2>Final Score</h2>
+        <div className="teams">
+          <div className={scoreA > scoreB ? 'win' : ''}><span className="name">{teamA}</span><span className="pts">{scoreA}</span></div>
+          <div className={scoreB > scoreA ? 'win' : ''}><span className="name">{teamB}</span><span className="pts">{scoreB}</span></div>
+        </div>
+        <p className="verdict"><span>{top}</span><em>{verb}</em><span>{bottom}</span></p>
+        {err && <p className="error">{err}</p>}
+        {failedHoles.length > 0 && (
+          <p className="error">
+            Hole {failedHoles.join(', ')} didn't save.{' '}
+            <button className="retry" onClick={() => failedHoles.forEach((h) => save(h, failed[h]))}>Retry</button>
+          </p>
+        )}
+        <button className="primary big" onClick={commit} disabled={finishing}>
+          {finishing ? 'Committing…' : 'Commit Score'}
+        </button>
+        <div className="nav one">
+          <button onClick={() => { setConfirming(false); setHole(HOLES) }} disabled={finishing}>Previous</button>
+        </div>
+        <div className={`sync ${pending ? 'on' : ''}`}>{pending ? 'Saving…' : 'Saved'}</div>
+      </section>
+    )
+  }
 
   if (finished) {
     return (
@@ -256,9 +293,9 @@ function Scoring({ initial, onExit }) {
         </p>
       )}
       <div className="nav">
-        <button onClick={() => setHole(hole - 1)} disabled={hole === 1 || finishing}>Previous</button>
-        <button className="primary" onClick={next} disabled={finishing}>
-          {finishing ? 'Finishing…' : hole < HOLES ? 'Next' : 'Finish Game'}
+        <button onClick={() => setHole(hole - 1)} disabled={hole === 1}>Previous</button>
+        <button className="primary" onClick={next}>
+          {hole < HOLES ? 'Next' : 'Review Final'}
         </button>
       </div>
       <div className={`sync ${pending ? 'on' : ''}`}>{pending ? 'Saving…' : 'Saved'}</div>
