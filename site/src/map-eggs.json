@@ -53,5 +53,14 @@
   "h": 7.34,
   "img": "egg-playpen.webp",
   "alt": "Holding court in the Playpen"
+ },
+ {
+  "id": "logman",
+  "left": 87.35,
+  "top": 19.32,
+  "w": 5.95,
+  "h": 8.5,
+  "img": "egg-logman.webp",
+  "alt": "Something in the trees by 4"
  }
 ]
