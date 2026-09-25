@@ -267,7 +267,10 @@
   ]
  },
  "Pink Ladies": {
-  "players": [],
+  "players": [
+   "Chad Schneider",
+   "Justin Green"
+  ],
   "photo": "pink-ladies.webp"
  },
  "Reservations @ Dorsia": {

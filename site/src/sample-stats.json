@@ -1585,6 +1585,27 @@
       "pct": 0.5
     },
     {
+      "player": "Chad Schneider",
+      "teams": [
+        "Pink Ladies"
+      ],
+      "years": [
+        2019,
+        2021
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 7,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.25
+    },
+    {
       "player": "Chris Zingler",
       "teams": [
         "Hitchhikers"
@@ -1603,6 +1624,27 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.4
+    },
+    {
+      "player": "Justin Green",
+      "teams": [
+        "Pink Ladies"
+      ],
+      "years": [
+        2019,
+        2021
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 7,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.25
     },
     {
       "player": "Ryan Goldstien",
