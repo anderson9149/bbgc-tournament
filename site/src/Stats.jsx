@@ -14,7 +14,9 @@ export function useStats() {
   useEffect(() => {
     if (!LIVE) return
     let cancelled = false
-    fetch(`${LIVE}?action=stats`, { cache: 'no-store' })
+    // Rebuilt by hand from the sheet, so it ships as a file rather than
+    // costing an Apps Script call on every visit.
+    fetch(`${BASE}data/stats.json`)
       .then((r) => r.json())
       .then((d) => { if (!cancelled) d.error ? setState({ stats: null, error: d.error }) : setState({ stats: d, error: null }) })
       .catch((e) => { if (!cancelled) setState({ stats: null, error: e.message }) })

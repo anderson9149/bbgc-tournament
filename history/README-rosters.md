@@ -22,3 +22,14 @@ sheet in. Anything already typed into a cell wins, so the rebuild never
 overwrites a hand edit. A team that predates the recorded era is not in the
 all-time list, so the build reports it as unmatched and skips it — expected,
 not a fault.
+
+## Static snapshots
+
+`history/snapshot-static.py` freezes the all-time table, the course guide and
+every finished year into `site/public/data/`. The site reads those from the CDN
+so that only the year still being played, and the live board, ever reach Apps
+Script — which serialises requests and starts returning HTML error pages once a
+crowd arrives.
+
+Re-run it after `BBGC > Rebuild all-time stats`, after importing a past year,
+and once the current tournament finishes, then commit and push.

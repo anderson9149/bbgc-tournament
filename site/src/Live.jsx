@@ -18,7 +18,7 @@ export function useLive(active) {
       .then((d) => { if (!cancelled && Array.isArray(d.games)) setData(d) })
       .catch(() => {})
     load()
-    const id = setInterval(load, 20000)
+    const id = setInterval(load, 30000)   // see REFRESH_SECONDS: the script is the bottleneck
     return () => { cancelled = true; clearInterval(id) }
   }, [active])
   return data

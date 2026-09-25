@@ -16,7 +16,9 @@ export function useHoles() {
   useEffect(() => {
     if (!LIVE) return
     let cancelled = false
-    fetch(`${LIVE}?action=holes`, { cache: 'no-store' })
+    // The course guide only changes when the sheet is rebuilt, so it ships as
+    // a file instead of costing an Apps Script call.
+    fetch(`${BASE}data/holes.json`)
       .then((r) => r.json())
       .then((d) => { if (!cancelled && Array.isArray(d.holes)) setHoles(d.holes) })
       .catch(() => { if (!cancelled) setHoles(sampleHoles.holes) })

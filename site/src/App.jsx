@@ -82,16 +82,20 @@ export default function App() {
         )}
       </nav>
 
-      {!data ? (
-        <p className="status center">{error ? `Couldn't load results: ${error}` : `Loading ${shownYear || ''}…`}</p>
-      ) : tab === 'hype' ? (
-        <Hype year={data.year} />
-      ) : tab === 'live' ? (
+      {/* Stats, the course map and the live board carry their own data, so they
+          stay usable while the year payload is still on its way — the sheet can
+          take a while when a crowd is on it, and there is no reason for that to
+          hold up pages that never needed it. */}
+      {tab === 'live' ? (
         <Live data={live} />
       ) : tab === 'coursemap' ? (
         <CourseMap holes={holes} tv={isTV} />
       ) : tab === 'stats' ? (
         <Stats stats={stats} error={statsError} tv={isTV} />
+      ) : !data ? (
+        <p className="status center">{error ? `Couldn't load results: ${error}` : `Loading ${shownYear || ''}…`}</p>
+      ) : tab === 'hype' ? (
+        <Hype year={data.year} />
       ) : tab === 'group' ? (
         <Pools pools={data.pools} order={Object.keys(data.pools)} tv={isTV} />
       ) : (
