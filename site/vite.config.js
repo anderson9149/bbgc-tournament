@@ -2,7 +2,8 @@ import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// base must match the GitHub repo name for GitHub Pages.
+// '/' because the site is served at the root of thebbgc.com. Asset URLs in
+// index.html are written root-relative and Vite rewrites them with this base.
 export default defineConfig({
   plugins: [react()],
   base: '/',
