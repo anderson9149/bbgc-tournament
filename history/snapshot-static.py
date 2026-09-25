@@ -36,8 +36,14 @@ for name, url in [('stats.json', API + '?action=stats'), ('holes.json', API + '?
     d = get(url)
     write(name, d) if d else fails.append(name)
 
-years = json.load(open(os.path.join(OUT, 'stats.json')))['years'] if os.path.exists(os.path.join(OUT, 'stats.json')) else []
-current = max(json.load(open(os.path.join(OUT, 'stats.json'))).get('years', [0])) + 1 if years else None
+# Every year the picker offers, not just the ones with stats: 2016 and 2017
+# were played but never recorded, so they have sheets and appear in the list
+# while contributing nothing to the all-time table. Missing their files is what
+# turned those two years into a 404.
+head = get(API)
+years = [y for y in (head or {}).get('years', []) if y < (head or {}).get('year', 0)]
+if not years:
+    print('  could not read the year list; nothing to snapshot')
 for y in years:
     d = get('%s?year=%d' % (API, y))
     if d and d.get('year') == y and d.get('pools'):

@@ -44,7 +44,11 @@ export function useResults(year) {
       const frozen = year && Number(year) < THIS_YEAR
       const url = frozen ? `${BASE_URL}data/${Number(year)}.json`
         : year ? `${API_URL}?year=${encodeURIComponent(year)}` : API_URL
-      const res = await fetch(url, frozen ? {} : { cache: 'no-store' })
+      let res = await fetch(url, frozen ? {} : { cache: 'no-store' })
+      // A year with no snapshot yet falls back to the sheet rather than 404ing.
+      if (frozen && !res.ok) {
+        res = await fetch(`${API_URL}?year=${encodeURIComponent(year)}`, { cache: 'no-store' })
+      }
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await readJson(res)
       if (id !== reqId.current) return   // a newer year was picked while this was in flight
