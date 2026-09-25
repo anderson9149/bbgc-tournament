@@ -561,7 +561,7 @@
       "player": "Brian Rosenburg",
       "teams": [
         "Blues Bros",
-        "Bushwood",
+        "Bushwood Ballers",
         "Gumby Dammit",
         "Royale w/ Cheese"
       ],
@@ -582,31 +582,6 @@
       "titles": 0,
       "tournaments": 4,
       "pct": 0.568
-    },
-    {
-      "player": "Brian Watson",
-      "teams": [
-        "Bushwood",
-        "Trash n Stache"
-      ],
-      "years": [
-        2020,
-        2021,
-        2025
-      ],
-      "titleYears": [
-        2020
-      ],
-      "w": 12,
-      "l": 11,
-      "t": 1,
-      "koYears": 2,
-      "koW": 5,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 1,
-      "tournaments": 3,
-      "pct": 0.521
     },
     {
       "player": "John Batner",
@@ -654,6 +629,30 @@
       "titles": 0,
       "tournaments": 4,
       "pct": 0.52
+    },
+    {
+      "player": "Brian Watson",
+      "teams": [
+        "Trash n Stache"
+      ],
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "titleYears": [
+        2020
+      ],
+      "w": 11,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 5,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 3,
+      "pct": 0.605
     },
     {
       "player": "Jay Hackney",
@@ -1197,6 +1196,30 @@
       "pct": 0.625
     },
     {
+      "player": "Kevin McGuire",
+      "teams": [
+        "Blues Bros",
+        "Bushwood Ballers",
+        "Royale w/ Cheese"
+      ],
+      "years": [
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 8,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.469
+    },
+    {
       "player": "Mike Seiffer",
       "teams": [
         "Long Ballz"
@@ -1265,28 +1288,6 @@
       "titles": 0,
       "tournaments": 4,
       "pct": 0.3
-    },
-    {
-      "player": "Kevin McGuire",
-      "teams": [
-        "Blues Bros",
-        "Royale w/ Cheese"
-      ],
-      "years": [
-        2022,
-        2023
-      ],
-      "titleYears": [],
-      "w": 6,
-      "l": 4,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.591
     },
     {
       "player": "Mayank Srivastava",
@@ -3606,7 +3607,7 @@
       "narrative": "One appearance, in 2024. Bocce Balboa went 1-4 in Orange, good for 6th, and the bracket stayed out of reach. They got the better of Vandelay Industries; Long Ballz got the better of them. Final ledger: 1-4. One and done."
     },
     {
-      "team": "Bushwood",
+      "team": "Bushwood Ballers",
       "years": [
         2025
       ],
@@ -3624,7 +3625,7 @@
       "facedMost": "Sparty Devils (1)",
       "beatMost": "Sparty Devils (1)",
       "lostMost": "Hot Sauce (1)",
-      "narrative": "One appearance, in 2025. Bushwood went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Sparty Devils; Hot Sauce got the better of them. Final ledger: 1-4. One and done."
+      "narrative": "One appearance, in 2025. Bushwood Ballers went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Sparty Devils; Hot Sauce got the better of them. Final ledger: 1-4. One and done."
     },
     {
       "team": "Get Leid",
