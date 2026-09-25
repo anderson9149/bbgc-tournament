@@ -53,6 +53,10 @@ export default function App() {
 
   const content = (
     <>
+      {/* The logo is painted into the background art, so it cannot carry a link
+          of its own. This sits invisibly on top of it and goes home. */}
+      <a className="home-hit" href={BASE} aria-label="Barrington Bocce Golf Classic — home" />
+
       <nav className="menu">
         <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
         <button className={tab === 'knockout' ? 'active' : ''} onClick={() => setTab('knockout')}>Knockout Round</button>

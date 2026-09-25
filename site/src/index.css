@@ -20,6 +20,21 @@ html { background: var(--red-deep); }
 body { margin: 0; }
 button { font: inherit; cursor: pointer; }
 
+/* ------------------------------------------------- logo hit area */
+/* Measured off the background art: the landscape image is 1672x941 and the
+   stage is 16:9, so cover maps straight to percentages. Portrait is cropped by
+   cover, so it is placed in image pixels scaled the same way the menu is. */
+.home-hit { position: absolute; z-index: 5; display: block; cursor: pointer; }
+.tv .home-hit { left: 15.07%; top: 2.13%; width: 24.58%; height: 15.62%; }
+.mobile .home-hit {
+  --u: max(100vw / 941, 100vh / 1672);      /* one image pixel, as the art is drawn */
+  position: fixed;
+  left: calc(50vw - 941 * var(--u) / 2 + 136 * var(--u));
+  top: calc(49 * var(--u));
+  width: calc(299 * var(--u));
+  height: calc(134 * var(--u));
+}
+
 /* ---------------------------------------------------------- menu */
 .menu { display: flex; justify-content: center; gap: 16px; }
 .menu button {
