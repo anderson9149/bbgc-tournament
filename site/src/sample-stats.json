@@ -528,6 +528,31 @@
       "pct": 0.455
     },
     {
+      "player": "Brian Watson",
+      "teams": [
+        "Bushwood",
+        "Trash n Stache"
+      ],
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "titleYears": [
+        2020
+      ],
+      "w": 12,
+      "l": 11,
+      "t": 1,
+      "koYears": 2,
+      "koW": 5,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 3,
+      "pct": 0.521
+    },
+    {
       "player": "John Batner",
       "teams": [
         "John-John, Inc",
@@ -595,30 +620,6 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.579
-    },
-    {
-      "player": "Brian Watson",
-      "teams": [
-        "Trash n Stache"
-      ],
-      "years": [
-        2020,
-        2021,
-        2025
-      ],
-      "titleYears": [
-        2020
-      ],
-      "w": 11,
-      "l": 7,
-      "t": 1,
-      "koYears": 2,
-      "koW": 5,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 1,
-      "tournaments": 3,
-      "pct": 0.605
     },
     {
       "player": "Jay Hackney",
@@ -969,6 +970,30 @@
       "pct": 1.0
     },
     {
+      "player": "Brian Rosenburg",
+      "teams": [
+        "Blues Bros",
+        "Bushwood",
+        "Gumby Dammit"
+      ],
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 8,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.469
+    },
+    {
       "player": "Dan Hrankowsky",
       "teams": [
         "Hilltoppers",
@@ -1149,28 +1174,6 @@
       "titles": 0,
       "tournaments": 5,
       "pct": 0.312
-    },
-    {
-      "player": "Brian Rosenburg",
-      "teams": [
-        "Blues Bros",
-        "Gumby Dammit"
-      ],
-      "years": [
-        2023,
-        2024
-      ],
-      "titleYears": [],
-      "w": 6,
-      "l": 4,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.591
     },
     {
       "player": "Chris Dely",
