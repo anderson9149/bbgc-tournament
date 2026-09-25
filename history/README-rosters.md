@@ -13,6 +13,12 @@ Who played for each team, keyed by the team name exactly as it appears in
 a Google Sheet cannot serve images to the site, so the picture has to live in
 the repo even though the names also land in the sheet.
 
+`titles` is optional, for a championship the sheets cannot show. 2016 and
+2017 were played but never recorded, so the only evidence of those winners
+is a photo and someone's memory.
+
 `BBGC > Build team roster sheet` pulls this file from GitHub and fills the
 sheet in. Anything already typed into a cell wins, so the rebuild never
-overwrites a hand edit.
+overwrites a hand edit. A team that predates the recorded era is not in the
+all-time list, so the build reports it as unmatched and skips it — expected,
+not a fault.
