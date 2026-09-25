@@ -81,6 +81,7 @@ function onOpen() {
     .addItem('Seed Bracket from pool standings', 'seedBracket')
     .addItem('Reset Bracket', 'resetBracket')
     .addItem('Assign team PINs', 'assignPins')
+    .addItem('Clear this year (start over)…', 'clearThisYear')
     .addSeparator()
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addItem('Refresh year list', 'refreshYearList')
@@ -470,6 +471,44 @@ function clearData_(ss) {
   resetBracket_(ss);
   var t = ss.getSheetByName(TICKER_SHEET);
   if (t) t.clearContents();
+}
+
+// Wipe a year back to an empty field: team names, pools, PINs, seed
+// overrides, every pool score, the bracket and the live board. The ticker is
+// left alone — it is written by hand and is not part of the results.
+// Only the year being played can be cleared, and only after typing it back.
+function clearThisYear() {
+  var ui = SpreadsheetApp.getUi();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var m = ss.getName().match(FILE_PATTERN);
+  var year = m ? m[1] : null;
+  if (!year) { ui.alert('This sheet is not named ' + FILE_PREFIX + '<year>, so there is nothing to clear.'); return; }
+  if (parseInt(year, 10) < new Date().getFullYear()) {
+    ui.alert('That is a finished year. Its results are history — they are not cleared from a menu.');
+    return;
+  }
+  var ask = ui.prompt('Clear ' + year + '?',
+    'This erases every team name, pool, PIN, seed override, pool score, the bracket and the ' +
+    'live board for ' + year + '. The ticker is kept. It cannot be undone except through ' +
+    'File > Version history.\n\nType ' + year + ' to confirm.', ui.ButtonSet.OK_CANCEL);
+  if (ask.getSelectedButton() !== ui.Button.OK || ask.getResponseText().trim() !== year) {
+    ui.alert('Nothing was changed.');
+    return;
+  }
+
+  var teams = ss.getSheetByName('Teams');
+  teams.getRange(2, 1, 24, 4).clearContent();      // name, pool, seed override, PIN
+  ss.getSheetByName('PoolGames').getRange(2, 7, 60, 2).clearContent();
+  resetBracket_(ss);
+  var hs = ss.getSheetByName(HOLE_SHEET);
+  var wiped = 0;
+  if (hs && hs.getLastRow() > 1) {
+    wiped = hs.getLastRow() - 1;
+    hs.deleteRows(2, wiped);
+  }
+  CacheService.getScriptCache().removeAll(['payload:' + year, 'live:' + year]);
+  ui.alert(year + ' is clear: 24 team rows, every pool score, the bracket and ' + wiped +
+           ' live game' + (wiped === 1 ? '' : 's') + '.\n\nThe ticker was left as it was.');
 }
 
 // ---------------------------------------------------- course guide
