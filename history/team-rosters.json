@@ -1,4 +1,11 @@
 {
+ "Banana in the Tailpipe, Holy Rollers": {
+  "players": [
+   "Mark Diol",
+   "Eric Schneider"
+  ],
+  "photo": "holy-rollers.webp"
+ },
  "Blues Bros": {
   "players": [
    "Kevin Mcquire",
@@ -89,13 +96,6 @@
    "Kumar Nathan"
   ],
   "photo": ""
- },
- "Holy Rollers": {
-  "players": [
-   "Mark Diol",
-   "Eric Schneider"
-  ],
-  "photo": "holy-rollers.webp"
  },
  "Hot Sauce": {
   "players": [

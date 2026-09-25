@@ -795,6 +795,52 @@
       "pct": 0.4
     },
     {
+      "player": "Eric Schneider",
+      "teams": [
+        "Banana in the Tailpipe, Holy Rollers"
+      ],
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 14,
+      "t": 1,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.37
+    },
+    {
+      "player": "Mark Diol",
+      "teams": [
+        "Banana in the Tailpipe, Holy Rollers"
+      ],
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 14,
+      "t": 1,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.37
+    },
+    {
       "player": "Nick Kelliher",
       "teams": [
         "On Wisconsin"
@@ -862,27 +908,6 @@
       "titles": 1,
       "tournaments": 1,
       "pct": 1.0
-    },
-    {
-      "player": "Eric Schneider",
-      "teams": [
-        "Holy Rollers"
-      ],
-      "years": [
-        2023,
-        2025
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 6,
-      "t": 0,
-      "koYears": 2,
-      "koW": 1,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.538
     },
     {
       "player": "Graham Whalen",
@@ -995,27 +1020,6 @@
       "titles": 1,
       "tournaments": 3,
       "pct": 0.395
-    },
-    {
-      "player": "Mark Diol",
-      "teams": [
-        "Holy Rollers"
-      ],
-      "years": [
-        2023,
-        2025
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 6,
-      "t": 0,
-      "koYears": 2,
-      "koW": 1,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.538
     },
     {
       "player": "Mike Seiffer",
@@ -1867,6 +1871,30 @@
       "narrative": "Three tournaments, one group title, and a habit of running into White Zin. John-John went 1-2 as newcomers in 2018, then won Yellow in 2019 at 4-1 and marched to the semifinals — the best day they had. In 2021 they went 4-1 again and racked up 97 points, more than anyone else in the tournament, finished second, and were bounced in round one by the last seed in the field. Both of their career losses to White Zin came in brackets. They went out at the top."
     },
     {
+      "team": "Banana in the Tailpipe, Holy Rollers",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 8,
+      "l": 14,
+      "t": 1,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "tournaments": 4,
+      "pct": 0.37,
+      "facedMost": "Hot Sauce (2)",
+      "beatMost": "Smug Champs (1)",
+      "lostMost": "Hot Sauce (2)",
+      "narrative": "Four tournaments under two names entirely. They were Banana in the Tailpipe in 2022 and 2024 — 0-5 and then 1-3-1, one win in ten — and the Holy Rollers in 2023 and 2025, which went a good deal better: Green won outright in 2023 with fewer points than the side behind them, third in Pink in 2025, and a quarterfinal on both trips. Career 8-14-1, with a group title and two runs to the last eight to set against that first spell. Hot Sauce and White Zin have each beaten them twice. Nobody else in the archive has swung so far between their own two identities."
+    },
+    {
       "team": "Guns n Rollers",
       "years": [
         2020,
@@ -1959,28 +1987,6 @@
       "beatMost": "Mustache Riders (2)",
       "lostMost": "",
       "narrative": "One tournament. One trophy. Chi'Bocce turned up in 2019, finished 1st in Blue at 4-0, and walked out of the bracket with everything. Four knockout wins, no losses, and a name on the trophy that nobody can ever take back. Mustache Riders were among the sides they put away. Never came back to defend it. Didn't need to."
-    },
-    {
-      "team": "Holy Rollers",
-      "years": [
-        2023,
-        2025
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 7,
-      "l": 6,
-      "t": 0,
-      "koYears": 2,
-      "koW": 1,
-      "koL": 2,
-      "groupTitles": 1,
-      "tournaments": 2,
-      "pct": 0.538,
-      "facedMost": "Hot Sauce (2)",
-      "beatMost": "Smug Champs (1)",
-      "lostMost": "Hot Sauce (2)",
-      "narrative": "Two tournaments, two quarterfinals, two identical 3-2 records. The Holy Rollers won Green in 2023 — taking the group with fewer points than the side behind them — and came back in 2025 to finish third in Pink and reach the last eight again. Hot Sauce and White Zin have each beaten them twice. Consistent to a fault."
     },
     {
       "team": "Long Ballz",
@@ -2900,28 +2906,6 @@
       "beatMost": "Teabaggers (1)",
       "lostMost": "Dug z World (1)",
       "narrative": "One appearance, in 2019. B.K. Knights went 1-3 in Blue, good for 4th, and the bracket stayed out of reach. They got the better of Teabaggers; Dug z World got the better of them. Final ledger: 1-3. One and done."
-    },
-    {
-      "team": "Banana in the Tailpipe",
-      "years": [
-        2022,
-        2024
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 1,
-      "l": 8,
-      "t": 1,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "tournaments": 2,
-      "pct": 0.15,
-      "facedMost": "Hide Your Moms (1)",
-      "beatMost": "Don Cuzzi (1)",
-      "lostMost": "Hide Your Moms (1)",
-      "narrative": "Two tournaments under two spellings, one win. Banana in the Tailpipe went 0-5 in 2022, dead last in Blue, then returned in 2024 to manage 1-3-1 — the solitary victory coming against Don Cuzzi. Career 1-8-1, a .150 win rate that is the lowest of any returning club. The name alone earns them a place in the record book."
     },
     {
       "team": "Billy G.O.A.T.",

@@ -25,7 +25,7 @@
       "Hot Sauce",
       "Blues Bros",
       "Sparty Devils",
-      "Holy Rollers"
+      "Banana in the Tailpipe, Holy Rollers"
     ],
     "Blue": [
       "Muck Fichigan",
@@ -48,7 +48,7 @@
     "The Big LeBocce": 1,
     "Don Cuzzi": 2,
     "Loh Hang Balls": 3,
-    "Holy Rollers": 1,
+    "Banana in the Tailpipe, Holy Rollers": 1,
     "Joanie Loves Bocce": 2,
     "Hot Sauce": 3,
     "White Zin": 1,
@@ -521,7 +521,7 @@
     },
     {
       "game": 6,
-      "a": "Holy Rollers",
+      "a": "Banana in the Tailpipe, Holy Rollers",
       "b": "W2",
       "winner": "b"
     },
@@ -565,15 +565,15 @@
     "Goldylichs": "2-2-1"
   },
   "ticker": [
-    "WELCOME TO THE 2023 B.B.G.C. \u2014 Four groups, six teams per group. Three from each group advance to the knockout round.",
-    "GROUP PLAY \u00b7 ORANGE \u2014 The Big LeBocce were the class of it: 4-1 and 99 points, the biggest haul in the tournament. Then a dead heat \u2014 Don Cuzzi and Loh Hang Balls both 3-2, Loh Hang with MORE points (84 to 78), and Don Cuzzi took the higher seed on the head-to-head. The Hawkeyes missed out at 2-3. THE BIG LeBOCCE, DON CUZZI and LOH HANG BALLS advance.",
-    "GROUP PLAY \u00b7 GREEN \u2014 Another photo finish. Holy Rollers and Joanie Loves Bocce both finished 3-2, and again the team with fewer points took the group \u2014 Holy Rollers 71, Joanie 84. Hot Sauce came third out of a three-way 2-2-1 pile-up. HOLY ROLLERS, JOANIE LOVES BOCCE and HOT SAUCE advance.",
-    "GROUP PLAY \u00b7 BLUE \u2014 White Zin did not lose: 4-0-1, the only unbeaten record in the field. Sister Swap 3-1-1 behind them, and Brothers Boor squeezed through third at 3-2 \u2014 which turned out to matter rather a lot. WHITE ZIN, SISTER SWAP and BROTHERS BOOR advance.",
-    "GROUP PLAY \u00b7 RED \u2014 Loose Meats took it at 4-1, Ghetto Ballers 3-1-1, The Seekers 3-2. A tight, scrappy group from start to finish. LOOSE MEATS, GHETTO BALLERS and THE SEEKERS advance.",
-    "ROUND ONE \u2014 Don Cuzzi ended The Seekers. Hot Sauce put out Ghetto Ballers. Loh Hang Balls ousted Joanie Loves Bocce. And Brothers Boor \u2014 eleventh seed, third out of their own group \u2014 quietly took care of Sister Swap. Nobody was watching them yet.",
-    "QUARTERFINALS \u2014 And the top seed went down. DON CUZZI KNOCKED OUT WHITE ZIN, 4-0-1 in the group and unbeaten all day, in their very first game of the bracket. Hot Sauce ended Holy Rollers. The Big LeBocce held off Loh Hang Balls. And Brothers Boor took down group champions Loose Meats.",
-    "SEMIFINALS \u2014 Don Cuzzi kept rolling, ending Hot Sauce. And Brothers Boor struck again \u2014 this time burying The Big LeBocce and that tournament-best 99-point campaign. The eleven seed was one win from the trophy.",
-    "THE FINAL \u2014 Don Cuzzi: second out of Orange on a head-to-head tiebreak, then the unbeaten number one seed, then Hot Sauce. Brothers Boor: ELEVENTH seed, third in their own group, and already the scalps of two group champions.",
-    "\ud83c\udfc6 CHAMPIONS: BROTHERS BOOR \ud83c\udfc6 \u2014 Eleventh seed. Third in their own group. And then they went out and beat Sister Swap, Loose Meats, The Big LeBocce and Don Cuzzi to lift the thing. One of the great runs in B.B.G.C. history. 2023 belongs to Brothers Boor."
+    "WELCOME TO THE 2023 B.B.G.C. — Four groups, six teams per group. Three from each group advance to the knockout round.",
+    "GROUP PLAY · ORANGE — The Big LeBocce were the class of it: 4-1 and 99 points, the biggest haul in the tournament. Then a dead heat — Don Cuzzi and Loh Hang Balls both 3-2, Loh Hang with MORE points (84 to 78), and Don Cuzzi took the higher seed on the head-to-head. The Hawkeyes missed out at 2-3. THE BIG LeBOCCE, DON CUZZI and LOH HANG BALLS advance.",
+    "GROUP PLAY · GREEN — Another photo finish. Holy Rollers and Joanie Loves Bocce both finished 3-2, and again the team with fewer points took the group — Holy Rollers 71, Joanie 84. Hot Sauce came third out of a three-way 2-2-1 pile-up. HOLY ROLLERS, JOANIE LOVES BOCCE and HOT SAUCE advance.",
+    "GROUP PLAY · BLUE — White Zin did not lose: 4-0-1, the only unbeaten record in the field. Sister Swap 3-1-1 behind them, and Brothers Boor squeezed through third at 3-2 — which turned out to matter rather a lot. WHITE ZIN, SISTER SWAP and BROTHERS BOOR advance.",
+    "GROUP PLAY · RED — Loose Meats took it at 4-1, Ghetto Ballers 3-1-1, The Seekers 3-2. A tight, scrappy group from start to finish. LOOSE MEATS, GHETTO BALLERS and THE SEEKERS advance.",
+    "ROUND ONE — Don Cuzzi ended The Seekers. Hot Sauce put out Ghetto Ballers. Loh Hang Balls ousted Joanie Loves Bocce. And Brothers Boor — eleventh seed, third out of their own group — quietly took care of Sister Swap. Nobody was watching them yet.",
+    "QUARTERFINALS — And the top seed went down. DON CUZZI KNOCKED OUT WHITE ZIN, 4-0-1 in the group and unbeaten all day, in their very first game of the bracket. Hot Sauce ended Holy Rollers. The Big LeBocce held off Loh Hang Balls. And Brothers Boor took down group champions Loose Meats.",
+    "SEMIFINALS — Don Cuzzi kept rolling, ending Hot Sauce. And Brothers Boor struck again — this time burying The Big LeBocce and that tournament-best 99-point campaign. The eleven seed was one win from the trophy.",
+    "THE FINAL — Don Cuzzi: second out of Orange on a head-to-head tiebreak, then the unbeaten number one seed, then Hot Sauce. Brothers Boor: ELEVENTH seed, third in their own group, and already the scalps of two group champions.",
+    "🏆 CHAMPIONS: BROTHERS BOOR 🏆 — Eleventh seed. Third in their own group. And then they went out and beat Sister Swap, Loose Meats, The Big LeBocce and Don Cuzzi to lift the thing. One of the great runs in B.B.G.C. history. 2023 belongs to Brothers Boor."
   ]
 }

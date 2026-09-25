@@ -4,7 +4,7 @@
   "notes": [
     "23 teams: Blue, Red and Yellow had 6 each; Orange had 5 (10 games, a bye each round).",
     "The pool board records each team's five round scores and point total but NOT which teams played each other in each round. Searching every possible round-robin schedule leaves 6 possibilities for Blue and 2 for Red, so the individual games cannot be reconstructed; the pools are entered as records only (Teams tab Record column).",
-    "Yellow's tally marks are the least legible on the board (photographed at an angle). Its records are a best reading, and they put Brownkowski (2-2-1) above Vandalay (1-3-1) even though the bracket seeded Vandalay as Yellow's #3 \u2014 worth confirming.",
+    "Yellow's tally marks are the least legible on the board (photographed at an angle). Its records are a best reading, and they put Brownkowski (2-2-1) above Vandalay (1-3-1) even though the bracket seeded Vandalay as Yellow's #3 — worth confirming.",
     "Seed Overrides follow the bracket's own seed numbers and the seed list written on the board (Seekers 5, White Zin 6, Boor 7, Brainerd 8, Mickey 9, LeBocce 10, Be-Yotch 11, Vandalay 12).",
     "Bracket is winners only; scores recorded as 1-0. Brainerd Bergs beat Hawkeyes in the final."
   ],
@@ -13,7 +13,7 @@
       "Joanie Loves Bocce",
       "The Seekers",
       "Merman",
-      "Banana in the Tailpipe",
+      "Banana in the Tailpipe, Holy Rollers",
       "Mickey the Mitcher",
       "Royale w/ Cheese"
     ],
@@ -45,7 +45,7 @@
     "Joanie Loves Bocce": "2-3",
     "The Seekers": "4-1",
     "Merman": "1-3-1",
-    "Banana in the Tailpipe": "0-5",
+    "Banana in the Tailpipe, Holy Rollers": "0-5",
     "Mickey the Mitcher": "2-2-1",
     "Royale w/ Cheese": "5-0",
     "Smug Champs": "4-1",
@@ -544,15 +544,15 @@
     }
   ],
   "ticker": [
-    "WELCOME TO THE 2022 B.B.G.C. \u2014 Four groups, six teams per group (five in Orange). Three from each group advance to the knockout round.",
-    "GROUP PLAY \u00b7 BLUE \u2014 Royale w/ Cheese went through it without a scratch: 5-0, the only perfect record in the tournament. The Seekers took second at 4-1 and Mickey the Mitcher edged in at 2-2-1. Banana in the Tailpipe never got off the mark. ROYALE W/ CHEESE, THE SEEKERS and MICKEY THE MITCHER advance.",
-    "GROUP PLAY \u00b7 RED \u2014 Smug Champs, the defending champions, looked every bit of it at 4-1. Behind them a genuine traffic jam: Brothers Boor and Brainerd Bergs both 2-2-1, with Steve + Jake, Guns n Rollers and Top Gun all at 2-3. Fine margins everywhere. SMUG CHAMPS, BROTHERS BOOR and BRAINERD BERGS advance.",
-    "GROUP PLAY \u00b7 YELLOW \u2014 The Hawkeyes did not lose a game: 4-0-1, the only unbeaten card in the group stage. White Zin were right there at 3-1-1. Vandelay Industries Industries took the last ticket. HAWKEYES, WHITE ZIN and VANDELAY INDUSTRIES INDUSTRIES advance.",
-    "GROUP PLAY \u00b7 ORANGE \u2014 Five teams, four games each. Muck Fichigan came out on top at 3-1, and then a straight tie for second: The Big LeBocce and Be-Yotch-e, Please, both 2-2. Sparty Devils and Billy G.O.A.T. both 1-2-1. MUCK FICHIGAN, BIG LeBOCCE and BE-YOTCH-E, PLEASE advance.",
-    "ROUND ONE \u2014 Brainerd Bergs edged out Mickey the Mitcher. The Seekers ended Vandelay Industries Industries. The Big LeBocce upset Brothers Boor. And Be-Yotch-e, Please sent WHITE ZIN home in the first game they played. The eleven seed over the six.",
-    "QUARTERFINALS \u2014 Hawkeyes held firm over The Big LeBocce, Smug Champs saw off Be-Yotch-e, and Muck Fichigan ended The Seekers. But the shock of the day came at the top of the board: BRAINERD BERGS TOOK DOWN ROYALE W/ CHEESE. Five and oh in the group, number one seed, out in a single game.",
-    "SEMIFINALS \u2014 Brainerd Bergs weren't done \u2014 they ended Muck Fichigan too. And the Hawkeyes stopped the defending champion Smug Champs cold. An eight seed and a two seed for the trophy.",
-    "THE FINAL \u2014 Hawkeyes: 4-0-1, the group stage's only unbeaten team, 2018 champions chasing a second. Brainerd Bergs: eighth seed out of a logjammed Red group, and a bracket run that had already buried the number one seed and a group champion.",
-    "\ud83c\udfc6 CHAMPIONS: BRAINERD BERGS \ud83c\udfc6 \u2014 They came in eighth. They beat the top seed, they beat a group champion, and then they beat the only team that hadn't lost all day. The Hawkeyes' second title will have to wait. 2022 goes to the Brainerd Bergs."
+    "WELCOME TO THE 2022 B.B.G.C. — Four groups, six teams per group (five in Orange). Three from each group advance to the knockout round.",
+    "GROUP PLAY · BLUE — Royale w/ Cheese went through it without a scratch: 5-0, the only perfect record in the tournament. The Seekers took second at 4-1 and Mickey the Mitcher edged in at 2-2-1. Banana in the Tailpipe never got off the mark. ROYALE W/ CHEESE, THE SEEKERS and MICKEY THE MITCHER advance.",
+    "GROUP PLAY · RED — Smug Champs, the defending champions, looked every bit of it at 4-1. Behind them a genuine traffic jam: Brothers Boor and Brainerd Bergs both 2-2-1, with Steve + Jake, Guns n Rollers and Top Gun all at 2-3. Fine margins everywhere. SMUG CHAMPS, BROTHERS BOOR and BRAINERD BERGS advance.",
+    "GROUP PLAY · YELLOW — The Hawkeyes did not lose a game: 4-0-1, the only unbeaten card in the group stage. White Zin were right there at 3-1-1. Vandelay Industries Industries took the last ticket. HAWKEYES, WHITE ZIN and VANDELAY INDUSTRIES INDUSTRIES advance.",
+    "GROUP PLAY · ORANGE — Five teams, four games each. Muck Fichigan came out on top at 3-1, and then a straight tie for second: The Big LeBocce and Be-Yotch-e, Please, both 2-2. Sparty Devils and Billy G.O.A.T. both 1-2-1. MUCK FICHIGAN, BIG LeBOCCE and BE-YOTCH-E, PLEASE advance.",
+    "ROUND ONE — Brainerd Bergs edged out Mickey the Mitcher. The Seekers ended Vandelay Industries Industries. The Big LeBocce upset Brothers Boor. And Be-Yotch-e, Please sent WHITE ZIN home in the first game they played. The eleven seed over the six.",
+    "QUARTERFINALS — Hawkeyes held firm over The Big LeBocce, Smug Champs saw off Be-Yotch-e, and Muck Fichigan ended The Seekers. But the shock of the day came at the top of the board: BRAINERD BERGS TOOK DOWN ROYALE W/ CHEESE. Five and oh in the group, number one seed, out in a single game.",
+    "SEMIFINALS — Brainerd Bergs weren't done — they ended Muck Fichigan too. And the Hawkeyes stopped the defending champion Smug Champs cold. An eight seed and a two seed for the trophy.",
+    "THE FINAL — Hawkeyes: 4-0-1, the group stage's only unbeaten team, 2018 champions chasing a second. Brainerd Bergs: eighth seed out of a logjammed Red group, and a bracket run that had already buried the number one seed and a group champion.",
+    "🏆 CHAMPIONS: BRAINERD BERGS 🏆 — They came in eighth. They beat the top seed, they beat a group champion, and then they beat the only team that hadn't lost all day. The Hawkeyes' second title will have to wait. 2022 goes to the Brainerd Bergs."
   ]
 }
