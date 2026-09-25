@@ -1112,6 +1112,50 @@
       "pct": 0.312
     },
     {
+      "player": "Cezar Turek",
+      "teams": [
+        "Dickens Cider"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 5,
+      "l": 9,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.357
+    },
+    {
+      "player": "Dave Degrazia",
+      "teams": [
+        "Dickens Cider"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 5,
+      "l": 9,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.357
+    },
+    {
       "player": "Dan Hrankowky",
       "teams": [
         "Loose Meats"
