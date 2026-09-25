@@ -759,6 +759,28 @@
       "pct": 0.588
     },
     {
+      "player": "Eric Lohmyer",
+      "teams": [
+        "Gumby Dammit",
+        "Loh Hang Balls"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "titleYears": [],
+      "w": 9,
+      "l": 4,
+      "t": 0,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.692
+    },
+    {
       "player": "Ryan Marvin",
       "teams": [
         "D-Boccery",
@@ -1129,6 +1151,28 @@
       "pct": 0.312
     },
     {
+      "player": "Brian Rosenburg",
+      "teams": [
+        "Blues Bros",
+        "Gumby Dammit"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 4,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.591
+    },
+    {
       "player": "Chris Dely",
       "teams": [
         "D-Boccery",
@@ -1308,26 +1352,6 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.562
-    },
-    {
-      "player": "Eric Lohmyer",
-      "teams": [
-        "Loh Hang Balls"
-      ],
-      "years": [
-        2023
-      ],
-      "titleYears": [],
-      "w": 4,
-      "l": 3,
-      "t": 0,
-      "koYears": 1,
-      "koW": 1,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.571
     },
     {
       "player": "Jake Feit",
@@ -1656,26 +1680,6 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.2
-    },
-    {
-      "player": "Brian Rosenburg",
-      "teams": [
-        "Blues Bros"
-      ],
-      "years": [
-        2023
-      ],
-      "titleYears": [],
-      "w": 1,
-      "l": 3,
-      "t": 1,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.3
     },
     {
       "player": "Chris Goluba",
