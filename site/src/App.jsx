@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useResults } from './useResults.js'
 import { useMediaQuery, useStageScale } from './hooks.js'
 import { Pools } from './Pools.jsx'
@@ -31,14 +31,20 @@ export default function App() {
     url.searchParams.set('year', y)
     window.history.replaceState(null, '', url)
   }
-  const years = data?.years?.length ? [...data.years].sort((a, b) => b - a) : null
-  const isCurrentYear = !years || data?.year === years[0]
+  // Keep the year list across a reload, so the picker does not vanish while a
+  // newly chosen year is still on its way from the sheet.
+  const yearsRef = useRef(null)
+  if (data?.years?.length) yearsRef.current = [...data.years].sort((a, b) => b - a)
+  const years = yearsRef.current
+  // The year on screen: the loaded one, or the one being fetched.
+  const shownYear = data?.year ?? (year ? Number(year) : years?.[0])
+  const isCurrentYear = !years || shownYear === years[0]
 
   // Past years have no Stats or Course Map tab; bounce back to the group stage.
   useEffect(() => {
     if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live')) setTab('group')
-    if (tab === 'hype' && (isCurrentYear || !hasHype(data?.year))) setTab('group')
-  }, [isCurrentYear, tab, data?.year])
+    if (tab === 'hype' && (isCurrentYear || !hasHype(shownYear))) setTab('group')
+  }, [isCurrentYear, tab, shownYear])
   // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
   const scale = useStageScale()
@@ -62,22 +68,22 @@ export default function App() {
         ) : (
           <>
             <button className={popup === 'story' ? 'active' : ''} onClick={() => setPopup(popup === 'story' ? null : 'story')}>
-              <span className="year-word">{data?.year} </span>Story
+              <span className="year-word">{shownYear} </span>Story
             </button>
-            {hasHype(data?.year) && (
+            {hasHype(shownYear) && (
               <button className={tab === 'hype' ? 'active' : ''} onClick={() => setTab('hype')}>Hype Video</button>
             )}
           </>
         )}
         {years && (
-          <select className="year" value={data.year} onChange={(e) => changeYear(e.target.value)} aria-label="Tournament year">
+          <select className="year" value={shownYear ?? ''} onChange={(e) => changeYear(e.target.value)} aria-label="Tournament year">
             {years.map((y) => <option key={y} value={y}>{y}</option>)}
           </select>
         )}
       </nav>
 
       {!data ? (
-        <p className="status center">{error ? `Couldn't load results: ${error}` : 'Loading…'}</p>
+        <p className="status center">{error ? `Couldn't load results: ${error}` : `Loading ${shownYear || ''}…`}</p>
       ) : tab === 'hype' ? (
         <Hype year={data.year} />
       ) : tab === 'live' ? (
@@ -97,7 +103,7 @@ export default function App() {
         {error && <span>Refresh failed · </span>}
         {fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
       </footer>
-      {popup === 'story' && <Story year={data?.year} messages={data?.ticker} onClose={() => setPopup(null)} />}
+      {popup === 'story' && <Story year={shownYear} messages={data?.ticker} onClose={() => setPopup(null)} />}
       {data && <Ticker key={data.year} messages={data.ticker} tv={isTV} />}
     </>
   )
