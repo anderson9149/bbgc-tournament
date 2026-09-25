@@ -235,6 +235,7 @@ function TeamList({ teams, h2hNote, onStory }) {
 function TeamRow({ t, h2hNote, onStory }) {
   const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
   const photo = rosters[t.team]?.photo
+  const players = rosters[t.team]?.players?.filter(Boolean) || []
   const titleYears = titleYearsFor(t)
   const stats = [
     ['Record', rec],
@@ -250,6 +251,7 @@ function TeamRow({ t, h2hNote, onStory }) {
     <article className="team-row">
       <header className="tr-head">
         <span className="tname">{t.team}</span>
+        {players.length > 0 && <span className="who">({players.join(' and ')})</span>}
         {titleYears.length > 0 && (
           <span className="titles">{'🏆'.repeat(Math.min(titleYears.length, 3))} {titleYears.join(' · ')}</span>
         )}

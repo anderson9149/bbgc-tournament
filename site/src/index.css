@@ -141,7 +141,10 @@ button { font: inherit; cursor: pointer; }
   box-shadow: 0 8px 24px rgba(0,0,0,.5); padding: 8px 12px 10px; overflow: hidden; }
 .tr-head { display: flex; align-items: baseline; gap: 12px; flex: 0 0 auto; }
 .tr-head .tname { font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; }
-.tr-head .titles { font-weight: 700; color: var(--yellow); }
+.tr-head .titles { font-weight: 700; color: var(--yellow); white-space: nowrap; }
+/* who played for them, alongside the club name */
+.tr-head .who { font-weight: 700; opacity: .8; font-size: .8rem; min-width: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tr-head .span { margin-left: auto; font-weight: 600; opacity: .7; font-size: .72rem; letter-spacing: .05em;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -387,6 +390,7 @@ button { font: inherit; cursor: pointer; }
 .tv .team-list { --row-h: 244px; --photo-w: 258px; --narr-w: 860px; flex: 1; }
 .tv .tr-head .tname { font-size: 26px; }
 .tv .tr-head .titles { font-size: 19px; }
+.tv .tr-head .who { font-size: 18px; }
 .tv .tr-head .span { font-size: 15px; }
 .tv .tr-stat .k { font-size: 12px; }
 .tv .tr-stat .v { font-size: 22px; }
@@ -525,6 +529,7 @@ button { font: inherit; cursor: pointer; }
 .mobile .tr-head { flex-wrap: wrap; row-gap: 2px; }
 .mobile .tr-head .tname { font-size: 1rem; }
 .mobile .tr-head .span { margin-left: 0; flex-basis: 100%; }
+.mobile .tr-head .who { flex-basis: 100%; font-size: .75rem; }
 .mobile .tr-stats { grid-template-columns: repeat(3, 1fr); }
 /* a phone cannot hold eight columns, so the stats wrap under the name */
 .mobile .player-grid { overflow: visible; }
