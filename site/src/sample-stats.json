@@ -1364,6 +1364,26 @@
       "pct": 0.5
     },
     {
+      "player": "Chris Zingler",
+      "teams": [
+        "Hitchhikers"
+      ],
+      "years": [
+        2025
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.4
+    },
+    {
       "player": "Ryan Goldstien",
       "teams": [
         "Goldylichs"
@@ -1382,6 +1402,26 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.5
+    },
+    {
+      "player": "Sean Breslins",
+      "teams": [
+        "Hitchhikers"
+      ],
+      "years": [
+        2025
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.4
     },
     {
       "player": "Brian Kuta",
