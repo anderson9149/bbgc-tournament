@@ -953,6 +953,32 @@
       "pct": 0.37
     },
     {
+      "player": "Justin Lindberg",
+      "teams": [
+        "Brainerd Bergs",
+        "Steam Punks"
+      ],
+      "years": [
+        2018,
+        2022,
+        2023,
+        2024
+      ],
+      "titleYears": [
+        2022
+      ],
+      "w": 8,
+      "l": 14,
+      "t": 1,
+      "koYears": 2,
+      "koW": 4,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 4,
+      "pct": 0.37
+    },
+    {
       "player": "Mark Diol",
       "teams": [
         "Banana in the Tailpipe, Holy Rollers"
@@ -1138,30 +1164,6 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.625
-    },
-    {
-      "player": "Justin Lindberg",
-      "teams": [
-        "Brainerd Bergs"
-      ],
-      "years": [
-        2022,
-        2023,
-        2024
-      ],
-      "titleYears": [
-        2022
-      ],
-      "w": 7,
-      "l": 11,
-      "t": 1,
-      "koYears": 1,
-      "koW": 4,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 1,
-      "tournaments": 3,
-      "pct": 0.395
     },
     {
       "player": "Mike Seiffer",
@@ -1830,6 +1832,26 @@
       "player": "Adam Sheridan",
       "teams": [
         "The Bryan Adams Show"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "player": "Austin Romero",
+      "teams": [
+        "Steam Punks"
       ],
       "years": [
         2018
