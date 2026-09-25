@@ -128,6 +128,53 @@ button { font: inherit; cursor: pointer; }
 .stats-note { margin: 0; text-align: center; font-weight: 600; font-style: italic; opacity: .7; font-size: .78rem; }
 .narrative p { margin: 0; line-height: 1.5; font-weight: 600; }
 
+/* ------------------------------------------------- stats: tabs + teams */
+.stats-tabs { display: flex; gap: 8px; flex: 0 0 auto; }
+.stats-tabs button { border: 2px solid rgba(255,255,255,.6); background: rgba(0,0,0,.3); color: #fff;
+  border-radius: 999px; padding: 6px 18px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+.stats-tabs button.on { background: #fff; color: var(--red); border-color: #fff; }
+
+/* one row per team, tall enough that two and a half fill the view */
+.team-list { display: flex; flex-direction: column; gap: 14px; overflow-y: auto; min-height: 0; padding-right: 4px; }
+.team-row { flex: 0 0 auto; height: var(--row-h, auto); display: flex; flex-direction: column;
+  background: rgba(30, 0, 4, .9); border: 2px solid rgba(255,255,255,.85); border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5); padding: 8px 12px 10px; overflow: hidden; }
+.tr-head { display: flex; align-items: baseline; gap: 12px; flex: 0 0 auto; }
+.tr-head .tname { font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; }
+.tr-head .titles { font-weight: 700; color: var(--yellow); }
+.tr-head .span { margin-left: auto; font-weight: 600; opacity: .7; font-size: .72rem; letter-spacing: .05em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* stats span the full width under the name; the photo, head-to-head and
+   write-up share the row below, so nothing floats in an empty column */
+.tr-body { display: grid; grid-template-columns: var(--photo-w, 180px) 1fr 1.25fr; gap: 12px; flex: 1; min-height: 0; margin-top: 7px; }
+/* one row of six keeps the stats shallow, which leaves the photo real height */
+.tr-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; flex: 0 0 auto; margin-top: 7px; }
+.tr-stat { background: rgba(0,0,0,.3); border-radius: 8px; padding: 4px 8px; }
+.tr-stat .k { display: block; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; opacity: .7; }
+.tr-stat .v { display: block; font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+/* A fixed thumbnail slot. Sizing the column to the image instead would leave
+   a lazy-loaded photo at zero width, which stops it ever loading, and the
+   shots vary from portrait to panorama so a uniform crop reads better anyway.
+   A team without a photo gets a grey box of the same size. */
+.tr-photo-wrap { min-height: 0; display: flex; align-items: stretch; }
+.tr-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%;
+  border-radius: 8px; background: rgba(255,255,255,.1); display: block; }
+.tr-photo.empty { background: rgba(255,255,255,.13); border: 1px dashed rgba(255,255,255,.28); }
+
+.tr-body .board.h2h { min-height: 0; }
+.tr-body .board header { padding: 4px 12px; }
+.tr-body .board h3 { font-size: .8rem; }
+.tr-body .board li { padding: 0 12px; font-size: .85rem; }
+.tr-body .board ol { padding: 3px 0 4px; }
+.tr-body .h2h-note { display: none; }   /* the note lives once at the foot of the page */
+
+.tr-narr { position: relative; min-height: 0; display: flex; }
+.tr-narr p { margin: 0; overflow: hidden; font-weight: 600; line-height: 1.4; font-size: .82rem;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; }
+.tr-narr .more { position: absolute; right: 0; bottom: 0; border: 0; border-radius: 6px; padding: 1px 8px;
+  background: var(--red); color: #fff; font-weight: 800; font-size: .72rem; box-shadow: -8px 0 10px rgba(30,0,4,.9); }
+
 /* --------------------------------------------------- winner photo */
 .winner-photo { margin: 0; background: #fff; padding: 6px 6px 0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); overflow: hidden; }
 .winner-photo img { display: block; width: 100%; border-radius: 6px; object-fit: cover; object-position: 50% 45%; }
@@ -308,6 +355,18 @@ button { font: inherit; cursor: pointer; }
 .tv .stats-note { font-size: 16px; }
 .tv .h2h-note { font-size: 15px; padding: 12px 18px 14px; }
 .tv .team-grid { flex: 1; }
+.tv .stats-tabs button { font-size: 19px; }
+/* 695px of stage minus the tab row: 2.5 rows plus two gaps */
+.tv .team-list { --row-h: 244px; flex: 1; }
+.tv .tr-head .tname { font-size: 26px; }
+.tv .tr-head .titles { font-size: 19px; }
+.tv .tr-head .span { font-size: 15px; }
+.tv .tr-stat .k { font-size: 12px; }
+.tv .tr-stat .v { font-size: 22px; }
+.tv .tr-right .board h3 { font-size: 17px; }
+.tv .tr-right .board li { font-size: 17px; }
+.tv .tr-narr p { font-size: 17px; }
+.tv .tr-narr .more { font-size: 15px; }
 
 .tv .live { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
   --who: 300px; --tot: 92px; }
@@ -430,6 +489,19 @@ button { font: inherit; cursor: pointer; }
 .mobile .stats { margin-top: 16px; }
 .mobile .boards { grid-template-columns: 1fr; }
 .mobile .team-grid { grid-template-columns: 1fr; }
+/* phones get one column and rows that size to their content; the page scrolls */
+/* the three tabs fit one line on a phone if they give up some padding */
+.mobile .stats-tabs { gap: 6px; }
+.mobile .stats-tabs button { padding: 6px 10px; font-size: .78rem; letter-spacing: .03em; flex: 1 1 0; }
+.mobile .team-list { overflow: visible; }
+.mobile .team-row { height: auto; }
+.mobile .tr-head { flex-wrap: wrap; row-gap: 2px; }
+.mobile .tr-head .tname { font-size: 1rem; }
+.mobile .tr-head .span { margin-left: 0; flex-basis: 100%; }
+.mobile .tr-stats { grid-template-columns: repeat(3, 1fr); }
+.mobile .tr-body { grid-template-columns: 1fr; }
+.mobile .tr-photo { height: 200px; }
+.mobile .tr-narr p { -webkit-line-clamp: 5; }
 .mobile .tiles { grid-template-columns: repeat(2, 1fr); }
 .mobile .cabinet h2 { flex-wrap: wrap; }
 .mobile .team-pick { font-size: .78rem; }

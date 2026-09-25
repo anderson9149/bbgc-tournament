@@ -1,9 +1,12 @@
-import { useEffect, useMemo, useState } from 'react'
-import { API_URL, REFRESH_SECONDS } from './config.js'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { API_URL } from './config.js'
 import sampleStats from './sample-stats.json'
+import rosters from '../../history/team-rosters.json'
+import { Overlay } from './Overlay.jsx'
 
 const params = new URLSearchParams(window.location.search)
 const LIVE = params.has('sample') ? '' : API_URL
+const BASE = import.meta.env.BASE_URL
 
 // All-time table, built by BBGC > Rebuild all-time stats and cached by the script.
 export function useStats() {
@@ -48,110 +51,141 @@ function h2hCoverage(stats) {
   return `*Head to head counts only games with a recorded score — ${parts.join(', ')}.`
 }
 
+const TABS = [['all', 'All Time'], ['teams', 'Teams'], ['individual', 'Individual']]
+
 export function Stats({ stats, error, tv }) {
-  const [who, setWho] = useState('')          // '' = All Time, otherwise a team name
+  const [view, setView] = useState('all')
+  const [story, setStory] = useState(null)   // the team whose full narrative is open
   const ranked = useMemo(() => (stats ? [...stats.teams].sort((a, b) => b.w - a.w || a.team.localeCompare(b.team)) : []), [stats])
   if (error) return <p className="status center">{error}</p>
   if (!stats) return <p className="status center">Loading all-time stats…</p>
 
   const span = stats.years?.length ? `${stats.years[0]}–${stats.years[stats.years.length - 1]}` : null
   const note = span ? <p className="stats-note">*Stats only encompass BBGC modern era {span}</p> : null
-  const picker = (
-    <select className="team-pick" value={who} onChange={(e) => setWho(e.target.value)} aria-label="All-time view">
-      <option value="">All Time</option>
-      {ranked.map((t) => <option key={t.team} value={t.team}>{t.team}</option>)}
-    </select>
-  )
-  if (who) {
-    const t = ranked.find((x) => x.team === who)
-    return t ? <TeamCard t={t} picker={picker} note={note} h2hNote={h2hCoverage(stats)} /> : null
-  }
 
+  const tabs = (
+    <nav className="stats-tabs">
+      {TABS.map(([id, label]) => (
+        <button key={id} className={view === id ? 'on' : ''} onClick={() => setView(id)}>{label}</button>
+      ))}
+    </nav>
+  )
+
+  return (
+    <section className={`stats view-${view}`}>
+      {tabs}
+      {view === 'all' && <AllTime stats={stats} tv={tv} note={note} />}
+      {view === 'teams' && <TeamList teams={ranked} h2hNote={h2hCoverage(stats)} onStory={setStory} />}
+      {view === 'individual' && <p className="status center">Individual records are not in yet.</p>}
+      {story && (
+        <Overlay title={story.team} subtitle="the write-up" onClose={() => setStory(null)} className="story">
+          <p>{story.narrative}</p>
+        </Overlay>
+      )}
+    </section>
+  )
+}
+
+// ------------------------------------------------------------ all time
+
+function AllTime({ stats, tv, note }) {
   const teams = stats.teams
   const champs = teams.filter((t) => t.titles > 0).sort((a, b) => b.titles - a.titles || a.titleYears[0] - b.titleYears[0])
-  const top = (key, cmp, filter) => [...(filter ? teams.filter(filter) : teams)].sort(cmp).slice(0, tv ? 6 : 8)
+  const top = (cmp, filter) => [...(filter ? teams.filter(filter) : teams)].sort(cmp).slice(0, tv ? 6 : 8)
 
   const boards = [
     { title: 'Most Wins', note: 'group + knockout',
-      rows: top('w', (a, b) => b.w - a.w || b.pct - a.pct),
+      rows: top((a, b) => b.w - a.w || b.pct - a.pct),
       value: (t) => `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}` },
     { title: 'Best Win %', note: `${MIN_GAMES}+ games`,
-      rows: top('pct', (a, b) => b.pct - a.pct || b.w - a.w, (t) => t.w + t.l + t.t >= MIN_GAMES),
+      rows: top((a, b) => b.pct - a.pct || b.w - a.w, (t) => t.w + t.l + t.t >= MIN_GAMES),
       value: (t) => t.pct.toFixed(3).replace(/^0/, '') },
     { title: 'Knockout Appearances', note: 'years reaching the bracket',
-      rows: top('koYears', (a, b) => b.koYears - a.koYears || b.w - a.w),
+      rows: top((a, b) => b.koYears - a.koYears || b.w - a.w),
       value: (t) => `${t.koYears} of ${t.tournaments}` },
     { title: 'Knockout Record', note: 'bracket games only',
-      rows: top('koW', (a, b) => b.koW - a.koW || a.koL - b.koL),
+      rows: top((a, b) => b.koW - a.koW || a.koL - b.koL),
       value: (t) => `${t.koW}-${t.koL}` },
     { title: 'Tournaments Played', note: 'years in the field',
-      rows: top('tournaments', (a, b) => b.tournaments - a.tournaments || b.w - a.w),
+      rows: top((a, b) => b.tournaments - a.tournaments || b.w - a.w),
       value: (t) => `${t.tournaments}` },
     { title: 'Group Titles', note: 'finished 1st in group',
-      rows: top('groupTitles', (a, b) => b.groupTitles - a.groupTitles || b.w - a.w),
+      rows: top((a, b) => b.groupTitles - a.groupTitles || b.w - a.w),
       value: (t) => `${t.groupTitles}` },
   ]
 
   return (
-    <section className="stats">
+    <>
       <div className="cabinet">
-        <h2>Champions {picker}</h2>
+        <h2>Champions</h2>
         <div className="cups">
           {champs.map((c) => (
             <div key={c.team} className={`cup ${c.titles > 1 ? 'multi' : ''}`}>
-              <span className="n">{c.titles > 1 ? `×${c.titles}` : '🏆'}</span>
+              {c.titles > 1 && <span className="n">×{c.titles}</span>}
+              {c.titles === 1 && <span className="n">🏆</span>}
               <span className="who">{c.team}</span>
               <span className="when">{c.titleYears.join(' · ')}</span>
             </div>
           ))}
         </div>
       </div>
-
       <div className="boards">
         {boards.map((b) => (
           <article className="board" key={b.title}>
             <header><h3>{b.title}</h3><span>{b.note}</span></header>
             <ol>
               {b.rows.map((t, i) => (
-                <li key={t.team}>
-                  <span className="rank">{i + 1}</span>
-                  <span className="team">{t.team}</span>
-                  <span className="val">{b.value(t)}</span>
-                </li>
+                <li key={t.team}><span className="rank">{i + 1}</span><span className="team">{t.team}</span><span className="val">{b.value(t)}</span></li>
               ))}
             </ol>
           </article>
         ))}
       </div>
       {note}
-    </section>
+    </>
   )
 }
 
-function TeamCard({ t, picker, note, h2hNote }) {
+// ------------------------------------------------------------- teams
+
+function TeamList({ teams, h2hNote, onStory }) {
+  return (
+    <div className="team-list">
+      {teams.map((t) => <TeamRow key={t.team} t={t} h2hNote={h2hNote} onStory={onStory} />)}
+    </div>
+  )
+}
+
+function TeamRow({ t, h2hNote, onStory }) {
   const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
-  const cells = [
-    ['Team Record', rec],
-    ['Win Percentage', t.pct.toFixed(3).replace(/^0/, '')],
-    ['Tournaments Played', `${t.tournaments}`],
+  const photo = rosters[t.team]?.photo
+  const stats = [
+    ['Record', rec],
+    ['Win %', t.pct.toFixed(3).replace(/^0/, '')],
+    ['Played', `${t.tournaments}`],
     ['Group Titles', `${t.groupTitles}`],
-    ['Knockout Appearances', `${t.koYears}`],
-    ['Knockout Record', `${t.koW}-${t.koL}`],
+    ['KO Years', `${t.koYears}`],
+    ['KO Record', `${t.koW}-${t.koL}`],
   ]
   const h2h = [['Faced Most', t.facedMost], ['Beaten Most', t.beatMost], ['Lost To Most', t.lostMost]]
+
   return (
-    <section className="stats team-view">
-      <div className="cabinet team-head">
-        <h2>
-          <span className="tname">{t.team}</span>
-          {t.titles > 0 && <span className="titles">{'🏆'.repeat(Math.min(t.titles, 3))} {t.titleYears.join(' · ')}</span>}
-          {picker}
-        </h2>
+    <article className="team-row">
+      <header className="tr-head">
+        <span className="tname">{t.team}</span>
+        {t.titles > 0 && <span className="titles">{'🏆'.repeat(Math.min(t.titles, 3))} {t.titleYears.join(' · ')}</span>}
         <span className="span">{t.years.join(' · ')}</span>
+      </header>
+
+      <div className="tr-stats">
+        {stats.map(([k, v]) => <div className="tr-stat" key={k}><span className="k">{k}</span><span className="v">{v}</span></div>)}
       </div>
-      <div className="team-grid">
-        <div className="tiles">
-          {cells.map(([k, v]) => <div className="tile" key={k}><span className="k">{k}</span><span className="v">{v}</span></div>)}
+
+      <div className="tr-body">
+        <div className="tr-photo-wrap">
+          {photo
+            ? <img className="tr-photo" src={`${BASE}teams/${photo}`} alt={t.team} loading="lazy" />
+            : <div className="tr-photo empty" aria-label="No photo yet" />}
         </div>
         <article className="board h2h">
           <header><h3>Head to Head</h3><span>recorded games</span></header>
@@ -160,9 +194,31 @@ function TeamCard({ t, picker, note, h2hNote }) {
           ))}</ol>
           {h2hNote && <p className="h2h-note">{h2hNote}</p>}
         </article>
+        <Narrative text={t.narrative} onMore={() => onStory(t)} />
       </div>
-      {t.narrative && <div className="narrative"><p>{t.narrative}</p></div>}
-      {note}
-    </section>
+    </article>
+  )
+}
+
+// Clamped write-up. "more…" only appears when the text is actually cut off,
+// which depends on the box it lands in, so it is measured rather than guessed.
+function Narrative({ text, onMore }) {
+  const ref = useRef(null)
+  const [clipped, setClipped] = useState(false)
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const check = () => setClipped(el.scrollHeight - el.clientHeight > 2)
+    check()
+    const ro = new ResizeObserver(check)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [text])
+  if (!text) return null
+  return (
+    <div className="tr-narr">
+      <p ref={ref}>{text}</p>
+      {clipped && <button className="more" onClick={onMore}>more…</button>}
+    </div>
   )
 }
