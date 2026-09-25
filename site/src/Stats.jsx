@@ -177,16 +177,18 @@ function TeamRow({ t, h2hNote, onStory }) {
         <span className="span">{t.years.join(' · ')}</span>
       </header>
 
-      <div className="tr-stats">
-        {stats.map(([k, v]) => <div className="tr-stat" key={k}><span className="k">{k}</span><span className="v">{v}</span></div>)}
-      </div>
-
-      <div className="tr-body">
+      <div className="tr-main">
         <div className="tr-photo-wrap">
           {photo
             ? <img className="tr-photo" src={`${BASE}teams/${photo}`} alt={t.team} loading="lazy" />
             : <div className="tr-photo empty" aria-label="No photo yet" />}
         </div>
+
+        <div className="tr-stats">
+          {stats.map(([k, v]) => <div className="tr-stat" key={k}><span className="k">{k}</span><span className="v">{v}</span></div>)}
+        </div>
+
+        <div className="tr-body">
         <article className="board h2h">
           <header><h3>Head to Head</h3><span>recorded games</span></header>
           <ol>{h2h.map(([k, v]) => (
@@ -195,6 +197,7 @@ function TeamRow({ t, h2hNote, onStory }) {
           {h2hNote && <p className="h2h-note">{h2hNote}</p>}
         </article>
         <Narrative text={t.narrative} onMore={() => onStory(t)} />
+        </div>
       </div>
     </article>
   )
