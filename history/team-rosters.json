@@ -153,6 +153,13 @@
   ],
   "photo": ""
  },
+ "Hide Your Moms": {
+  "players": [
+   "Steve Livingston",
+   "Don Eustice"
+  ],
+  "photo": ""
+ },
  "Hilltoppers": {
   "players": [
    "Adam Kneisler",
@@ -235,12 +242,26 @@
   ],
   "photo": ""
  },
+ "Merman": {
+  "players": [
+   "Tony Choch",
+   "Chris Zingler"
+  ],
+  "photo": ""
+ },
  "Mickey the Mitcher": {
   "players": [
    "Mike Fenske",
    "Mitch Izenstark"
   ],
   "photo": "mickey-the-mitcher.webp"
+ },
+ "Mistress Irrelevant": {
+  "players": [
+   "Andrew Bland",
+   "Jason Ehlert"
+  ],
+  "photo": ""
  },
  "Moist Baguette": {
   "players": [
@@ -291,6 +312,13 @@
   "players": [
    "Adam Kneisler",
    "Chris Goluba"
+  ],
+  "photo": ""
+ },
+ "Royale w/ Cheese": {
+  "players": [
+   "Brian Rosenburg",
+   "Kevin Mcquire"
   ],
   "photo": ""
  },
@@ -394,6 +422,13 @@
    "Mike Boyum"
   ],
   "photo": "vandelay-industries.webp"
+ },
+ "Village People": {
+  "players": [
+   "Keenan Baker",
+   "Chris Zingler"
+  ],
+  "photo": ""
  },
  "Vivace do Tinge": {
   "players": [

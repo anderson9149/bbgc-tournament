@@ -241,6 +241,32 @@
       "pct": 0.707
     },
     {
+      "player": "Steve Livingston",
+      "teams": [
+        "Hide Your Moms",
+        "Muck Fichigan"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 27,
+      "l": 11,
+      "t": 1,
+      "koYears": 5,
+      "koW": 7,
+      "koL": 5,
+      "groupTitles": 4,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.705
+    },
+    {
       "player": "Pete Anderson",
       "teams": [
         "Joanie Loves Bocce",
@@ -349,30 +375,6 @@
       "titles": 1,
       "tournaments": 7,
       "pct": 0.558
-    },
-    {
-      "player": "Steve Livingston",
-      "teams": [
-        "Muck Fichigan"
-      ],
-      "years": [
-        2020,
-        2021,
-        2022,
-        2023,
-        2025
-      ],
-      "titleYears": [],
-      "w": 22,
-      "l": 9,
-      "t": 1,
-      "koYears": 4,
-      "koW": 6,
-      "koL": 4,
-      "groupTitles": 4,
-      "titles": 0,
-      "tournaments": 5,
-      "pct": 0.703
     },
     {
       "player": "Tim Ostergaard",
@@ -530,6 +532,32 @@
       "titles": 0,
       "tournaments": 6,
       "pct": 0.455
+    },
+    {
+      "player": "Brian Rosenburg",
+      "teams": [
+        "Blues Bros",
+        "Bushwood",
+        "Gumby Dammit",
+        "Royale w/ Cheese"
+      ],
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 12,
+      "l": 9,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.568
     },
     {
       "player": "Brian Watson",
@@ -788,6 +816,28 @@
       "pct": 0.559
     },
     {
+      "player": "Don Eustice",
+      "teams": [
+        "Hide Your Moms",
+        "Mag Dick"
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 9,
+      "l": 5,
+      "t": 1,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.633
+    },
+    {
       "player": "Eric Lohmyer",
       "teams": [
         "Gumby Dammit",
@@ -808,6 +858,29 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.692
+    },
+    {
+      "player": "Jason Ehlert",
+      "teams": [
+        "Mistress Irrelevant",
+        "Sister Swap"
+      ],
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 9,
+      "l": 7,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.559
     },
     {
       "player": "Ryan Marvin",
@@ -998,30 +1071,6 @@
       "pct": 1.0
     },
     {
-      "player": "Brian Rosenburg",
-      "teams": [
-        "Blues Bros",
-        "Bushwood",
-        "Gumby Dammit"
-      ],
-      "years": [
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 8,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.469
-    },
-    {
       "player": "Graham Whalen",
       "teams": [
         "Long Ballz"
@@ -1068,27 +1117,6 @@
       "titles": 1,
       "tournaments": 4,
       "pct": 0.341
-    },
-    {
-      "player": "Jason Ehlert",
-      "teams": [
-        "Sister Swap"
-      ],
-      "years": [
-        2023,
-        2024
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 4,
-      "t": 1,
-      "koYears": 2,
-      "koW": 0,
-      "koL": 2,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.625
     },
     {
       "player": "Jay Robert",
@@ -1225,6 +1253,28 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.5
+    },
+    {
+      "player": "Kevin Mcquire",
+      "teams": [
+        "Blues Bros",
+        "Royale w/ Cheese"
+      ],
+      "years": [
+        2022,
+        2023
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 4,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.591
     },
     {
       "player": "Mayank Srivastava",
@@ -1381,26 +1431,6 @@
       "titles": 0,
       "tournaments": 4,
       "pct": 0.278
-    },
-    {
-      "player": "Don Eustice",
-      "teams": [
-        "Mag Dick"
-      ],
-      "years": [
-        2025
-      ],
-      "titleYears": [],
-      "w": 4,
-      "l": 3,
-      "t": 1,
-      "koYears": 1,
-      "koW": 2,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.562
     },
     {
       "player": "Jake Feit",
@@ -1591,6 +1621,30 @@
       "pct": 0.6
     },
     {
+      "player": "Chris Zingler",
+      "teams": [
+        "Hitchhikers",
+        "Merman",
+        "Village People"
+      ],
+      "years": [
+        2018,
+        2022,
+        2025
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 9,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.269
+    },
+    {
       "player": "Marc Tozi",
       "teams": [
         "Tyson's Micropenis"
@@ -1609,6 +1663,26 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.6
+    },
+    {
+      "player": "Andrew Bland",
+      "teams": [
+        "Mistress Irrelevant"
+      ],
+      "years": [
+        2025
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.4
     },
     {
       "player": "Ben Wunderlich",
@@ -1650,26 +1724,6 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.25
-    },
-    {
-      "player": "Chris Zingler",
-      "teams": [
-        "Hitchhikers"
-      ],
-      "years": [
-        2025
-      ],
-      "titleYears": [],
-      "w": 2,
-      "l": 3,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.4
     },
     {
       "player": "Horace Seeley-Brown",
@@ -1873,26 +1927,6 @@
       "pct": 0.2
     },
     {
-      "player": "Kevin Mcquire",
-      "teams": [
-        "Blues Bros"
-      ],
-      "years": [
-        2023
-      ],
-      "titleYears": [],
-      "w": 1,
-      "l": 3,
-      "t": 1,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.3
-    },
-    {
       "player": "Kumar Nathan",
       "teams": [
         "Here 4 Beer"
@@ -1913,6 +1947,26 @@
       "pct": 0.2
     },
     {
+      "player": "Tony Choch",
+      "teams": [
+        "Merman"
+      ],
+      "years": [
+        2022
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.3
+    },
+    {
       "player": "Eric Fischer",
       "teams": [
         "Wildcat"
@@ -1923,6 +1977,26 @@
       "titleYears": [],
       "w": 0,
       "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "player": "Keenan Baker",
+      "teams": [
+        "Village People"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 0,
+      "l": 3,
       "t": 0,
       "koYears": 0,
       "koW": 0,
