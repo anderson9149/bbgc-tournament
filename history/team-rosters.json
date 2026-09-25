@@ -8,7 +8,7 @@
  },
  "Blues Bros": {
   "players": [
-   "Kevin Mcquire",
+   "Kevin McGuire",
    "Brian Rosenburg"
   ],
   "photo": ""
@@ -111,6 +111,13 @@
   ],
   "photo": "the-mesh-strikes-back.webp"
  },
+ "Glory Holz": {
+  "players": [
+   "Brett Koenig",
+   "Matt Almond"
+  ],
+  "photo": ""
+ },
  "Goldylichs": {
   "players": [
    "Ryan Goldstien",
@@ -120,7 +127,7 @@
  },
  "Grand Lakes": {
   "players": [
-   "Brian Kuta",
+   "Brian Kutka",
    "Chris Dely"
   ],
   "photo": "grand-lakes.webp"
@@ -180,6 +187,13 @@
    "Mike Oberholtzer"
   ],
   "photo": "hot-sauce.webp"
+ },
+ "Hung Like a HorsePower": {
+  "players": [
+   "Graham Whalen",
+   "Sean Viohl"
+  ],
+  "photo": ""
  },
  "Joanie Loves Bocce": {
   "players": [
@@ -315,10 +329,17 @@
   ],
   "photo": ""
  },
+ "Rolling Stones": {
+  "players": [
+   "Mike Dieterle",
+   "Jamie Bolger"
+  ],
+  "photo": ""
+ },
  "Royale w/ Cheese": {
   "players": [
    "Brian Rosenburg",
-   "Kevin Mcquire"
+   "Kevin McGuire"
   ],
   "photo": ""
  },
@@ -385,6 +406,13 @@
   "players": [
    "Jerry Magee",
    "Mike Brawley"
+  ],
+  "photo": ""
+ },
+ "The Richard Simmons Exp.": {
+  "players": [
+   "Doug Moore",
+   "Justin Lindberg"
   ],
   "photo": ""
  },

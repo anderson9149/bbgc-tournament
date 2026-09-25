@@ -509,6 +509,30 @@
       "pct": 0.415
     },
     {
+      "player": "Brett Koenig",
+      "teams": [
+        "Glory Holz",
+        "The Big LeBocce"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 15,
+      "l": 10,
+      "t": 0,
+      "koYears": 4,
+      "koW": 2,
+      "koL": 4,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.6
+    },
+    {
       "player": "David Iacuzzi",
       "teams": [
         "Don Cuzzi"
@@ -632,7 +656,7 @@
       "pct": 0.52
     },
     {
-      "player": "Brett Koenig",
+      "player": "Jay Hackney",
       "teams": [
         "The Big LeBocce"
       ],
@@ -654,26 +678,32 @@
       "pct": 0.579
     },
     {
-      "player": "Jay Hackney",
+      "player": "Justin Lindberg",
       "teams": [
-        "The Big LeBocce"
+        "Brainerd Bergs",
+        "Steam Punks",
+        "The Richard Simmons Exp."
       ],
       "years": [
+        2018,
         2021,
         2022,
-        2023
+        2023,
+        2024
       ],
-      "titleYears": [],
+      "titleYears": [
+        2022
+      ],
       "w": 11,
-      "l": 8,
-      "t": 0,
+      "l": 16,
+      "t": 2,
       "koYears": 3,
-      "koW": 2,
-      "koL": 3,
+      "koW": 4,
+      "koL": 2,
       "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.579
+      "titles": 1,
+      "tournaments": 5,
+      "pct": 0.414
     },
     {
       "player": "Mike Boyum",
@@ -792,6 +822,31 @@
       "pct": 0.588
     },
     {
+      "player": "Brian Kutka",
+      "teams": [
+        "Grand Lakes",
+        "Guns n Rollers"
+      ],
+      "years": [
+        2020,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 9,
+      "l": 16,
+      "t": 0,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 5,
+      "pct": 0.36
+    },
+    {
       "player": "Dan Hrankowsky",
       "teams": [
         "Brownkowski",
@@ -907,29 +962,6 @@
       "pct": 0.429
     },
     {
-      "player": "Brian Kutka",
-      "teams": [
-        "Guns n Rollers"
-      ],
-      "years": [
-        2020,
-        2022,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 8,
-      "l": 12,
-      "t": 0,
-      "koYears": 2,
-      "koW": 0,
-      "koL": 2,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 4,
-      "pct": 0.4
-    },
-    {
       "player": "Eric Schneider",
       "teams": [
         "Banana in the Tailpipe, Holy Rollers"
@@ -949,32 +981,6 @@
       "koL": 2,
       "groupTitles": 1,
       "titles": 0,
-      "tournaments": 4,
-      "pct": 0.37
-    },
-    {
-      "player": "Justin Lindberg",
-      "teams": [
-        "Brainerd Bergs",
-        "Steam Punks"
-      ],
-      "years": [
-        2018,
-        2022,
-        2023,
-        2024
-      ],
-      "titleYears": [
-        2022
-      ],
-      "w": 8,
-      "l": 14,
-      "t": 1,
-      "koYears": 2,
-      "koW": 4,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 1,
       "tournaments": 4,
       "pct": 0.37
     },
@@ -1099,24 +1105,26 @@
     {
       "player": "Graham Whalen",
       "teams": [
+        "Hung Like a HorsePower",
         "Long Ballz"
       ],
       "years": [
+        2021,
         2023,
         2024,
         2025
       ],
       "titleYears": [],
       "w": 7,
-      "l": 10,
+      "l": 15,
       "t": 0,
       "koYears": 1,
       "koW": 1,
       "koL": 1,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 3,
-      "pct": 0.412
+      "tournaments": 4,
+      "pct": 0.318
     },
     {
       "player": "Ian Rodnick",
@@ -1143,6 +1151,29 @@
       "titles": 1,
       "tournaments": 4,
       "pct": 0.341
+    },
+    {
+      "player": "Jamie Bolger",
+      "teams": [
+        "Mustache Riders",
+        "Rolling Stones"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 10,
+      "t": 0,
+      "koYears": 2,
+      "koW": 3,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.412
     },
     {
       "player": "Jay Robert",
@@ -1236,28 +1267,7 @@
       "pct": 0.3
     },
     {
-      "player": "Jamie Bolger",
-      "teams": [
-        "Mustache Riders"
-      ],
-      "years": [
-        2018,
-        2019
-      ],
-      "titleYears": [],
-      "w": 6,
-      "l": 6,
-      "t": 0,
-      "koYears": 2,
-      "koW": 3,
-      "koL": 2,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.5
-    },
-    {
-      "player": "Kevin Mcquire",
+      "player": "Kevin McGuire",
       "teams": [
         "Blues Bros",
         "Royale w/ Cheese"
@@ -1498,6 +1508,26 @@
       "pct": 0.571
     },
     {
+      "player": "Matt Almond",
+      "teams": [
+        "Glory Holz"
+      ],
+      "years": [
+        2025
+      ],
+      "titleYears": [],
+      "w": 4,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.667
+    },
+    {
       "player": "Michael Brickhouse",
       "teams": [
         "Brick Cock"
@@ -1645,6 +1675,26 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.269
+    },
+    {
+      "player": "Doug Moore",
+      "teams": [
+        "The Richard Simmons Exp."
+      ],
+      "years": [
+        2021
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.583
     },
     {
       "player": "Marc Tozi",
@@ -1869,26 +1919,6 @@
       "pct": 0.25
     },
     {
-      "player": "Brian Kuta",
-      "teams": [
-        "Grand Lakes"
-      ],
-      "years": [
-        2023
-      ],
-      "titleYears": [],
-      "w": 1,
-      "l": 4,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.2
-    },
-    {
       "player": "Chris Goluba",
       "teams": [
         "Reservations @ Dorsia"
@@ -1955,6 +1985,26 @@
       ],
       "years": [
         2023
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.2
+    },
+    {
+      "player": "Mike Dieterle",
+      "teams": [
+        "Rolling Stones"
+      ],
+      "years": [
+        2021
       ],
       "titleYears": [],
       "w": 1,
@@ -2077,6 +2127,26 @@
       ],
       "years": [
         2019
+      ],
+      "titleYears": [],
+      "w": 0,
+      "l": 5,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
+      "player": "Sean Viohl",
+      "teams": [
+        "Hung Like a HorsePower"
+      ],
+      "years": [
+        2021
       ],
       "titleYears": [],
       "w": 0,
