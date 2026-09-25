@@ -1269,6 +1269,46 @@
       "pct": 0.312
     },
     {
+      "player": "Ryan Wilson",
+      "teams": [
+        "Ohiowa"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.75
+    },
+    {
+      "player": "Steve Russell",
+      "teams": [
+        "Ohiowa"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 2,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.75
+    },
+    {
       "player": "Cezar Turek",
       "teams": [
         "Dickens Cider"
