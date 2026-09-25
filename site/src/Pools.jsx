@@ -12,6 +12,13 @@ export function Pools({ pools, order, tv }) {
   )
 }
 
+// A round robin of n teams is n(n-1)/2 games, so the schedule says how many
+// slots a pool holds even before anyone is entered.
+function poolSize(total) {
+  const n = (1 + Math.sqrt(1 + 8 * (total || 0))) / 2
+  return Number.isInteger(n) && n > 1 ? n : 6
+}
+
 function Pool({ name, pool, tv, onDetails }) {
   if (!pool) return null
   // Older deployments don't send ties; derive them from the games list.
@@ -22,6 +29,17 @@ function Pool({ name, pool, tv, onDetails }) {
       ties[g.teamB] = (ties[g.teamB] || 0) + 1
     }
   })
+
+  // Before a ball is thrown the sheet may hold no teams at all, or only some of
+  // them. Fill the rest of the card with TBD so an empty group reads as "not
+  // drawn yet" rather than a broken box. Once a game is played the table shows
+  // exactly what is there — a group that really ran short stays short.
+  const rows = [...pool.standings]
+  if (pool.played === 0) {
+    for (let i = rows.length; i < poolSize(pool.total); i++) {
+      rows.push({ team: '', seed: i + 1, w: 0, l: 0, t: 0, diff: 0, placeholder: true })
+    }
+  }
 
   return (
     <article className={`pool pool-${name.toLowerCase()}`}>
@@ -34,17 +52,17 @@ function Pool({ name, pool, tv, onDetails }) {
           <tr><th>#</th><th className="team">Team</th><th>W</th><th>L</th><th>T</th><th>+/−</th></tr>
         </thead>
         <tbody>
-          {pool.standings.map((row) => {
+          {rows.map((row, i) => {
             const t = row.t ?? ties[row.team] ?? 0
             return (
-              <tr key={row.team} className={row.seed <= 3 ? 'advancing' : ''}>
+              <tr key={row.team || `tbd-${i}`} className={row.seed <= 3 && !row.placeholder ? 'advancing' : ''}>
                 <td>{row.seed}</td>
                 <td className="team">{row.team || <em>TBD</em>}{row.override ? <span className="override" title="Seed set manually">*</span> : null}</td>
-                <td>{row.w}</td>
-                <td>{row.l}</td>
-                <td>{t}</td>
+                <td>{row.placeholder ? '' : row.w}</td>
+                <td>{row.placeholder ? '' : row.l}</td>
+                <td>{row.placeholder ? '' : t}</td>
                 <td title={row.recordOverride ? 'Game scores were not recorded' : undefined}>
-                  {row.recordOverride ? '—' : row.diff > 0 ? `+${row.diff}` : row.diff}
+                  {row.placeholder ? '' : row.recordOverride ? '—' : row.diff > 0 ? `+${row.diff}` : row.diff}
                 </td>
               </tr>
             )
