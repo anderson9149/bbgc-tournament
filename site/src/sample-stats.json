@@ -426,6 +426,35 @@
       "pct": 0.724
     },
     {
+      "player": "Spencer Shully",
+      "teams": [
+        "Ghetto Ballers",
+        "Mustache Riders",
+        "Trash n Stache"
+      ],
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2023,
+        2025
+      ],
+      "titleYears": [
+        2020
+      ],
+      "w": 20,
+      "l": 15,
+      "t": 2,
+      "koYears": 5,
+      "koW": 8,
+      "koL": 4,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 6,
+      "pct": 0.568
+    },
+    {
       "player": "Trevor Essig",
       "teams": [
         "Chi'Bocce",
@@ -451,33 +480,6 @@
       "titles": 1,
       "tournaments": 5,
       "pct": 0.625
-    },
-    {
-      "player": "Spencer Shully",
-      "teams": [
-        "Mustache Riders",
-        "Trash n Stache"
-      ],
-      "years": [
-        2018,
-        2019,
-        2020,
-        2021,
-        2025
-      ],
-      "titleYears": [
-        2020
-      ],
-      "w": 17,
-      "l": 13,
-      "t": 1,
-      "koYears": 4,
-      "koW": 8,
-      "koL": 3,
-      "groupTitles": 0,
-      "titles": 1,
-      "tournaments": 5,
-      "pct": 0.565
     },
     {
       "player": "Lou Donzelli",
