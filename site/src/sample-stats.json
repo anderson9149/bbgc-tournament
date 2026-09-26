@@ -1048,6 +1048,32 @@
       "pct": 0.559
     },
     {
+      "player": "Kevin McGuire",
+      "teams": [
+        "Blues Bros",
+        "Bushwood Ballers",
+        "I Can't Decide",
+        "Royale w/ Cheese"
+      ],
+      "years": [
+        2020,
+        2022,
+        2023,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 11,
+      "t": 1,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.425
+    },
+    {
       "player": "Mark Diol",
       "teams": [
         "Banana in the Tailpipe, Holy Rollers"
@@ -1211,30 +1237,6 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.412
-    },
-    {
-      "player": "Kevin McGuire",
-      "teams": [
-        "Blues Bros",
-        "Bushwood Ballers",
-        "Royale w/ Cheese"
-      ],
-      "years": [
-        2022,
-        2023,
-        2025
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 8,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.469
     },
     {
       "player": "Mike Brickhouse",
@@ -1957,6 +1959,26 @@
       ],
       "years": [
         2018
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.25
+    },
+    {
+      "player": "Brad Logan",
+      "teams": [
+        "I Can't Decide"
+      ],
+      "years": [
+        2020
       ],
       "titleYears": [],
       "w": 1,
