@@ -1242,6 +1242,32 @@
       "pct": 1.0
     },
     {
+      "player": "Brian Connors",
+      "teams": [
+        "Sparty Devils",
+        "Spencer Torkelson"
+      ],
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 18,
+      "t": 3,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.304
+    },
+    {
       "player": "Jamie Bolger",
       "teams": [
         "Mustache Riders",
@@ -1309,30 +1335,6 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.583
-    },
-    {
-      "player": "Brian Connors",
-      "teams": [
-        "Sparty Devils"
-      ],
-      "years": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 6,
-      "l": 15,
-      "t": 3,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 5,
-      "pct": 0.312
     },
     {
       "player": "Chris Dely",
@@ -2187,6 +2189,26 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.2
+    },
+    {
+      "player": "Mike Postma",
+      "teams": [
+        "Spencer Torkelson"
+      ],
+      "years": [
+        2020
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 3,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.25
     },
     {
       "player": "Tony Choch",
