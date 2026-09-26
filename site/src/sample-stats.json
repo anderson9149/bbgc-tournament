@@ -1361,6 +1361,54 @@
       "pct": 0.3
     },
     {
+      "player": "Chris Zingler",
+      "teams": [
+        "Dug z World",
+        "Hitchhikers",
+        "Mermen",
+        "Village People"
+      ],
+      "years": [
+        2018,
+        2019,
+        2022,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 12,
+      "t": 1,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.342
+    },
+    {
+      "player": "Doug Moore",
+      "teams": [
+        "Dug z World",
+        "The Richard Simmons Exp."
+      ],
+      "years": [
+        2019,
+        2021
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 5,
+      "t": 1,
+      "koYears": 2,
+      "koW": 1,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.542
+    },
+    {
       "player": "Jake Feit",
       "teams": [
         "Laces Out"
@@ -1775,50 +1823,6 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.3
-    },
-    {
-      "player": "Chris Zingler",
-      "teams": [
-        "Hitchhikers",
-        "Mermen",
-        "Village People"
-      ],
-      "years": [
-        2018,
-        2022,
-        2025
-      ],
-      "titleYears": [],
-      "w": 3,
-      "l": 9,
-      "t": 1,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.269
-    },
-    {
-      "player": "Doug Moore",
-      "teams": [
-        "The Richard Simmons Exp."
-      ],
-      "years": [
-        2021
-      ],
-      "titleYears": [],
-      "w": 3,
-      "l": 2,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.583
     },
     {
       "player": "Trev Travis",
