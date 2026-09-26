@@ -1557,6 +1557,29 @@
       "pct": 0.278
     },
     {
+      "player": "Marc Tozi",
+      "teams": [
+        "Double Deuce",
+        "Hurricane Ditka",
+        "Tyson's Micropenis"
+      ],
+      "years": [
+        2018,
+        2024
+      ],
+      "titleYears": [],
+      "w": 5,
+      "l": 7,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.417
+    },
+    {
       "player": "Sean Breslin",
       "teams": [
         "Be-Yotch-e, Please",
@@ -1791,28 +1814,6 @@
       "pct": 0.583
     },
     {
-      "player": "Marc Tozi",
-      "teams": [
-        "Hurricane Ditka",
-        "Tyson's Micropenis"
-      ],
-      "years": [
-        2018,
-        2024
-      ],
-      "titleYears": [],
-      "w": 3,
-      "l": 5,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.375
-    },
-    {
       "player": "Trev Travis",
       "teams": [
         "TNT"
@@ -1932,6 +1933,28 @@
       "koW": 0,
       "koL": 0,
       "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.25
+    },
+    {
+      "player": "Phil Zoloto",
+      "teams": [
+        "Double Deuce",
+        "Trojan"
+      ],
+      "years": [
+        2018,
+        2019
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 6,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
       "titles": 0,
       "tournaments": 2,
       "pct": 0.25
@@ -2211,26 +2234,6 @@
       "titleYears": [],
       "w": 0,
       "l": 3,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.0
-    },
-    {
-      "player": "Phil Zoloto",
-      "teams": [
-        "Trojan"
-      ],
-      "years": [
-        2019
-      ],
-      "titleYears": [],
-      "w": 0,
-      "l": 4,
       "t": 0,
       "koYears": 0,
       "koW": 0,
