@@ -667,29 +667,6 @@
       "pct": 0.464
     },
     {
-      "player": "Dan Chomicz",
-      "teams": [
-        "Del Bocce Vista",
-        "Teabaggers"
-      ],
-      "years": [
-        2019,
-        2020,
-        2021
-      ],
-      "titleYears": [],
-      "w": 11,
-      "l": 10,
-      "t": 0,
-      "koYears": 2,
-      "koW": 2,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.524
-    },
-    {
       "player": "Jay Hackney",
       "teams": [
         "The Big LeBocce"
@@ -792,6 +769,51 @@
       "pct": 0.359
     },
     {
+      "player": "Tom Chomicz",
+      "teams": [
+        "Del Bocce Vista",
+        "Teabaggers"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 11,
+      "l": 10,
+      "t": 0,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.524
+    },
+    {
+      "player": "Dan Chomicz",
+      "teams": [
+        "Del Bocce Vista"
+      ],
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "titleYears": [],
+      "w": 10,
+      "l": 7,
+      "t": 0,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.588
+    },
+    {
       "player": "Ian Rodnick",
       "teams": [
         "Boilers",
@@ -840,28 +862,6 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.625
-    },
-    {
-      "player": "Tom Chomicz",
-      "teams": [
-        "Del Bocce Vista"
-      ],
-      "years": [
-        2019,
-        2020,
-        2021
-      ],
-      "titleYears": [],
-      "w": 10,
-      "l": 7,
-      "t": 0,
-      "koYears": 2,
-      "koW": 2,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.588
     },
     {
       "player": "Brian Kutka",
