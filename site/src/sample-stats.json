@@ -2111,6 +2111,26 @@
       "pct": 0.25
     },
     {
+      "player": "Billy Sivrais",
+      "teams": [
+        "Billy G.O.A.T."
+      ],
+      "years": [
+        2022
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.375
+    },
+    {
       "player": "Brad Logan",
       "teams": [
         "I Can't Decide"
@@ -2253,6 +2273,26 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.25
+    },
+    {
+      "player": "Payne",
+      "teams": [
+        "Billy G.O.A.T."
+      ],
+      "years": [
+        2022
+      ],
+      "titleYears": [],
+      "w": 1,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.375
     },
     {
       "player": "Tony Choch",
