@@ -792,6 +792,33 @@
       "pct": 0.524
     },
     {
+      "player": "Brian Kutka",
+      "teams": [
+        "B.K. Knights",
+        "Grand Lakes",
+        "Guns n Rollers"
+      ],
+      "years": [
+        2019,
+        2020,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 10,
+      "l": 19,
+      "t": 0,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.345
+    },
+    {
       "player": "Dan Chomicz",
       "teams": [
         "Del Bocce Vista"
@@ -862,31 +889,6 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.625
-    },
-    {
-      "player": "Brian Kutka",
-      "teams": [
-        "Grand Lakes",
-        "Guns n Rollers"
-      ],
-      "years": [
-        2020,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 9,
-      "l": 16,
-      "t": 0,
-      "koYears": 2,
-      "koW": 0,
-      "koL": 2,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 5,
-      "pct": 0.36
     },
     {
       "player": "Dan Hrankowsky",
@@ -2009,6 +2011,28 @@
       "pct": 0.4
     },
     {
+      "player": "Kumar Nathan",
+      "teams": [
+        "B.K. Knights",
+        "Here 4 Beer"
+      ],
+      "years": [
+        2019,
+        2023
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 7,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.222
+    },
+    {
       "player": "Nate Johnson",
       "teams": [
         "Flamers"
@@ -2201,26 +2225,6 @@
       ],
       "years": [
         2024
-      ],
-      "titleYears": [],
-      "w": 1,
-      "l": 4,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.2
-    },
-    {
-      "player": "Kumar Nathan",
-      "teams": [
-        "Here 4 Beer"
-      ],
-      "years": [
-        2023
       ],
       "titleYears": [],
       "w": 1,
