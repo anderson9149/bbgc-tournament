@@ -1265,6 +1265,30 @@
       "pct": 0.412
     },
     {
+      "player": "Marc Tozi",
+      "teams": [
+        "BBCOCKS",
+        "Double Deuce",
+        "Tyson's Micropenis"
+      ],
+      "years": [
+        2018,
+        2021,
+        2024
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 6,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 1,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.536
+    },
+    {
       "player": "Mike Brickhouse",
       "teams": [
         "Brick Cock",
@@ -1557,28 +1581,6 @@
       "titles": 0,
       "tournaments": 4,
       "pct": 0.278
-    },
-    {
-      "player": "Marc Tozi",
-      "teams": [
-        "Double Deuce",
-        "Tyson's Micropenis"
-      ],
-      "years": [
-        2018,
-        2024
-      ],
-      "titleYears": [],
-      "w": 5,
-      "l": 4,
-      "t": 0,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.556
     },
     {
       "player": "Sean Breslin",
@@ -3440,6 +3442,27 @@
       "narrative": "One appearance, in 2024. Tyson's Micropenis went 3-2 in Red, good for 4th, and the bracket stayed out of reach. They got the better of Mickey the Mitcher; Joanie Loves Bocce got the better of them. A career record of 3-2, and then they were gone."
     },
     {
+      "team": "BBCOCKS",
+      "years": [
+        2021
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 1,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "tournaments": 1,
+      "pct": 0.5,
+      "facedMost": "John-John, Inc (1)",
+      "beatMost": "Dickens Cider (1)",
+      "lostMost": "John-John, Inc (1)",
+      "narrative": "One appearance, in 2021. BBCOCKS went 2-2-1 in Red, good for 4th, and the bracket stayed out of reach. They got the better of Dickens Cider; John-John, Inc got the better of them. Final ledger: 2-2-1. One and done."
+    },
+    {
       "team": "Brownkowski",
       "years": [
         2022
@@ -3628,27 +3651,6 @@
       "beatMost": "Noonan (1)",
       "lostMost": "On Wisconsin (1)",
       "narrative": "Two tournaments, no brackets, two wins in total. The Pink Ladies went 1-3-1 in 2019 and 1-4 in 2021, finishing fifth in their group on both occasions. They beat Noonan and they beat the Sparty Devils, and that is the whole ledger. Every tournament needs somebody to play against."
-    },
-    {
-      "team": "The Best Looking Bocce Team",
-      "years": [
-        2021
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 2,
-      "l": 2,
-      "t": 1,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "tournaments": 1,
-      "pct": 0.5,
-      "facedMost": "John-John, Inc (1)",
-      "beatMost": "Dickens Cider (1)",
-      "lostMost": "John-John, Inc (1)",
-      "narrative": "One appearance, in 2021. The Best Looking Bocce Team went 2-2-1 in Red, good for 4th, and the bracket stayed out of reach. They got the better of Dickens Cider; John-John, Inc got the better of them. Final ledger: 2-2-1. One and done."
     },
     {
       "team": "Top Gun",
