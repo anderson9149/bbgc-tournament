@@ -401,6 +401,35 @@
       "pct": 0.703
     },
     {
+      "player": "Trevor Essig",
+      "teams": [
+        "Chi'Bocce",
+        "Hot Sauce",
+        "TNT"
+      ],
+      "years": [
+        2018,
+        2019,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [
+        2019
+      ],
+      "w": 22,
+      "l": 13,
+      "t": 2,
+      "koYears": 5,
+      "koW": 6,
+      "koL": 4,
+      "groupTitles": 1,
+      "titles": 1,
+      "tournaments": 6,
+      "pct": 0.622
+    },
+    {
       "player": "Justin Davenport",
       "teams": [
         "Smug Champs"
@@ -453,33 +482,6 @@
       "titles": 1,
       "tournaments": 6,
       "pct": 0.568
-    },
-    {
-      "player": "Trevor Essig",
-      "teams": [
-        "Chi'Bocce",
-        "Hot Sauce"
-      ],
-      "years": [
-        2019,
-        2021,
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [
-        2019
-      ],
-      "w": 19,
-      "l": 11,
-      "t": 2,
-      "koYears": 4,
-      "koW": 5,
-      "koL": 3,
-      "groupTitles": 1,
-      "titles": 1,
-      "tournaments": 5,
-      "pct": 0.625
     },
     {
       "player": "Lou Donzelli",
@@ -1809,6 +1811,26 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.375
+    },
+    {
+      "player": "Trev Travis",
+      "teams": [
+        "TNT"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.6
     },
     {
       "player": "Ben Wunderlich",
