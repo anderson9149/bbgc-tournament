@@ -3,8 +3,8 @@
   "source": "history/2018-poster.webp (hand-written results poster)",
   "notes": [
     "16 teams in four 4-team pools (1-Red, 2-Blue, 3-Yellow, 4-Green), 3 rounds of 2 games each. Top 12 made the bracket; the four winless teams did not.",
-    "The poster lists every bracket team's record and point total in the corner, which fixes the seeding: White Zin 1, Hawkeyes 2, Don Cuzzi 3, Double Deuce 4, On Wisconsin 5, Brick Cock 6, TNT 7, Flangers 8, Mustache Riders 9, Bryan Adams Show 10, Steam Punks 11, Joanie Loves Bocce 12.",
-    "Red and Blue games are reconstructed from the round tables and reproduce every listed point total exactly (Brick Cock 50, Double Deuce 51, Flangers 41, White Zin 65, Bryan Adams 44, Steam Punks 42).",
+    "The poster lists every bracket team's record and point total in the corner, which fixes the seeding: White Zin 1, Hawkeyes 2, Don Cuzzi 3, Double Deuce 4, On Wisconsin 5, Brick Cock 6, TNT 7, Flamers 8, Mustache Riders 9, Bryan Adams Show 10, Steam Punks 11, Joanie Loves Bocce 12.",
+    "Red and Blue games are reconstructed from the round tables and reproduce every listed point total exactly (Brick Cock 50, Double Deuce 51, Flamers 41, White Zin 65, Bryan Adams 44, Steam Punks 42).",
     "Yellow and Green round tables have several digits that can't be read confidently (and one reading would contradict TNT's listed 2-1), so those two pools are entered as records only.",
     "Bracket is winners only; scores recorded as 1-0. Hawkeyes beat White Zin in the final."
   ],
@@ -13,7 +13,7 @@
       "Brick Cock",
       "Double Deuce",
       "Hurricane Ditka",
-      "Flangers"
+      "Flamers"
     ],
     "Blue": [
       "Steam Punks",
@@ -47,7 +47,7 @@
   "overrides": {
     "Double Deuce": 1,
     "Brick Cock": 2,
-    "Flangers": 3,
+    "Flamers": 3,
     "White Zin": 1,
     "The Bryan Adams Show": 2,
     "Steam Punks": 3,
@@ -239,7 +239,7 @@
   "bracket": [
     {
       "game": 1,
-      "a": "Flangers",
+      "a": "Flamers",
       "b": "Mustache Riders",
       "winner": "b"
     },
@@ -305,15 +305,15 @@
     }
   ],
   "ticker": [
-    "WELCOME TO THE 2018 B.B.G.C. \u2014 Four groups, four teams per group. Three from each group advance to the knockout round.",
-    "GROUP PLAY \u00b7 RED \u2014 A perfect circle of chaos. Brick Cock buried Double Deuce 22-6. Double Deuce ran past Flangers 21-7. Then Flangers stunned Brick Cock 14-13. Three teams locked at 2-1 and only the points column to split them. DOUBLE DEUCE, BRICK COCK and FLANGERS advance.",
-    "GROUP PLAY \u00b7 BLUE \u2014 White Zin was untouchable: 3-0 and 65 points, the biggest number anybody posted all day. Behind them, three teams deadlocked at 1-2 \u2014 and John-John's 18-17 thriller over Steam Punks came one point too late. WHITE ZIN, THE BRYAN ADAMS SHOW and STEAM PUNKS advance.",
-    "GROUP PLAY \u00b7 GREEN \u2014 Don Cuzzi and On Wisconsin went the whole way without losing. Both 2-0-1. Deadlocked. Separated by one solitary point, 50 to 49. DON CUZZI, ON WISCONSIN and JOANIE LOVES BOCCE advance.",
-    "GROUP PLAY \u00b7 YELLOW \u2014 The Hawkeyes swept it 3-0 and never looked troubled. And spare a thought for Mustache Riders: 49 points, MORE than TNT's 47, but a 1-2 record dropped them to the nine line. HAWKEYES, TNT and MUSTACHE RIDERS advance.",
-    "ROUND ONE \u2014 Mustache Riders sent Flangers home. On Wisconsin handled group-mate Joanie Loves Bocce for the second time in a day. TNT ended the Bryan Adams Show. And Brick Cock closed the book on the Steam Punks. Four in, four out, and the bracket was set.",
-    "QUARTERFINALS \u2014 White Zin rolled on. The Hawkeyes turned back TNT, the group rival they'd already beaten once. But the noise came from the bottom half: Brick Cock, the SIX seed, took down unbeaten Don Cuzzi \u2014 and On Wisconsin ousted Double Deuce. Both top-four seeds, gone.",
-    "SEMIFINALS \u2014 White Zin ended On Wisconsin's unbeaten day to punch the first ticket. On the other side the Hawkeyes stopped the Brick Cock giant-killers cold. Two group winners left standing. Neither one of them had lost a game all tournament.",
-    "THE FINAL \u2014 White Zin: the one seed, 3-0 in the group, a tournament-best 65 points, five straight wins, not a blemish on them. The Hawkeyes: 3-0 themselves, the two seed, three straight in the bracket including a revenge game over TNT. Something had to give.",
-    "\ud83c\udfc6 CHAMPIONS: THE HAWKEYES \ud83c\udfc6 \u2014 They swept their group, beat back a group rival who wanted them badly, buried the bracket's biggest giant-killer, and then took down the number one seed with the trophy sitting on the table. Perfect from the first hole to the last. 2018 belongs to the Hawkeyes."
+    "WELCOME TO THE 2018 B.B.G.C. — Four groups, four teams per group. Three from each group advance to the knockout round.",
+    "GROUP PLAY · RED — A perfect circle of chaos. Brick Cock buried Double Deuce 22-6. Double Deuce ran past Flamers 21-7. Then Flamers stunned Brick Cock 14-13. Three teams locked at 2-1 and only the points column to split them. DOUBLE DEUCE, BRICK COCK and FLANGERS advance.",
+    "GROUP PLAY · BLUE — White Zin was untouchable: 3-0 and 65 points, the biggest number anybody posted all day. Behind them, three teams deadlocked at 1-2 — and John-John's 18-17 thriller over Steam Punks came one point too late. WHITE ZIN, THE BRYAN ADAMS SHOW and STEAM PUNKS advance.",
+    "GROUP PLAY · GREEN — Don Cuzzi and On Wisconsin went the whole way without losing. Both 2-0-1. Deadlocked. Separated by one solitary point, 50 to 49. DON CUZZI, ON WISCONSIN and JOANIE LOVES BOCCE advance.",
+    "GROUP PLAY · YELLOW — The Hawkeyes swept it 3-0 and never looked troubled. And spare a thought for Mustache Riders: 49 points, MORE than TNT's 47, but a 1-2 record dropped them to the nine line. HAWKEYES, TNT and MUSTACHE RIDERS advance.",
+    "ROUND ONE — Mustache Riders sent Flamers home. On Wisconsin handled group-mate Joanie Loves Bocce for the second time in a day. TNT ended the Bryan Adams Show. And Brick Cock closed the book on the Steam Punks. Four in, four out, and the bracket was set.",
+    "QUARTERFINALS — White Zin rolled on. The Hawkeyes turned back TNT, the group rival they'd already beaten once. But the noise came from the bottom half: Brick Cock, the SIX seed, took down unbeaten Don Cuzzi — and On Wisconsin ousted Double Deuce. Both top-four seeds, gone.",
+    "SEMIFINALS — White Zin ended On Wisconsin's unbeaten day to punch the first ticket. On the other side the Hawkeyes stopped the Brick Cock giant-killers cold. Two group winners left standing. Neither one of them had lost a game all tournament.",
+    "THE FINAL — White Zin: the one seed, 3-0 in the group, a tournament-best 65 points, five straight wins, not a blemish on them. The Hawkeyes: 3-0 themselves, the two seed, three straight in the bracket including a revenge game over TNT. Something had to give.",
+    "🏆 CHAMPIONS: THE HAWKEYES 🏆 — They swept their group, beat back a group rival who wanted them badly, buried the bracket's biggest giant-killer, and then took down the number one seed with the trophy sitting on the table. Perfect from the first hole to the last. 2018 belongs to the Hawkeyes."
   ]
 }

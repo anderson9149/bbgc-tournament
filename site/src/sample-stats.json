@@ -1857,6 +1857,26 @@
       "pct": 0.5
     },
     {
+      "player": "Brian Turner",
+      "teams": [
+        "Flamers"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.5
+    },
+    {
       "player": "Chad Schneider",
       "teams": [
         "Pink Ladies"
@@ -1939,6 +1959,26 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.25
+    },
+    {
+      "player": "Nate Johnson",
+      "teams": [
+        "Flamers"
+      ],
+      "years": [
+        2018
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.5
     },
     {
       "player": "Phil Zoloto",
@@ -2880,7 +2920,7 @@
       "tournaments": 2,
       "pct": 0.5,
       "facedMost": "Chi'Bocce (2)",
-      "beatMost": "Flangers (1)",
+      "beatMost": "Flamers (1)",
       "lostMost": "Chi'Bocce (2)",
       "narrative": "Two tournaments and one of the great Cinderella runs. Mustache Riders went 1-2 in 2018 and still reached the quarterfinals; then in 2019, seeded twelfth and last out of the five-team Blue group, they knocked out On Wisconsin and that tournament-best 94-point campaign, took down group champions Kase-Kare-Cock, and made the semifinals before Chi'Bocce finally stopped them. They are 6-6 all time and 3-2 in brackets. Chi'Bocce beat them twice; nobody else managed it more than once."
     },
@@ -3080,8 +3120,8 @@
       "pct": 0.667,
       "facedMost": "Double Deuce (1)",
       "beatMost": "Double Deuce (1)",
-      "lostMost": "Flangers (1)",
-      "narrative": "A one-season club with something to show for it. Brick Cock finished 2nd in Red in 2018 at 2-1 and made the bracket. They won 2 knockout games and reached the semifinals. They got the better of Double Deuce; Flangers got the better of them. A career record of 4-2, and then they were gone."
+      "lostMost": "Flamers (1)",
+      "narrative": "A one-season club with something to show for it. Brick Cock finished 2nd in Red in 2018 at 2-1 and made the bracket. They won 2 knockout games and reached the semifinals. They got the better of Double Deuce; Flamers got the better of them. A career record of 4-2, and then they were gone."
     },
     {
       "team": "Glory Holz",
@@ -3458,12 +3498,12 @@
       "tournaments": 1,
       "pct": 0.5,
       "facedMost": "Brick Cock (1)",
-      "beatMost": "Flangers (1)",
+      "beatMost": "Flamers (1)",
       "lostMost": "Brick Cock (1)",
-      "narrative": "One tournament, and they owned their corner of it. Double Deuce won Red in 2018 at 2-1. They reached the quarterfinals. They got the better of Flangers; Brick Cock got the better of them. Final ledger: 2-2. One and done."
+      "narrative": "One tournament, and they owned their corner of it. Double Deuce won Red in 2018 at 2-1. They reached the quarterfinals. They got the better of Flamers; Brick Cock got the better of them. Final ledger: 2-2. One and done."
     },
     {
-      "team": "Flangers",
+      "team": "Flamers",
       "years": [
         2018
       ],
@@ -3481,7 +3521,7 @@
       "facedMost": "Hurricane Ditka (1)",
       "beatMost": "Hurricane Ditka (1)",
       "lostMost": "Double Deuce (1)",
-      "narrative": "A one-season club with something to show for it. Flangers finished 3rd in Red in 2018 at 2-1 and made the bracket. They went out in round one. They got the better of Hurricane Ditka; Double Deuce got the better of them. Final ledger: 2-2. One and done."
+      "narrative": "A one-season club with something to show for it. Flamers finished 3rd in Red in 2018 at 2-1 and made the bracket. They went out in round one. They got the better of Hurricane Ditka; Double Deuce got the better of them. Final ledger: 2-2. One and done."
     },
     {
       "team": "Goldylichs",
@@ -4151,10 +4191,10 @@
       "groupTitles": 0,
       "tournaments": 1,
       "pct": 0.0,
-      "facedMost": "Flangers (1)",
+      "facedMost": "Flamers (1)",
       "beatMost": "",
-      "lostMost": "Flangers (1)",
-      "narrative": "Hurricane Ditka entered once, in 2018, and Red was unkind: 0-3, bottom of the pile, and no way out of the group. Flangers were one of the teams that saw them off. They have not been seen since."
+      "lostMost": "Flamers (1)",
+      "narrative": "Hurricane Ditka entered once, in 2018, and Red was unkind: 0-3, bottom of the pile, and no way out of the group. Flamers were one of the teams that saw them off. They have not been seen since."
     },
     {
       "team": "The Boys r Back",
