@@ -788,6 +788,34 @@
       "pct": 0.359
     },
     {
+      "player": "Ian Rodnick",
+      "teams": [
+        "Boilers",
+        "Brainerd Bergs",
+        "Loopers"
+      ],
+      "years": [
+        2018,
+        2019,
+        2022,
+        2023,
+        2024
+      ],
+      "titleYears": [
+        2022
+      ],
+      "w": 10,
+      "l": 17,
+      "t": 1,
+      "koYears": 2,
+      "koW": 4,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
+      "tournaments": 5,
+      "pct": 0.375
+    },
+    {
       "player": "John Kuenstar",
       "teams": [
         "John-John, Inc"
@@ -1160,32 +1188,6 @@
       "pct": 0.318
     },
     {
-      "player": "Ian Rodnick",
-      "teams": [
-        "Boilers",
-        "Brainerd Bergs"
-      ],
-      "years": [
-        2018,
-        2022,
-        2023,
-        2024
-      ],
-      "titleYears": [
-        2022
-      ],
-      "w": 7,
-      "l": 14,
-      "t": 1,
-      "koYears": 1,
-      "koW": 4,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 1,
-      "tournaments": 4,
-      "pct": 0.341
-    },
-    {
       "player": "Jamie Bolger",
       "teams": [
         "Mustache Riders",
@@ -1231,6 +1233,28 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.469
+    },
+    {
+      "player": "Mike Brickhouse",
+      "teams": [
+        "Brick Cock",
+        "Loopers"
+      ],
+      "years": [
+        2018,
+        2019
+      ],
+      "titleYears": [],
+      "w": 7,
+      "l": 5,
+      "t": 0,
+      "koYears": 2,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.583
     },
     {
       "player": "Mike Seiffer",
@@ -1583,26 +1607,6 @@
       "koW": 0,
       "koL": 1,
       "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.667
-    },
-    {
-      "player": "Michael Brickhouse",
-      "teams": [
-        "Brick Cock"
-      ],
-      "years": [
-        2018
-      ],
-      "titleYears": [],
-      "w": 4,
-      "l": 2,
-      "t": 0,
-      "koYears": 1,
-      "koW": 2,
-      "koL": 1,
-      "groupTitles": 0,
       "titles": 0,
       "tournaments": 1,
       "pct": 0.667
