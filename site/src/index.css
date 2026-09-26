@@ -333,9 +333,13 @@ button { font: inherit; cursor: pointer; }
 /* the reel sits where the pools or the bracket would be, letterboxed to 16:9 */
 .hype { display: flex; align-items: center; justify-content: center; min-height: 0; }
 .hype-frame { position: relative; width: 100%; aspect-ratio: 16 / 9;
-  background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.55);
+  background: #000; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,.55);
   border: 2px solid rgba(255,255,255,.85); }
-.hype-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* No overflow:hidden here. Clipping an iframe with a rounded ancestor makes
+   iOS Safari composite the video wrongly — a Drive reel plays its audio
+   behind a black rectangle. The iframe rounds its own corners instead. */
+.hype-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+  border-radius: 10px; }
 
 /* ----------------------------------------------------- course map */
 /* the box must hug the image exactly, or the percentage-positioned pins drift */
