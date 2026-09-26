@@ -1027,6 +1027,32 @@
       "pct": 0.37
     },
     {
+      "player": "Graham Whalen",
+      "teams": [
+        "Get Leid",
+        "Hung Like a HorsePower",
+        "Long Ballz"
+      ],
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 19,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 5,
+      "pct": 0.296
+    },
+    {
       "player": "Jay Roberts",
       "teams": [
         "Magnum",
@@ -1097,6 +1123,30 @@
       "titles": 0,
       "tournaments": 4,
       "pct": 0.37
+    },
+    {
+      "player": "Mike Seiffer",
+      "teams": [
+        "Get Leid",
+        "Long Ballz"
+      ],
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 14,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 4,
+      "pct": 0.364
     },
     {
       "player": "Nick Kelliher",
@@ -1194,30 +1244,6 @@
       "pct": 1.0
     },
     {
-      "player": "Graham Whalen",
-      "teams": [
-        "Hung Like a HorsePower",
-        "Long Ballz"
-      ],
-      "years": [
-        2021,
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 15,
-      "t": 0,
-      "koYears": 1,
-      "koW": 1,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 4,
-      "pct": 0.318
-    },
-    {
       "player": "Jamie Bolger",
       "teams": [
         "Mustache Riders",
@@ -1261,28 +1287,6 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.583
-    },
-    {
-      "player": "Mike Seiffer",
-      "teams": [
-        "Long Ballz"
-      ],
-      "years": [
-        2023,
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 10,
-      "t": 0,
-      "koYears": 1,
-      "koW": 1,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.412
     },
     {
       "player": "Brian Connors",
