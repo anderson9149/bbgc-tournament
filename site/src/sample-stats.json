@@ -1029,7 +1029,6 @@
     {
       "player": "Graham Whalen",
       "teams": [
-        "Get Leid",
         "Hung Like a HorsePower",
         "Long Ballz"
       ],
@@ -1127,7 +1126,6 @@
     {
       "player": "Mike Seiffer",
       "teams": [
-        "Get Leid",
         "Long Ballz"
       ],
       "years": [
@@ -2726,6 +2724,30 @@
       "narrative": "Four tournaments, two trips to the bracket, and not one knockout win to show for it. Guns n Rollers opened with an 0-3 in 2020, improved steadily, and made the field in both 2024 and 2025 — losing in round one each time. Those back-to-back 3-2 group campaigns are the best work of their career. The Hawkeyes are the nemesis: three meetings, two defeats. The breakthrough is out there somewhere."
     },
     {
+      "team": "Long Ballz",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 8,
+      "l": 14,
+      "t": 0,
+      "koYears": 1,
+      "koW": 1,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 4,
+      "pct": 0.364,
+      "facedMost": "Brothers Boor (2)",
+      "beatMost": "Brothers Boor (2)",
+      "lostMost": "White Zin (2)",
+      "narrative": "Four tournaments, and the record is finally moving. Graham Whalen and Mike Seiffer first played together in 2022 and went 1-4, bottom of Yellow. They have improved every year since, and 2025 got them into the bracket for the first time. Career 8-14, no group title yet, one knockout appearance. Four straight years as the same pair — few clubs in the archive have been this settled."
+    },
+    {
       "team": "On Wisconsin",
       "years": [
         2018,
@@ -2794,29 +2816,6 @@
       "beatMost": "Mustache Riders (2)",
       "lostMost": "",
       "narrative": "One tournament. One trophy. Chi'Bocce turned up in 2019, finished 1st in Blue at 4-0, and walked out of the bracket with everything. Four knockout wins, no losses, and a name on the trophy that nobody can ever take back. Mustache Riders were among the sides they put away. Never came back to defend it. Didn't need to."
-    },
-    {
-      "team": "Long Ballz",
-      "years": [
-        2023,
-        2024,
-        2025
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 7,
-      "l": 10,
-      "t": 0,
-      "koYears": 1,
-      "koW": 1,
-      "koL": 1,
-      "groupTitles": 0,
-      "tournaments": 3,
-      "pct": 0.412,
-      "facedMost": "Brothers Boor (2)",
-      "beatMost": "Brothers Boor (2)",
-      "lostMost": "White Zin (2)",
-      "narrative": "Three tournaments, one good one. Long Ballz finished bottom of Orange in 2023 at 1-4, then returned in 2024, went 3-2, made the bracket and reached the quarterfinals before White Zin ended it. A 2-3 season in 2025 followed. They are 7-10 all time and have beaten Brothers Boor twice. White Zin, on the other hand, have never lost to them."
     },
     {
       "team": "Sister Swap",
@@ -3757,27 +3756,6 @@
       "beatMost": "Sparty Devils (1)",
       "lostMost": "Hot Sauce (1)",
       "narrative": "One appearance, in 2025. Bushwood Ballers went 1-4 in Blue, good for 6th, and the bracket stayed out of reach. They got the better of Sparty Devils; Hot Sauce got the better of them. Final ledger: 1-4. One and done."
-    },
-    {
-      "team": "Get Leid",
-      "years": [
-        2022
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 1,
-      "l": 4,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "tournaments": 1,
-      "pct": 0.2,
-      "facedMost": "",
-      "beatMost": "",
-      "lostMost": "",
-      "narrative": "One appearance, in 2022. Get Leid went 1-4 in Yellow, good for 6th, and the bracket stayed out of reach. Final ledger: 1-4. One and done."
     },
     {
       "team": "Grand Lakes",
