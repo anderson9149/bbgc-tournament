@@ -1331,6 +1331,28 @@
       "pct": 0.3
     },
     {
+      "player": "Jake Feit",
+      "teams": [
+        "Laces Out"
+      ],
+      "years": [
+        2022,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 9,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.406
+    },
+    {
       "player": "Mayank Srivastava",
       "teams": [
         "Double Doink, The Mesh",
@@ -1443,6 +1465,28 @@
       "pct": 0.75
     },
     {
+      "player": "Steve Shanfeld",
+      "teams": [
+        "Laces Out"
+      ],
+      "years": [
+        2022,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 6,
+      "l": 9,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.406
+    },
+    {
       "player": "Cezar Turek",
       "teams": [
         "Dickens Cider"
@@ -1531,27 +1575,6 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.455
-    },
-    {
-      "player": "Jake Feit",
-      "teams": [
-        "Laces Out"
-      ],
-      "years": [
-        2024,
-        2025
-      ],
-      "titleYears": [],
-      "w": 4,
-      "l": 6,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.409
     },
     {
       "player": "Jerry Magee",
@@ -1666,27 +1689,6 @@
       "years": [
         2022,
         2024
-      ],
-      "titleYears": [],
-      "w": 4,
-      "l": 6,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.409
-    },
-    {
-      "player": "Steve Shanfeld",
-      "teams": [
-        "Laces Out"
-      ],
-      "years": [
-        2024,
-        2025
       ],
       "titleYears": [],
       "w": 4,
@@ -2809,6 +2811,29 @@
       "narrative": "Two tournaments, two strong group campaigns, two round-one exits. Sister Swap went 3-1-1 in 2023 and 4-1 in 2024, finishing second both times — and lost their opening knockout game on both occasions. A .625 career win rate with absolutely nothing in the bracket to show for it. Brothers Boor have split their two meetings. The group stage has never been the problem."
     },
     {
+      "team": "Laces Out",
+      "years": [
+        2022,
+        2024,
+        2025
+      ],
+      "titles": 0,
+      "titleYears": [],
+      "w": 6,
+      "l": 9,
+      "t": 1,
+      "koYears": 1,
+      "koW": 0,
+      "koL": 1,
+      "groupTitles": 0,
+      "tournaments": 3,
+      "pct": 0.406,
+      "facedMost": "Hide Your Moms (2)",
+      "beatMost": "Don Cuzzi (1)",
+      "lostMost": "Hide Your Moms (2)",
+      "narrative": "Three tournaments under two names. Jake Feit and Steve Shanfeld entered 2022 as themselves — the board simply wrote Steve + Jake — and went 2-3 in Red. They came back as Laces Out in 2024 and 2025, and the second of those got them into the bracket for the first time. Career 6-9-1 with one knockout appearance and no group title yet. The name is better than the record, but the record is going the right way."
+    },
+    {
       "team": "Mustache Riders",
       "years": [
         2018,
@@ -3070,28 +3095,6 @@
       "beatMost": "Brothers Boor (1)",
       "lostMost": "Dickens Cider (1)",
       "narrative": "One tournament, and they owned their corner of it. Kase-Kare-Cock won Green in 2019 at 4-1. They reached the quarterfinals. They got the better of Brothers Boor; Dickens Cider got the better of them. A career record of 4-2, and then they were gone."
-    },
-    {
-      "team": "Laces Out",
-      "years": [
-        2024,
-        2025
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 4,
-      "l": 6,
-      "t": 1,
-      "koYears": 1,
-      "koW": 0,
-      "koL": 1,
-      "groupTitles": 0,
-      "tournaments": 2,
-      "pct": 0.409,
-      "facedMost": "Hide Your Moms (2)",
-      "beatMost": "Don Cuzzi (1)",
-      "lostMost": "Hide Your Moms (2)",
-      "narrative": "Two tournaments in Blue, two mid-table finishes. Laces Out went 2-2-1 in 2024, squeaked into the bracket third, and lost in round one to Hide Your Moms — the very side that had already beaten them in the group. A 2-3 in 2025 left them outside. Career 4-6-1."
     },
     {
       "team": "Loh Hang Balls",
@@ -3556,27 +3559,6 @@
       "beatMost": "Noonan (1)",
       "lostMost": "On Wisconsin (1)",
       "narrative": "Two tournaments, no brackets, two wins in total. The Pink Ladies went 1-3-1 in 2019 and 1-4 in 2021, finishing fifth in their group on both occasions. They beat Noonan and they beat the Sparty Devils, and that is the whole ledger. Every tournament needs somebody to play against."
-    },
-    {
-      "team": "Steve + Jake",
-      "years": [
-        2022
-      ],
-      "titles": 0,
-      "titleYears": [],
-      "w": 2,
-      "l": 3,
-      "t": 0,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "tournaments": 1,
-      "pct": 0.4,
-      "facedMost": "",
-      "beatMost": "",
-      "lostMost": "",
-      "narrative": "One appearance, in 2022. Steve + Jake went 2-3 in Red, good for 4th, and the bracket stayed out of reach. Final ledger: 2-3. One and done."
     },
     {
       "team": "The Best Looking Bocce Team",
