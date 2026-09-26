@@ -533,6 +533,36 @@
       "pct": 0.6
     },
     {
+      "player": "Brian Rosenburg",
+      "teams": [
+        "Blues Bros",
+        "Bushwood Ballers",
+        "Gumby Dammit",
+        "Magnum",
+        "Noonan",
+        "Royale w/ Cheese"
+      ],
+      "years": [
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 14,
+      "l": 15,
+      "t": 3,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 2,
+      "titles": 0,
+      "tournaments": 6,
+      "pct": 0.484
+    },
+    {
       "player": "David Iacuzzi",
       "teams": [
         "Don Cuzzi"
@@ -558,30 +588,30 @@
       "pct": 0.455
     },
     {
-      "player": "Brian Rosenburg",
+      "player": "Brian Watson",
       "teams": [
-        "Blues Bros",
-        "Bushwood Ballers",
-        "Gumby Dammit",
-        "Royale w/ Cheese"
+        "Noonan",
+        "Trash n Stache"
       ],
       "years": [
-        2022,
-        2023,
-        2024,
+        2019,
+        2020,
+        2021,
         2025
       ],
-      "titleYears": [],
+      "titleYears": [
+        2020
+      ],
       "w": 12,
-      "l": 9,
+      "l": 11,
       "t": 1,
       "koYears": 2,
-      "koW": 0,
-      "koL": 2,
-      "groupTitles": 2,
-      "titles": 0,
+      "koW": 5,
+      "koL": 1,
+      "groupTitles": 0,
+      "titles": 1,
       "tournaments": 4,
-      "pct": 0.568
+      "pct": 0.521
     },
     {
       "player": "John Batner",
@@ -610,9 +640,11 @@
     {
       "player": "Mike Oberholtzer",
       "teams": [
-        "Hot Sauce"
+        "Hot Sauce",
+        "Hurricane Ditka"
       ],
       "years": [
+        2018,
         2021,
         2023,
         2024,
@@ -620,39 +652,38 @@
       ],
       "titleYears": [],
       "w": 12,
-      "l": 11,
+      "l": 14,
       "t": 2,
       "koYears": 3,
       "koW": 2,
       "koL": 3,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 4,
-      "pct": 0.52
+      "tournaments": 5,
+      "pct": 0.464
     },
     {
-      "player": "Brian Watson",
+      "player": "Dan Chomicz",
       "teams": [
-        "Trash n Stache"
+        "Del Bocce Vista",
+        "Teabaggers"
       ],
       "years": [
+        2019,
         2020,
-        2021,
-        2025
+        2021
       ],
-      "titleYears": [
-        2020
-      ],
+      "titleYears": [],
       "w": 11,
-      "l": 7,
-      "t": 1,
+      "l": 10,
+      "t": 0,
       "koYears": 2,
-      "koW": 5,
-      "koL": 1,
-      "groupTitles": 0,
-      "titles": 1,
+      "koW": 2,
+      "koL": 2,
+      "groupTitles": 1,
+      "titles": 0,
       "tournaments": 3,
-      "pct": 0.605
+      "pct": 0.524
     },
     {
       "player": "Jay Hackney",
@@ -680,6 +711,7 @@
       "player": "Justin Lindberg",
       "teams": [
         "Brainerd Bergs",
+        "CooCoo 4 Coconuts",
         "Steam Punks",
         "The Richard Simmons Exp."
       ],
@@ -688,21 +720,22 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
       ],
       "titleYears": [
         2022
       ],
       "w": 11,
-      "l": 16,
+      "l": 21,
       "t": 2,
       "koYears": 3,
       "koW": 4,
       "koL": 2,
       "groupTitles": 1,
       "titles": 1,
-      "tournaments": 5,
-      "pct": 0.414
+      "tournaments": 6,
+      "pct": 0.353
     },
     {
       "player": "Mike Boyum",
@@ -753,28 +786,6 @@
       "titles": 0,
       "tournaments": 6,
       "pct": 0.359
-    },
-    {
-      "player": "Dan Chomicz",
-      "teams": [
-        "Del Bocce Vista"
-      ],
-      "years": [
-        2019,
-        2020,
-        2021
-      ],
-      "titleYears": [],
-      "w": 10,
-      "l": 7,
-      "t": 0,
-      "koYears": 2,
-      "koW": 2,
-      "koL": 2,
-      "groupTitles": 1,
-      "titles": 0,
-      "tournaments": 3,
-      "pct": 0.588
     },
     {
       "player": "John Kuenstar",
@@ -984,6 +995,29 @@
       "pct": 0.37
     },
     {
+      "player": "Jay Roberts",
+      "teams": [
+        "Magnum",
+        "Sister Swap"
+      ],
+      "years": [
+        2021,
+        2023,
+        2024
+      ],
+      "titleYears": [],
+      "w": 8,
+      "l": 6,
+      "t": 3,
+      "koYears": 2,
+      "koW": 0,
+      "koL": 2,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 3,
+      "pct": 0.559
+    },
+    {
       "player": "Mark Diol",
       "teams": [
         "Banana in the Tailpipe, Holy Rollers"
@@ -1173,27 +1207,6 @@
       "titles": 0,
       "tournaments": 3,
       "pct": 0.412
-    },
-    {
-      "player": "Jay Robert",
-      "teams": [
-        "Sister Swap"
-      ],
-      "years": [
-        2023,
-        2024
-      ],
-      "titleYears": [],
-      "w": 7,
-      "l": 4,
-      "t": 1,
-      "koYears": 2,
-      "koW": 0,
-      "koL": 2,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 2,
-      "pct": 0.625
     },
     {
       "player": "Kevin McGuire",
@@ -1654,6 +1667,28 @@
       "pct": 0.6
     },
     {
+      "player": "Andrew Bland",
+      "teams": [
+        "Bocce Balboa",
+        "Misters Irrelevant"
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "titleYears": [],
+      "w": 3,
+      "l": 7,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.3
+    },
+    {
       "player": "Chris Zingler",
       "teams": [
         "Hitchhikers",
@@ -1700,42 +1735,46 @@
     {
       "player": "Marc Tozi",
       "teams": [
+        "Hurricane Ditka",
         "Tyson's Micropenis"
       ],
       "years": [
+        2018,
         2024
       ],
       "titleYears": [],
       "w": 3,
-      "l": 2,
+      "l": 5,
       "t": 0,
       "koYears": 0,
       "koW": 0,
       "koL": 0,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 1,
-      "pct": 0.6
+      "tournaments": 2,
+      "pct": 0.375
     },
     {
-      "player": "Andrew Bland",
+      "player": "Ryan Goldstein",
       "teams": [
-        "Misters Irrelevant"
+        "Goldylichs",
+        "Inches From Glory"
       ],
       "years": [
-        2025
+        2023,
+        2024
       ],
       "titleYears": [],
-      "w": 2,
-      "l": 3,
-      "t": 0,
+      "w": 3,
+      "l": 5,
+      "t": 1,
       "koYears": 0,
       "koW": 0,
       "koL": 0,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 1,
-      "pct": 0.4
+      "tournaments": 2,
+      "pct": 0.389
     },
     {
       "player": "Ben Wunderlich",
@@ -1777,6 +1816,28 @@
       "titles": 0,
       "tournaments": 2,
       "pct": 0.25
+    },
+    {
+      "player": "Eric Nelson",
+      "teams": [
+        "Here 4 Beer",
+        "Inches From Glory"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "titleYears": [],
+      "w": 2,
+      "l": 7,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 2,
+      "pct": 0.222
     },
     {
       "player": "Horace Seeley-Brown",
@@ -1838,26 +1899,6 @@
       "titles": 0,
       "tournaments": 1,
       "pct": 0.4
-    },
-    {
-      "player": "Ryan Goldstien",
-      "teams": [
-        "Goldylichs"
-      ],
-      "years": [
-        2023
-      ],
-      "titleYears": [],
-      "w": 2,
-      "l": 2,
-      "t": 1,
-      "koYears": 0,
-      "koW": 0,
-      "koL": 0,
-      "groupTitles": 0,
-      "titles": 0,
-      "tournaments": 1,
-      "pct": 0.5
     },
     {
       "player": "Sean Breslins",
@@ -1922,47 +1963,51 @@
     {
       "player": "Chris Goluba",
       "teams": [
+        "Balz Deep",
         "Reservations @ Dorsia"
       ],
       "years": [
-        2019
+        2019,
+        2020
       ],
       "titleYears": [],
       "w": 1,
-      "l": 3,
+      "l": 6,
       "t": 1,
       "koYears": 0,
       "koW": 0,
       "koL": 0,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 1,
-      "pct": 0.3
+      "tournaments": 2,
+      "pct": 0.188
     },
     {
-      "player": "Eric Nelson",
+      "player": "John Hart",
       "teams": [
-        "Here 4 Beer"
+        "CooCoo 4 Coconuts",
+        "Moist Baguette"
       ],
       "years": [
-        2023
+        2024,
+        2025
       ],
       "titleYears": [],
       "w": 1,
-      "l": 4,
+      "l": 9,
       "t": 0,
       "koYears": 0,
       "koW": 0,
       "koL": 0,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 1,
-      "pct": 0.2
+      "tournaments": 2,
+      "pct": 0.1
     },
     {
-      "player": "John Hart",
+      "player": "Josh Brown",
       "teams": [
-        "Moist Baguette"
+        "Bocce Balboa"
       ],
       "years": [
         2024
@@ -2040,6 +2085,26 @@
       "pct": 0.3
     },
     {
+      "player": "Dan Figatner",
+      "teams": [
+        "Trojan"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 0,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
       "player": "Eric Fischer",
       "teams": [
         "Wildcat"
@@ -2100,6 +2165,26 @@
       "pct": 0.0
     },
     {
+      "player": "Phil Zoloto",
+      "teams": [
+        "Trojan"
+      ],
+      "years": [
+        2019
+      ],
+      "titleYears": [],
+      "w": 0,
+      "l": 4,
+      "t": 0,
+      "koYears": 0,
+      "koW": 0,
+      "koL": 0,
+      "groupTitles": 0,
+      "titles": 0,
+      "tournaments": 1,
+      "pct": 0.0
+    },
+    {
       "player": "Rich Matonis",
       "teams": [
         "The Boners"
@@ -2144,21 +2229,23 @@
     {
       "player": "Sean Viohl",
       "teams": [
+        "Balz Deep",
         "Hung Like a HorsePower"
       ],
       "years": [
+        2020,
         2021
       ],
       "titleYears": [],
       "w": 0,
-      "l": 5,
+      "l": 8,
       "t": 0,
       "koYears": 0,
       "koW": 0,
       "koL": 0,
       "groupTitles": 0,
       "titles": 0,
-      "tournaments": 1,
+      "tournaments": 2,
       "pct": 0.0
     }
   ],

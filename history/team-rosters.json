@@ -1,4 +1,11 @@
 {
+ "Balz Deep": {
+  "players": [
+   "Chris Goluba",
+   "Sean Viohl"
+  ],
+  "photo": ""
+ },
  "Banana in the Tailpipe, Holy Rollers": {
   "players": [
    "Mark Diol",
@@ -10,6 +17,13 @@
   "players": [
    "Kevin McGuire",
    "Brian Rosenburg"
+  ],
+  "photo": ""
+ },
+ "Bocce Balboa": {
+  "players": [
+   "Andrew Bland",
+   "Josh Brown"
   ],
   "photo": ""
  },
@@ -69,6 +83,13 @@
   ],
   "photo": "cock-a-doodle-lou.webp"
  },
+ "CooCoo 4 Coconuts": {
+  "players": [
+   "John Hart",
+   "Justin Lindberg"
+  ],
+  "photo": ""
+ },
  "Covid Cowboys": {
   "players": [
    "Tyson Lagoni",
@@ -120,7 +141,7 @@
  },
  "Goldylichs": {
   "players": [
-   "Ryan Goldstien",
+   "Ryan Goldstein",
    "Ben Wunderlich"
   ],
   "photo": "goldylichs.webp"
@@ -195,6 +216,20 @@
   ],
   "photo": ""
  },
+ "Hurricane Ditka": {
+  "players": [
+   "Mike Oberholtzer",
+   "Marc Tozi"
+  ],
+  "photo": ""
+ },
+ "Inches From Glory": {
+  "players": [
+   "Eric Nelson",
+   "Ryan Goldstein"
+  ],
+  "photo": ""
+ },
  "Joanie Loves Bocce": {
   "players": [
    "Tony Sacket",
@@ -256,6 +291,13 @@
   ],
   "photo": ""
  },
+ "Magnum": {
+  "players": [
+   "Jay Roberts",
+   "Brian Rosenburg"
+  ],
+  "photo": ""
+ },
  "Mermen": {
   "players": [
    "Tony Choch",
@@ -295,6 +337,13 @@
   "players": [
    "Spencer Shully",
    "Jamie Bolger"
+  ],
+  "photo": ""
+ },
+ "Noonan": {
+  "players": [
+   "Brian Watson",
+   "Brian Rosenburg"
   ],
   "photo": ""
  },
@@ -345,7 +394,7 @@
  },
  "Sister Swap": {
   "players": [
-   "Jay Robert",
+   "Jay Roberts",
    "Jason Ehlert"
   ],
   "photo": ""
@@ -370,6 +419,12 @@
    "Austin Romero"
   ],
   "photo": "steam-punks.webp"
+ },
+ "Teabaggers": {
+  "players": [
+   "Dan Chomicz"
+  ],
+  "photo": ""
  },
  "The Big LeBocce": {
   "players": [
@@ -443,6 +498,13 @@
    "Brian Watson"
   ],
   "photo": "trash-n-stache.webp"
+ },
+ "Trojan": {
+  "players": [
+   "Dan Figatner",
+   "Phil Zoloto"
+  ],
+  "photo": ""
  },
  "Tyson's Micropenis": {
   "players": [
