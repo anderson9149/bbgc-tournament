@@ -89,6 +89,7 @@ function unrecordedTitleYears(stats) {
 export function Stats({ stats, error, tv }) {
   const [view, setView] = useState('all')
   const [story, setStory] = useState(null)   // the team whose full narrative is open
+  const [photo, setPhoto] = useState(null)   // the team whose photo is open full size
   const ranked = useMemo(() => (stats ? [...stats.teams].sort((a, b) => b.w - a.w || a.team.localeCompare(b.team)) : []), [stats])
   if (error) return <p className="status center">{error}</p>
   if (!stats) return <p className="status center">Loading all-time stats…</p>
@@ -114,11 +115,17 @@ export function Stats({ stats, error, tv }) {
     <section className={`stats view-${view}`}>
       {tabs}
       {view === 'all' && <AllTime stats={stats} tv={tv} note={note} />}
-      {view === 'teams' && <TeamList teams={ranked} h2hNote={h2hCoverage(stats)} onStory={setStory} />}
+      {view === 'teams' && <TeamList teams={ranked} h2hNote={h2hCoverage(stats)} onStory={setStory} onPhoto={setPhoto} />}
       {view === 'individual' && <Individuals players={stats.players} />}
       {story && (
         <Overlay title={story.team} subtitle="the write-up" onClose={() => setStory(null)} className="story">
           <p>{story.narrative}</p>
+        </Overlay>
+      )}
+      {photo && (
+        <Overlay title={photo.team} subtitle={rosters[photo.team]?.players?.join(' and ')}
+                 onClose={() => setPhoto(null)} className="photo-view">
+          <img src={`${BASE}teams/${rosters[photo.team].photo}`} alt={photo.team} />
         </Overlay>
       )}
     </section>
@@ -226,15 +233,15 @@ function Individuals({ players }) {
 
 // ------------------------------------------------------------- teams
 
-function TeamList({ teams, h2hNote, onStory }) {
+function TeamList({ teams, h2hNote, onStory, onPhoto }) {
   return (
     <div className="team-list">
-      {teams.map((t) => <TeamRow key={t.team} t={t} h2hNote={h2hNote} onStory={onStory} />)}
+      {teams.map((t) => <TeamRow key={t.team} t={t} h2hNote={h2hNote} onStory={onStory} onPhoto={onPhoto} />)}
     </div>
   )
 }
 
-function TeamRow({ t, h2hNote, onStory }) {
+function TeamRow({ t, h2hNote, onStory, onPhoto }) {
   const rec = `${t.w}-${t.l}${t.t ? `-${t.t}` : ''}`
   const photo = rosters[t.team]?.photo
   const players = rosters[t.team]?.players?.filter(Boolean) || []
@@ -263,7 +270,9 @@ function TeamRow({ t, h2hNote, onStory }) {
       <div className="tr-main">
         <div className="tr-photo-wrap">
           {photo
-            ? <img className="tr-photo" src={`${BASE}teams/${photo}`} alt={t.team} loading="lazy" />
+            ? <button className="tr-photo-btn" onClick={() => onPhoto(t)} aria-label={`${t.team} — see the whole photo`}>
+                <img className="tr-photo" src={`${BASE}teams/${photo}`} alt={t.team} loading="lazy" />
+              </button>
             : <div className="tr-photo empty" aria-label="No photo yet" />}
         </div>
 
