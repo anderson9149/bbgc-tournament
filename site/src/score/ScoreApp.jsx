@@ -239,7 +239,7 @@ function Scoring({ initial, onExit }) {
           {finishing ? 'Committing…' : 'Commit Score'}
         </button>
         <div className="nav one">
-          <button onClick={() => { setConfirming(false); setHole(HOLES) }} disabled={finishing}>Previous</button>
+          <button onClick={() => { setConfirming(false); setHole(HOLES); setErr(null) }} disabled={finishing}>Previous</button>
         </div>
         <div className={`sync ${pending ? 'on' : ''}`}>{pending ? 'Saving…' : 'Saved'}</div>
       </section>

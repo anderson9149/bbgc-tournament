@@ -29,8 +29,19 @@ async function retry(fn, attempts = 3) {
   }
 }
 
+// Reading or writing a hole needs the hole-by-hole card back.
 const asGame = (data) => {
   if (!Array.isArray(data.holes)) throw new ApiError('Scorekeeper API not available — deploy the latest script')
+  return data
+}
+
+// Committing does not. The score is already in the sheet by the time this
+// returns, so the only things the final card shows are the two totals — demand
+// those and nothing more, rather than failing a commit that actually worked.
+const asFinal = (data) => {
+  if (typeof data.scoreA !== 'number' || typeof data.scoreB !== 'number') {
+    throw new ApiError('The sheet did not confirm the final score — check the board before re-committing')
+  }
   return data
 }
 
@@ -57,4 +68,4 @@ function post(body, expectGame = true) {
 
 export const login = (pin) => post({ action: 'login', pin }, false)
 export const saveHole = (a, b, hole, value, pin) => post({ action: 'hole', a, b, hole, value, pin })
-export const finishGame = (a, b, pin) => post({ action: 'finish', a, b, pin })
+export const finishGame = (a, b, pin) => post({ action: 'finish', a, b, pin }, false).then(asFinal)
