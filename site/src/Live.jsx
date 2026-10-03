@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { API_URL } from './config.js'
+import { API_URL, LIVE_SECONDS } from './config.js'
 import sampleLive from './sample-live.json'
 
 const params = new URLSearchParams(window.location.search)
@@ -18,7 +18,7 @@ export function useLive(active) {
       .then((d) => { if (!cancelled && Array.isArray(d.games)) setData(d) })
       .catch(() => {})
     load()
-    const id = setInterval(load, 30000)   // see REFRESH_SECONDS: the script is the bottleneck
+    const id = setInterval(load, LIVE_SECONDS * 1000)
     return () => { cancelled = true; clearInterval(id) }
   }, [active])
   return data

@@ -9,7 +9,7 @@ import { Overlay, Story } from './Overlay.jsx'
 import { CourseMap, useHoles } from './CourseMap.jsx'
 import { Live, useLive } from './Live.jsx'
 import { Hype, hasHype } from './Hype.jsx'
-import { API_URL as CONFIGURED_URL } from './config.js'
+import { API_URL as CONFIGURED_URL, IS_WALL, REFRESH_SECONDS } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
 
@@ -110,6 +110,7 @@ export default function App() {
         {!API_URL && <span>Sample data · </span>}
         {error && <span>Refresh failed · </span>}
         {fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
+        {IS_WALL && <span> · wall {REFRESH_SECONDS}s</span>}
       </footer>
       {popup === 'story' && <Story year={shownYear} messages={data?.ticker} onClose={() => setPopup(null)} />}
       {data && <Ticker key={data.year} messages={data.ticker} tv={isTV} />}
