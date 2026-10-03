@@ -83,6 +83,10 @@ function onOpen() {
     .addItem('Assign team PINs', 'assignPins')
     .addItem('Clear this year (start over)…', 'clearThisYear')
     .addSeparator()
+    .addItem('Email me a backup now', 'backupNow')
+    .addItem('Back up every 30 minutes', 'backupEvery30Minutes')
+    .addItem('Stop automatic backups', 'stopAutomaticBackups')
+    .addSeparator()
     .addItem('Set up year files (one time)', 'setupYearFiles')
     .addItem('Refresh year list', 'refreshYearList')
     .addItem('Import a past year from GitHub history…', 'importHistory')
@@ -509,6 +513,110 @@ function clearThisYear() {
   CacheService.getScriptCache().removeAll(['payload:' + year, 'live:' + year]);
   ui.alert(year + ' is clear: 24 team rows, every pool score, the bracket and ' + wiped +
            ' live game' + (wiped === 1 ? '' : 's') + '.\n\nThe ticker was left as it was.');
+}
+
+// ------------------------------------------------------ backups
+
+// Email a copy of the year's data to whoever owns the sheet. Google's own
+// version history is the better safety net — it is automatic and restores any
+// point in time — but it lives in the same account as the thing it protects.
+// This puts a restorable copy somewhere else.
+//
+// The attachment is the raw contents of every tab, not a summary, so a bad
+// afternoon can be undone by pasting it back. The body is a readable
+// standings table for checking on a phone without opening anything.
+var BACKUP_PROP = 'bbgcLastBackup';
+
+function backupNow() {
+  var sent = sendBackup_(true);
+  SpreadsheetApp.getUi().alert(sent ? 'Backup emailed to ' + Session.getEffectiveUser().getEmail()
+                                    : 'Could not send the backup — check the execution log.');
+}
+
+function backupEvery30Minutes() {
+  stopBackups_();
+  ScriptApp.newTrigger('sendBackup_').timeBased().everyMinutes(30).create();
+  sendBackup_(true);
+  SpreadsheetApp.getUi().alert('Backing up every 30 minutes to ' + Session.getEffectiveUser().getEmail() +
+    '.\n\nOnly changed data is sent, so quiet stretches cost nothing. ' +
+    'Turn it off with BBGC > Stop automatic backups when the day is done.');
+}
+
+function stopAutomaticBackups() {
+  var n = stopBackups_();
+  SpreadsheetApp.getUi().alert(n ? 'Stopped. No more backup emails.' : 'Automatic backups were not running.');
+}
+
+function stopBackups_() {
+  var n = 0;
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === 'sendBackup_') { ScriptApp.deleteTrigger(t); n++; }
+  });
+  return n;
+}
+
+// force = send even if nothing has changed since the last one
+function sendBackup_(force) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var m = ss.getName().match(FILE_PATTERN);
+  var year = m ? m[1] : String(new Date().getFullYear());
+
+  var dump = {};
+  ['Teams', 'PoolGames', 'BracketGames', HOLE_SHEET, TICKER_SHEET].forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (sh && sh.getLastRow()) dump[name] = sh.getDataRange().getValues();
+  });
+  var body = JSON.stringify({ year: Number(year), takenAt: new Date().toISOString(), sheets: dump });
+
+  // Nothing new since last time? Then there is nothing worth sending.
+  var props = PropertiesService.getScriptProperties();
+  var fingerprint = Utilities.base64Encode(
+    Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, body));
+  if (!force && props.getProperty(BACKUP_PROP) === fingerprint) return false;
+  props.setProperty(BACKUP_PROP, fingerprint);
+
+  var stamp = Utilities.formatDate(new Date(), ss.getSpreadsheetTimeZone(), 'yyyy-MM-dd HH:mm');
+  MailApp.sendEmail({
+    to: Session.getEffectiveUser().getEmail(),
+    subject: 'BBGC ' + year + ' backup — ' + stamp,
+    body: backupSummary_(ss, year, stamp),
+    attachments: [Utilities.newBlob(body, 'application/json',
+      'BBGC_' + year + '_' + stamp.replace(/[: ]/g, '-') + '.json')],
+  });
+  return true;
+}
+
+// A readable standings table, so the email is useful on its own.
+function backupSummary_(ss, year, stamp) {
+  var lines = ['BBGC ' + year + ' as at ' + stamp, ''];
+  try {
+    var data = readData_(ss);
+    var standings = computeStandings_(data);
+    poolsOf_(data).forEach(function (pool) {
+      var p = standings[pool];
+      lines.push(pool.toUpperCase() + '  (' + p.played + '/' + p.total + ' played)');
+      p.rows.forEach(function (r, i) {
+        if (!r.team) return;
+        lines.push('  ' + (i + 1) + '. ' + r.team + '  ' + r.w + '-' + r.l + (r.t ? '-' + r.t : '') +
+                   '  (' + (r.diff > 0 ? '+' : '') + r.diff + ')');
+      });
+      lines.push('');
+    });
+    var played = data.bracket.filter(function (g) { return g.scoreA !== null && g.scoreB !== null; });
+    if (played.length) {
+      lines.push('KNOCKOUT');
+      played.forEach(function (g) {
+        lines.push('  ' + g.round + ' ' + g.game + ': ' + g.teamA + ' ' + g.scoreA +
+                   ' - ' + g.scoreB + ' ' + g.teamB + (g.winner ? '  -> ' + g.winner : ''));
+      });
+      lines.push('');
+    }
+  } catch (err) {
+    lines.push('(could not build the summary: ' + err + ')');
+  }
+  lines.push('The attached JSON holds every tab in full. To restore, paste a');
+  lines.push('sheet\'s block back over the same range.');
+  return lines.join('\n');
 }
 
 // ---------------------------------------------------- course guide
