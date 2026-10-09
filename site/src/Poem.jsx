@@ -1,14 +1,12 @@
 const BASE = import.meta.env.BASE_URL
 const VIDEO = '4YB0z163wqg'
 
-// Measured off the artwork, which is cropped to the parchment itself: the
-// compass rose spans 3.3%-20.5% across, centred at 11.9% / 19.3%. On the
-// stage the video is drawn as a circle over it, wider than the rose so it
-// reads from across the room: nudged right to stay inside the torn edge, and
-// dropped to 25% because at this size it is taller than the rose's distance
-// from the top of the paper. `size` and `left` are percentages of the map's
+// On the stage the video is a circle on the parchment, up in the top-left
+// where the compass rose is painted. At this size it cannot be centred on the
+// rose without hanging over the torn edges, so it is set inside them instead
+// and only partly covers it. `size` and `left` are percentages of the map's
 // width, `top` of its height.
-const COMPASS = { left: 13.5, top: 25, size: 25.86 }
+const COMPASS = { left: 18, top: 30, size: 25.86 }
 
 const STANZAS = [
   ['In the spirit of leisure I see no deeper',
