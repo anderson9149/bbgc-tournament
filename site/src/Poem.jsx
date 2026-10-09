@@ -19,7 +19,7 @@ const STANZAS = [
    'Any golfer that stands in my way'],
   ['From the bad first bounce, to the 2-point trounce',
    'From the 1st to 18th, may each hole beckon thee',
-   'Boccemens balls to the clo sest of calls',
+   'Boccemens balls to the closet of calls',
    'And when the FAT lady sings may she gargle them all'],
   ['So drown all your sins, fill em with grins, cause even as losers, at Ty’s we all win!'],
   ['Raise your glasses, gentlemen, to the XX annual',
