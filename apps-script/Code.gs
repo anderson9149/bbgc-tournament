@@ -561,10 +561,19 @@ function relabelPools() {
   var out = [];
   pools.forEach(function (p) { for (var i = 0; i < 15; i++) out.push([p]); });
   pg.getRange(2, 1, 60, 1).setValues(out);
+
+  // The Pool dropdown still offers the names it was set up with, so every
+  // renamed cell is flagged "Input must be an item on the specified list".
+  // Harmless — the value is stored and read either way — but it litters the
+  // tab with red corners. Point the list at the names actually in use.
+  ss.getSheetByName('Teams').getRange(2, 2, 24, 1).setDataValidation(
+    SpreadsheetApp.newDataValidation().requireValueInList(pools, true).build());
   CacheService.getScriptCache().remove('payload:' + (ss.getName().match(FILE_PATTERN) || [])[1]);
   ui.alert('PoolGames now reads:\n\n' + pools.join('\n') +
            (was.length ? '\n\n(was: ' + was.join(', ') + ')' : '') +
-           '\n\nFifteen fixtures each, in the order the pools appear on the Teams tab.');
+           '\n\nFifteen fixtures each, in the order the pools appear on the Teams tab. ' +
+           'The Pool dropdown now offers these names too, so the red "invalid" ' +
+           'corners will clear.');
 }
 
 // ------------------------------------------------------ backups
