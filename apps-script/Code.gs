@@ -81,6 +81,7 @@ function onOpen() {
     .addItem('Seed Bracket from pool standings', 'seedBracket')
     .addItem('Reset Bracket', 'resetBracket')
     .addItem('Assign team PINs', 'assignPins')
+    .addItem('Re-label pool games after renaming pools', 'relabelPools')
     .addItem('Clear this year (start over)…', 'clearThisYear')
     .addSeparator()
     .addItem('Email me a backup now', 'backupNow')
@@ -253,7 +254,13 @@ function seedBracket() {
   }
   var data = readData_(ss);
   var standings = computeStandings_(data);
-  var incomplete = POOLS.filter(function (p) { return !standings[p].complete; });
+  // The bracket template names the pools Orange/Red/Blue/Yellow. The Teams tab
+  // may call them something else entirely, so line them up by position.
+  var actual = poolsOf_(data);
+  var alias = {};
+  POOLS.forEach(function (p, i) { alias[p] = actual[i] || p; });
+  var incomplete = POOLS.map(function (p) { return alias[p]; })
+    .filter(function (p) { return !standings[p] || !standings[p].complete; });
   if (incomplete.length) {
     var resp = ui.alert(
       'Pool play is not finished for: ' + incomplete.join(', ') + '.\n\nSeed the bracket anyway?',
@@ -264,15 +271,15 @@ function seedBracket() {
   var sh = ss.getSheetByName('BracketGames');
   BRACKET.forEach(function (g, i) {
     var r = i + 2;
-    if (g.a.charAt(0) !== 'W') sh.getRange(r, 3).setValue(seedName_(standings, g.a));
-    if (g.b.charAt(0) !== 'W') sh.getRange(r, 4).setValue(seedName_(standings, g.b));
+    if (g.a.charAt(0) !== 'W') sh.getRange(r, 3).setValue(seedName_(standings, g.a, alias));
+    if (g.b.charAt(0) !== 'W') sh.getRange(r, 4).setValue(seedName_(standings, g.b, alias));
   });
   ui.alert('Bracket seeded. Enter scores in BracketGames as games finish.');
 }
 
-function seedName_(standings, ref) {
+function seedName_(standings, ref, alias) {
   var parts = ref.split('#');
-  var pool = standings[parts[0]];
+  var pool = standings[(alias && alias[parts[0]]) || parts[0]];
   var row = pool && pool.rows[parseInt(parts[1], 10) - 1];
   return row ? row.team : '';
 }
@@ -360,14 +367,26 @@ function poolsOf_(data) {
   return seen.length ? seen : POOLS;
 }
 
+// A withdrawn team is left in place with a dash for a name, so the pool keeps
+// its six rows and the PoolGames formulas still line up. It does not appear in
+// the standings and its games do not count. Only a name that IS a dash counts
+// — D-Boccery and Kase-Kare-Cock are real clubs.
+function isScratch_(name) {
+  return /^[-\u2013\u2014\s]*$/.test(String(name || ''));
+}
+
 function computeStandings_(data) {
   var out = {};
   poolsOf_(data).forEach(function (pool) {
     var stats = {};
-    data.teams.filter(function (t) { return t.pool === pool; }).forEach(function (t) {
+    data.teams.filter(function (t) { return t.pool === pool && !isScratch_(t.team); }).forEach(function (t) {
       stats[t.team] = { team: t.team, w: 0, l: 0, t: 0, pf: 0, pa: 0, diff: 0, override: t.override, record: t.record };
     });
-    var games = data.poolGames.filter(function (g) { return g.pool === pool; });
+    // A five-team pool is ten games, not fifteen, so the progress counter has
+    // to drop the fixtures against the empty slot rather than wait forever.
+    var games = data.poolGames.filter(function (g) {
+      return g.pool === pool && !isScratch_(g.teamA) && !isScratch_(g.teamB);
+    });
     var played = 0;
     games.forEach(function (g) {
       if (g.scoreA === null || g.scoreB === null) return;
@@ -513,6 +532,39 @@ function clearThisYear() {
   CacheService.getScriptCache().removeAll(['payload:' + year, 'live:' + year]);
   ui.alert(year + ' is clear: 24 team rows, every pool score, the bracket and ' + wiped +
            ' live game' + (wiped === 1 ? '' : 's') + '.\n\nThe ticker was left as it was.');
+}
+
+// The PoolGames tab keys every fixture to a pool name, and its Team A/B
+// formulas look the teams up by that same name. Rename the pools on the Teams
+// tab — "Red" to "Red (Glory Hole)", say — and nothing matches any more: no
+// games, no standings, no way to enter a score. This re-labels them in order.
+function relabelPools() {
+  var ui = SpreadsheetApp.getUi();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var teams = ss.getSheetByName('Teams').getRange(2, 1, 24, 2).getValues();
+  var pools = [];
+  teams.forEach(function (r) {
+    var p = String(r[1]).trim();
+    if (p && pools.indexOf(p) < 0) pools.push(p);
+  });
+  if (pools.length !== 4) {
+    ui.alert('Expected four pools on the Teams tab, found ' + pools.length +
+             (pools.length ? ':\n\n' + pools.join('\n') : '.') +
+             '\n\nFill in the Pool column for all 24 teams first.');
+    return;
+  }
+  var pg = ss.getSheetByName('PoolGames');
+  var rows = pg.getRange(2, 1, 60, 1).getValues();
+  var was = [];
+  rows.forEach(function (r) { var v = String(r[0]).trim(); if (v && was.indexOf(v) < 0) was.push(v); });
+
+  var out = [];
+  pools.forEach(function (p) { for (var i = 0; i < 15; i++) out.push([p]); });
+  pg.getRange(2, 1, 60, 1).setValues(out);
+  CacheService.getScriptCache().remove('payload:' + (ss.getName().match(FILE_PATTERN) || [])[1]);
+  ui.alert('PoolGames now reads:\n\n' + pools.join('\n') +
+           (was.length ? '\n\n(was: ' + was.join(', ') + ')' : '') +
+           '\n\nFifteen fixtures each, in the order the pools appear on the Teams tab.');
 }
 
 // ------------------------------------------------------ backups
@@ -1230,7 +1282,7 @@ function opponentsFor_(ss, team, pool) {
   var mates = [];
   rows.forEach(function (r) {
     var t = String(r[0]).trim();
-    if (t && t !== team && String(r[1]) === pool) mates.push(t);
+    if (t && t !== team && !isScratch_(t) && String(r[1]) === pool) mates.push(t);
   });
   var bracket = [];
   var br = ss.getSheetByName('BracketGames').getRange(2, 3, BRACKET.length, 2).getValues();
