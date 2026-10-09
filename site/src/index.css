@@ -543,6 +543,7 @@ button { font: inherit; cursor: pointer; }
 .mobile .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 200 + 8px); flex-wrap: wrap; gap: 8px; }
 .mobile.tab-coursemap .menu,
 .mobile.tab-hype .menu,
+.mobile.tab-poem .menu,
 .mobile.tab-live .menu { padding-top: calc(max(100vw / 941, 100vh / 1672) * 240 + 8px); }
 .mobile .menu button { font-size: 13px; padding: 8px 14px; }
 .mobile .menu select.year { font-size: 13px; padding: 8px 34px 8px 14px; background-position: right 12px center; }
