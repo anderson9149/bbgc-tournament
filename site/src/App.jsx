@@ -9,6 +9,7 @@ import { Overlay, Story } from './Overlay.jsx'
 import { CourseMap, useHoles } from './CourseMap.jsx'
 import { Live, useLive } from './Live.jsx'
 import { Hype, hasHype } from './Hype.jsx'
+import { Poem } from './Poem.jsx'
 import { API_URL as CONFIGURED_URL, IS_WALL, REFRESH_SECONDS } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
@@ -42,7 +43,7 @@ export default function App() {
 
   // Past years have no Stats or Course Map tab; bounce back to the group stage.
   useEffect(() => {
-    if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live')) setTab('group')
+    if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live' || tab === 'poem')) setTab('group')
     if (tab === 'hype' && (isCurrentYear || !hasHype(shownYear))) setTab('group')
   }, [isCurrentYear, tab, shownYear])
   // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
@@ -68,6 +69,7 @@ export default function App() {
             <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>Stats</button>
             <button className={tab === 'coursemap' ? 'active' : ''} onClick={() => setTab('coursemap')}>Course Map</button>
             <button className={tab === 'live' ? 'active' : ''} onClick={() => setTab('live')}>Live</button>
+            <button className={tab === 'poem' ? 'active' : ''} onClick={() => setTab('poem')}>Poem</button>
           </>
         ) : (
           <>
@@ -90,7 +92,9 @@ export default function App() {
           stay usable while the year payload is still on its way — the sheet can
           take a while when a crowd is on it, and there is no reason for that to
           hold up pages that never needed it. */}
-      {tab === 'live' ? (
+      {tab === 'poem' ? (
+        <Poem tv={isTV} />
+      ) : tab === 'live' ? (
         <Live data={live} />
       ) : tab === 'coursemap' ? (
         <CourseMap holes={holes} tv={isTV} />

@@ -352,6 +352,22 @@ button { font: inherit; cursor: pointer; }
 .hype-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
   border-radius: 10px; }
 
+/* ---------------------------------------------------------- poem */
+.poem-map { position: relative; line-height: 0; }
+.poem-map > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+/* the video fills the compass rose, round and flush */
+.poem-compass { position: absolute; aspect-ratio: 1; transform: translate(-50%, -50%);
+  border-radius: 50%; overflow: hidden; background: #000;
+  box-shadow: 0 0 0 3px rgba(90, 58, 20, .75), 0 6px 18px rgba(0,0,0,.45); }
+.poem-compass iframe { width: 100%; height: 100%; border: 0; display: block; }
+/* YouTube letterboxes a 16:9 reel inside a circle, so overfill and crop */
+.poem-compass iframe { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 178%; height: 100%; }
+
+.poem-text { line-height: 1.32; color: #4a3113; font-weight: 700; }
+.poem-text p { margin: 0 0 .62em; }
+.poem-text span { display: block; }
+
 /* ----------------------------------------------------- course map */
 /* the box must hug the image exactly, or the percentage-positioned pins drift */
 .map { position: relative; line-height: 0; align-self: start; justify-self: start; }
@@ -496,6 +512,14 @@ button { font: inherit; cursor: pointer; }
    inside the box rather than stretching across it */
 .tv .hype-frame { height: 100%; width: auto; }
 
+/* the parchment is 1392x804 and the stage area is 1780x695, so height is the limit */
+.tv .poem { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
+  display: flex; align-items: center; justify-content: center; }
+.tv .poem .poem-map { height: 100%; aspect-ratio: 1392 / 804; }
+/* the verse clears the compass on the left and the torn edge all round */
+.tv .poem .poem-text { position: absolute; left: 26%; right: 6%; top: 6%; bottom: 6%;
+  display: flex; flex-direction: column; justify-content: center; font-size: 19px; }
+
 .tv .coursemap-tv { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
   display: grid; grid-template-columns: 1070px 1fr; gap: 22px; align-items: start; }
 .tv .coursemap-tv .map { width: 1070px; }
@@ -544,6 +568,10 @@ button { font: inherit; cursor: pointer; }
 .mobile .hole-text { font-size: .92rem; }
 .mobile .year-word { display: none; }
 .mobile .live { margin-top: 16px; --who: 140px; --tot: 46px; }
+/* a phone cannot hold the verse on the map and keep it legible */
+.mobile .poem { margin-top: 16px; display: flex; flex-direction: column; gap: 14px; }
+.mobile .poem .poem-text { background: #f0c98a; border-radius: 12px; padding: 16px 18px;
+  font-size: .9rem; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
 .mobile .hype { margin-top: 16px; }
 .mobile .hype-frame { max-width: 100%; }
 .mobile .live-scroll { overflow-x: auto; }
