@@ -364,8 +364,10 @@ button { font: inherit; cursor: pointer; }
 .poem-compass iframe { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   width: 178%; height: 100%; }
 
-.poem-text { line-height: 1.32; color: #4a3113; font-weight: 700; }
-.poem-text p { margin: 0 0 .62em; }
+.poem-text { line-height: 1.3; color: #4a3113; font-weight: 700; }
+.poem-lines { width: max-content; max-width: 100%; }
+.poem-text p { margin: 0 0 .55em; }
+.poem-text p:last-child { margin-bottom: 0; }
 .poem-text span { display: block; }
 
 /* ----------------------------------------------------- course map */
@@ -518,7 +520,8 @@ button { font: inherit; cursor: pointer; }
 .tv .poem .poem-map { height: 100%; aspect-ratio: 1392 / 804; }
 /* the verse clears the compass on the left and the torn edge all round */
 .tv .poem .poem-text { position: absolute; left: 27%; right: 6%; top: 6%; bottom: 6%;
-  display: flex; flex-direction: column; justify-content: center; font-size: 19px; }
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-size: 20px; }
 
 .tv .coursemap-tv { position: absolute; top: 290px; left: 70px; right: 70px; bottom: 95px;
   display: grid; grid-template-columns: 1070px 1fr; gap: 22px; align-items: start; }
@@ -574,10 +577,18 @@ button { font: inherit; cursor: pointer; }
    size are percentages of the width, which keeps it put however tall the
    parchment grows. */
 .mobile .poem { margin-top: 16px; }
-.mobile .poem .poem-map { height: auto; }
+/* padding, not a margin on the first child: that would collapse straight out
+   of the map and sit the video on the torn top edge. */
+.mobile .poem .poem-map { height: auto; padding-top: 18%; }
 .mobile .poem .poem-map > img { position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: fill; }
-.mobile .poem .poem-text { position: relative; padding: 84% 9% 10%; font-size: .95rem; }
+/* The video rides in the flow at the top, so the verse only needs a gap. */
+.mobile .poem .poem-screen { position: relative; margin: 0 12%; aspect-ratio: 16 / 9;
+  border-radius: 8px; overflow: hidden; background: #000;
+  box-shadow: 0 0 0 3px rgba(90, 58, 20, .75), 0 6px 18px rgba(0, 0, 0, .45); }
+.mobile .poem .poem-screen iframe { width: 100%; height: 100%; border: 0; display: block; }
+.mobile .poem .poem-text { position: relative; padding: 7% 9% 10%; font-size: .95rem; }
+.mobile .poem .poem-lines { width: auto; }
 .mobile .hype { margin-top: 16px; }
 .mobile .hype-frame { max-width: 100%; }
 .mobile .live-scroll { overflow-x: auto; }
