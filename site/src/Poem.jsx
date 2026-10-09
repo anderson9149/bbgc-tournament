@@ -2,8 +2,21 @@ const BASE = import.meta.env.BASE_URL
 const VIDEO = '4YB0z163wqg'
 
 // Measured off the artwork, which is cropped to the parchment itself: the
-// compass rose sits at 11.9% / 19.3% and is 17.2% of the width across.
-const COMPASS = { left: 11.93, top: 19.28, size: 17.24 }
+// compass rose spans 3.3%-20.5% across, centred at 11.9% / 19.3%. All three
+// numbers are percentages of the map's width except `top`, which is of its
+// height. The video is drawn wider than the rose so it reads from across the
+// room, and nudged right so the circle still lands inside the torn edge.
+const COMPASS = {
+  // At this size the circle is taller than the rose's distance from the top
+  // edge, so it is dropped to 25% to stay on the parchment; it still covers
+  // the whole rose.
+  tv: { left: 13.5, top: 25, size: 25.86 },
+  // A phone stretches the parchment tall to fit the verse, so the painted rose
+  // ends up well down the page and badly elongated. The circle follows it down
+  // (same `top`) but is pushed right, because at this size it would otherwise
+  // hang off the torn edge.
+  mobile: { left: 25, top: 19.28, size: 43.1 },
+}
 
 const STANZAS = [
   ['In the spirit of leisure I see no deeper',
@@ -38,10 +51,11 @@ function Verse() {
   )
 }
 
-function Compass() {
+function Compass({ tv }) {
+  const c = tv ? COMPASS.tv : COMPASS.mobile
   return (
     <div className="poem-compass"
-         style={{ left: `${COMPASS.left}%`, top: `${COMPASS.top}%`, width: `${COMPASS.size}%` }}>
+         style={{ left: `${c.left}%`, top: `${c.top}%`, width: `${c.size}%` }}>
       <iframe
         // cc_load_policy=0 stops captions loading by default, iv_load_policy=3
         // drops annotations. Both would sit over a 200px circle.
@@ -54,26 +68,16 @@ function Compass() {
   )
 }
 
+// The verse sits on the parchment either way. On the stage the map keeps its
+// shape and the verse is placed on it; on a phone the verse sets the height
+// and the parchment stretches behind it, which is the only way to have both
+// legible type and the text on the map.
 export function Poem({ tv }) {
-  // On the stage the verse sits on the parchment, clear of the compass. A
-  // phone has nothing like the room, so the map keeps the compass and the
-  // verse goes underneath where it can be read.
-  if (!tv) {
-    return (
-      <section className="poem poem-mobile">
-        <div className="poem-map">
-          <img src={`${BASE}poem-map.webp`} alt="" />
-          <Compass />
-        </div>
-        <Verse />
-      </section>
-    )
-  }
   return (
-    <section className="poem poem-tv">
+    <section className={`poem ${tv ? 'poem-tv' : 'poem-mobile'}`}>
       <div className="poem-map">
         <img src={`${BASE}poem-map.webp`} alt="" />
-        <Compass />
+        <Compass tv={tv} />
         <Verse />
       </div>
     </section>
