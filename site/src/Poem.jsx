@@ -43,7 +43,9 @@ function Compass() {
     <div className="poem-compass"
          style={{ left: `${COMPASS.left}%`, top: `${COMPASS.top}%`, width: `${COMPASS.size}%` }}>
       <iframe
-        src={`https://www.youtube-nocookie.com/embed/${VIDEO}?rel=0&modestbranding=1`}
+        // cc_load_policy=0 stops captions loading by default, iv_load_policy=3
+        // drops annotations. Both would sit over a 200px circle.
+        src={`https://www.youtube-nocookie.com/embed/${VIDEO}?rel=0&modestbranding=1&cc_load_policy=0&iv_load_policy=3&playsinline=1`}
         title="Bauman reads the poem"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
