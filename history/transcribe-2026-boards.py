@@ -20,12 +20,14 @@ BOARD = {
 }
 
 # scores as written, in the board's cell order; None = game not played (scratch)
-WZ = None   # White Zin v Mesh: first digit pair is overwritten, needs confirming
+WZ = 28     # White Zin v Mesh: overwritten on the board, confirmed by Pete
 SCORES = {
  'Pink (SouthMouth)': [(10,15), None, (13,15),  (15,13), None, (12,16),
                        None, (14,20), (WZ,5),   (10,15), (16,13), None,
                        None, (16,10), (9,19)],
- 'Red (Glory Hole)' : [(11,19), None, (17,9),   (18,15), None, (1,21),
+ # Hawkeyes 2-21 and Jerkoffs 13-12 differ from what the scorekeeper app
+ # recorded (1-21 and 12-11); the written board is taken as the record.
+ 'Red (Glory Hole)' : [(11,19), None, (17,9),   (18,15), None, (2,21),
                        None, (18,10), (15,15),  (9,17), (12,11), None,
                        None, (15,4), (14,12)],
  'Orange (Blaggo)'  : [(7,21), (21,9), (15,12), (21,8), (13,20), (15,19),
