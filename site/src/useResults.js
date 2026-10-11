@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { API_URL as CONFIGURED_URL, LIVE_YEAR, NEWEST_YEAR, REFRESH_SECONDS } from './config.js'
+import { API_URL as CONFIGURED_URL, LIVE_YEAR, NEWEST_YEAR, PREVIEW_YEAR, REFRESH_SECONDS } from './config.js'
 import sampleLive from './sample-data.json'
 import sampleFull from './sample-full.json'
 
@@ -42,6 +42,20 @@ export function useResults(year) {
       // under a crowd, so only the year still being played goes to it — which
       // between tournaments is none of them, including the default view.
       const want = year ? Number(year) : NEWEST_YEAR
+      // A preview year has no sheet and no snapshot. Borrow the newest year's
+      // file for the picker's year list and hand back a payload with nothing
+      // in it, so the page can say the tournament is still being planned.
+      if (want === PREVIEW_YEAR) {
+        let list = []
+        try {
+          const r = await fetch(`${BASE_URL}data/${NEWEST_YEAR}.json`)
+          if (r.ok) list = (await readJson(r)).years || []
+        } catch { /* the picker just falls back to what it already had */ }
+        if (id !== reqId.current) return
+        setState({ data: { year: PREVIEW_YEAR, preview: true, years: list, pools: {}, bracket: [], ticker: [] },
+                   error: null, fetchedAt: null })
+        return
+      }
       const frozen = want !== LIVE_YEAR
       const url = frozen ? `${BASE_URL}data/${want}.json`
         : year ? `${API_URL}?year=${encodeURIComponent(year)}` : API_URL

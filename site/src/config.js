@@ -11,6 +11,12 @@ export const LIVE_YEAR = null
 // The year the site opens on when no ?year= is given.
 export const NEWEST_YEAR = 2026
 
+// A year that has not been played. It is offered in the picker and shows a
+// placeholder instead of results; null when there is nothing to tease. It is
+// deliberately not NEWEST_YEAR, so the site still opens on the last
+// tournament rather than on the teaser.
+export const PREVIEW_YEAR = 2027
+
 // How often the page re-fetches, in seconds. Every open tab costs an Apps
 // Script call at this interval and the script serialises them, so the default
 // is deliberately slow: 60s keeps a crowd from queueing it into error pages.

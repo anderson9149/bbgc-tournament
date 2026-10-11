@@ -10,7 +10,8 @@ import { CourseMap, useHoles } from './CourseMap.jsx'
 import { Live, useLive } from './Live.jsx'
 import { Hype, hasHype } from './Hype.jsx'
 import { Poem } from './Poem.jsx'
-import { API_URL as CONFIGURED_URL, IS_WALL, LIVE_YEAR, NEWEST_YEAR, REFRESH_SECONDS } from './config.js'
+import { Preview } from './Preview.jsx'
+import { API_URL as CONFIGURED_URL, IS_WALL, LIVE_YEAR, NEWEST_YEAR, PREVIEW_YEAR, REFRESH_SECONDS } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
 
@@ -43,10 +44,13 @@ export default function App() {
   // newly chosen year is still on its way from the sheet.
   const yearsRef = useRef(null)
   if (data?.years?.length) yearsRef.current = [...data.years].sort((a, b) => b - a)
-  const years = yearsRef.current
+  // The preview year has no sheet, so nothing upstream lists it; it is added here.
+  const years = yearsRef.current && (PREVIEW_YEAR === null || yearsRef.current.includes(PREVIEW_YEAR)
+    ? yearsRef.current : [PREVIEW_YEAR, ...yearsRef.current])
   // The year on screen: the loaded one, or the one being fetched.
   const shownYear = data?.year ?? (year ? Number(year) : years?.[0])
-  const isCurrentYear = !years || shownYear === years[0]
+  const isPreview = PREVIEW_YEAR !== null && shownYear === PREVIEW_YEAR
+  const isCurrentYear = !isPreview && (!years || shownYear === years[0] || shownYear === NEWEST_YEAR)
 
   // Past years have no Stats or Course Map tab; bounce back to the group stage.
   useEffect(() => {
@@ -57,7 +61,7 @@ export default function App() {
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
   const scale = useStageScale()
 
-  const bg = `${BASE}bg/${tab}-${isTV ? 'landscape' : 'portrait'}.webp`
+  const bg = `${BASE}bg/${isPreview ? 'preview' : tab}-${isTV ? 'landscape' : 'portrait'}.webp`
 
   const content = (
     <>
@@ -66,6 +70,7 @@ export default function App() {
       <a className="home-hit" href={BASE} aria-label="Barrington Bocce Golf Classic — home" />
 
       <nav className="menu">
+        {!isPreview && <>
         {/* Knockout first: it is the tab a year opens on. */}
         <button className={tab === 'knockout' ? 'active' : ''} onClick={() => setTab('knockout')}>Knockout Round</button>
         <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
@@ -89,6 +94,7 @@ export default function App() {
             )}
           </>
         )}
+        </>}
         {years && (
           <select className="year" value={shownYear ?? ''} onChange={(e) => changeYear(e.target.value)} aria-label="Tournament year">
             {years.map((y) => <option key={y} value={y}>{y}</option>)}
@@ -100,7 +106,9 @@ export default function App() {
           stay usable while the year payload is still on its way — the sheet can
           take a while when a crowd is on it, and there is no reason for that to
           hold up pages that never needed it. */}
-      {tab === 'poem' ? (
+      {isPreview ? (
+        <Preview year={shownYear} />
+      ) : tab === 'poem' ? (
         <Poem tv={isTV} />
       ) : tab === 'live' ? (
         <Live data={live} />
@@ -119,13 +127,14 @@ export default function App() {
       )}
 
       <footer className="status">
-        {!API_URL && <span>Sample data · </span>}
-        {error && <span>Refresh failed · </span>}
-        {fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
+        {isPreview && <span>Nothing to report yet</span>}
+        {!isPreview && !API_URL && <span>Sample data · </span>}
+        {!isPreview && error && <span>Refresh failed · </span>}
+        {!isPreview && fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
         {IS_WALL && <span> · wall {REFRESH_SECONDS}s</span>}
       </footer>
       {popup === 'story' && <Story year={shownYear} messages={data?.ticker} onClose={() => setPopup(null)} />}
-      {data && <Ticker key={data.year} messages={data.ticker} tv={isTV} />}
+      {data && !isPreview && <Ticker key={data.year} messages={data.ticker} tv={isTV} />}
     </>
   )
 
