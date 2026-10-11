@@ -66,8 +66,9 @@ export default function App() {
       <a className="home-hit" href={BASE} aria-label="Barrington Bocce Golf Classic — home" />
 
       <nav className="menu">
-        <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
+        {/* Knockout first: it is the tab a year opens on. */}
         <button className={tab === 'knockout' ? 'active' : ''} onClick={() => setTab('knockout')}>Knockout Round</button>
+        <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
         {isCurrentYear ? (
           <>
             <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
