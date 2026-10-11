@@ -1,640 +1,724 @@
 {
  "B.K. Knights": {
+  "photo": "",
   "players": [
    "Brian Kutka",
    "Kumar Nathan"
-  ],
-  "photo": ""
+  ]
  },
  "BBCOCKS": {
+  "photo": "",
   "players": [
    "Marc Tozi"
-  ],
-  "photo": ""
+  ]
+ },
+ "Balboa's Balls": {
+  "photo": "",
+  "players": [
+   "Mike Megleo",
+   "Andy Haley"
+  ]
  },
  "Balz Deep": {
+  "photo": "",
   "players": [
    "Chris Goluba",
    "Sean Viohl"
-  ],
-  "photo": ""
+  ]
  },
  "Banana in the Tailpipe, Holy Rollers": {
+  "photo": "holy-rollers.webp",
   "players": [
    "Mark Diol",
    "Eric Schneider"
-  ],
-  "photo": "holy-rollers.webp"
+  ]
  },
  "Be-Yotch-e, Please": {
+  "photo": "",
   "players": [
    "Sean Breslin",
    "Ryan Goldstein"
-  ],
-  "photo": ""
+  ]
  },
  "Billy G.O.A.T.": {
+  "photo": "",
   "players": [
    "Billy Sivrais",
    "Payne"
-  ],
-  "photo": ""
+  ]
  },
  "Blues Bros": {
+  "photo": "",
   "players": [
    "Kevin McGuire",
    "Brian Rosenburg"
-  ],
-  "photo": ""
+  ]
  },
  "Bocce Balboa": {
+  "photo": "",
   "players": [
    "Andrew Bland",
    "Josh Brown"
-  ],
-  "photo": ""
+  ]
  },
  "Boilers": {
+  "photo": "",
   "players": [
    "Jeff Polk",
    "Ian Rodnick"
-  ],
-  "photo": ""
+  ]
  },
  "Brainerd Bergs": {
+  "photo": "brainerd-bergs.webp",
   "players": [
    "Justin Lindberg",
    "Ian Rodnick"
-  ],
-  "photo": "brainerd-bergs.webp"
+  ]
+ },
+ "Brawley Heat Morkes Meat": {
+  "photo": "",
+  "players": [
+   "Dave Morkes",
+   "Mike Brawley"
+  ]
  },
  "Brick Cock": {
+  "photo": "",
   "players": [
    "Alex Haycock",
    "Mike Brickhouse"
-  ],
-  "photo": ""
+  ]
  },
  "Brothers Boor": {
+  "photo": "brothers-boor.webp",
   "players": [
    "Adam Boor",
    "Brett Boor"
-  ],
-  "photo": "brothers-boor.webp"
+  ]
  },
  "Brownkowski": {
+  "photo": "",
   "players": [
    "Dan Hrankowsky",
    "Horace Seeley-Brown"
-  ],
-  "photo": ""
+  ]
  },
  "Bushwood Ballers": {
+  "photo": "",
   "players": [
    "Brian Rosenburg",
    "Kevin McGuire"
-  ],
-  "photo": ""
+  ]
  },
  "Chi'Bocce": {
+  "photo": "chi-bocce.webp",
   "players": [
    "Trevor Essig",
    "Brad Johnson"
-  ],
-  "photo": "chi-bocce.webp"
+  ]
  },
  "Cock-a-Doodle-Lou": {
+  "photo": "cock-a-doodle-lou.webp",
   "players": [
    "Alex Haycock",
    "Lou Donzelli"
-  ],
-  "photo": "cock-a-doodle-lou.webp"
+  ]
  },
  "CooCoo 4 Coconuts": {
+  "photo": "",
   "players": [
    "John Hart",
    "Justin Lindberg"
-  ],
-  "photo": ""
+  ]
  },
  "Covid Cowboys": {
+  "photo": "",
   "players": [
    "Tyson Lagoni",
    "Adam Kneisler"
-  ],
-  "photo": ""
+  ]
  },
  "D-Boccery": {
+  "photo": "d-boccery.webp",
   "players": [
-   "Chris Dely",
-   "Ryan Marvin"
-  ],
-  "photo": "d-boccery.webp"
+   "Ryan Marvin",
+   "Chris Dely"
+  ]
  },
  "Del Bocce Vista": {
+  "photo": "del-bocce-vista.webp",
   "players": [
    "Dan Chomicz",
    "Tom Chomicz"
-  ],
-  "photo": "del-bocce-vista.webp"
+  ]
  },
  "Dickens Cider": {
+  "photo": "dickens-cider.webp",
   "players": [
    "Dave Degrazia",
    "Cezar Turek"
-  ],
-  "photo": "dickens-cider.webp"
+  ]
  },
  "Don Cuzzi": {
+  "photo": "don-cuzzi.webp",
   "players": [
    "David Iacuzzi",
    "Lou Donzelli"
-  ],
-  "photo": "don-cuzzi.webp"
+  ]
  },
  "Double Deuce": {
+  "photo": "",
   "players": [
    "Phil Zoloto",
    "Marc Tozi"
-  ],
-  "photo": ""
+  ]
  },
  "Double Doink, The Mesh": {
+  "photo": "the-mesh-strikes-back.webp",
   "players": [
    "Jeff Polk",
    "Mayank Srivastava"
-  ],
-  "photo": "the-mesh-strikes-back.webp"
+  ]
  },
  "Dug z World": {
+  "photo": "dug-z-world.webp",
   "players": [
    "Doug Moore",
    "Chris Zingler"
-  ],
-  "photo": "dug-z-world.webp"
+  ]
  },
  "Flamers": {
+  "photo": "",
   "players": [
    "Nate Johnson",
    "Brian Turner"
-  ],
-  "photo": ""
+  ]
+ },
+ "Full Send Fondlers": {
+  "photo": "",
+  "players": [
+   "Brian Connors",
+   "Mikey Babynko"
+  ]
  },
  "Ghetto Ballers": {
+  "photo": "",
   "players": [
    "Spencer Shully"
-  ],
-  "photo": ""
+  ]
  },
  "Glory Holz": {
+  "photo": "",
   "players": [
    "Brett Koenig",
    "Matt Almond"
-  ],
-  "photo": ""
+  ]
  },
  "Goldylichs": {
+  "photo": "goldylichs.webp",
   "players": [
    "Ryan Goldstein",
    "Ben Wunderlich"
-  ],
-  "photo": "goldylichs.webp"
+  ]
  },
  "Grand Lakes": {
+  "photo": "grand-lakes.webp",
   "players": [
    "Brian Kutka",
    "Chris Dely"
-  ],
-  "photo": "grand-lakes.webp"
+  ]
  },
  "Gumby Dammit": {
+  "photo": "",
   "players": [
    "Brian Rosenburg",
    "Eric Lohmyer"
-  ],
-  "photo": ""
+  ]
  },
  "Guns n Rollers": {
+  "photo": "guns-n-rollers.webp",
   "players": [
-   "Tom Palmer",
-   "Brian Kutka"
-  ],
-  "photo": "guns-n-rollers.webp"
+   "Brian Kutka",
+   "Tom Palmer"
+  ]
  },
  "Hawkeyes": {
+  "photo": "hawkeyes.webp",
   "players": [
    "Ryan Miller",
    "Tone Bone Dierickx"
-  ],
-  "photo": "hawkeyes.webp"
+  ]
  },
  "Here 4 Beer": {
+  "photo": "",
   "players": [
    "Eric Nelson",
    "Kumar Nathan"
-  ],
-  "photo": ""
+  ]
  },
  "Hide Your Moms": {
+  "photo": "",
   "players": [
    "Steve Livingston",
    "Don Eustice"
-  ],
-  "photo": ""
+  ]
  },
  "Hilltoppers": {
+  "photo": "",
   "players": [
    "Adam Kneisler",
    "Dan Hrankowsky"
-  ],
-  "photo": ""
+  ]
  },
  "Hitchhikers": {
+  "photo": "hitchhikers.webp",
   "players": [
    "Sean Breslin",
    "Chris Zingler"
-  ],
-  "photo": "hitchhikers.webp"
+  ]
+ },
+ "Holy Rollers": {
+  "photo": "holy-rollers.webp",
+  "players": [
+   "Mark Diol",
+   "Eric Schneider"
+  ]
  },
  "Hot Sauce": {
+  "photo": "hot-sauce.webp",
   "players": [
    "Trevor Essig",
    "Mike Oberholtzer"
-  ],
-  "photo": "hot-sauce.webp"
+  ]
  },
  "Hung Like a HorsePower": {
+  "photo": "",
   "players": [
    "Graham Whalen",
    "Sean Viohl"
-  ],
-  "photo": ""
+  ]
  },
  "Hurricane Ditka": {
+  "photo": "",
   "players": [
    "Mike Oberholtzer",
    "Mike Fenske"
-  ],
-  "photo": ""
+  ]
  },
  "I Can't Decide": {
+  "photo": "",
   "players": [
    "Brad Logan",
    "Kevin McGuire"
-  ],
-  "photo": ""
+  ]
  },
  "Inches From Glory": {
+  "photo": "",
   "players": [
    "Eric Nelson",
    "Ryan Goldstein"
-  ],
-  "photo": ""
+  ]
  },
  "Joanie Loves Bocce": {
+  "photo": "joanie-loves-bocce.webp",
   "players": [
    "Tony Sacket",
    "Pete Anderson"
-  ],
-  "photo": "joanie-loves-bocce.webp"
+  ]
  },
  "John-John, Inc": {
+  "photo": "john-john-inc.webp",
   "players": [
    "John Batner",
    "John Kuenstar"
-  ],
-  "photo": "john-john-inc.webp"
+  ]
  },
  "Kase-Kare-Cock": {
+  "photo": "",
   "players": [
    "Alex Haycock"
-  ],
-  "photo": ""
+  ]
  },
  "Keen on Christ + Blue Balls": {
+  "photo": "",
   "players": [
    "Kevin Keenan",
    "Erin Christianson"
-  ],
-  "photo": ""
+  ]
  },
  "Kris Krossed": {
+  "photo": "",
   "players": [
    "Lou Donzelli"
-  ],
-  "photo": ""
+  ]
  },
  "Laces Out": {
+  "photo": "laces-out.webp",
   "players": [
-   "Jake Feit",
-   "Steve Shanfeld"
-  ],
-  "photo": "laces-out.webp"
+   "Steve Shanfeld",
+   "Jake Feit"
+  ]
  },
  "Loh Hang Balls": {
+  "photo": "",
   "players": [
    "Eric Lohmyer",
    "Mike Brawley"
-  ],
-  "photo": ""
+  ]
  },
  "Long Ballz": {
+  "photo": "long-ballz.webp",
   "players": [
    "Mike Seiffer",
    "Graham Whalen"
-  ],
-  "photo": "long-ballz.webp"
+  ]
  },
  "Loopers": {
+  "photo": "",
   "players": [
    "Mike Brickhouse",
    "Ian Rodnick"
-  ],
-  "photo": ""
+  ]
  },
  "Loose Meats": {
+  "photo": "",
   "players": [
    "Ryan Marvin",
    "Dan Hrankowsky"
-  ],
-  "photo": ""
+  ]
  },
  "Mag Dick": {
+  "photo": "",
   "players": [
    "Jerry Magee",
    "Don Eustice"
-  ],
-  "photo": ""
+  ]
  },
  "Magnum": {
+  "photo": "",
   "players": [
    "Jay Roberts",
    "Brian Rosenburg"
-  ],
-  "photo": ""
+  ]
  },
  "Mermen": {
+  "photo": "",
   "players": [
    "Tony Choch",
    "Chris Zingler"
-  ],
-  "photo": ""
+  ]
  },
  "Mickey the Mitcher": {
+  "photo": "mickey-the-mitcher.webp",
   "players": [
    "Mike Fenske",
    "Mitch Izenstark"
-  ],
-  "photo": "mickey-the-mitcher.webp"
+  ]
  },
  "Misters Irrelevant": {
+  "photo": "",
   "players": [
    "Andrew Bland",
    "Jason Ehlert"
-  ],
-  "photo": ""
+  ]
  },
  "Moist Baguette": {
+  "photo": "moist-baguette.webp",
   "players": [
    "John Hart",
    "Mayank Srivastava"
-  ],
-  "photo": "moist-baguette.webp"
+  ]
  },
  "Muck Fichigan": {
+  "photo": "muck-fichigan.webp",
   "players": [
    "Steve Livingston",
    "Tim Ostergaard"
-  ],
-  "photo": "muck-fichigan.webp"
+  ]
  },
  "Mustache Riders": {
+  "photo": "",
   "players": [
    "Spencer Shully",
    "Jamie Bolger"
-  ],
-  "photo": ""
+  ]
  },
  "Noonan": {
+  "photo": "",
   "players": [
    "Brian Watson",
    "Brian Rosenburg"
-  ],
-  "photo": ""
+  ]
  },
  "Ohiowa": {
+  "photo": "ohiowa.webp",
   "players": [
    "Ryan Wilson",
    "Steve Russell"
-  ],
-  "photo": "ohiowa.webp"
+  ]
  },
  "On Wisconsin": {
+  "photo": "on-wisconsin.webp",
   "players": [
    "Jeff Bauman",
    "Nick Kelliher"
   ],
-  "photo": "on-wisconsin.webp",
   "titles": [
    2017
   ]
  },
  "Pink Ladies": {
+  "photo": "pink-ladies.webp",
   "players": [
    "Chad Schneider",
    "Justin Green"
-  ],
-  "photo": "pink-ladies.webp"
+  ]
  },
  "Reservations @ Dorsia": {
+  "photo": "",
   "players": [
    "Adam Kneisler",
    "Chris Goluba"
-  ],
-  "photo": ""
+  ]
  },
  "Rolling Stones": {
+  "photo": "",
   "players": [
    "Mike Dieterle",
    "Jamie Bolger"
-  ],
-  "photo": ""
+  ]
  },
  "Royale w/ Cheese": {
+  "photo": "",
   "players": [
    "Brian Rosenburg",
    "Kevin McGuire"
-  ],
-  "photo": ""
+  ]
  },
  "Sister Swap": {
+  "photo": "",
   "players": [
    "Jay Roberts",
    "Jason Ehlert"
-  ],
-  "photo": ""
+  ]
  },
  "Smug Champs": {
+  "photo": "smug-champs.webp",
   "players": [
    "Justin Davenport",
    "Alex Haycock"
-  ],
-  "photo": "smug-champs.webp"
+  ]
  },
  "Sparty Devils": {
+  "photo": "sparty-devils.webp",
   "players": [
    "Mike DiMucci",
    "Brian Connors"
-  ],
-  "photo": "sparty-devils.webp"
+  ]
  },
  "Spencer Torkelson": {
+  "photo": "",
   "players": [
    "Brian Connors",
    "Mike Postma"
-  ],
-  "photo": ""
+  ]
  },
  "Steam Punks": {
+  "photo": "steam-punks.webp",
   "players": [
    "Justin Lindberg",
    "Austin Romero"
-  ],
-  "photo": "steam-punks.webp"
+  ]
  },
  "TNT": {
+  "photo": "",
   "players": [
    "Trevor Essig",
    "Trev Travis"
-  ],
-  "photo": ""
+  ]
  },
  "Teabaggers": {
+  "photo": "",
   "players": [
    "Tom Chomicz"
-  ],
-  "photo": ""
+  ]
+ },
+ "Team Daisy": {
+  "photo": "",
+  "players": [
+   "Lou Donzelli",
+   "Tim Provost"
+  ]
  },
  "The Big LeBocce": {
+  "photo": "the-big-lebocce.webp",
   "players": [
-   "Jay Hackney",
-   "Brett Koenig"
-  ],
-  "photo": "the-big-lebocce.webp"
+   "Brett Koenig",
+   "Jay Hackney"
+  ]
+ },
+ "The Bocce Ballers": {
+  "photo": "",
+  "players": [
+   "Spencer Shully",
+   "Jerry Magee"
+  ]
  },
  "The Boners": {
+  "photo": "the-boners.webp",
   "players": [
    "Rich Matonis",
    "Tone Bone Dierickx"
   ],
-  "photo": "the-boners.webp",
   "titles": [
    2016
   ]
  },
  "The Boys r Back": {
+  "photo": "",
   "players": [
    "Lou Donzelli",
    "Mike Hill"
-  ],
-  "photo": ""
+  ]
  },
  "The Bryan Adams Show": {
+  "photo": "",
   "players": [
    "Adam Kneisler",
    "Adam Sheridan"
-  ],
-  "photo": ""
+  ]
+ },
+ "The Busch Men": {
+  "photo": "",
+  "players": [
+   "Jeff Bauman",
+   "Devon Gwin"
+  ]
+ },
+ "The High End Jerkoffs": {
+  "photo": "",
+  "players": [
+   "Dalton Landman",
+   "Ryan Rymarzak"
+  ]
+ },
+ "The Hitchhikers": {
+  "photo": "hitchhikers.webp",
+  "players": [
+   "Chris Zingler",
+   "Sean Breslin"
+  ]
  },
  "The M.J.s": {
+  "photo": "",
   "players": [
    "Jerry Magee",
    "Mike Brawley"
-  ],
-  "photo": ""
+  ]
+ },
+ "The Mesh Strikes Back": {
+  "photo": "the-mesh-strikes-back.webp",
+  "players": [
+   "Jeff Polk",
+   "Mayank Srivastava"
+  ]
  },
  "The Richard Simmons Exp.": {
+  "photo": "",
   "players": [
    "Doug Moore",
    "Justin Lindberg"
-  ],
-  "photo": ""
+  ]
  },
  "The Seekers": {
+  "photo": "the-seekers.webp",
   "players": [
    "Jeff Bauman",
    "Tim Provost"
-  ],
-  "photo": "the-seekers.webp"
+  ]
+ },
+ "Tight Lines": {
+  "photo": "",
+  "players": [
+   "Andrew Bland",
+   "Billy Bonifacic"
+  ]
  },
  "Top Gun": {
+  "photo": "",
   "players": [
    "Lou Donzelli",
    "Rick Gardunio"
-  ],
-  "photo": ""
+  ]
  },
  "Trash Panda's": {
+  "photo": "",
   "players": [
    "John Gwin",
    "Tim Provost"
-  ],
-  "photo": ""
+  ]
  },
  "Trash n Stache": {
+  "photo": "trash-n-stache.webp",
   "players": [
    "Spencer Shully",
    "Brian Watson"
-  ],
-  "photo": "trash-n-stache.webp"
+  ]
  },
  "Trojan": {
+  "photo": "",
   "players": [
    "Dan Figatner",
    "Phil Zoloto"
-  ],
-  "photo": ""
+  ]
  },
  "Tyson's Micropenis": {
+  "photo": "micro-penis.webp",
   "players": [
    "Marc Tozi",
    "Aaron Jais"
-  ],
-  "photo": "micro-penis.webp"
+  ]
+ },
+ "Uncle Rico": {
+  "photo": "",
+  "players": [
+   "Brian Watson",
+   "Angelo Martire"
+  ]
  },
  "Vandelay Industries": {
+  "photo": "vandelay-industries.webp",
   "players": [
    "Steve Nuzzo",
    "Mike Boyum"
-  ],
-  "photo": "vandelay-industries.webp"
+  ]
  },
  "Village People": {
+  "photo": "",
   "players": [
    "Keenan Baker",
    "Chris Zingler"
-  ],
-  "photo": ""
+  ]
  },
  "Vivace do Tinge": {
+  "photo": "",
   "players": [
    "Pete Anderson",
    "John Batner"
-  ],
-  "photo": ""
+  ]
  },
  "White Zin": {
+  "photo": "white-zin.webp",
   "players": [
-   "Tyson Lagoni",
-   "Chad \"Chanderson\" Anderson"
-  ],
-  "photo": "white-zin.webp"
+   "Chad \"Chanderson\" Anderson",
+   "Tyson Lagoni"
+  ]
  },
  "Wildcat": {
+  "photo": "",
   "players": [
    "Eric Fischer",
    "Sean Devine"
-  ],
-  "photo": ""
+  ]
  }
 }
