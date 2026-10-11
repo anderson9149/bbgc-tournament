@@ -10,17 +10,23 @@ import { CourseMap, useHoles } from './CourseMap.jsx'
 import { Live, useLive } from './Live.jsx'
 import { Hype, hasHype } from './Hype.jsx'
 import { Poem } from './Poem.jsx'
-import { API_URL as CONFIGURED_URL, IS_WALL, REFRESH_SECONDS } from './config.js'
+import { API_URL as CONFIGURED_URL, IS_WALL, LIVE_YEAR, REFRESH_SECONDS } from './config.js'
 
 const API_URL = new URLSearchParams(window.location.search).has('sample') ? '' : CONFIGURED_URL
 
 const BASE = import.meta.env.BASE_URL
 
+// Which tab a year opens on. Between tournaments the bracket is the thing to
+// see — it carries the champion and the trophy photo. While one is being
+// played the bracket is mostly empty and the group stage is where the
+// movement is, so a live year opens there instead.
+const DEFAULT_TAB = LIVE_YEAR === null ? 'knockout' : 'group'
+
 export default function App() {
   // ?year=2024 deep-links a past tournament; otherwise the latest year.
   const [year, setYear] = useState(() => new URLSearchParams(window.location.search).get('year'))
   const { data, error, fetchedAt, loading, refresh } = useResults(year)
-  const [tab, setTab] = useState('group')
+  const [tab, setTab] = useState(DEFAULT_TAB)
   const [popup, setPopup] = useState(null)   // 'story' | 'map' | null
   const { stats, error: statsError } = useStats()
   const holes = useHoles()
@@ -43,8 +49,8 @@ export default function App() {
 
   // Past years have no Stats or Course Map tab; bounce back to the group stage.
   useEffect(() => {
-    if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live' || tab === 'poem')) setTab('group')
-    if (tab === 'hype' && (isCurrentYear || !hasHype(shownYear))) setTab('group')
+    if (!isCurrentYear && (tab === 'stats' || tab === 'coursemap' || tab === 'live' || tab === 'poem')) setTab(DEFAULT_TAB)
+    if (tab === 'hype' && (isCurrentYear || !hasHype(shownYear))) setTab(DEFAULT_TAB)
   }, [isCurrentYear, tab, shownYear])
   // TV / laptop: fixed 16:9 stage. Phone / portrait tablet: scrolling page.
   const isTV = useMediaQuery('(orientation: landscape) and (min-width: 900px)')
