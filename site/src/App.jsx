@@ -5,7 +5,7 @@ import { Pools } from './Pools.jsx'
 import { Bracket } from './Bracket.jsx'
 import { Ticker } from './Ticker.jsx'
 import { Stats, useStats } from './Stats.jsx'
-import { Overlay, Story } from './Overlay.jsx'
+import { Overlay, Story, useStories } from './Overlay.jsx'
 import { CourseMap, useHoles } from './CourseMap.jsx'
 import { Live, useLive } from './Live.jsx'
 import { Hype, hasHype } from './Hype.jsx'
@@ -31,6 +31,7 @@ export default function App() {
   const [tab, setTab] = useState(() => defaultTab(year ?? NEWEST_YEAR))
   const [popup, setPopup] = useState(null)   // 'story' | 'map' | null
   const { stats, error: statsError } = useStats()
+  const stories = useStories()
   const holes = useHoles()
   const live = useLive(tab === 'live')
 
@@ -74,6 +75,12 @@ export default function App() {
         {/* Knockout first: it is the tab a year opens on. */}
         <button className={tab === 'knockout' ? 'active' : ''} onClick={() => setTab('knockout')}>Knockout Round</button>
         <button className={tab === 'group' ? 'active' : ''} onClick={() => setTab('group')}>Group Stage</button>
+        {/* Any year that has a story written gets the button, newest included. */}
+        {stories?.[String(shownYear)] && (
+          <button className={popup === 'story' ? 'active' : ''} onClick={() => setPopup(popup === 'story' ? null : 'story')}>
+            <span className="year-word">{shownYear} </span>Story
+          </button>
+        )}
         {isCurrentYear ? (
           <>
             <button className={`refresh ${loading ? 'loading' : ''}`} onClick={refresh} disabled={loading || !API_URL}>
@@ -85,14 +92,9 @@ export default function App() {
             <button className={tab === 'poem' ? 'active' : ''} onClick={() => setTab('poem')}>Poem</button>
           </>
         ) : (
-          <>
-            <button className={popup === 'story' ? 'active' : ''} onClick={() => setPopup(popup === 'story' ? null : 'story')}>
-              <span className="year-word">{shownYear} </span>Story
-            </button>
-            {hasHype(shownYear) && (
-              <button className={tab === 'hype' ? 'active' : ''} onClick={() => setTab('hype')}>Hype Video</button>
-            )}
-          </>
+          hasHype(shownYear) && (
+            <button className={tab === 'hype' ? 'active' : ''} onClick={() => setTab('hype')}>Hype Video</button>
+          )
         )}
         </>}
         {years && (
@@ -133,7 +135,7 @@ export default function App() {
         {!isPreview && fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
         {IS_WALL && <span> · wall {REFRESH_SECONDS}s</span>}
       </footer>
-      {popup === 'story' && <Story year={shownYear} onClose={() => setPopup(null)} />}
+      {popup === 'story' && <Story year={shownYear} stories={stories} onClose={() => setPopup(null)} />}
       {data && !isPreview && <Ticker key={data.year} messages={data.ticker} tv={isTV} />}
     </>
   )

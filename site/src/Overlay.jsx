@@ -21,11 +21,12 @@ export function Overlay({ title, subtitle, onClose, className = '', children }) 
 }
 
 // The stories live in one file in the repo rather than in each year's Ticker
-// tab, which holds the slogans that scroll during the event. Fetched when the
-// overlay is first opened, so the page does not carry it for nothing.
+// tab, which holds the slogans that scroll during the event. The menu needs to
+// know which years have one before anything is opened, so the fetch lives in a
+// hook; it is one small file and the result is shared.
 let storiesCache = null
 
-export function Story({ year, onClose }) {
+export function useStories() {
   const [stories, setStories] = useState(storiesCache)
   useEffect(() => {
     if (storiesCache) return
@@ -36,6 +37,10 @@ export function Story({ year, onClose }) {
       .then((d) => { storiesCache = d; if (live) setStories(d) })
     return () => { live = false }
   }, [])
+  return stories
+}
+
+export function Story({ year, stories, onClose }) {
   const story = stories?.[String(year)]
   return (
     <Overlay title={`${year} Story`} subtitle="how it happened" onClose={onClose} className="story">
