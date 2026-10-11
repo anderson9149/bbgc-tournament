@@ -858,12 +858,28 @@ function writeTeamSummary_(stats, narr) {
   });
 }
 
+// Every pool game that can be played has a score, and the bracket has crowned
+// someone. Used to decide whether the year being played yet counts as history.
+function isFinished_(data) {
+  var pools = poolsOf_(data);
+  if (!pools.length) return false;
+  var standings = computeStandings_(data);
+  for (var i = 0; i < pools.length; i++) {
+    if (!standings[pools[i]] || !standings[pools[i]].complete) return false;
+  }
+  var last = (data.bracket || [])[data.bracket.length - 1];
+  return !!(last && last.winner);
+}
+
 function computeAllTime_() {
   var years = yearFiles_(true);
   var thisYear = new Date().getFullYear();
-  // All-time stats cover finished tournaments only. The current year is still
-  // being played (and may hold test data), so it is left out entirely.
-  var list = Object.keys(years).filter(function (y) { return parseInt(y, 10) < thisYear; }).sort();
+  // All-time stats cover finished tournaments only. A past year always counts;
+  // the current one counts once it is actually over, which is what lets the
+  // year just played into the table without waiting for January. A tournament
+  // half-played, or a sheet holding test data, fails isFinished_ and is left
+  // out exactly as before.
+  var list = Object.keys(years).filter(function (y) { return parseInt(y, 10) <= thisYear; }).sort();
   var by = {};
   function T(name) {
     if (!by[name]) by[name] = { team: name, years: [], titleYears: [], titles: [],
@@ -883,6 +899,7 @@ function computeAllTime_() {
     var data;
     try { data = readData_(ss); } catch (err) { return; }
     if (!data.teams.length) return;
+    if (parseInt(y, 10) === thisYear && !isFinished_(data)) return;
     played.push(y);
 
     // head-to-head from every game with a real score
