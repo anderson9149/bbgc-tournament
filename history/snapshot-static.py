@@ -41,7 +41,9 @@ for name, url in [('stats.json', API + '?action=stats'), ('holes.json', API + '?
 # while contributing nothing to the all-time table. Missing their files is what
 # turned those two years into a 404.
 head = get(API)
-years = [y for y in (head or {}).get('years', []) if y < (head or {}).get('year', 0)]
+# Every year including the one just played: once the tournament is over its
+# sheet stops changing too, and config.js decides which (if any) is still live.
+years = [y for y in (head or {}).get('years', []) if y <= (head or {}).get('year', 0)]
 if not years:
     print('  could not read the year list; nothing to snapshot')
 for y in years:

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { API_URL as CONFIGURED_URL, REFRESH_SECONDS } from './config.js'
+import { API_URL as CONFIGURED_URL, LIVE_YEAR, NEWEST_YEAR, REFRESH_SECONDS } from './config.js'
 import sampleLive from './sample-data.json'
 import sampleFull from './sample-full.json'
 
@@ -9,7 +9,6 @@ const params = new URLSearchParams(window.location.search)
 const API_URL = params.has('sample') ? '' : CONFIGURED_URL
 const sample = params.get('sample') === 'full' ? sampleFull : sampleLive
 const BASE_URL = import.meta.env.BASE_URL
-const THIS_YEAR = new Date().getFullYear()
 
 // Apps Script answers an overloaded request with an HTML error page, which
 // would surface as a raw "Unexpected token '<'". Say what actually happened.
@@ -40,14 +39,16 @@ export function useResults(year) {
     try {
       // A finished year never changes, so it is served as a file from the CDN.
       // Apps Script queues requests and starts handing out HTML error pages
-      // under a crowd, so only the year still being played goes to it.
-      const frozen = year && Number(year) < THIS_YEAR
-      const url = frozen ? `${BASE_URL}data/${Number(year)}.json`
+      // under a crowd, so only the year still being played goes to it — which
+      // between tournaments is none of them, including the default view.
+      const want = year ? Number(year) : NEWEST_YEAR
+      const frozen = want !== LIVE_YEAR
+      const url = frozen ? `${BASE_URL}data/${want}.json`
         : year ? `${API_URL}?year=${encodeURIComponent(year)}` : API_URL
       let res = await fetch(url, frozen ? {} : { cache: 'no-store' })
       // A year with no snapshot yet falls back to the sheet rather than 404ing.
       if (frozen && !res.ok) {
-        res = await fetch(`${API_URL}?year=${encodeURIComponent(year)}`, { cache: 'no-store' })
+        res = await fetch(`${API_URL}?year=${want}`, { cache: 'no-store' })
       }
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await readJson(res)
