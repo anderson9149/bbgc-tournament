@@ -148,7 +148,7 @@ export default function App() {
     )
   }
   return (
-    <div className={`mobile tab-${tab}`}>
+    <div className={`mobile tab-${isPreview ? 'preview' : tab}`}>
       <div className="mobile-bg" style={{ backgroundImage: `url(${bg})` }} />
       {content}
     </div>
