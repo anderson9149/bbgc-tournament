@@ -1,0 +1,575 @@
+{
+ "year": 2026,
+ "source": "photographs of the four pool whiteboards and the wall bracket",
+ "notes": [
+  "Scoring was done on paper, so these are transcribed from the boards by history/transcribe-2026-boards.py.",
+  "The paper board and the sheet numbered their rounds differently; games were matched on the team pair, which is unique in a round robin. The rounds here are the board's.",
+  "All 22 W-L-T records reproduce the boards' tally marks exactly, and the 18 games that reached the sheet through the scorekeeper agree with the board.",
+  "Two cells differ from the scorekeeper and the written board was taken as the record: Hawkeyes 2-21 Brawley Heat (app said 1-21) and The High End Jerkoffs 13-12 Balboa's Balls (app said 12-11).",
+  "White Zin 28-5 over The Mesh Strikes Back was written over on the board and confirmed by Pete.",
+  "Four bracket wins carry no score on the board and import as 1-0.",
+  "Pink and Red were five-team pools after two withdrawals; slot 6 is the empty slot."
+ ],
+ "teams": {
+  "Pink (SouthMouth)": [
+   "White Zin",
+   "Brothers Boor",
+   "The Big LeBocce",
+   "The Hitchhikers",
+   "The Mesh Strikes Back",
+   "-"
+  ],
+  "Red (Glory Hole)": [
+   "Muck Fichigan",
+   "Hawkeyes",
+   "Holy Rollers",
+   "Laces Out",
+   "Brawley Heat Morkes Meat",
+   "-"
+  ],
+  "Orange (Blaggo)": [
+   "Smug Champs",
+   "Joanie Loves Bocce",
+   "The Busch Men",
+   "D-Boccery",
+   "The High End Jerkoffs",
+   "Balboa's Balls"
+  ],
+  "Green (Latrell)": [
+   "The Bocce Ballers",
+   "Team Daisy",
+   "Guns n Rollers",
+   "Full Send Fondlers",
+   "Uncle Rico",
+   "Tight Lines"
+  ]
+ },
+ "overrides": {
+  "White Zin": 1,
+  "The Mesh Strikes Back": 2,
+  "The Big LeBocce": 3,
+  "Muck Fichigan": 1,
+  "Brawley Heat Morkes Meat": 2,
+  "Laces Out": 3,
+  "Smug Champs": 1,
+  "The High End Jerkoffs": 2,
+  "The Busch Men": 3,
+  "The Bocce Ballers": 1,
+  "Team Daisy": 2,
+  "Guns n Rollers": 3
+ },
+ "poolGames": {
+  "Pink (SouthMouth)": [
+   [
+    1,
+    2,
+    1,
+    10,
+    15
+   ],
+   [
+    1,
+    3,
+    6,
+    null,
+    null
+   ],
+   [
+    1,
+    4,
+    5,
+    13,
+    15
+   ],
+   [
+    2,
+    3,
+    4,
+    15,
+    13
+   ],
+   [
+    2,
+    6,
+    1,
+    null,
+    null
+   ],
+   [
+    2,
+    2,
+    5,
+    12,
+    16
+   ],
+   [
+    3,
+    6,
+    4,
+    null,
+    null
+   ],
+   [
+    3,
+    2,
+    3,
+    14,
+    20
+   ],
+   [
+    3,
+    1,
+    5,
+    28,
+    5
+   ],
+   [
+    4,
+    4,
+    1,
+    10,
+    15
+   ],
+   [
+    4,
+    5,
+    3,
+    16,
+    13
+   ],
+   [
+    4,
+    6,
+    2,
+    null,
+    null
+   ],
+   [
+    5,
+    5,
+    6,
+    null,
+    null
+   ],
+   [
+    5,
+    1,
+    3,
+    16,
+    10
+   ],
+   [
+    5,
+    4,
+    2,
+    9,
+    19
+   ]
+  ],
+  "Red (Glory Hole)": [
+   [
+    1,
+    2,
+    1,
+    11,
+    19
+   ],
+   [
+    1,
+    3,
+    6,
+    null,
+    null
+   ],
+   [
+    1,
+    4,
+    5,
+    17,
+    9
+   ],
+   [
+    2,
+    3,
+    4,
+    18,
+    15
+   ],
+   [
+    2,
+    6,
+    1,
+    null,
+    null
+   ],
+   [
+    2,
+    2,
+    5,
+    2,
+    21
+   ],
+   [
+    3,
+    6,
+    4,
+    null,
+    null
+   ],
+   [
+    3,
+    2,
+    3,
+    18,
+    10
+   ],
+   [
+    3,
+    1,
+    5,
+    15,
+    15
+   ],
+   [
+    4,
+    4,
+    1,
+    9,
+    17
+   ],
+   [
+    4,
+    5,
+    3,
+    12,
+    11
+   ],
+   [
+    4,
+    6,
+    2,
+    null,
+    null
+   ],
+   [
+    5,
+    5,
+    6,
+    null,
+    null
+   ],
+   [
+    5,
+    1,
+    3,
+    15,
+    4
+   ],
+   [
+    5,
+    4,
+    2,
+    14,
+    12
+   ]
+  ],
+  "Orange (Blaggo)": [
+   [
+    1,
+    2,
+    1,
+    7,
+    21
+   ],
+   [
+    1,
+    3,
+    6,
+    21,
+    9
+   ],
+   [
+    1,
+    4,
+    5,
+    15,
+    12
+   ],
+   [
+    2,
+    3,
+    4,
+    21,
+    8
+   ],
+   [
+    2,
+    6,
+    1,
+    13,
+    20
+   ],
+   [
+    2,
+    2,
+    5,
+    15,
+    19
+   ],
+   [
+    3,
+    6,
+    4,
+    15,
+    12
+   ],
+   [
+    3,
+    2,
+    3,
+    15,
+    14
+   ],
+   [
+    3,
+    1,
+    5,
+    18,
+    15
+   ],
+   [
+    4,
+    4,
+    1,
+    12,
+    15
+   ],
+   [
+    4,
+    5,
+    3,
+    19,
+    10
+   ],
+   [
+    4,
+    6,
+    2,
+    15,
+    13
+   ],
+   [
+    5,
+    5,
+    6,
+    13,
+    12
+   ],
+   [
+    5,
+    1,
+    3,
+    13,
+    12
+   ],
+   [
+    5,
+    4,
+    2,
+    11,
+    13
+   ]
+  ],
+  "Green (Latrell)": [
+   [
+    1,
+    2,
+    1,
+    6,
+    18
+   ],
+   [
+    1,
+    3,
+    6,
+    13,
+    12
+   ],
+   [
+    1,
+    4,
+    5,
+    9,
+    14
+   ],
+   [
+    2,
+    3,
+    4,
+    14,
+    7
+   ],
+   [
+    2,
+    6,
+    1,
+    15,
+    11
+   ],
+   [
+    2,
+    2,
+    5,
+    13,
+    14
+   ],
+   [
+    3,
+    6,
+    4,
+    16,
+    3
+   ],
+   [
+    3,
+    2,
+    3,
+    19,
+    7
+   ],
+   [
+    3,
+    1,
+    5,
+    21,
+    8
+   ],
+   [
+    4,
+    4,
+    1,
+    3,
+    21
+   ],
+   [
+    4,
+    5,
+    3,
+    6,
+    16
+   ],
+   [
+    4,
+    6,
+    2,
+    7,
+    25
+   ],
+   [
+    5,
+    5,
+    6,
+    14,
+    16
+   ],
+   [
+    5,
+    1,
+    3,
+    23,
+    9
+   ],
+   [
+    5,
+    4,
+    2,
+    9,
+    25
+   ]
+  ]
+ },
+ "bracket": [
+  {
+   "game": 1,
+   "a": "The High End Jerkoffs",
+   "b": "Guns n Rollers",
+   "winner": "b",
+   "scoreA": 13,
+   "scoreB": 14
+  },
+  {
+   "game": 2,
+   "a": "The Mesh Strikes Back",
+   "b": "The Busch Men",
+   "winner": "b"
+  },
+  {
+   "game": 3,
+   "a": "Team Daisy",
+   "b": "Laces Out",
+   "winner": "a",
+   "scoreA": 15,
+   "scoreB": 11
+  },
+  {
+   "game": 4,
+   "a": "Brawley Heat Morkes Meat",
+   "b": "The Big LeBocce",
+   "winner": "b"
+  },
+  {
+   "game": 5,
+   "a": "Smug Champs",
+   "b": "W1",
+   "winner": "a",
+   "scoreA": 13,
+   "scoreB": 7
+  },
+  {
+   "game": 6,
+   "a": "Muck Fichigan",
+   "b": "W2",
+   "winner": "a",
+   "scoreA": 19,
+   "scoreB": 6
+  },
+  {
+   "game": 7,
+   "a": "The Bocce Ballers",
+   "b": "W3",
+   "winner": "b",
+   "scoreA": 12,
+   "scoreB": 18
+  },
+  {
+   "game": 8,
+   "a": "White Zin",
+   "b": "W4",
+   "winner": "b",
+   "scoreB": 13
+  },
+  {
+   "game": 9,
+   "a": "W5",
+   "b": "W6",
+   "winner": "a",
+   "scoreA": 14,
+   "scoreB": 13
+  },
+  {
+   "game": 10,
+   "a": "W7",
+   "b": "W8",
+   "winner": "a",
+   "scoreA": 16
+  },
+  {
+   "game": 11,
+   "a": "W9",
+   "b": "W10",
+   "winner": "b",
+   "scoreA": 15,
+   "scoreB": 17
+  }
+ ]
+}

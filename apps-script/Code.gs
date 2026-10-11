@@ -1154,7 +1154,16 @@ function importHistory() {
   if (ask.getSelectedButton() !== ui.Button.OK) return;
   var year = ask.getResponseText().trim();
   if (!years[year]) { ui.alert('No sheet named ' + FILE_PREFIX + year + ' in ' + FOLDER_NAME + '.'); return; }
-  if (parseInt(year, 10) >= thisYear) { ui.alert('Only past years can be imported.'); return; }
+  if (parseInt(year, 10) > thisYear) { ui.alert('That year has not been played yet.'); return; }
+  // The year just played can be imported too — that is how a tournament scored
+  // on paper gets in — but it is also the year a live board would be sitting
+  // in, so it asks first and says plainly what it is about to overwrite.
+  if (parseInt(year, 10) === thisYear) {
+    var live = ui.alert('Import over THIS year?',
+      year + ' is the current year. If its tournament is still being played this will erase the ' +
+      'scores already on the board. Only do this once the event is over.\n\nContinue?', ui.ButtonSet.YES_NO);
+    if (live !== ui.Button.YES) return;
+  }
 
   var res = UrlFetchApp.fetch(HISTORY_URL + year + '.json', { muteHttpExceptions: true });
   if (res.getResponseCode() !== 200) { ui.alert('No history file for ' + year + ' in the repo (history/' + year + '.json). Push it to GitHub first.'); return; }
