@@ -15,14 +15,14 @@
    "White Zin",
    "Brothers Boor",
    "The Big LeBocce",
-   "The Hitchhikers",
-   "The Mesh Strikes Back",
+   "Hitchhikers",
+   "Double Doink, The Mesh Strikes Back",
    "-"
   ],
   "Red (Glory Hole)": [
    "Muck Fichigan",
    "Hawkeyes",
-   "Holy Rollers",
+   "Banana in the Tailpipe, Holy Rollers",
    "Laces Out",
    "Brawley Heat Morkes Meat",
    "-"
@@ -46,7 +46,7 @@
  },
  "overrides": {
   "White Zin": 1,
-  "The Mesh Strikes Back": 2,
+  "Double Doink, The Mesh Strikes Back": 2,
   "The Big LeBocce": 3,
   "Muck Fichigan": 1,
   "Brawley Heat Morkes Meat": 2,
@@ -499,7 +499,7 @@
   },
   {
    "game": 2,
-   "a": "The Mesh Strikes Back",
+   "a": "Double Doink, The Mesh Strikes Back",
    "b": "The Busch Men",
    "winner": "b"
   },
