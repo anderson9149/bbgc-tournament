@@ -32,6 +32,15 @@ def write(name, data):
     print('  %-14s %7d bytes' % (name, os.path.getsize(p)))
 
 fails = []
+
+# The year stories are written in the repo, not in a sheet: the Ticker tab is
+# for the slogans that scroll during the event, which is a different thing.
+try:
+    write('stories.json', json.load(open('history/stories.json')))
+except Exception as e:
+    print('  stories.json: %s' % e)
+    fails.append('stories.json')
+
 for name, url in [('stats.json', API + '?action=stats'), ('holes.json', API + '?action=holes')]:
     d = get(url)
     write(name, d) if d else fails.append(name)

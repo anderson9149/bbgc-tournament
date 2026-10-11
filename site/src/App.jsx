@@ -133,7 +133,7 @@ export default function App() {
         {!isPreview && fetchedAt && <span>Updated {fetchedAt.toLocaleTimeString()}</span>}
         {IS_WALL && <span> · wall {REFRESH_SECONDS}s</span>}
       </footer>
-      {popup === 'story' && <Story year={shownYear} messages={data?.ticker} onClose={() => setPopup(null)} />}
+      {popup === 'story' && <Story year={shownYear} onClose={() => setPopup(null)} />}
       {data && !isPreview && <Ticker key={data.year} messages={data.ticker} tv={isTV} />}
     </>
   )
