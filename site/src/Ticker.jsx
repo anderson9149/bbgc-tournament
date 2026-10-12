@@ -18,12 +18,31 @@ export function Ticker({ messages, tv }) {
   const text = (messages || []).filter(Boolean)
   const key = text.join('|')
 
+  // Measured once, this went wrong whenever the width it read was not the
+  // width that ended up on screen — a font swapping in late, the phone turning,
+  // the mobile class landing after the first paint. The duration stayed put
+  // while the track got wider, and the ticker ran at whatever multiple of the
+  // intended speed that worked out to. So it re-measures whenever the rendered
+  // width actually changes, from any cause.
   useLayoutEffect(() => {
     const wrap = wrapRef.current, copy = copyRef.current
-    if (!wrap || !copy || !copy.offsetWidth) return
-    const speed = tv ? TV_SPEED : Math.max(20, wrap.offsetWidth / PHONE_SECONDS_PER_SCREEN)
-    const repeat = Math.max(1, Math.ceil(wrap.offsetWidth / copy.offsetWidth))
-    setLayout({ repeat, duration: Math.max(10, (copy.offsetWidth * repeat) / speed) })
+    if (!wrap || !copy) return
+    const measure = () => {
+      const copyW = copy.offsetWidth, boxW = wrap.offsetWidth
+      if (!copyW || !boxW) return
+      const speed = tv ? TV_SPEED : Math.max(20, boxW / PHONE_SECONDS_PER_SCREEN)
+      const repeat = Math.max(1, Math.ceil(boxW / copyW))
+      const duration = Math.max(10, (copyW * repeat) / speed)
+      // Bail out when nothing moved: changing repeat re-renders the track,
+      // which would otherwise set the observer off again forever.
+      setLayout((prev) => (prev.repeat === repeat && Math.abs(prev.duration - duration) < 0.5
+        ? prev : { repeat, duration }))
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(copy)
+    ro.observe(wrap)
+    return () => ro.disconnect()
   }, [key, tv])
 
   if (!text.length) return null
